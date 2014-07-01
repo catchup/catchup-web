@@ -12,3 +12,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+
+group :test do
+  gem 'capybara'
+end
