@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= t('greeting', user: session[:current_user]) if signed_in? %>
+
 <%= yield %>
 
 </body>
