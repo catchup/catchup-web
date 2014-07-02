@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :boards
+  resources :boards, only: [:create, :index, :new, :show]
 
   root to: 'users#new'
 
