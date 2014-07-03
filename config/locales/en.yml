@@ -25,3 +25,8 @@ en:
   users:
     new:
       login: Login
+  lists:
+    list:
+      todo: To Do
+      doing: Doing
+      review: Review
