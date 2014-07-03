@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140703094627) do
 
   create_table "lists", force: true do |t|
     t.string   "title"
+    t.integer  "position"
     t.integer  "board_id"
     t.datetime "created_at"
     t.datetime "updated_at"

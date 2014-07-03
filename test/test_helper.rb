@@ -10,4 +10,8 @@ end
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
   include AbstractController::Translation
+
+  def in_order?(first, last)
+    page.body.index(first) < page.body.index(last)
+  end
 end
