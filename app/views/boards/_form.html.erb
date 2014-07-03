@@ -1,0 +1,17 @@
+<%= form_for(@board) do |f| %>
+  <% if @board.errors.any? %>
+      <ul>
+      <% @board.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
