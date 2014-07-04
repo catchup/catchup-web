@@ -17,4 +17,8 @@ class ActionDispatch::IntegrationTest
   def in_order?(first, last)
     page.body.index(first) < page.body.index(last)
   end
+
+  def refresh
+    visit current_url
+  end
 end

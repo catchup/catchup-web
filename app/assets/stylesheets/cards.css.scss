@@ -1,0 +1,8 @@
+[data-role="cards-container"]
+{
+  // IMPORTANT: This selector has the same importance as production code.
+  // Removing this could cause dragging to stop working, because there would
+  // be no sufficient area. Change values at your own risk!
+  min-width: 30px;
+  min-height: 30px;
+}
