@@ -1,8 +1,8 @@
 class CardsController < ApplicationController
   def create
-    @card = list.cards.new(card_params)
+    @card = list.create_card(card_params)
 
-    flash[:alert] = I18n.t("cards.create.error") unless @card.save
+    flash[:alert] = I18n.t("cards.create.error") unless @card.valid?
     redirect_to @card.list.board
   end
 
