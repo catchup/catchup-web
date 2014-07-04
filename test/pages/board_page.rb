@@ -22,7 +22,7 @@ module BoardPage
   end
 
   def card(title)
-    find("[data-card='#{title}']")
+    find("[data-role='card']", text: title)
   end
 
   def has_card?(title)
