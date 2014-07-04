@@ -32,4 +32,4 @@ en:
       review: Review
   cards:
     create:
-      error: 'There was some error while creating this card.'
+      error: There was some error while creating this card
