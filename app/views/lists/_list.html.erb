@@ -1,3 +1,6 @@
 <div>
   <h3><%= list.title %></h3>
+
+  <%= render 'cards/form', card: list.cards.new %>
+  <%= render list.cards %>
 </div>
