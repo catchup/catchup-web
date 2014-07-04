@@ -1,4 +1,6 @@
-$(document).on "page:load", ->
+
+
+$(document).on "ready page:load", ->
   CARDS_CONTAINER_CLASS = "[data-role='cards-container']"
 
   $(CARDS_CONTAINER_CLASS).sortable(
