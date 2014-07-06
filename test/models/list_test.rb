@@ -5,7 +5,8 @@ class ListTest < ActiveSupport::TestCase
     list   = lists(:sample)
     first  = list.create_card(title: 'card 1')
     second = list.create_card(title: 'card 2')
+    third  = list.create_card(title: 'card 3')
 
-    assert_equal [second, first], list.cards
+    assert_equal [third, second, first], list.cards
   end
 end

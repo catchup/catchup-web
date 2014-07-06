@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :boards, only: [:create, :index, :new, :show] do
     resources :lists, only: [] do
-      resources :cards, only: [:create]
+      resources :cards, only: [:create, :update]
     end
   end
 

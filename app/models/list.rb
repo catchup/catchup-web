@@ -4,7 +4,10 @@ class List < ActiveRecord::Base
 
   def create_card(params)
     card = cards.create(params)
-    card.move_to_top
+    card.move_to(
+      list: self.id,
+      position: 0
+    )
 
     card
   end

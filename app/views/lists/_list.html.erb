@@ -3,7 +3,7 @@
 
   <%= render "cards/form", card: list.cards.new %>
 
-  <div data-role="cards-container">
+  <div data-role="cards-container" data-list-id="<%= list.id %>">
     <%= render list.cards %>
   </div>
 </div>

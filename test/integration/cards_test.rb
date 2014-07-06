@@ -33,9 +33,13 @@ class CardsTest < ActionDispatch::IntegrationTest
     end
 
     # And its position should be persisted
-    # refresh
-    # within another_list do
-    #   assert has_card?('My Card')
-    # end
+    refresh
+
+    # We have to fetch back the list again, because the dom has changed via
+    # refresh :(
+    another_list = lists.second
+    within another_list do
+      assert has_card?('My Card')
+    end
   end
 end
