@@ -1,4 +1,5 @@
-<%= form_for([card.list.board, card.list, card]) do |f| %>
+<%= form_for card do |f| %>
+  <%= f.hidden_field :list_id %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

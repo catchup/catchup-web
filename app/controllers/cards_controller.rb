@@ -7,7 +7,7 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card = list.cards.find(params[:id])
+    @card = Card.find(params[:id])
     @card.move_to(
       list: card_params.fetch(:list_id),
       position: card_params.fetch(:position)
@@ -18,13 +18,11 @@ class CardsController < ApplicationController
 
   private
 
-  def card_params
-    params.require(:card).permit(:title, :list_id, :position)
+  def list
+    @list ||= List.find(card_params[:list_id])
   end
 
-  def list
-    board = Board.find(params[:board_id])
-
-    @list ||= board.lists.find(params[:list_id])
+  def card_params
+    params.require(:card).permit(:title, :list_id, :position)
   end
 end

@@ -13,7 +13,7 @@ $(document).on "ready page:load", ->
       card_id  = $card.data("card-id")
       position = $card.index()
 
-      $update_form.find('#card_list_id').val(list_id)
-      $update_form.find('#card_position').val(position)
+      $update_form.find("#card_list_id").val(list_id)
+      $update_form.find("#card_position").val(position)
       $update_form.submit()
   )

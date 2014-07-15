@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ListTest < ActiveSupport::TestCase
   test 'puts latest created cards first' do
-    list   = lists(:sample)
+    list   = List.create(title: 'whatever')
     first  = list.create_card(title: 'card 1')
     second = list.create_card(title: 'card 2')
     third  = list.create_card(title: 'card 3')
