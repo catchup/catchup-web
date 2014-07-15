@@ -11,7 +11,6 @@ class CardTest < ActiveSupport::TestCase
     third = list.cards.third
 
     third.move_to(
-      list: list.id,
       position: 0
     )
 
