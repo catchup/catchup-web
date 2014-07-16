@@ -19,3 +19,8 @@ group :test do
   gem 'capybara'
   gem 'poltergeist'
 end
+
+# Styling
+gem 'bourbon'
+gem 'neat'
+gem 'normalize-rails'
