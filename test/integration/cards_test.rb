@@ -7,8 +7,7 @@ class CardsTest < ActionDispatch::IntegrationTest
   setup do
     Capybara.current_driver = Capybara.javascript_driver
 
-    visit root_path
-    click_on t('see_boards')
+    visit_boards
   end
 
   teardown do
@@ -40,6 +39,29 @@ class CardsTest < ActionDispatch::IntegrationTest
     another_list = lists.second
     within another_list do
       assert has_card?('My Card')
+    end
+  end
+
+  test 'User creates a card while other users are on the same page' do
+    # Given a new board
+    Capybara.session_name = :default
+    create_board('a board')
+
+    # And another user on the same board
+    Capybara.session_name = :another
+    visit_board('a board')
+
+    # When I create a card
+    Capybara.session_name = :default
+    create_card(
+      'User 1 Card',
+      on: lists.first
+    )
+
+    # Then the other user sees it in realtime
+    Capybara.session_name = :another
+    within lists.first do
+      assert has_card?('User 1 Card')
     end
   end
 end

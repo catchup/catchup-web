@@ -5,8 +5,7 @@ class BoardTest < ActionDispatch::IntegrationTest
   include BoardPage
 
   setup do
-    visit root_path
-    click_on t('see_boards')
+    visit_boards
   end
 
   test 'User creates a boards with fixed columns' do

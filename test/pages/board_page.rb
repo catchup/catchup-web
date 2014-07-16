@@ -32,4 +32,14 @@ module BoardPage
   def lists
     all("[data-role='list']").to_a
   end
+
+  def visit_board(title)
+    visit_boards
+    click_on title
+  end
+
+  def visit_boards
+    visit root_path
+    click_on t('see_boards')
+  end
 end
