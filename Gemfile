@@ -9,6 +9,7 @@ gem 'jquery-ui-rails'
 gem 'rails', '4.1.2'
 gem 'passenger'
 gem 'pg'
+gem 'pusher'
 gem 'ranked-model'
 gem 'sass-rails', '~> 4.0.3'
 gem 'spring',        group: :development
