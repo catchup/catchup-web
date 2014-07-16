@@ -1,14 +1,17 @@
 require 'test_helper'
+require 'pages/board_page'
 
 class BoardTest < ActionDispatch::IntegrationTest
-  test 'User creates a boards with fixed columns' do
-    visit root_url
-    click_on t('see_boards')
+  include BoardPage
 
+  setup do
+    visit root_path
+    click_on t('see_boards')
+  end
+
+  test 'User creates a boards with fixed columns' do
     # When I create a new board
-    click_on 'New Board'
-    fill_in 'board[title]', with: 'My Board'
-    click_on 'Create Board'
+    create_board('a board')
 
     # Then I see To Do, Doing and Review
     assert page.has_text? t('lists.list.todo')
