@@ -1,3 +1,4 @@
-<h1><%= @board.title %></h1>
-
-<%= render @board.lists %>
+<div data-role="board" data-board-id="<%= @board.id %>">
+  <h1><%= @board.title %></h1>
+  <%= render @board.lists %>
+</div>
