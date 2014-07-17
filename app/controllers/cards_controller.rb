@@ -6,7 +6,7 @@ class CardsController < ApplicationController
       card_html = render_to_string(@card)
       Pusher.trigger(
         "board_#{@card.list.board_id}",
-        'new_card',
+        "new_card",
         id: @card.id, list_id: @card.list_id, html: card_html
       )
     else

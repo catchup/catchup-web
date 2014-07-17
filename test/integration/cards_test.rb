@@ -1,5 +1,5 @@
-require 'test_helper'
-require 'pages/board_page'
+require "test_helper"
+require "pages/board_page"
 
 class CardsTest < ActionDispatch::IntegrationTest
   include BoardPage
@@ -14,11 +14,11 @@ class CardsTest < ActionDispatch::IntegrationTest
     Capybara.use_default_driver
   end
 
-  test 'User drags cards to other lists' do
+  test "User drags cards to other lists" do
     # Given a new board with a card
-    create_board('a board')
+    create_board("a board")
     card = create_card(
-      'My Card',
+      "My Card",
       on: lists.first
     )
 
@@ -28,7 +28,7 @@ class CardsTest < ActionDispatch::IntegrationTest
 
     # Then that card should stick to the new list
     within another_list do
-      assert has_card?('My Card')
+      assert has_card?("My Card")
     end
 
     # And its position should be persisted
@@ -38,30 +38,30 @@ class CardsTest < ActionDispatch::IntegrationTest
     # refresh :(
     another_list = lists.second
     within another_list do
-      assert has_card?('My Card')
+      assert has_card?("My Card")
     end
   end
 
-  test 'User creates a card while other users are on the same page' do
+  test "User creates a card while other users are on the same page" do
     # Given a new board
     Capybara.session_name = :default
-    create_board('a board')
+    create_board("a board")
 
     # And another user on the same board
     Capybara.session_name = :another
-    visit_board('a board')
+    visit_board("a board")
 
     # When I create a card
     Capybara.session_name = :default
     create_card(
-      'User 1 Card',
+      "User 1 Card",
       on: lists.first
     )
 
     # Then the other user sees it in realtime
     Capybara.session_name = :another
     within lists.first do
-      assert has_card?('User 1 Card')
+      assert has_card?("User 1 Card")
     end
   end
 end
