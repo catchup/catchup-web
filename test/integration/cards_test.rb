@@ -15,7 +15,7 @@ class CardsTest < ActionDispatch::IntegrationTest
   test "User drags cards to other lists" do
     # Given a new board with a card
     visit_boards
-    create_board("a board")
+    create_board("Board 1")
     card = create_card(
       "My Card",
       on: lists.first
@@ -45,11 +45,11 @@ class CardsTest < ActionDispatch::IntegrationTest
     # Given a new board
     Capybara.session_name = :user_1
     visit_boards
-    create_board("a board")
+    create_board("Board 2")
 
     # And another user on the same board
     Capybara.session_name = :user_2
-    visit_board("a board")
+    visit_board("Board 2")
 
     # When I create a card
     Capybara.session_name = :user_1
@@ -61,6 +61,31 @@ class CardsTest < ActionDispatch::IntegrationTest
     # Then the other user sees it in realtime
     Capybara.session_name = :user_2
     within lists.first do
+      assert has_card?("User 1 Card")
+    end
+  end
+
+  test "User moves a card while other users are on the same page" do
+    # Given a new board with a card
+    Capybara.session_name = :user_1
+    visit_boards
+    create_board("Board 3")
+    card = create_card(
+      "User 1 Card",
+      on: lists.first
+    )
+
+    # And another user on the same board
+    Capybara.session_name = :user_2
+    visit_board("Board 3")
+
+    # When I create a card and I move it
+    Capybara.session_name = :user_1
+    card.drag_to cards_container_for_list(lists.third)
+
+    # Then the other user sees it in realtime
+    Capybara.session_name = :user_2
+    within lists.third do
       assert has_card?("User 1 Card")
     end
   end
