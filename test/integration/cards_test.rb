@@ -1,16 +1,9 @@
 require "test_helper"
 require "pages/board_page"
+require "integration/javascript_test"
 
-class CardsTest < ActionDispatch::IntegrationTest
+class CardsTest < JavascriptTest
   include BoardPage
-
-  setup do
-    Capybara.current_driver = Capybara.javascript_driver
-  end
-
-  teardown do
-    Capybara.use_default_driver
-  end
 
   test "User drags cards to other lists" do
     # Given a new board with a card
