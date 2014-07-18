@@ -1,25 +1,23 @@
-require 'test_helper'
-require 'pages/board_page'
+require "test_helper"
+require "pages/board_page"
 
 class CardsTest < ActionDispatch::IntegrationTest
   include BoardPage
 
   setup do
     Capybara.current_driver = Capybara.javascript_driver
-
-    visit root_path
-    click_on t('see_boards')
   end
 
   teardown do
     Capybara.use_default_driver
   end
 
-  test 'User drags cards to other lists' do
+  test "User drags cards to other lists" do
     # Given a new board with a card
-    create_board('a board')
+    visit_boards
+    create_board("Board 1")
     card = create_card(
-      'My Card',
+      "My Card",
       on: lists.first
     )
 
@@ -29,7 +27,7 @@ class CardsTest < ActionDispatch::IntegrationTest
 
     # Then that card should stick to the new list
     within another_list do
-      assert has_card?('My Card')
+      assert has_card?("My Card")
     end
 
     # And its position should be persisted
@@ -39,7 +37,56 @@ class CardsTest < ActionDispatch::IntegrationTest
     # refresh :(
     another_list = lists.second
     within another_list do
-      assert has_card?('My Card')
+      assert has_card?("My Card")
+    end
+  end
+
+  test "User creates a card while other users are on the same page" do
+    # Given a new board
+    Capybara.session_name = :user_1
+    visit_boards
+    create_board("Board 2")
+
+    # And another user on the same board
+    Capybara.session_name = :user_2
+    visit_board("Board 2")
+
+    # When I create a card
+    Capybara.session_name = :user_1
+    create_card(
+      "User 1 Card",
+      on: lists.first
+    )
+
+    # Then the other user sees it in realtime
+    Capybara.session_name = :user_2
+    within lists.first do
+      assert has_card?("User 1 Card")
+    end
+  end
+
+  test "User moves a card while other users are on the same page" do
+    # Given a new board with a card
+    Capybara.session_name = :user_1
+    visit_boards
+    create_board("Board 3")
+    card = create_card(
+      "User 1 Card",
+      on: lists.first
+    )
+
+    # And another user on the same board
+    Capybara.session_name = :user_2
+    visit_board("Board 3")
+
+    # When I create a card and I move it
+    Capybara.session_name = :user_1
+    card.drag_to cards_container_for_list(lists.third)
+
+    # Then the other user sees it in realtime
+    Capybara.session_name = :user_2
+    within lists.third do
+      assert has_card?("User 1 Card")
     end
   end
 end

@@ -1,7 +1,7 @@
-$(document).on "ready page:load", ->
-  CARDS_CONTAINER_SELECTOR = "[data-role='cards-container']"
-  CARD_UPDATE_FORM         = "[data-role='card-update-form']"
+CARDS_CONTAINER_SELECTOR = "[data-role='cards-container']"
+CARD_UPDATE_FORM         = "[data-role='card-update-form']"
 
+$(document).on "ready page:load", ->
   $(CARDS_CONTAINER_SELECTOR).sortable(
     connectWith: CARDS_CONTAINER_SELECTOR,
     stop: (event, ui) ->
@@ -17,3 +17,6 @@ $(document).on "ready page:load", ->
       $update_form.find("#card_position").val(position)
       $update_form.submit()
   )
+
+$(document).on "new_card", ->
+  $(CARDS_CONTAINER_SELECTOR).sortable("refresh")
