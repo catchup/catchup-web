@@ -3,7 +3,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    session[:current_user] = user_params.fetch(:email)
+    user_email = user_params.fetch(:email)
+
+    session[:current_user] = user_email
+    User.find_or_create_by(email: user_email)
 
     redirect_to root_path
   end
