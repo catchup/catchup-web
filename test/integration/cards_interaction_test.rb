@@ -2,17 +2,14 @@ require "test_helper"
 require "pages/board_page"
 require "integration/javascript_test"
 
-class CardsTest < JavascriptTest
+class CardsInteractionTest < JavascriptTest
   include BoardPage
 
   test "User drags cards to other lists" do
     # Given a new board with a card
     visit_boards
     create_board("Board 1")
-    card = create_card(
-      "My Card",
-      on: lists.first
-    )
+    card = create_card("My Card")
 
     # When I drag a card to another list
     another_list = lists.second
@@ -46,10 +43,7 @@ class CardsTest < JavascriptTest
 
     # When I create a card
     Capybara.session_name = :user_1
-    create_card(
-      "User 1 Card",
-      on: lists.first
-    )
+    create_card("User 1 Card")
 
     # Then the other user sees it in realtime
     Capybara.session_name = :user_2
@@ -63,10 +57,7 @@ class CardsTest < JavascriptTest
     Capybara.session_name = :user_1
     visit_boards
     create_board("Board 3")
-    card = create_card(
-      "User 1 Card",
-      on: lists.first
-    )
+    card = create_card("User 1 Card")
 
     # And another user on the same board
     Capybara.session_name = :user_2
