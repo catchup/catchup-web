@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
     else
       redirect_to(
         boards_path,
-        alert: t('boards.create.error')
+        alert: t("boards.create.error")
       )
     end
   end
