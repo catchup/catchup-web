@@ -1,5 +1,5 @@
 <%= form_for card do |f| %>
-  <%= f.hidden_field :list_id %>
+  <%= f.hidden_field :board_id, value: board.id %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>

@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def create
-    @card = list.create_card(card_params)
+    @card = board.create_card(card_params)
 
     if @card.valid?
       card_html = render_to_string(@card)
@@ -13,7 +13,7 @@ class CardsController < ApplicationController
       flash[:alert] = I18n.t("cards.create.error")
     end
 
-    redirect_to list.board
+    redirect_to board
   end
 
   def update
@@ -22,19 +22,20 @@ class CardsController < ApplicationController
       list: card_params.fetch(:list_id),
       position: card_params.fetch(:position)
     )
+
     Pusher.trigger(
       "board_#{@card.list.board_id}",
       "move_card",
       id: @card.id, list_id: @card.list_id, position: card_params.fetch(:position)
     )
 
-    redirect_to list.board
+    render nothing: true
   end
 
   private
 
-  def list
-    @list ||= List.find(card_params[:list_id])
+  def board
+    @board ||= Board.find(params[:card][:board_id])
   end
 
   def card_params
