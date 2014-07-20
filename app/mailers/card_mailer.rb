@@ -1,13 +1,14 @@
 class CardMailer < ActionMailer::Base
+  default(
+    from: "task-planner bot",
+    to: User.all.pluck(:email)
+  )
+
   def new_card(card)
     @card  = card
     @board = card.list.board
 
-    mail(
-      from: "task-planner bot",
-      to: User.all.pluck(:email),
-      subject: "New card on #{@board.title}"
-    )
+    mail(subject: "New card on #{@board.title}")
   end
 
   def card_moved(card)
@@ -15,10 +16,6 @@ class CardMailer < ActionMailer::Base
     @board = @list.board
     @card  = card
 
-    mail(
-      from: "task-planner bot",
-      to: User.all.pluck(:email),
-      subject: "Card moved on #{@board.title}"
-    )
+    mail(subject: "Card moved on #{@board.title}")
   end
 end
