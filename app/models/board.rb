@@ -9,6 +9,10 @@ class Board < ActiveRecord::Base
     lists.create(params)
   end
 
+  def create_card(params)
+    lists.first.create_card(params)
+  end
+
   private
 
   def add_sample_lists

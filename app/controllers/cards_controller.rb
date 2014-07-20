@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def create
-    @card = list.create_card(card_params)
+    @card = board.create_card(card_params)
 
     if @card.valid?
       card_html = render_to_string(@card)
@@ -13,7 +13,7 @@ class CardsController < ApplicationController
       flash[:alert] = I18n.t("cards.create.error")
     end
 
-    redirect_to list.board
+    redirect_to board
   end
 
   def update
@@ -33,8 +33,8 @@ class CardsController < ApplicationController
 
   private
 
-  def list
-    @list ||= List.find(card_params[:list_id])
+  def board
+    @board ||= Board.find(params[:card][:board_id])
   end
 
   def card_params
