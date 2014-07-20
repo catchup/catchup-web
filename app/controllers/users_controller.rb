@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    redirect_to boards_path if signed_in?
   end
 
   def create
