@@ -28,7 +28,7 @@ class CardsController < ApplicationController
       id: @card.id, list_id: @card.list_id, position: card_params.fetch(:position)
     )
 
-    redirect_to list.board
+    redirect_to board
   end
 
   private
