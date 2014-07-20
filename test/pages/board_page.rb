@@ -16,7 +16,6 @@ module BoardPage
   end
 
   def create_board(title)
-    click_on "New Board"
     fill_in "board[title]", with: title
     click_on "Create Board"
   end
