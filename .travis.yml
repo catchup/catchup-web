@@ -1,7 +1,7 @@
 language: ruby
 rvm: 2.1.2
 addons:
-  postgresql: '9.3'
+  postgresql: "9.3"
 before_script:
 - cp config/database.yml.travis config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
@@ -13,4 +13,4 @@ deploy:
   api_key:
     secure: Q6FTY/w0lyXt/OCfEK6gaedJI1vcPb/1SQF5i3TyDPl/Yzg8jUcJSNcGXxoRgSpO6V6g5o+92fc5bjLIoa45NhsmYvHnQAv3KIvslhKEgVLTdh+EBhq1njSWmh2XR4Mtfnf5yY0qEX+aDsseCllxJbCJWeiPxeC2MkNxSo+XMXE=
   app: task-planner
-  run: 'rake db:migrate'
+  run: "rake db:migrate"
