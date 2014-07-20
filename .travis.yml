@@ -13,3 +13,4 @@ deploy:
   api_key:
     secure: Q6FTY/w0lyXt/OCfEK6gaedJI1vcPb/1SQF5i3TyDPl/Yzg8jUcJSNcGXxoRgSpO6V6g5o+92fc5bjLIoa45NhsmYvHnQAv3KIvslhKEgVLTdh+EBhq1njSWmh2XR4Mtfnf5yY0qEX+aDsseCllxJbCJWeiPxeC2MkNxSo+XMXE=
   app: task-planner
+  run: 'rake db:migrate'
