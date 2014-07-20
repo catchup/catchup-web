@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'pages/board_page'
 
-class BoardTest < ActionDispatch::IntegrationTest
+class BoardsTest < ActionDispatch::IntegrationTest
   include BoardPage
 
   setup do
