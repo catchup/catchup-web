@@ -30,6 +30,9 @@ en:
       todo: To Do
       doing: Doing
       review: Review
+  boards:
+    create:
+      error: There was some error while creating this board
   cards:
     create:
       error: There was some error while creating this card
