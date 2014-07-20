@@ -21,4 +21,17 @@ class BoardTest < ActionDispatch::IntegrationTest
     assert in_order? t('lists.list.todo'), t('lists.list.doing')
     assert in_order? t('lists.list.doing'), t('lists.list.review')
   end
+
+  test 'User creates a new card' do
+    # Given a board
+    create_board('a board')
+
+    # When I create a new card
+    create_card('My Card')
+
+    # Then it should appear on the first list
+    within lists.first do
+      assert has_card?('My Card')
+    end
+  end
 end
