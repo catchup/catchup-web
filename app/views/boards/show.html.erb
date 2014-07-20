@@ -2,3 +2,5 @@
   <h1><%= @board.title %></h1>
   <%= render @board.lists %>
 </div>
+
+ <%= render "cards/form", card: Card.new, board: @board %>

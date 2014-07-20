@@ -3,14 +3,9 @@ module BoardPage
     list.find("[data-role='cards-container']")
   end
 
-  def create_card(title, on: nil)
-    raise "Cards should be created into lists, missing :on option" if on.nil?
-
-    list = on
-    within list do
-      fill_in "card[title]", with: title
-      click_on "Create Card"
-    end
+  def create_card(title)
+    fill_in "card[title]", with: title
+    click_on "Create Card"
 
     card(title)
   end
