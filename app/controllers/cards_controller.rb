@@ -22,13 +22,12 @@ class CardsController < ApplicationController
       list: card_params.fetch(:list_id),
       position: card_params.fetch(:position)
     )
+
     Pusher.trigger(
       "board_#{@card.list.board_id}",
       "move_card",
       id: @card.id, list_id: @card.list_id, position: card_params.fetch(:position)
     )
-
-    redirect_to board
   end
 
   private
