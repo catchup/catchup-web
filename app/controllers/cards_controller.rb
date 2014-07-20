@@ -28,6 +28,8 @@ class CardsController < ApplicationController
       "move_card",
       id: @card.id, list_id: @card.list_id, position: card_params.fetch(:position)
     )
+
+    render nothing: true
   end
 
   private
