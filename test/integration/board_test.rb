@@ -8,7 +8,7 @@ class BoardTest < ActionDispatch::IntegrationTest
     visit_boards
   end
 
-  test 'User creates a boards with fixed columns' do
+  test 'User creates a boards with fixed lists' do
     # When I create a new board
     create_board('a board')
 
