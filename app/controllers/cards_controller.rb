@@ -9,6 +9,7 @@ class CardsController < ApplicationController
         "new_card",
         id: @card.id, list_id: @card.list_id, html: card_html
       )
+      CardMailer.new_card(@card).deliver
     else
       flash[:alert] = I18n.t("cards.create.error")
     end
@@ -28,6 +29,7 @@ class CardsController < ApplicationController
       "move_card",
       id: @card.id, list_id: @card.list_id, position: card_params.fetch(:position)
     )
+    CardMailer.card_moved(@card).deliver
 
     render nothing: true
   end
