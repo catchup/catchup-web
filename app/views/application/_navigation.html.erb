@@ -1,0 +1,6 @@
+<header>
+  <nav>
+    <%= link_to t('see_boards'), boards_path %>
+  </nav>
+  <%= content_tag :h1, t('greeting', user: session[:current_user]) if signed_in? %>
+</header>

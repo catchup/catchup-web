@@ -9,16 +9,11 @@
 </head>
 <body>
 
-<div id="main-grid" class="container">
+<%= render "navigation" %>
 
-  <%= t('greeting', user: session[:current_user]) if signed_in? %>
-  <%= link_to t('see_boards'), boards_path %>
+<%= render "flashes" %>
 
-  <%= render "flashes" %>
-
-  <%= yield %>
-
-</div>
+<%= yield %>
 
 </body>
 </html>

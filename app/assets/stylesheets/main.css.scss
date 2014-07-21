@@ -1,3 +1,29 @@
-div.container {
-  @include outer-container;
+header {
+  $header-background-color: $dark-gray;
+  $header-link-color: white;
+
+  @include clearfix;
+
+  @include padding(0 2em 0 1em);
+
+  background-color: $header-background-color;
+
+  nav {
+    float: left;
+  }
+
+  a, a:hover, a:active, a:focus {
+    @include padding(1em 0 1em 0);
+    display: inline-block;
+
+    color: $header-link-color;
+    font-weight: bold;
+  }
+
+  h1 {
+    float: right;
+
+    color: $medium-gray;
+    font-size: $base-font-size;
+  }
 }
