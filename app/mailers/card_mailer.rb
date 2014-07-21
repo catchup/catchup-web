@@ -1,6 +1,6 @@
 class CardMailer < ActionMailer::Base
   default(
-    from: "task-planner bot",
+    from: "asd@pittle.org",
     to: User.all.pluck(:email)
   )
 
