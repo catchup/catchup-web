@@ -9,7 +9,11 @@
 </head>
 <body>
 
-<%= render "navigation" %>
+<% content_for :greeting_or_login do %>
+  <%= content_tag :h1, t('greeting', user: session[:current_user]) if signed_in? %>
+<% end %>
+
+<%= render "header" %>
 
 <%= render "flashes" %>
 
