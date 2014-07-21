@@ -39,3 +39,17 @@ header {
     }
   }
 }
+
+div.board-lists {
+  @include outer-container;
+}
+
+div.list {
+  @include span-columns(4);
+
+  background-color: $light-gray;
+}
+
+div.card {
+  background-color: $medium-gray;
+}
