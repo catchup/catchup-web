@@ -1,6 +1,9 @@
-<div data-role="board" data-board-id="<%= @board.id %>">
+<div data-role="board" data-board-id="<%= @board.id %>" class="board">
   <h1><%= @board.title %></h1>
-  <%= render @board.lists %>
-</div>
 
- <%= render "cards/form", card: Card.new, board: @board %>
+  <%= render "cards/form", card: Card.new, board: @board %>
+
+  <div class="board-lists">
+    <%= render @board.lists %>
+  </div>
+</div>

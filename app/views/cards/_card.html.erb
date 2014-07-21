@@ -1,4 +1,4 @@
-<div data-role="card" data-card-id="<%= card.id %>">
+<div data-role="card" data-card-id="<%= card.id %>" class="card">
   <h4><%= card.title %></h4>
 
   <%= form_for card, remote: true, data: { role: "card-update-form" } do |f| %>
