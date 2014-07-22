@@ -1,6 +1,7 @@
 class Card < ActiveRecord::Base
   include RankedModel
 
+  has_many :comments
   belongs_to :list
   ranks :position, with_same: :list_id
 
