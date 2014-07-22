@@ -10,7 +10,7 @@
 <body>
 
 <% content_for :greeting_or_login do %>
-  <%= content_tag :h1, t('greeting', user: session[:current_user]) if signed_in? %>
+  <%= content_tag :h1, t('greeting', user: current_user.email) if signed_in? %>
 <% end %>
 
 <%= render "header" %>
