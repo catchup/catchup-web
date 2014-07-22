@@ -4,6 +4,7 @@ class Board < ActiveRecord::Base
   validates :title, presence: true
 
   has_many :lists, -> { order(position: :asc) }
+  has_many :cards, through: :lists
 
   def add_list!(params)
     lists.create(params)

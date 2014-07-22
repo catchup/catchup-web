@@ -18,7 +18,7 @@ class CardsController < ApplicationController
   end
 
   def update
-    @card = Card.find(params[:id])
+    @card = board.cards.find(params[:id])
     @card.move_to(
       list: card_params.fetch(:list_id),
       position: card_params.fetch(:position)
