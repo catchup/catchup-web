@@ -37,7 +37,7 @@ class CardsController < ApplicationController
   private
 
   def board
-    @board ||= Board.find(params[:card][:board_id])
+    @board ||= Board.find(params[:board_id])
   end
 
   def card_params
