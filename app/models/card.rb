@@ -3,6 +3,8 @@ class Card < ActiveRecord::Base
 
   has_many :comments
   belongs_to :list
+  delegate :board, to: :list
+
   ranks :position, with_same: :list_id
 
   validates :title, presence: true
