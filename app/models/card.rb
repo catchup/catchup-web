@@ -16,4 +16,9 @@ class Card < ActiveRecord::Base
     update_attribute(:list_id, list_id)
     update_attribute(:position_position, position)
   end
+
+  def post_comment(by:, with:)
+    attributes = with.merge(user: by)
+    comments.create(attributes)
+  end
 end

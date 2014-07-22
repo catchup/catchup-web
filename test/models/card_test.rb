@@ -35,4 +35,17 @@ class CardTest < ActiveSupport::TestCase
     assert_not list_1.cards.reload.include?(first)
     assert_equal first, list_2.cards.reload.second
   end
+
+  test "posts a comment on the card" do
+    card = cards(:cool_feature)
+
+    comment = card.post_comment(
+      by: users(:antonio),
+      with: { text: "Hello, world!" }
+    )
+
+    assert card.comments.reload.include?(comment)
+    assert_equal "Hello, world!", comment.text
+    assert_equal users(:antonio), comment.user
+  end
 end
