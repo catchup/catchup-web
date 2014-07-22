@@ -36,3 +36,6 @@ en:
   cards:
     create:
       error: There was some error while creating this card
+  comments:
+    create:
+      error: There was some error while creating this comment

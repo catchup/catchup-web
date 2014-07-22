@@ -17,8 +17,12 @@ class CardsController < ApplicationController
     redirect_to board
   end
 
+  def show
+    @card = board.cards.find(params[:id])
+  end
+
   def update
-    @card = Card.find(params[:id])
+    @card = board.cards.find(params[:id])
     @card.move_to(
       list: card_params.fetch(:list_id),
       position: card_params.fetch(:position)
@@ -37,7 +41,7 @@ class CardsController < ApplicationController
   private
 
   def board
-    @board ||= Board.find(params[:card][:board_id])
+    @board ||= Board.find(params[:board_id])
   end
 
   def card_params

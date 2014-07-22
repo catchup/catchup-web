@@ -1,0 +1,5 @@
+<h2><%= @card.title %></h2>
+
+<%= render "comments/form", comment: Comment.new, card: @card %>
+
+<%= render @card.comments %>
