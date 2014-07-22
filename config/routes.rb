@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :boards, only: [:create, :index, :show] do
-    resources :cards, only: [:create, :update]
+    resources :cards, only: [:create, :show, :update]
   end
 
   root to: 'users#new'

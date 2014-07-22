@@ -17,6 +17,10 @@ class CardsController < ApplicationController
     redirect_to board
   end
 
+  def show
+    @card = board.cards.find(params[:id])
+  end
+
   def update
     @card = board.cards.find(params[:id])
     @card.move_to(
