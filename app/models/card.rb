@@ -1,7 +1,7 @@
 class Card < ActiveRecord::Base
   include RankedModel
 
-  has_many :comments
+  has_many :comments, -> { order(created_at: :desc) }
   belongs_to :list
   delegate :board, to: :list
 
