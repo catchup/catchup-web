@@ -1,5 +1,6 @@
-class BaseMailer < ActionMailer::Base
+class GlobalMailer < ActionMailer::Base
   default(from: "asd@pittle.org")
+  default(to: Proc.new { everyone })
 
   protected
 
