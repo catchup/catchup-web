@@ -8,8 +8,6 @@ class CardsInteractionTest < JavascriptTest
 
   test "User drags cards to other lists" do
     # Given a new board with a card
-    Capybara.session_name = SecureRandom.hex
-
     visit_boards
     create_board("Board 1")
     card = create_card("My Card")
@@ -36,9 +34,6 @@ class CardsInteractionTest < JavascriptTest
 
   test "User creates a card while other users are on the same page" do
     # Given a new board
-    user_1 = SecureRandom.hex
-    user_2 = SecureRandom.hex
-
     Capybara.session_name = user_1
     visit_boards
     create_board("Board 2")
@@ -60,9 +55,6 @@ class CardsInteractionTest < JavascriptTest
 
   test "User moves a card while other users are on the same page" do
     # Given a new board with a card
-    user_1 = SecureRandom.hex
-    user_2 = SecureRandom.hex
-
     Capybara.session_name = user_1
     visit_boards
     create_board("Board 3")
