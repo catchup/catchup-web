@@ -3,6 +3,8 @@ rvm: 2.1.2
 addons:
   postgresql: "9.3"
 before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 - cp config/database.yml.travis config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
 notifications:
