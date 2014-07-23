@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'poltergeist'
+  gem 'selenium-webdriver'
 end
 
 # Styling
