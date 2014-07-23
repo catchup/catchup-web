@@ -1,3 +1,5 @@
+require "securerandom"
+
 class JavascriptTest < ActionDispatch::IntegrationTest
   setup do
     Capybara.current_driver = Capybara.javascript_driver

@@ -1,7 +1,6 @@
 require "test_helper"
 require "pages/board_page"
 require "integration/javascript_test"
-require "securerandom"
 
 class CardsInteractionTest < JavascriptTest
   include BoardPage
