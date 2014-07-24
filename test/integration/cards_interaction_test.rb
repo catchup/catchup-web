@@ -1,9 +1,11 @@
 require "test_helper"
 require "pages/board_page"
+require "pages/card_page"
 require "integration/javascript_test"
 
 class CardsInteractionTest < JavascriptTest
   include BoardPage
+  include CardPage
 
   test "User drags cards to other lists" do
     # Given a new board with a card
@@ -72,5 +74,26 @@ class CardsInteractionTest < JavascriptTest
     within lists.third do
       assert has_card?("User 1 Card")
     end
+  end
+
+  test "User archives a card while other users are on the board" do
+    # Given a new board with a card
+    Capybara.session_name = user_1
+    visit_boards
+    create_board("Board 3")
+    card = create_card("User 1 Card")
+
+    # And another user on the same board
+    Capybara.session_name = user_2
+    visit_board("Board 3")
+
+    # When I archive that card
+    Capybara.session_name = user_1
+    show_card(card)
+    archive_card
+
+    # Then the other user sees it disappear in realtime
+    Capybara.session_name = user_2
+    refute has_card?("User 1 Card")
   end
 end

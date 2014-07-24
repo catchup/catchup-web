@@ -36,6 +36,8 @@ en:
   cards:
     create:
       error: There was some error while creating this card
+    archive:
+      submit: Archive
   comments:
     create:
       error: There was some error while creating this comment

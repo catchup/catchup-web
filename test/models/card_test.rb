@@ -28,7 +28,7 @@ class CardTest < ActiveSupport::TestCase
     first = list_1.cards.first
 
     first.move_to(
-      list: list_2.id,
+      list_id: list_2.id,
       position: 2
     )
 
@@ -47,5 +47,14 @@ class CardTest < ActiveSupport::TestCase
     assert card.comments.reload.include?(comment)
     assert_equal "Hello, world!", comment.text
     assert_equal users(:antonio), comment.user
+  end
+
+  test "archives the card" do
+    card = cards(:cool_feature)
+    card.archive
+
+    unarchived_cards = card.list.cards.unarchived.reload
+    assert card.archived?
+    refute unarchived_cards.include?(card)
   end
 end
