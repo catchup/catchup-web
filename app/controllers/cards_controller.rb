@@ -23,10 +23,7 @@ class CardsController < ApplicationController
 
   def move
     @card = board.cards.find(params[:id])
-    @card.move_to(
-      list: move_params.fetch(:list_id),
-      position: move_params.fetch(:position)
-    )
+    @card.move_to(move_params.symbolize_keys)
 
     Pusher.trigger(
       "board_#{@card.list.board_id}",

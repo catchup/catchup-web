@@ -28,7 +28,7 @@ class CardTest < ActiveSupport::TestCase
     first = list_1.cards.first
 
     first.move_to(
-      list: list_2.id,
+      list_id: list_2.id,
       position: 2
     )
 

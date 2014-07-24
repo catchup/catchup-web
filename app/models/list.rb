@@ -5,7 +5,7 @@ class List < ActiveRecord::Base
   def create_card(params)
     card = cards.create(params)
     card.move_to(
-      list: self.id,
+      list_id: self.id,
       position: 0
     )
 
