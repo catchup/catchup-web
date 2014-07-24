@@ -26,3 +26,7 @@ $(document).on "ready page:load", ->
           $children.eq(card.position).prepend($card)
         else
           $container.append($card)
+
+    channel.bind 'archive_card', (card) ->
+      ARCHIVED_CARD_SELECTOR = "[data-card-id='#{card.id}']"
+      $(ARCHIVED_CARD_SELECTOR).remove()

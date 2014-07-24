@@ -42,7 +42,11 @@ class CardsController < ApplicationController
     @card = board.cards.find(params[:id])
 
     if @card.update_attributes(archive_params)
-      # no-op
+      Pusher.trigger(
+        "board_#{@card.list.board_id}",
+        "archive_card",
+        id: @card.id, list_id: @card.list_id
+      )
     else
       flash[:alert] = I18n.t("cards.update.error")
     end
