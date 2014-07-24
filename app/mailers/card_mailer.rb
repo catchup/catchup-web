@@ -1,14 +1,9 @@
-class CardMailer < ActionMailer::Base
-  default(from: "asd@pittle.org")
-
+class CardMailer < GlobalMailer
   def new_card(card)
     @card  = card
     @board = card.list.board
 
-    mail(
-      subject: "New card on #{@board.title}",
-      to: everyone
-    )
+    mail(subject: "New card on #{@board.title}")
   end
 
   def card_moved(card)
@@ -16,15 +11,6 @@ class CardMailer < ActionMailer::Base
     @board = @list.board
     @card  = card
 
-    mail(
-      subject: "Card moved on #{@board.title}",
-      to: everyone
-    )
-  end
-
-  private
-
-  def everyone
-    User.all.pluck(:email)
+    mail(subject: "Card moved on #{@board.title}")
   end
 end

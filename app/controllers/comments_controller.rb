@@ -6,7 +6,11 @@ class CommentsController < ApplicationController
       with: comment_params
     )
 
-    flash[:alert] = t('comments.create.error') unless comment.valid?
+    if comment.valid?
+      CommentMailer.new_comment(comment).deliver
+    else
+      flash[:alert] = t("comments.create.error")
+    end
 
     redirect_to [card.board, card]
   end

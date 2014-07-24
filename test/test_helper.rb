@@ -9,6 +9,13 @@ class ActiveSupport::TestCase
   fixtures :all
 end
 
+class ActionMailer::TestCase
+  def sent_to_everyone?(email)
+    email.to.include?(users(:ali).email) &&
+    email.to.include?(users(:antonio).email)
+  end
+end
+
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
   include AbstractController::Translation
