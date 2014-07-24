@@ -12,4 +12,10 @@ class CardMailerTest < ActionMailer::TestCase
 
     assert sent_to_everyone?(email)
   end
+
+  test "card_archived is sent to all the users" do
+    email = CardMailer.card_archived cards(:cool_feature)
+
+    assert sent_to_everyone?(email)
+  end
 end

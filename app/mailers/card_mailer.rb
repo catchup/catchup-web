@@ -7,10 +7,17 @@ class CardMailer < GlobalMailer
   end
 
   def card_moved(card)
-    @list = card.list
+    @list  = card.list
     @board = @list.board
     @card  = card
 
     mail(subject: "Card moved on #{@board.title}")
+  end
+
+  def card_archived(card)
+    @board = card.board
+    @card  = card
+
+    mail(subject: "Card archived on #{@board.title}")
   end
 end
