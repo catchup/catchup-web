@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :boards, only: [:create, :index, :show] do
-    resources :cards, only: [:create, :show, :update]
+    resources :cards, only: [:create, :show, :update] do
+      match :move, on: :member, via: [:patch, :put]
+    end
   end
 
   resources :cards, only: [] do

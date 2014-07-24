@@ -1,7 +1,7 @@
 <div data-role="card" data-card-id="<%= card.id %>" class="card">
   <h4><%= link_to card.title, [card.board, card] %></h4>
 
-  <%= form_for [card.board, card], remote: true, data: { role: "card-update-form" } do |f| %>
+  <%= form_for [:move, card.board, card], remote: true, data: { role: "card-update-form" } do |f| %>
     <%= f.hidden_field :list_id %>
     <%= f.hidden_field :position %>
   <% end %>
