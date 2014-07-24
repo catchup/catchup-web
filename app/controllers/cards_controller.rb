@@ -38,10 +38,10 @@ class CardsController < ApplicationController
     render nothing: true
   end
 
-  def update
+  def archive
     @card = board.cards.find(params[:id])
 
-    if @card.update_attributes(card_params)
+    if @card.update_attributes(archive_params)
       # no-op
     else
       flash[:alert] = I18n.t("cards.update.error")
@@ -56,8 +56,12 @@ class CardsController < ApplicationController
     @board ||= Board.find(params[:board_id])
   end
 
+  def archive_params
+    params.require(:card).permit(:archived)
+  end
+
   def card_params
-    params.require(:card).permit(:title, :archived)
+    params.require(:card).permit(:title)
   end
 
   def move_params
