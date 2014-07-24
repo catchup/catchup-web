@@ -1,15 +1,19 @@
 class UsersController < ApplicationController
   def new
     redirect_to boards_path if signed_in?
+
+    @user = User.new
   end
 
   def create
-    user_email = user_params.fetch(:email)
+    @user = User.find_or_create_by(user_params)
 
-    session[:current_user] = user_email
-    User.find_or_create_by(email: user_email)
-
-    redirect_to root_path
+    if @user.valid?
+      session[:current_user] = @user.email
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
