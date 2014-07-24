@@ -48,4 +48,13 @@ class CardTest < ActiveSupport::TestCase
     assert_equal "Hello, world!", comment.text
     assert_equal users(:antonio), comment.user
   end
+
+  test "archives the card" do
+    card = cards(:cool_feature)
+    card.archive
+
+    unarchived_cards = card.list.cards.unarchived.reload
+    assert card.archived?
+    refute unarchived_cards.include?(card)
+  end
 end
