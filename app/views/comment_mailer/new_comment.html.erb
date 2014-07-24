@@ -1,5 +1,5 @@
 <p>
-  <%= @comment.user.email %> just wrote on <%= link_to @card.title, [@card.board, @card] %>
+  <%= @comment.user.email %> just wrote on <%= link_to @card.title, board_card_url(@card.board, @card) %>
 </p>
 <p>
   <%= @comment.text %>
