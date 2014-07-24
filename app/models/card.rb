@@ -1,6 +1,8 @@
 class Card < ActiveRecord::Base
   include RankedModel
 
+  scope :unarchived, -> { where(archived: false) }
+
   has_many :comments, -> { order(created_at: :desc) }
   belongs_to :list
   delegate :board, to: :list

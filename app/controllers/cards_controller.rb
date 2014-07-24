@@ -38,6 +38,18 @@ class CardsController < ApplicationController
     render nothing: true
   end
 
+  def update
+    @card = board.cards.find(params[:id])
+
+    if @card.update_attributes(card_params)
+      # no-op
+    else
+      flash[:alert] = I18n.t("cards.update.error")
+    end
+
+    redirect_to [@card.board, @card]
+  end
+
   private
 
   def board
@@ -45,7 +57,7 @@ class CardsController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:title)
+    params.require(:card).permit(:title, :archived)
   end
 
   def move_params

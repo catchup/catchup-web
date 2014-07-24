@@ -1,8 +1,10 @@
 require "test_helper"
 require "pages/board_page"
+require "pages/card_page"
 
 class BoardsTest < ActionDispatch::IntegrationTest
   include BoardPage
+  include CardPage
 
   setup do
     visit_boards
@@ -33,5 +35,19 @@ class BoardsTest < ActionDispatch::IntegrationTest
     within lists.first do
       assert has_card?("My Card")
     end
+  end
+
+  test "User archives a card" do
+    # Given a board with a card
+    create_board("a board")
+    card = create_card("My Card")
+
+    # When I archive it
+    show_card(card)
+    archive_card
+
+    # Then it should disappear from the board
+    visit_board("a board")
+    refute has_card?("My Card")
   end
 end

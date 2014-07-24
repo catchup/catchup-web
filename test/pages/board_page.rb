@@ -20,7 +20,16 @@ module BoardPage
   end
 
   def has_card?(title)
-    card(title) != nil
+    card(title)
+    true
+  rescue Capybara::ElementNotFound
+    false
+  end
+
+  def show_card(card_container)
+    within card_container do
+      click_on card_container.text
+    end
   end
 
   def lists
