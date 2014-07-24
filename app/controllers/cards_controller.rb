@@ -44,6 +44,7 @@ class CardsController < ApplicationController
       "archive_card",
       id: @card.id, list_id: @card.list_id
     )
+    CardMailer.card_archived(@card).deliver
 
     redirect_to [@card.board, @card]
   end
