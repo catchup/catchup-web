@@ -40,16 +40,13 @@ class CardsController < ApplicationController
 
   def archive
     @card = board.cards.find(params[:id])
+    @card.archive
 
-    if @card.update_attributes(archive_params)
-      Pusher.trigger(
-        "board_#{@card.list.board_id}",
-        "archive_card",
-        id: @card.id, list_id: @card.list_id
-      )
-    else
-      flash[:alert] = I18n.t("cards.update.error")
-    end
+    Pusher.trigger(
+      "board_#{@card.list.board_id}",
+      "archive_card",
+      id: @card.id, list_id: @card.list_id
+    )
 
     redirect_to [@card.board, @card]
   end
@@ -58,10 +55,6 @@ class CardsController < ApplicationController
 
   def board
     @board ||= Board.find(params[:board_id])
-  end
-
-  def archive_params
-    params.require(:card).permit(:archived)
   end
 
   def card_params

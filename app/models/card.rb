@@ -23,4 +23,8 @@ class Card < ActiveRecord::Base
     attributes = with.merge(user: by)
     comments.create(attributes)
   end
+
+  def archive
+    update_attribute(:archived, true)
+  end
 end

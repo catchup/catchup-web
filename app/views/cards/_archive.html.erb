@@ -1,4 +1,3 @@
 <%= form_for [:archive, card.board, card] do |f| %>
-  <%= f.hidden_field :archived, value: true %>
   <%= f.submit t(".submit") %>
 <% end %>
