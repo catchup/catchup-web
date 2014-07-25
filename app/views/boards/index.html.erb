@@ -1,9 +1,7 @@
-<ul>
-  <% @boards.each do |board| %>
-    <li><%= link_to board.title, board %></li>
-  <% end %>
-</ul>
-
-<br>
-
+<!-- TODO: @as-cii: `*en.yml` please. ;-) -->
+<h1 class="title">Here they are. What are you waiting for?<br><strong>Pick either one of them!</strong></h1>
+<div class="board-list clearfix">
+  <!-- TODO: @as-cii: is this okay? Would you rather do it differently? -->
+  <%= render partial: "preview", collection: @boards %>
+</div>
 <%= render "form", board: Board.new %>
