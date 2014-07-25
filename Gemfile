@@ -12,6 +12,7 @@ gem 'postmark-rails'
 gem 'pg'
 gem 'pusher'
 gem 'ranked-model'
+gem 'redcarpet'
 gem 'sass-rails', '~> 4.0.3'
 gem 'spring',        group: :development
 gem 'turbolinks'
