@@ -6,6 +6,7 @@
     <meta name="description" content="<%= content_for(:description).presence || "Task Planner" %>">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'standardize', media: 'all', 'data-turbolinks-track' => true %>
     <%# Controller specific stylesheet %>
     <% if TaskPlanner::Application.assets.find_asset "#{controller_name}.css" %>
       <%= stylesheet_link_tag "#{controller_name}" %>
@@ -17,9 +18,8 @@
     <%= content_for :head %>
   </head>
   <body>
-    <%= content_tag :h1, t('greeting', user: current_user.email) if signed_in? %>
 
-    <%= link_to t('see_boards'), boards_path %>
+    <%= render "header" %>
 
     <%= render "flashes" %>
 

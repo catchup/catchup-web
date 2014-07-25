@@ -1,0 +1,11 @@
+<header class="_container _container-1">
+  <nav class="_container _container-2 clearfix">
+    <a href="<%= boards_path %>" class="goto-boards"><%= t('see_boards') %></a>
+  </nav>
+  <div class="info-section clearfix">
+    <% if signed_in? %>
+    <!-- TODO: @as-cii: could you please fix this using *.yml, without f**king up with the markup much? ;-) -->
+    <h1 class="grettings">Hi, <strong><%= current_user.email %></strong>!</h1>
+    <% end %>
+  </div>
+</header>

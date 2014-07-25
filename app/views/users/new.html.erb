@@ -1,4 +1,16 @@
-<%= form_for @user do |f| %>
-  <%= f.text_field :email %>
-  <%= f.submit t('.login') %>
+<!-- TODO: @as-cii: do you think could you rewrite the following `form_for` as
+
+```html
+<form class="sign-in sign-in-1 clearfix" ...>
+```
+
+Instead?
+-->
+<%= form_for @user, html: { class: "sign-in sign-in-1 clearfix" } do |f| %>
+  <!-- TODO: @as-cii: could you extract the text below into `*.yml` without f**king up much with the markup? -->
+  <p class="slogan">You can&nbsp;<a href="<%= boards_path %>">check out boards</a>&nbsp;now<br>and join us when ready.</p>
+  <div class="form-fields clearfix">
+    <input class="email" name="user[email]" placeholder="email address" type="email">
+    <button class="sign-in" type="submit"><%= t('.login') %></button>
+  </div>
 <% end %>

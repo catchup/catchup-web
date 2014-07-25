@@ -21,7 +21,7 @@
 
 en:
   greeting: Welcome %{user}
-  see_boards: See Boards
+  see_boards: Go to boards
   users:
     new:
       login: Enter
