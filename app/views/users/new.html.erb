@@ -1,8 +1,4 @@
-<% content_for :greeting_or_login do %>
-
-  <%= form_for @user do |f| %>
-    <%= f.text_field :email %>
-    <%= f.submit t('.login') %>
-  <% end %>
-
+<%= form_for @user do |f| %>
+  <%= f.text_field :email %>
+  <%= f.submit t('.login') %>
 <% end %>
