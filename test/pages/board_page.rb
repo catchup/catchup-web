@@ -5,7 +5,7 @@ module BoardPage
 
   def create_card(title)
     fill_in "card[title]", with: title
-    click_on "Create Card"
+    click_on t("cards.create.submit")
 
     card(title)
   end
@@ -27,9 +27,7 @@ module BoardPage
   end
 
   def show_card(card_container)
-    within card_container do
-      click_on card_container.text
-    end
+    click_on card_container.text
   end
 
   def lists

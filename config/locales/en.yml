@@ -39,6 +39,7 @@ en:
       suggest: Here they are. What are you waiting for?<br><strong>Pick either one of them!</strong>
   cards:
     create:
+      submit: Create
       error: There was some error while creating this card
     archive:
       submit: Archive

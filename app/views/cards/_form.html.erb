@@ -1,5 +1,4 @@
-<!-- TODO: @as-cii: same issue: `form_for` vs `<form>` tag. -->
-<%= form_for [board, card], html: { class: "create-board clearfix" } do %>
-  <input class="card-name" name="card[title]" placeholder="type here to create a new card…" type="text">
-  <button class="create" type="submit">Create<br></button>
+<%= form_for [board, card], html: { class: "create-board clearfix" } do |f| %>
+  <%= f.text_field :title, placeholder: "type here to create a new card…", class: "card-name" %>
+  <%= f.submit t("cards.create.submit"), class: "create" %>
 <% end %>
