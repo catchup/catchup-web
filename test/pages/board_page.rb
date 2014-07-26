@@ -12,7 +12,7 @@ module BoardPage
 
   def create_board(title)
     fill_in "board[title]", with: title
-    click_on "Create Board"
+    click_on t("boards.create.submit")
   end
 
   def card(title)

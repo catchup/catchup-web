@@ -1,16 +1,7 @@
-<!-- TODO: @as-cii: do you think could you rewrite the following `form_for` as
-
-```html
-<form class="create-board clearfix" ...>
-```
-
-Instead?
--->
 <%= form_for board, html: { class: "create-board clearfix" } do |f| %>
-  <!-- TODO: @as-cii: `*en.yml` please. ;-) -->
-  <p class="form-title">… or maybe <strong>create a new one</strong>?</p>
+  <p class="form-title"><%= t("boards.create.suggest").html_safe %></p>
   <div class="form-fields clearfix">
-    <input class="board-name" name="board[title]" placeholder="board title" type="text">
-    <button class="sign-in" type="submit">Do it!</button>
+    <%= f.text_field :title, placeholder: "board title", class: "board-name" %>
+    <%= f.submit t("boards.create.submit"), class: "sign-in" %>
   </div>
 <% end %>

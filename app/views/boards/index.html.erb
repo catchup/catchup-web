@@ -1,7 +1,5 @@
-<!-- TODO: @as-cii: `*en.yml` please. ;-) -->
-<h1 class="title">Here they are. What are you waiting for?<br><strong>Pick either one of them!</strong></h1>
+<h1 class="title"><%= t("boards.index.suggest").html_safe %></h1>
 <div class="board-list clearfix">
-  <!-- TODO: @as-cii: is this okay? Would you rather do it differently? -->
-  <%= render partial: "preview", collection: @boards %>
+  <%= render @boards %>
 </div>
 <%= render "form", board: Board.new %>
