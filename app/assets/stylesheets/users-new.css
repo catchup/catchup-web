@@ -49,7 +49,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.grettings {
+.greeting {
   display: inline-block;
   float: right;
   margin-right: 24px;
@@ -113,7 +113,7 @@ body {
   font-weight: inherit;
 }
 
-.grettings strong {
+.greeting strong {
   font-weight: 700;
 }
 

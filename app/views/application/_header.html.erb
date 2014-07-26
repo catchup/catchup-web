@@ -4,8 +4,7 @@
   </nav>
   <div class="info-section clearfix">
     <% if signed_in? %>
-    <!-- TODO: @as-cii: could you please fix this using *.yml, without f**king up with the markup much? ;-) -->
-    <h1 class="grettings">Hi, <strong><%= current_user.email %></strong>!</h1>
+    <h1 class="greeting"><%= t("greeting", user: current_user.email).html_safe %></h1>
     <% end %>
   </div>
 </header>

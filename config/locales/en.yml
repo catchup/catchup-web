@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  greeting: Welcome %{user}
+  greeting: Hi, <strong>%{user}</strong>
   see_boards: Go to boards
   users:
     new:

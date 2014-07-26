@@ -85,7 +85,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.grettings {
+.greeting {
   display: inline-block;
   float: right;
   margin-right: 24px;
@@ -184,7 +184,7 @@ body {
 }
 
 .form-title strong,
-.grettings strong,
+.greeting strong,
 .title strong {
   font-weight: 700;
 }
