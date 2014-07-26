@@ -1,4 +1,4 @@
 <%= form_for [board, card], html: { class: "create-board clearfix" } do |f| %>
-  <%= f.text_field :title, placeholder: "type here to create a new card…", class: "card-name" %>
+  <%= f.text_field :title, placeholder: t("cards.create.title-placeholder"), class: "card-name" %>
   <%= f.submit t("cards.create.submit"), class: "create" %>
 <% end %>

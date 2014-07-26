@@ -1,7 +1,7 @@
 <%= form_for board, html: { class: "create-board clearfix" } do |f| %>
   <p class="form-title"><%= t("boards.create.suggest").html_safe %></p>
   <div class="form-fields clearfix">
-    <%= f.text_field :title, placeholder: "board title", class: "board-name" %>
+    <%= f.text_field :title, placeholder: t("boards.create.title-placeholder"), class: "board-name" %>
     <%= f.submit t("boards.create.submit"), class: "sign-in" %>
   </div>
 <% end %>

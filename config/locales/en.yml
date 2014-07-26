@@ -24,7 +24,9 @@ en:
   see_boards: Go to boards
   users:
     new:
+      email-placeholder: email address
       login: Enter
+      slogan: 'You can&nbsp;<a href="%{boards_path}">check out boards</a>&nbsp;now<br>and join us when ready.'
   lists:
     list:
       todo: To Do
@@ -35,12 +37,14 @@ en:
       error: There was some error while creating this board
       submit: Do it!
       suggest: … or maybe <strong>create a new one</strong>?
+      title-placeholder: board title
     index:
       suggest: Here they are. What are you waiting for?<br><strong>Pick either one of them!</strong>
   cards:
     create:
-      submit: Create
       error: There was some error while creating this card
+      submit: Create
+      title-placeholder: type here to create a new card…
     archive:
       submit: Archive
   comments:
