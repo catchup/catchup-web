@@ -1,0 +1,207 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 400 1em/1.38 Helvetica;
+  color: rgb(50, 120, 105);
+}
+
+.board {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 11px;
+}
+
+.board-header {
+  float: left;
+  width: 100%;
+  height: 68px;
+}
+
+.board-header .title {
+  width: 467px;
+  margin: 10px 0 0 24px;
+}
+
+.card {
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 80px;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: rgb(195, 230, 222);
+}
+
+.card-name {
+  display: block;
+  float: left;
+  width: 85.1963746223%;
+  height: 38px;
+  padding: 0 10px;
+  border-top: 1px solid rgb(87, 185, 164);
+  border-bottom: 1px solid rgb(87, 185, 164);
+  border-left: 1px solid rgb(87, 185, 164);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.38;
+  color: rgb(87, 185, 164);
+}
+
+.card-name:active,
+.card-name:focus,
+.card-name:hover {
+  bottom: auto;
+  right: auto;
+  margin-right: 0;
+}
+
+.cards-container {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 831px;
+  margin-top: 9px;
+  overflow: scroll;
+}
+
+.container {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.create {
+  display: block;
+  float: left;
+  width: 98px;
+  height: 38px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: rgb(87, 185, 164);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.create-board {
+  position: relative;
+  float: right;
+  width: 55.1666666666%;
+  height: 38px;
+  margin: 10px 2% 0 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.goto-boards {
+  display: inline-block;
+  float: left;
+  margin-left: 24px;
+  font-size: 1.375em;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+.grettings {
+  display: inline-block;
+  float: right;
+  margin-right: 24px;
+  font-size: 1.375em;
+  line-height: 1.38;
+  color: rgb(255, 255, 255);
+}
+
+.info-section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 18;
+  width: 100%;
+  height: 30px;
+  margin: auto 0;
+}
+
+.list {
+  float: left;
+  width: 30.75%;
+  min-width: 300px;
+  padding: 4px;
+  border: 1px solid rgb(87, 185, 164);
+  border-radius: 4px;
+}
+
+.list .title {
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.38;
+  color: rgb(50, 120, 105);
+}
+
+.title {
+  float: left;
+  font-size: 1.75em;
+  line-height: 1.38;
+  color: rgb(87, 185, 164);
+}
+
+.list-1 {
+  margin-left: 24px;
+}
+
+.list-2 {
+  margin-left: 22px;
+}
+
+._container-1 {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(87, 185, 164);
+}
+
+._container-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 30px;
+  margin: auto 0;
+}
+
+.grettings strong {
+  font-weight: 700;
+}
+
+.text strong,
+.title strong {
+  font-weight: inherit;
+}
+
+.title a {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.title a:active,
+.title a:focus,
+.title a:hover {
+  color: inherit;
+}

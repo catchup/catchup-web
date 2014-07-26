@@ -1,9 +1,9 @@
-<div data-role="board" data-board-id="<%= @board.id %>" class="board">
-  <h1><%= @board.title %></h1>
-
-  <%= render "cards/form", card: Card.new, board: @board %>
-
-  <div class="board-lists">
+<div class="board clearfix" data-role="board" data-board-id="<%= @board.id %>">
+  <div class="board-header clearfix">
+    <h1 class="title"><%= @board.title %></h1>
+    <%= render "cards/form", card: Card.new, board: @board %>
+  </div>
+  <div class="container clearfix">
     <%= render @board.lists %>
   </div>
 </div>
