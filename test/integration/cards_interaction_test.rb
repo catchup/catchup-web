@@ -45,12 +45,12 @@ class CardsInteractionTest < JavascriptTest
 
     # When I create a card
     Capybara.session_name = user_1
-    create_card("User 1 Card")
+    create_card("Create card")
 
     # Then the other user sees it in realtime
     Capybara.session_name = user_2
     within lists.first do
-      assert has_card?("User 1 Card")
+      assert has_card?("Create card")
     end
   end
 
@@ -59,7 +59,7 @@ class CardsInteractionTest < JavascriptTest
     Capybara.session_name = user_1
     visit_boards
     create_board("Board 3")
-    card = create_card("User 1 Card")
+    card = create_card("Moving card")
 
     # And another user on the same board
     Capybara.session_name = user_2
@@ -72,7 +72,7 @@ class CardsInteractionTest < JavascriptTest
     # Then the other user sees it in realtime
     Capybara.session_name = user_2
     within lists.third do
-      assert has_card?("User 1 Card")
+      assert has_card?("Moving card")
     end
   end
 
@@ -81,7 +81,7 @@ class CardsInteractionTest < JavascriptTest
     Capybara.session_name = user_1
     visit_boards
     create_board("Board 3")
-    card = create_card("User 1 Card")
+    card = create_card("Archiving card")
 
     # And another user on the same board
     Capybara.session_name = user_2
@@ -94,6 +94,6 @@ class CardsInteractionTest < JavascriptTest
 
     # Then the other user sees it disappear in realtime
     Capybara.session_name = user_2
-    refute has_card?("User 1 Card")
+    refute has_card?("Archiving card")
   end
 end
