@@ -42,6 +42,7 @@ class CardsInteractionTest < JavascriptTest
     # And another user on the same board
     Capybara.session_name = user_2
     visit_board("Board 2")
+    sleep 1
 
     # When I create a card
     Capybara.session_name = user_1
@@ -64,6 +65,7 @@ class CardsInteractionTest < JavascriptTest
     # And another user on the same board
     Capybara.session_name = user_2
     visit_board("Board 3")
+    sleep 1
 
     # When I create a card and I move it
     Capybara.session_name = user_1
@@ -86,6 +88,7 @@ class CardsInteractionTest < JavascriptTest
     # And another user on the same board
     Capybara.session_name = user_2
     visit_board("Board 3")
+    sleep 1
 
     # When I archive that card
     Capybara.session_name = user_1
