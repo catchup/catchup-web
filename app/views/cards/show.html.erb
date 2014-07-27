@@ -1,6 +1,8 @@
-<h2><%= @card.title %></h2>
-
-<%= render "cards/archive", card: @card %>
-<%= render "comments/form", comment: Comment.new, card: @card %>
-
-<%= render @card.comments %>
+<div class="card-header clearfix">
+  <h1 class="card-title"><%= @card.title %></h1>
+  <%= render "cards/archive", card: @card %>
+</div>
+<div class="card-comments clearfix">
+  <%= render "comments/form", comment: Comment.new, card: @card %>
+  <%= render @card.comments %>
+</div>
