@@ -24,8 +24,3 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
-
-# Styling
-gem 'bourbon'
-gem 'neat'
-gem 'normalize-rails'

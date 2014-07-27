@@ -1,11 +1,10 @@
-<header>
-
-  <nav>
-    <%= link_to t('see_boards'), boards_path %>
+<header class="_container _container-1">
+  <nav class="_container _container-2 clearfix">
+    <a href="<%= boards_path %>" class="goto-boards"><%= t('see_boards') %></a>
   </nav>
-
-  <div class="header-right">
-    <%= content_for :greeting_or_login %>
+  <div class="info-section clearfix">
+    <% if signed_in? %>
+    <h1 class="greeting"><%= t("greeting", user: current_user.email).html_safe %></h1>
+    <% end %>
   </div>
-
 </header>

@@ -1,9 +1,5 @@
-<ul>
-  <% @boards.each do |board| %>
-    <li><%= link_to board.title, board %></li>
-  <% end %>
-</ul>
-
-<br>
-
+<h1 class="title"><%= t("boards.index.suggest").html_safe %></h1>
+<div class="board-list clearfix">
+  <%= render @boards %>
+</div>
 <%= render "form", board: Board.new %>
