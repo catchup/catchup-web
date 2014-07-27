@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'standardize', media: 'all', 'data-turbolinks-track' => true %>
     <%# Controller specific stylesheet %>
     <% if TaskPlanner::Application.assets.find_asset "#{controller_name}-#{action_name}.css" %>
-      <%= stylesheet_link_tag "#{controller_name}-#{action_name}" %>
+      <%= stylesheet_link_tag "#{controller_name}-#{action_name}", media: 'all', 'data-turbolinks-track' => true %>
     <% end %>
 
     <%= csrf_meta_tags %>
