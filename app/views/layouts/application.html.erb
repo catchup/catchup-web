@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= content_for(:title).presence || "Task Planner" %></title>
-    <meta name="description" content="<%= content_for(:description).presence || "Task Planner" %>">
+    <title><%= content_for(:title).presence || "catchup.io" %></title>
+    <meta name="description" content="<%= content_for(:description).presence || "catchup.io" %>">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'standardize', media: 'all', 'data-turbolinks-track' => true %>
     <%# Controller specific stylesheet %>
-    <% if TaskPlanner::Application.assets.find_asset "#{controller_name}-#{action_name}.css" %>
+    <% if CatchupWeb::Application.assets.find_asset "#{controller_name}-#{action_name}.css" %>
       <%= stylesheet_link_tag "#{controller_name}-#{action_name}", media: 'all', 'data-turbolinks-track' => true %>
     <% end %>
 

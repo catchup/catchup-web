@@ -5,12 +5,12 @@ default: &default
 
 development:
   <<: *default
-  database: task-planner-dev
+  database: catchup-web-dev
 
 test:
   <<: *default
-  database: task-planner-test
+  database: catchup-web-test
 
 production:
   <<: *default
-  database: task-planner-prod
+  database: catchup-web-prod
