@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= stylesheet_link_tag    'standardize', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'github-markdown', media: 'all', 'data-turbolinks-track' => true %>
     <%# Controller specific stylesheet %>
     <% if CatchupWeb::Application.assets.find_asset "#{controller_name}-#{action_name}.css" %>
       <%= stylesheet_link_tag "#{controller_name}-#{action_name}", media: 'all', 'data-turbolinks-track' => true %>
