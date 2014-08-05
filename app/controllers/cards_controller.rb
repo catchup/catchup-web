@@ -23,14 +23,9 @@ class CardsController < ApplicationController
 
   def move
     @card = board.cards.find(params[:id])
-    @card.move_to(move_params.symbolize_keys)
+    @card.move_to(move_params)
 
-    Pusher.trigger(
-      "board_#{@card.list.board_id}",
-      "move_card",
-      id: @card.id, list_id: @card.list_id, position: move_params.fetch(:position)
-    )
-    CardMailer.card_moved(@card).deliver
+    CardsNotification.publish(:card_moved, @card, move_params)
 
     render nothing: true
   end
@@ -60,6 +55,6 @@ class CardsController < ApplicationController
   end
 
   def move_params
-    params.require(:card).permit(:list_id, :position)
+    params.require(:card).permit(:list_id, :position).symbolize_keys
   end
 end
