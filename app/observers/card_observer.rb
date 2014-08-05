@@ -1,6 +1,6 @@
 class CardObserver
   def self.publish(event, model, params = nil)
-    new().publish(event, model, params)
+    new.publish(event, model, params)
   end
 
   def publish(event, model, params)
