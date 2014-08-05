@@ -1,11 +1,15 @@
-class CardsNotification
-  def self.publish(event, model, params)
+class CardObserver
+  def self.publish(event, model, params = nil)
     new().publish(event, model, params)
   end
 
   def publish(event, model, params)
     observers.each do |observer|
-      observer.send(event, model, params)
+      if params
+        observer.send(event, model, params)
+      else
+        observer.send(event, model)
+      end
     end
   end
 

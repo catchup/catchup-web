@@ -4,12 +4,7 @@ class CardsController < ApplicationController
 
     if @card.valid?
       card_html = render_to_string(@card)
-      Pusher.trigger(
-        "board_#{@card.list.board_id}",
-        "new_card",
-        id: @card.id, list_id: @card.list_id, html: card_html
-      )
-      CardMailer.new_card(@card).deliver
+      CardObserver.publish(:card_created, @card, card_html)
     else
       flash[:alert] = I18n.t("cards.create.error")
     end
@@ -25,7 +20,7 @@ class CardsController < ApplicationController
     @card = board.cards.find(params[:id])
     @card.move_to(move_params)
 
-    CardsNotification.publish(:card_moved, @card, move_params)
+    CardObserver.publish(:card_moved, @card, move_params)
 
     render nothing: true
   end
@@ -34,12 +29,7 @@ class CardsController < ApplicationController
     @card = board.cards.find(params[:id])
     @card.archive
 
-    Pusher.trigger(
-      "board_#{@card.list.board_id}",
-      "archive_card",
-      id: @card.id, list_id: @card.list_id
-    )
-    CardMailer.card_archived(@card).deliver
+    CardObserver.publish(:card_archived, @card)
 
     redirect_to [@card.board, @card]
   end
