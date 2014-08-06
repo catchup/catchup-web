@@ -11,10 +11,12 @@ class CardTest < ActiveSupport::TestCase
     third = list.cards.third
 
     third.move_to(
+      list_id: list.id,
       position: 0
     )
 
     assert_equal third, list.cards.reload.first
+    refute third.changed_list?
   end
 
   test 'move into another list' do
@@ -34,6 +36,7 @@ class CardTest < ActiveSupport::TestCase
 
     assert_not list_1.cards.reload.include?(first)
     assert_equal first, list_2.cards.reload.second
+    assert first.changed_list?
   end
 
   test "posts a comment on the card" do

@@ -14,6 +14,10 @@ class ActionMailer::TestCase
     email.to.include?(users(:ali).email) &&
     email.to.include?(users(:antonio).email)
   end
+
+  def delivered_email?
+    ActionMailer::Base.deliveries.last != nil
+  end
 end
 
 class ActionDispatch::IntegrationTest
