@@ -16,6 +16,6 @@ class CardObserver
   private
 
   def observers
-    [::CardRealtime, ::CardMailNotifier]
+    [::CardRealtime, ::CardMailSender]
   end
 end

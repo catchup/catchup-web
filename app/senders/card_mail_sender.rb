@@ -1,4 +1,4 @@
-class CardMailNotifier
+class CardMailSender
   def self.card_moved(card, _)
     CardMailer.card_moved(card).deliver if card.changed_list?
   end
