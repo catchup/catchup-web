@@ -12,7 +12,7 @@ class Card < ActiveRecord::Base
   validates :title, presence: true
 
   def move_to(list_id: nil, position:)
-    changed_list! if list_id != self.list_id
+    changed_list! if Integer(list_id) != self.list_id
 
     update_attribute(:list_id, list_id) if list_id
     update_attribute(:position_position, position)
