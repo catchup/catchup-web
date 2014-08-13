@@ -1,4 +1,6 @@
 class CommentMailer < GlobalMailer
+  helper ApplicationHelper
+
   def new_comment(comment)
     @comment = comment
     @card    = comment.card
