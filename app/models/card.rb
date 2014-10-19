@@ -34,4 +34,12 @@ class Card < ActiveRecord::Base
   def archive
     update_attribute(:archived, true)
   end
+
+  def app_name
+    "catchup-web"
+  end
+
+  def branch_tarball
+    "https://github.com/catchup/catchup-web/archive/whatever.tar.gz"
+  end
 end
