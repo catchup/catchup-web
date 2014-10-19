@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :cards, only: [] do
     resources :comments, only: :create
+    resources :previews, only: :create
   end
 
   root to: 'users#new'

@@ -1,22 +1,12 @@
-class PreviewsController
+class PreviewsController < ApplicationController
   def create
-    # TODO: this whole process should happen in background. see SuckerPunch or
-    #       sidekiq.
-
-    # TODO: this should be random
-    app_name    = "catchup-web-forks"
-
-    # TODO: this should be set by the user somehow
-    tarball     = "https://github.com/catchup/catchup-web/archive/whatever.tar.gz"
-
-    origin      = Heroku::Application.from_name("catchup-web")
-    destination = Heroku::Application.from_name(app_name)
-
-    destination.destroy
-    origin.fork_into(destination)
-    destination.deploy_branch(tarball)
-    destination.run_command("rake db:migrate")
-
-    redirect_to destination.url
+    # TODO: get app name from card
+    # TODO: get fork name randomly
+    # TODO: get tarball from card
+    PreviewJob.new.async.perform(
+      Heroku::Application.from_name("catchup-web"),
+      Heroku::Application.from_name("catchup-web-fork"),
+      "https://github.com/catchup/catchup-web/archive/whatever.tar.gz"
+    )
   end
 end
