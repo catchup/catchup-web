@@ -1,4 +1,4 @@
-require 'platform-api'
+require "platform-api"
 
 module Heroku
   class Application < Struct.new(:name)
