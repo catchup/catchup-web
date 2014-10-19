@@ -5,8 +5,11 @@ class PreviewsController < ApplicationController
     PreviewJob.new.async.perform(
       Heroku::Application.from_name(card.app_name),
       Heroku::Application.from_name(random_suffix(card.app_name)),
-      card.branch_tarball
+      card.branch_tarball,
+      card
     )
+
+    redirect_to [card.board, card]
   end
 
   private

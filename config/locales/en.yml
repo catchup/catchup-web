@@ -45,8 +45,12 @@ en:
       error: There was some error while creating this card
       submit: Create
       title-placeholder: type here to create a new card…
+      tarball-placeholder: https://github.com/catchup/catchup-web/archive/<branch>.tar.gz
+      app-name-placeholder: catchup-web
     archive:
       submit: Archive
+    preview:
+      submit: Preview
   comments:
     create:
       error: There was some error while creating this comment

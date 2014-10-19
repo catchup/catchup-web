@@ -1,3 +1,5 @@
 cool_feature:
   title: Cool Feature
+  branch_tarball: https://github.com/catchup/catchup-web/archive/whatever.tar.gz
+  app_name: catchup-web
   list: todo

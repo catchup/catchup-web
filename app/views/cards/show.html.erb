@@ -1,6 +1,9 @@
 <div class="card-header clearfix">
   <h1 class="card-title"><%= @card.title %></h1>
   <%= render "cards/archive", card: @card %>
+  <%= render "cards/preview", card: @card %>
+
+  <%= link_to @card.preview_url, @card.preview_url if @card.preview_url? %>
 </div>
 <div class="card-comments clearfix">
   <%= render "comments/form", comment: Comment.new, card: @card %>
