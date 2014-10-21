@@ -13,6 +13,7 @@ module Heroku
     def destroy
       heroku_platform.app.delete(name)
     rescue Excon::Errors::NotFound
+    rescue Excon::Errors::Forbidden
       false
     end
 
@@ -54,6 +55,7 @@ module Heroku
       command = "HEROKU_API_KEY=#{api_key} \
                  bundle exec heroku #{command} --app #{name} #{arguments}"
 
+      # TODO: Provide a better solution for logging. (e.g. via Rails logger)
       system(command)
     end
 
