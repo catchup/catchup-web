@@ -22,7 +22,7 @@ module Heroku
         "source_blob" => { "url" => tarball, "version" => "preview" }
       )
 
-      wait_build_completion(build["id"])
+      wait_build_completion(build)
     end
 
     def fork_into(application)
@@ -39,11 +39,11 @@ module Heroku
       @heroku_platform ||= PlatformAPI.connect_oauth(api_key)
     end
 
-    def wait_build_completion(build_id, poll_interval: 5)
+    def wait_build_completion(build, poll_interval: 5)
       loop do
         sleep poll_interval
         begin
-          info = heroku_platform.build.info(name, build_id)
+          info = heroku_platform.build.info(name, build["id"])
           return if info["status"] != "pending"
         rescue Excon::Errors::ServiceUnavailable
         end
