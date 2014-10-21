@@ -6,6 +6,8 @@
   <%= link_to @card.preview_url, @card.preview_url if @card.preview_url? %>
 </div>
 <div class="card-comments clearfix">
+  <% if signed_in? %>
   <%= render "comments/form", comment: Comment.new, card: @card %>
+  <% end %>
   <%= render @card.comments %>
 </div>
