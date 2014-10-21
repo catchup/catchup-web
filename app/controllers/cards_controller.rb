@@ -41,7 +41,7 @@ class CardsController < ApplicationController
   end
 
   def card_params
-    params.require(:card).permit(:title)
+    params.require(:card).permit(:title, :branch_tarball, :app_name)
   end
 
   def move_params

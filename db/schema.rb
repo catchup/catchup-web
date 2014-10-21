@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724092309) do
+ActiveRecord::Schema.define(version: 20141019114125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20140724092309) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
-    t.boolean  "archived",   default: false
+    t.boolean  "archived",       default: false
+    t.string   "branch_tarball"
+    t.string   "app_name"
+    t.string   "preview_url"
   end
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree
