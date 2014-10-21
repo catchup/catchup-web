@@ -39,9 +39,9 @@ module Heroku
       @heroku_platform ||= PlatformAPI.connect_oauth(api_key)
     end
 
-    def wait_build_completion(build_id)
+    def wait_build_completion(build_id, poll_interval: 5)
       loop do
-        sleep 5
+        sleep poll_interval
         begin
           info = heroku_platform.build.info(name, build_id)
           return if info["status"] != "pending"
