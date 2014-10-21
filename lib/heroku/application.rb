@@ -25,17 +25,6 @@ module Heroku
       wait_build_completion(build["id"])
     end
 
-    def wait_build_completion(build_id)
-      loop do
-        sleep 5
-        begin
-          info = heroku_platform.build.info(name, build_id)
-          return if info["status"] != "pending"
-        rescue Excon::Errors::ServiceUnavailable
-        end
-      end
-    end
-
     def fork_into(application)
       heroku_clt("fork", application.name)
     end
@@ -48,6 +37,17 @@ module Heroku
 
     def heroku_platform
       @heroku_platform ||= PlatformAPI.connect_oauth(api_key)
+    end
+
+    def wait_build_completion(build_id)
+      loop do
+        sleep 5
+        begin
+          info = heroku_platform.build.info(name, build_id)
+          return if info["status"] != "pending"
+        rescue Excon::Errors::ServiceUnavailable
+        end
+      end
     end
 
     def heroku_clt(command, arguments)
