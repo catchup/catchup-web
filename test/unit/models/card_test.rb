@@ -60,4 +60,12 @@ class CardTest < ActiveSupport::TestCase
     assert card.archived?
     refute unarchived_cards.include?(card)
   end
+
+  test "involved users are the same as board ones" do
+    board = stub(subscribers: [stub, stub])
+    card  = cards(:cool_feature)
+    card.stubs(:board).returns(board)
+
+    assert_equal board.subscribers, card.involved_users
+  end
 end

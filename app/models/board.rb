@@ -5,6 +5,9 @@ class Board < ActiveRecord::Base
 
   has_many :lists, -> { order(position: :asc) }
   has_many :cards, through: :lists
+  has_and_belongs_to_many :subscribers,
+                          join_table: "boards_subscriptions",
+                          class_name: "User"
 
   def add_list!(params)
     lists.create(params)
@@ -12,6 +15,18 @@ class Board < ActiveRecord::Base
 
   def create_card(params)
     lists.first.create_card(params)
+  end
+
+  def toggle_subscription_for(user)
+    if has_subscriber?(user)
+      subscribers.delete(user)
+    else
+      subscribers << user
+    end
+  end
+
+  def has_subscriber?(user)
+    subscribers.where(id: user.id).exists?
   end
 
   private
