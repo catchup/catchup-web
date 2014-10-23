@@ -3,12 +3,11 @@ class CommentMailer < ActionMailer::Base
 
   default(from: "asd@pittle.org")
 
-  def new_comment(comment)
+  def new_comment(comment, recipients)
     @comment = comment
     @card    = comment.card
     @user    = comment.user
-    recipients = comment.involved_users.map(&:email)
 
-    mail(subject: "New comment on card #{@card.title}", to: recipients)
+    mail(subject: "New comment on card #{@card.title}", to: recipients.map(&:email))
   end
 end

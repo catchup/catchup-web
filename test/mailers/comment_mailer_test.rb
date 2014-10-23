@@ -1,12 +1,9 @@
 require "test_helper"
 
 class CommentMailerTest < ActionMailer::TestCase
-  test "new_comment is sent to all the users" do
+  test "new_comment is sent to card involved users" do
     involved_users     = [users(:ali)]
-    irrelevant_comment = comments(:greeting)
-    irrelevant_comment.stubs(:involved_users).returns(involved_users)
-
-    email = CommentMailer.new_comment comments(:greeting)
+    email = CommentMailer.new_comment(comments(:greeting), involved_users)
 
     assert_equal involved_users.map(&:email), email.to
   end
