@@ -13,6 +13,6 @@ module CardPage
   end
 
   def has_comment?(text)
-    page.has_selector? "[data-role='comment']", text: text
+    page.has_text? text
   end
 end
