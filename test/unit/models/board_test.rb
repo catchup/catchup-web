@@ -22,11 +22,9 @@ class BoardTest < ActiveSupport::TestCase
   test "unsubscribes a user if toggles his subscription twice" do
     board = boards(:development)
 
-    board.toggle_subscription_for users(:antonio)
     board.toggle_subscription_for users(:ali)
     board.toggle_subscription_for users(:ali)
 
-    assert board.has_subscriber? users(:antonio)
     refute board.has_subscriber? users(:ali)
   end
 end
