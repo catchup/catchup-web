@@ -1,7 +1,7 @@
 class CommentMailer < ActionMailer::Base
-  helper ApplicationHelper
+  include SystemNotification
 
-  default(from: "asd@pittle.org")
+  helper ApplicationHelper
 
   def new_comment(comment, recipients)
     @comment = comment

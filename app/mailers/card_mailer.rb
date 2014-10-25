@@ -1,5 +1,5 @@
 class CardMailer < ActionMailer::Base
-  default(from: "asd@pittle.org")
+  include SystemNotification
 
   def new_card(card, recipients)
     @card  = card
