@@ -34,4 +34,8 @@ class Card < ActiveRecord::Base
   def archive
     update_attribute(:archived, true)
   end
+
+  def involved_users
+    board.subscribers
+  end
 end

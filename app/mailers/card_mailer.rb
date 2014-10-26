@@ -1,23 +1,25 @@
-class CardMailer < GlobalMailer
-  def new_card(card)
+class CardMailer < ActionMailer::Base
+  include SystemNotification
+
+  def new_card(card, recipients)
     @card  = card
     @board = card.list.board
 
-    mail(subject: "New card on #{@board.title}")
+    mail(subject: "New card on #{@board.title}", to: recipients.map(&:email))
   end
 
-  def card_moved(card)
+  def card_moved(card, recipients)
     @list  = card.list
     @board = @list.board
     @card  = card
 
-    mail(subject: "Card moved on #{@board.title}")
+    mail(subject: "Card moved on #{@board.title}", to: recipients.map(&:email))
   end
 
-  def card_archived(card)
+  def card_archived(card, recipients)
     @board = card.board
     @card  = card
 
-    mail(subject: "Card archived on #{@board.title}")
+    mail(subject: "Card archived on #{@board.title}", to: recipients.map(&:email))
   end
 end

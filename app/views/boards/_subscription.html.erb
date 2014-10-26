@@ -1,0 +1,6 @@
+<%= form_for [:toggle_subscription, board] do |f| %>
+  <%= label_tag t(".receive-notifications") %>
+  <%= check_box_tag :subscribe, "", board.has_subscriber?(current_user) %>
+
+  <%= f.submit t(".submit") %>
+<% end %>

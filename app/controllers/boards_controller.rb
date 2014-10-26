@@ -20,6 +20,13 @@ class BoardsController < ApplicationController
     end
   end
 
+  def toggle_subscription
+    board = Board.find(params[:id])
+    board.toggle_subscription_for(current_user)
+
+    redirect_to board
+  end
+
   private
 
   def board_params

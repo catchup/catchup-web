@@ -1,21 +1,29 @@
 require "test_helper"
 
 class CardMailerTest < ActionMailer::TestCase
-  test "new_card is sent to all the users" do
-    email = CardMailer.new_card cards(:cool_feature)
-
-    assert sent_to_everyone?(email)
+  def setup
+    @irrelevant_card = cards(:cool_feature)
+    @involved_users  = [users(:antonio)]
   end
 
-  test "card_moved is sent to all the users" do
-    email = CardMailer.card_moved cards(:cool_feature)
-
-    assert sent_to_everyone?(email)
+  test "new_card is sent to involved users only" do
+    email = CardMailer.new_card(@irrelevant_card, @involved_users)
+    assert sent_to_involved_users?(email)
   end
 
-  test "card_archived is sent to all the users" do
-    email = CardMailer.card_archived cards(:cool_feature)
+  test "card_moved is sent to involved users only" do
+    email = CardMailer.card_moved(@irrelevant_card, @involved_users)
+    assert sent_to_involved_users?(email)
+  end
 
-    assert sent_to_everyone?(email)
+  test "card_archived is sent to involved users only" do
+    email = CardMailer.card_archived(@irrelevant_card, @involved_users)
+    assert sent_to_involved_users?(email)
+  end
+
+  private
+
+  def sent_to_involved_users?(email)
+    @involved_users.map(&:email) == email.to
   end
 end

@@ -4,4 +4,8 @@ class Comment < ActiveRecord::Base
 
   validates :text, presence: true
   validates :user, presence: true
+
+  def involved_users
+    card.involved_users
+  end
 end
