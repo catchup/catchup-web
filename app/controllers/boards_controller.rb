@@ -27,9 +27,16 @@ class BoardsController < ApplicationController
     redirect_to board
   end
 
+  def update
+    board = Board.find(params[:id])
+    board.update_attributes(board_params)
+
+    redirect_to board
+  end
+
   private
 
   def board_params
-    params.require(:board).permit(:title)
+    params.require(:board).permit(:title, :heroku_api_key)
   end
 end
