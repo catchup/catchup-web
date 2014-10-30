@@ -43,6 +43,9 @@ en:
     subscription:
       receive-notifications: Receive Notifications?
       submit: Update Preference
+    heroku:
+      api-key: Your Heroku API Key
+      submit: Save Heroku Settings
   cards:
     create:
       error: There was some error while creating this card

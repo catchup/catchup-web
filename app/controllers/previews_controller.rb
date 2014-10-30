@@ -1,15 +1,16 @@
 class PreviewsController < ApplicationController
   def create
-    card = Card.find(params[:card_id])
+    card  = Card.find(params[:card_id])
+    board = card.board
 
     PreviewJob.new.async.perform(
-      Heroku::Application.from_name(card.app_name),
-      Heroku::Application.from_name(random_suffix(card.app_name)),
+      Heroku::Application.with(name: card.app_name, api_key: board.heroku_api_key),
+      Heroku::Application.with(name: random_suffix(card.app_name), api_key: board.heroku_api_key),
       card.branch_tarball,
       card
     )
 
-    redirect_to [card.board, card]
+    redirect_to [board, card]
   end
 
   private

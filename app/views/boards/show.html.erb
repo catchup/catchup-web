@@ -2,6 +2,7 @@
   <div class="board-header clearfix">
     <h1 class="title"><%= @board.title %></h1>
     <%= render "boards/subscription", board: @board if signed_in? %>
+    <%= render "boards/heroku", board: @board %>
     <%= render "cards/form", card: Card.new, board: @board %>
   </div>
   <div class="container clearfix">

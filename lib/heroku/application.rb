@@ -1,9 +1,9 @@
 require "platform-api"
 
 module Heroku
-  class Application < Struct.new(:name)
-    def self.from_name(name)
-      new(name)
+  class Application < Struct.new(:name, :api_key)
+    def self.with(name:, api_key:)
+      new(name, api_key)
     end
 
     def url
@@ -60,10 +60,6 @@ module Heroku
 
       Rails.logger.debug("Running command on #{name}: #{command}")
       system(command)
-    end
-
-    def api_key
-      ENV.fetch("HEROKU_API_KEY")
     end
   end
 end

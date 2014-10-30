@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :boards, only: [:create, :index, :show] do
+  resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
 
     resources :cards, only: [:create, :show] do
