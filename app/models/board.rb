@@ -29,10 +29,6 @@ class Board < ActiveRecord::Base
     subscribers.where(id: user.id).exists?
   end
 
-  def heroku_api_key
-    ENV.fetch("HEROKU_API_KEY")
-  end
-
   private
 
   def add_sample_lists
