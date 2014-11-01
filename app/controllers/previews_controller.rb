@@ -3,6 +3,7 @@ class PreviewsController < ApplicationController
     card  = Card.find(params[:card_id])
     board = card.board
 
+    card.previewing!
     PreviewJob.new.async.perform(
       Heroku::Application.with(name: card.app_name, api_key: board.heroku_api_key),
       Heroku::Application.with(name: random_suffix(card.app_name), api_key: board.heroku_api_key),
