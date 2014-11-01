@@ -23,6 +23,14 @@ class CardRealtime
     )
   end
 
+  def self.card_previewed(card, preview_url)
+    trigger(
+      card,
+      :preview_card,
+      id: card.id, preview_url: preview_url
+    )
+  end
+
   def self.trigger(card, event_name, params)
     Pusher.trigger(
       "board_#{card.list.board_id}",

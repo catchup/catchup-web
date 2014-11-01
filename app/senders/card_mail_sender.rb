@@ -16,4 +16,8 @@ class CardMailSender
 
     CardMailer.card_archived(card, card.involved_users).deliver
   end
+
+  def self.card_previewed(card, preview_url)
+    # no-op
+  end
 end
