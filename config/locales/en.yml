@@ -56,6 +56,7 @@ en:
     archive:
       submit: Archive
     preview:
+      wait: Your Preview is being generated... Please wait :)
       submit: Preview
   comments:
     create:

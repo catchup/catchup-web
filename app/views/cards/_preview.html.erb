@@ -1,3 +1,9 @@
+<% if card.previewing? %>
+  <%= t(".wait") %>
+<% elsif card.previewed? %>
+  <%= link_to @card.preview_url, @card.preview_url %>
+<% end %>
+
 <%= form_for :preview, url: card_previews_path(card) do |f| %>
   <%= f.submit t(".submit") %>
 <% end %>
