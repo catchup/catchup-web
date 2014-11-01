@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141030172932) do
+ActiveRecord::Schema.define(version: 20141101134055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20141030172932) do
     t.string   "branch_tarball"
     t.string   "app_name"
     t.string   "preview_url"
+    t.boolean  "previewing"
   end
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree
