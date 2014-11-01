@@ -8,6 +8,6 @@ class PreviewJob
     destination.run_command("rake db:migrate")
 
     card.previewed!(destination.url)
-    CardsObserver.publish(:card_previewed, card, card.preview_url)
+    CardObserver.publish(:card_previewed, card, card.preview_url)
   end
 end
