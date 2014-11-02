@@ -1,9 +1,9 @@
-<div class="card-header clearfix">
+<div class="card-header clearfix"
+     data-role="single-card"
+     data-board-id="<%= @card.board.id %>">
   <h1 class="card-title"><%= @card.title %></h1>
   <%= render "cards/archive", card: @card %>
   <%= render "cards/preview", card: @card %>
-
-  <%= link_to @card.preview_url, @card.preview_url if @card.preview_url? %>
 </div>
 <div class="card-comments clearfix">
   <% if signed_in? %>

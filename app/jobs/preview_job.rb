@@ -7,6 +7,7 @@ class PreviewJob
     destination.deploy_branch(tarball)
     destination.run_command("rake db:migrate")
 
-    card.update_attributes(preview_url: destination.url)
+    card.previewed!(destination.url)
+    CardObserver.publish(:card_previewed, card, card.preview_url)
   end
 end

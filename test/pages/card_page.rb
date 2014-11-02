@@ -15,4 +15,12 @@ module CardPage
   def has_comment?(text)
     page.has_text? text
   end
+
+  def has_preview_wait_message?
+    page.has_text? t("cards.preview.wait")
+  end
+
+  def has_preview_url?(url)
+    page.has_link? url
+  end
 end

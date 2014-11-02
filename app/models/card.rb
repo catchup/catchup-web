@@ -38,4 +38,16 @@ class Card < ActiveRecord::Base
   def involved_users
     board.subscribers
   end
+
+  def previewing!
+    update_attribute(:previewing, true)
+  end
+
+  def previewed!(url)
+    update_attributes(previewing: false, preview_url: url)
+  end
+
+  def previewed?
+    !previewing? && preview_url?
+  end
 end
