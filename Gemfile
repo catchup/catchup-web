@@ -34,5 +34,5 @@ group :test do
 end
 
 group :production do
-  gem "skylight"
+  gem 'skylight'
 end
