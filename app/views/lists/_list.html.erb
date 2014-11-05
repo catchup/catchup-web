@@ -1,6 +1,9 @@
-<div class="list list-1 clearfix" data-role="list">
-  <h2 class="title"><%= list.title %></h2>
-  <div class="cards-container clearfix js-cards-container" data-role="cards-container" data-list-id="<%= list.id %>">
+<div data-role="list">
+
+  <h2><%= list.title %></h2>
+
+  <div data-role="cards-container" data-list-id="<%= list.id %>">
     <%= render list.cards.unarchived %>
   </div>
+
 </div>

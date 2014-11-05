@@ -1,13 +1,11 @@
-<div class="card-header clearfix"
-     data-role="single-card"
-     data-board-id="<%= @card.board.id %>">
-  <h1 class="card-title"><%= @card.title %></h1>
+<div data-role="single-card" data-board-id="<%= @card.board.id %>">
+  <h1><%= @card.title %></h1>
+
   <%= render "cards/archive", card: @card %>
   <%= render "cards/preview", card: @card %>
 </div>
-<div class="card-comments clearfix">
-  <% if signed_in? %>
+
+<% if signed_in? %>
   <%= render "comments/form", comment: Comment.new, card: @card %>
-  <% end %>
-  <%= render @card.comments %>
-</div>
+<% end %>
+<%= render @card.comments %>

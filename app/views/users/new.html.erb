@@ -1,7 +1,5 @@
-<%= form_for @user, html: { class: "sign-in sign-in-1 clearfix" } do |f| %>
-  <p class="slogan"><%= t(".slogan", boards_path: boards_path).html_safe %></p>
-  <div class="form-fields clearfix">
-    <%= f.text_field :email, placeholder: t(".email-placeholder"), class: "email" %>
-    <%= f.submit t(".login"), class: "sign-in" %>
-  </div>
+<%= form_for @user do |f| %>
+  <p><%= t(".slogan", boards_path: boards_path).html_safe %></p>
+  <%= f.text_field :email, placeholder: t(".email-placeholder") %>
+  <%= f.submit t(".login") %>
 <% end %>

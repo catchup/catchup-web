@@ -1,5 +1,4 @@
-<h1 class="title"><%= t("boards.index.suggest").html_safe %></h1>
-<div class="board-list clearfix">
-  <%= render @boards %>
-</div>
+<h1><%= t("boards.index.suggest").html_safe %></h1>
+
+<%= render @boards %>
 <%= render "form", board: Board.new %>
