@@ -22,6 +22,10 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of'
 
+group :development do
+  gem 'quiet_assets'
+end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
