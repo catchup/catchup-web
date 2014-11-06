@@ -24,9 +24,10 @@ en:
   see_boards: Go to boards
   users:
     new:
-      email-placeholder: email address
-      login: Enter
-      slogan: 'You can&nbsp;<a href="%{boards_path}">check out boards</a>&nbsp;now<br>and join us when ready.'
+      greeting: <strong>%{name}.</strong> Is that you?
+      text: Can you tell us what's your email address? We will only send you few notifications when you do things around. (Ehm… And a lazy way of authentication. How secure is that!) We won't ever SPAM you, promise!
+      email-placeholder: youare@aweso.me
+      submit: Let's Do This!
   lists:
     list:
       todo: To Do
@@ -35,11 +36,12 @@ en:
   boards:
     create:
       error: There was some error while creating this board
-      submit: Do it!
+      submit: Create a new board
       suggest: … or maybe <strong>create a new one</strong>?
-      title-placeholder: board title
+      title-placeholder: Hit Your Keys Here To…
     index:
-      suggest: Here they are. What are you waiting for?<br><strong>Pick either one of them!</strong>
+      greeting: Hey <strong>%{name}!</strong> These are your boards…
+      tutorial: <p>Claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Hendrerit in vulputate velit esse molestie consequat vel illum; dolore eu feugiat nulla.</p><p>Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. Nam liber tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
     subscription:
       receive-notifications: Receive Notifications?
       submit: Update Preference

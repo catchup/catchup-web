@@ -1,0 +1,377 @@
+body {
+  background-color: rgb(255, 252, 242);
+  font: 300 1.5em/1.38 'Source Sans Pro';
+  color: rgb(15, 20, 31);
+}
+
+.page-boards,
+.page-signup {
+  color: rgb(15, 20, 31);
+}
+
+.page-cards {
+  font-weight: 900;
+  color: rgb(255, 252, 242);
+}
+
+.text-container p {
+  margin-bottom: 1em;
+}
+
+.board {
+  position: relative;
+  float: left;
+  width: 94.1717791411%;
+  height: 198px;
+}
+
+.board .board-title {
+  width: 100%;
+  height: 198px;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: 700;
+  color: rgb(237, 227, 212);
+  overflow: hidden;
+}
+
+.board .board-title:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 252, 242);
+}
+
+.board-form .submit {
+  clear: both;
+  width: 100%;
+}
+
+.board-title {
+  float: left;
+  text-transform: uppercase;
+}
+
+.board-wrapper {
+  float: left;
+  width: 33.3322682685%;
+  margin-top: 20px;
+}
+
+.boards-container {
+  float: left;
+  width: 81.5026041666%;
+  margin-left: 10%;
+}
+
+.boards-content {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background-color: rgb(237, 227, 212);
+}
+
+.boards-footer {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.boards-header {
+  float: left;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.card {
+  position: relative;
+  float: left;
+  width: 97.9997964169%;
+  height: 198px;
+  margin: 20px 0 0 0.99756%;
+  background-color: rgb(255, 252, 242);
+}
+
+.cards-header {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.cards-header .board-title {
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 1.5em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 252, 242);
+}
+
+.doing-list {
+  background-color: rgb(237, 227, 212);
+}
+
+.doing-list .card {
+  z-index: 5;
+}
+
+.doing-list .emptylist-placeholder {
+  z-index: 6;
+}
+
+.doing-title,
+.todo-title {
+  color: rgb(237, 227, 212);
+}
+
+.emptylist-placeholder {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 0.917em;
+  line-height: 1.38;
+  color: rgb(255, 252, 242);
+  overflow: hidden;
+}
+
+.emptylist-placeholder:hover,
+.text:hover {
+  opacity: 1;
+}
+
+.form-container {
+  float: left;
+  clear: both;
+  width: 80%;
+  margin: 90px 0 0 10%;
+}
+
+.greeting {
+  float: left;
+  margin-left: 10%;
+  font-size: 1.917em;
+  font-weight: 900;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+.input {
+  display: block;
+  float: left;
+  width: 66.0400390625%;
+  height: 54px;
+  padding: 0 10px;
+  border: 1px solid rgb(215, 222, 209);
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(15, 20, 31);
+}
+
+.list {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 94.1762929588%;
+  min-height: 238px;
+  padding-bottom: 20px;
+}
+
+.list-title {
+  float: left;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.list-wrapper {
+  float: left;
+  width: 33.3333333333%;
+}
+
+.lists-container {
+  float: left;
+  clear: both;
+  width: 81.5%;
+  margin: 60px 0 0 10%;
+}
+
+.new-board {
+  background-color: rgb(255, 255, 255);
+}
+
+.old-board {
+  display: block;
+  background-color: rgb(255, 252, 242);
+}
+
+.old-board:hover {
+  background-color: rgb(118, 175, 186);
+}
+
+.plain-text {
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  text-align: justify;
+  color: rgb(15, 20, 31);
+}
+
+.review-list {
+  background-color: rgb(255, 68, 122);
+}
+
+.review-list .card {
+  z-index: 0;
+}
+
+.review-list .emptylist-placeholder {
+  z-index: 1;
+}
+
+.review-title {
+  color: rgb(255, 68, 122);
+}
+
+.signup-content {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.board-form,
+.cards-nav,
+.signup-form {
+  float: left;
+  width: 100%;
+}
+
+.signup-form .submit {
+  width: 31.9791666666%;
+  margin-left: 1.97917%;
+}
+
+.signup-header {
+  float: left;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.submit {
+  display: block;
+  float: left;
+  height: 54px;
+  background-color: rgb(255, 68, 122);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 252, 242);
+}
+
+.text {
+  display: block;
+  float: left;
+  padding-left: 24px;
+  border-bottom: 6px solid rgb(255, 68, 122);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(255, 68, 122);
+  opacity: 0.2;
+}
+
+.text-container {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.textarea {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 144px;
+  padding: 10px 15px;
+  background-color: rgb(255, 252, 242);
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(15, 20, 31);
+  overflow: visible;
+  resize: none;
+}
+
+.todo-list {
+  margin-top: 130px;
+  background-color: rgb(237, 227, 212);
+}
+
+.todo-list .card {
+  z-index: 10;
+}
+
+.todo-list .emptylist-placeholder {
+  z-index: 11;
+}
+
+.user-firstname {
+  float: left;
+  margin-left: 10%;
+  padding-right: 6px;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.board-title em,
+.user-firstname em {
+  background-color: transparent;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
+.board-title span,
+.user-firstname span {
+  background-color: transparent;
+  font-weight: 200;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
+.board-title strong {
+  background-color: transparent;
+  font-weight: 200;
+  text-transform: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.greeting strong {
+  border-right: 8px solid rgb(255, 68, 122);
+  border-left: 8px solid rgb(255, 68, 122);
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-top-style: none;
+  border-bottom-style: none;
+  background-color: rgb(255, 68, 122);
+  color: rgb(255, 252, 242);
+}
+
+.user-firstname strong {
+  background-color: rgb(255, 68, 122);
+  font-weight: 200;
+  text-transform: inherit;
+  text-decoration: none;
+  color: rgb(255, 252, 242);
+}

@@ -1,4 +1,18 @@
-<h1><%= t("boards.index.suggest").html_safe %></h1>
+<header class="boards-header clearfix">
+  <h1 class="greeting"><%= t('.greeting', name: 'Zach').html_safe %></h1>
+</header>
 
-<%= render @boards %>
-<%= render "form", board: Board.new %>
+<section class="boards-content clearfix">
+  <div class="boards-container clearfix">
+    <%= render "form", board: Board.new %>
+    <%= render @boards %>
+  </div>
+</section>
+
+<footer class="boards-footer clearfix">
+  <div class="text-container clearfix">
+    <div class="plain-text">
+      <%= t('.tutorial').html_safe %>
+    </div>
+  </div>
+</footer>
