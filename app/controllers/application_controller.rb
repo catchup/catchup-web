@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :signed_in?
 
-  before_action :authenticate_early_adopters
+  before_action :authenticate_early_adopters if Rails.env.production?
 
   def current_user
     @current_user ||= User.find_by(email: session[:current_user])
