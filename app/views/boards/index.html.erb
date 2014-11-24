@@ -1,18 +1,22 @@
-<header class="boards-header clearfix">
-  <h1 class="greeting"><%= t('.greeting', name: 'Zach').html_safe %></h1>
-</header>
+<div class="page-welcome">
 
-<section class="boards-content clearfix">
-  <div class="boards-container clearfix">
-    <%= render "form", board: Board.new %>
-    <%= render @boards %>
-  </div>
-</section>
+  <header class="boards-header clearfix">
+    <h1 class="greeting"><%= t('.greeting', name: 'Zach').html_safe %></h1>
+  </header>
 
-<footer class="boards-footer clearfix">
-  <div class="text-container clearfix">
-    <div class="plain-text">
-      <%= t('.tutorial').html_safe %>
+  <section class="boards-content clearfix">
+    <div class="boards-container clearfix">
+      <%= render "form", board: Board.new %>
+      <%= render @boards %>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <footer class="boards-footer clearfix">
+    <div class="text-container clearfix">
+      <div class="plain-text">
+        <%= t('.tutorial').html_safe %>
+      </div>
+    </div>
+  </footer>
+
+</div>

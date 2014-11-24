@@ -1,10 +1,7 @@
-<a href="<%= url_for([card.board, card]) %>" data-role="card" data-card-id="<%= card.id %>">
-
-  <p><%= card.title %></p>
-
+<a href="<%= url_for([card.board, card]) %>" class="card clearfix" data-role="card" data-card-id="<%= card.id %>">
+  <h3 class="card-title"><%= card.title %></h3>
   <%= form_for [:move, card.board, card], remote: true, data: { role: "card-update-form" } do |f| %>
     <%= f.hidden_field :list_id %>
     <%= f.hidden_field :position %>
   <% end %>
-
 </a>

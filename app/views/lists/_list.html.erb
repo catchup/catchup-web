@@ -1,9 +1,7 @@
-<div data-role="list">
-
-  <h2><%= list.title %></h2>
-
-  <div data-role="cards-container" data-list-id="<%= list.id %>">
+<div class="list-wrapper clearfix" data-role="list">
+  <h2 class="list-title <%= list_class %>-title"><%= list.title %></h2>
+  <div class="list <%= list_class %>-list clearfix" data-role="cards-container" data-list-id="<%= list.id %>">
     <%= render list.cards.unarchived %>
+    <p class="emptylist-placeholder"><%= emptylist_placeholder %></p>
   </div>
-
 </div>
