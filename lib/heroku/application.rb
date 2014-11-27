@@ -11,7 +11,7 @@ module Heroku
     end
 
     def destroy
-      Rails.logger.debug("Destroying Heroku Application: #{name}...")
+      Rails.logger.info("Destroying Heroku Application: #{name}...")
       heroku_platform.app.delete(name)
     rescue Excon::Errors::NotFound
     rescue Excon::Errors::Forbidden
@@ -19,7 +19,7 @@ module Heroku
     end
 
     def deploy_branch(tarball)
-      Rails.logger.debug("Building #{tarball} on #{name}...")
+      Rails.logger.info("Building #{tarball} on #{name}...")
       build = heroku_platform.build.create(
         name,
         "source_blob" => { "url" => tarball, "version" => "preview" }
@@ -44,7 +44,7 @@ module Heroku
 
     def wait_build_completion(build, poll_interval: 5)
       loop do
-        Rails.logger.debug("Waiting for build completion on #{name}...")
+        Rails.logger.info("Waiting for build completion on #{name}...")
         sleep poll_interval
         begin
           info = heroku_platform.build.info(name, build["id"])
@@ -58,7 +58,7 @@ module Heroku
       command = "HEROKU_API_KEY=#{api_key} \
                  bundle exec heroku #{command} --app #{name} #{arguments}"
 
-      Rails.logger.debug("Running command on #{name}: #{command}")
+      Rails.logger.info("Running command on #{name}: #{command}")
       system(command)
     end
   end
