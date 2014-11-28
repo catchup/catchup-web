@@ -117,6 +117,24 @@ body {
   height: 198px;
   margin: 20px 0 0 0.99756%;
   background-color: rgb(255, 252, 242);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -o-transition: -o-transform 0.25s;
+  -ms-transition: -ms-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
+}
+
+.card:active {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
 }
 
 .card-title {
@@ -162,6 +180,15 @@ body {
 
 .doing-list .card {
   z-index: 14;
+}
+
+.doing-list .card:active,
+.todo-list .card:active {
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 .doing-list .emptylist-placeholder {
@@ -275,6 +302,14 @@ body {
   z-index: 19;
 }
 
+.review-list .card:active {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
 .review-list .emptylist-placeholder {
   z-index: 18;
 }
@@ -355,6 +390,19 @@ body {
 
 .todo-list .card {
   z-index: 9;
+}
+
+.todo-list .card:hover {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: none;
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -o-transition: -o-transform 0.25s;
+  -ms-transition: -ms-transform 0.25s;
+  transition: transform 0.25s;
 }
 
 .todo-list .emptylist-placeholder {
