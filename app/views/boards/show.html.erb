@@ -2,7 +2,7 @@
 
   <nav class="cards-nav clearfix">
     <a href="<%= boards_path %>" class="text">boards</a>
-    <a href="#" class="text">settings</a>
+    <a href="#!" class="text">settings</a>
   </nav>
 
   <header class="cards-header clearfix">
@@ -27,3 +27,14 @@
 -->
 
 </div>
+
+<script charset="utf-8">
+$('.text').click(function() {
+  vex.dialog.confirm({
+    message: 'Are you absolutely sure you want to destroy the alien planet?',
+    callback: function(value) {
+      return console.log(value ? 'Successfully destroyed the planet.' : 'Chicken.');
+    }
+  });
+})
+</script>

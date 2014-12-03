@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require jquery-ui/sortable
 //= require turbolinks
+//= require vex/vex
+//= require vex/vex.dialog
 //= require_tree .
