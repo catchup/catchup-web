@@ -31,17 +31,3 @@
   -->
 
 </div>
-
-<script charset="utf-8">
-$('.js-add-card').click(function() {
-  var container = $($('.js-add-card-form-container')[0]);
-  vex.open({
-    content: container.clone().show().wrap('<div></div>').parent().html(),
-    contentCSS: {
-      width: '80%',
-      height: container.css('height'),
-      padding: '0'
-    }
-  });
-});
-</script>
