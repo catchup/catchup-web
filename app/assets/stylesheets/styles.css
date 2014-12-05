@@ -22,7 +22,7 @@ body {
   position: fixed;
   top: 197px;
   left: 0;
-  z-index: 24;
+  z-index: 25;
   width: 48px;
   height: 48px;
   background-color: rgb(255, 68, 122);
@@ -33,12 +33,29 @@ body {
   top: -22px;
   left: 0;
   right: 0;
-  z-index: 23;
+  z-index: 24;
   margin: 0 auto;
   font-size: 2.667em;
   line-height: 1.38;
   text-align: center;
   color: rgb(255, 252, 242);
+}
+
+.add-card-form .submit {
+  clear: both;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.add-card-form-container {
+  display: none;
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 31;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .board {
@@ -61,6 +78,15 @@ body {
 .board .board-title:hover {
   background-color: rgba(0, 0, 0, 0);
   color: rgb(255, 252, 242);
+}
+
+.board-content {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 23;
+  width: 100%;
+  padding-top: 60px;
 }
 
 .board-form .submit {
@@ -215,13 +241,6 @@ body {
   opacity: 1;
 }
 
-.form-container {
-  float: left;
-  clear: both;
-  width: 80%;
-  margin: 90px 0 0 10%;
-}
-
 .greeting {
   float: left;
   margin-left: 10%;
@@ -241,6 +260,31 @@ body {
   font-size: 1em;
   text-align: center;
   text-transform: uppercase;
+  color: rgb(15, 20, 31);
+}
+
+.input-app-name,
+.input-tarball-url {
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 54px;
+  margin-top: 4px;
+  padding-left: 20px;
+  border: 1px solid rgb(215, 222, 209);
+  font-size: 1em;
+  color: rgb(15, 20, 31);
+}
+
+.input-title {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 54px;
+  padding-left: 20px;
+  border: 1px solid rgb(215, 222, 209);
+  font-size: 1em;
   color: rgb(15, 20, 31);
 }
 
@@ -265,12 +309,9 @@ body {
 }
 
 .lists-container {
-  position: relative;
   float: left;
-  clear: both;
-  z-index: 22;
   width: 81.5%;
-  margin: 60px 0 0 10%;
+  margin-left: 10%;
 }
 
 .new-board {
@@ -337,6 +378,13 @@ body {
   margin-left: 1.97917%;
 }
 
+.signup-form-container {
+  float: left;
+  clear: both;
+  width: 80%;
+  margin: 90px 0 0 10%;
+}
+
 .signup-header {
   float: left;
   width: 100%;
@@ -367,6 +415,7 @@ body {
   opacity: 0.2;
 }
 
+.add-card-form,
 .text-container {
   float: left;
   width: 80%;

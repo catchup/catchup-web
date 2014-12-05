@@ -1,6 +1,6 @@
-<%= form_for [board, card] do |f| %>
-  <%= f.text_field :title, placeholder: t("cards.create.title-placeholder") %>
-  <%= f.text_field :app_name, placeholder: t("cards.create.app-name-placeholder") %>
-  <%= f.text_field :branch_tarball, placeholder: t("cards.create.tarball-placeholder") %>
-  <%= f.submit t("cards.create.submit") %>
+<%= form_for [board, card], html: { class: 'add-card-form clearfix' } do |f| %>
+  <%= f.text_field :title, class: 'input-title', placeholder: t("cards.create.title-placeholder") %>
+  <%= f.text_field :app_name, class: 'input-app-name', placeholder: t("cards.create.app-name-placeholder") %>
+  <%= f.text_field :branch_tarball, class:'input-tarball-url', placeholder: t("cards.create.tarball-placeholder") %>
+  <%= button_tag t("cards.create.submit"), class: 'submit' %>
 <% end %>

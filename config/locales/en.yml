@@ -51,10 +51,10 @@ en:
   cards:
     create:
       error: There was some error while creating this card
-      submit: Create
-      title-placeholder: type here to create a new card…
-      tarball-placeholder: https://github.com/catchup/catchup-web/archive/<branch>.tar.gz
-      app-name-placeholder: catchup-web
+      title-placeholder: Title
+      app-name-placeholder: Heroku app name
+      tarball-placeholder: GitHub tarball URL
+      submit: Add
     archive:
       submit: Archive
     preview:

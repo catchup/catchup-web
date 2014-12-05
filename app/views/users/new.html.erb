@@ -10,10 +10,10 @@
         <%= t('.text') %>
       </div>
     </div>
-    <div class="form-container clearfix">
+    <div class="signup-form-container clearfix">
       <%= form_for @user, html: { class: 'signup-form clearfix' } do |f| %>
-      <%= f.email_field :email, class: 'input', placeholder: t('.email-placeholder') %>
-      <%= button_tag t('.submit'), class: 'submit' %>
+        <%= f.email_field :email, class: 'input', placeholder: t('.email-placeholder') %>
+        <%= button_tag t('.submit'), class: 'submit' %>
       <% end %>
     </div>
   </section>
