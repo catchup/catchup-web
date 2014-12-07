@@ -4,6 +4,11 @@ body {
   color: rgb(15, 20, 31);
 }
 
+.page-_add-card {
+  font-weight: 700;
+  color: rgb(255, 252, 242);
+}
+
 .page-board {
   font-weight: 900;
   color: rgb(255, 252, 242);
@@ -41,6 +46,12 @@ body {
   color: rgb(255, 252, 242);
 }
 
+.add-card-form {
+  float: left;
+  width: 80%;
+  margin-left: 9.99756%;
+}
+
 .add-card-form .submit {
   clear: both;
   width: 100%;
@@ -49,12 +60,9 @@ body {
 
 .add-card-form-container {
   display: none;
-  position: relative;
   float: left;
-  clear: both;
-  z-index: 31;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 16px;
   padding-bottom: 20px;
 }
 
@@ -92,6 +100,7 @@ body {
 .board-form .submit {
   clear: both;
   width: 100%;
+  font-weight: 700;
 }
 
 .board-title {
@@ -274,6 +283,7 @@ body {
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
   font-size: 1em;
+  font-weight: 900;
   color: rgb(15, 20, 31);
 }
 
@@ -282,9 +292,11 @@ body {
   float: left;
   width: 100%;
   height: 54px;
+  margin-top: 4px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
   font-size: 1em;
+  font-weight: 900;
   color: rgb(15, 20, 31);
 }
 
@@ -376,6 +388,7 @@ body {
 .signup-form .submit {
   width: 31.9791666666%;
   margin-left: 1.97917%;
+  font-weight: 700;
 }
 
 .signup-form-container {
@@ -397,7 +410,6 @@ body {
   height: 54px;
   background-color: rgb(255, 68, 122);
   font-size: 1em;
-  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   color: rgb(255, 252, 242);
@@ -415,7 +427,6 @@ body {
   opacity: 0.2;
 }
 
-.add-card-form,
 .text-container {
   float: left;
   width: 80%;

@@ -22,9 +22,12 @@
     <p class="add-card-action js-add-card">+</p>
   </div>
 
-  <div class="add-card-form-container clearfix js-add-card-form-container">
-    <%= render "cards/form", card: Card.new, board: @board %>
+  <div class="page-_add-card">
+    <div class="add-card-form-container clearfix js-add-card-form-container">
+      <%= render "cards/form", card: Card.new, board: @board %>
+    </div>
   </div>
+
   <!--
   <%= render "boards/subscription", board: @board if signed_in? %>
   <%= render "boards/heroku", board: @board %>

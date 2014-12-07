@@ -8,7 +8,7 @@ window.Catchup.Dialog = class Dialog
       vex.open(
         content: @$content,
         contentCSS: {
-          width: '80%',
+          width: '64%', # 1200 -> 768
           height: @$element.css('height'),
           padding: '0'
         }
