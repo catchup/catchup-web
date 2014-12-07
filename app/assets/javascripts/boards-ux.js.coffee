@@ -1,5 +1,9 @@
 $ ->
-  $newCardForm   = $('.js-add-card-form-container')
   $addCardButton = $('.js-add-card')
+  $addCard       = $('.js-add-card-form-container')
 
-  new Catchup.Dialog($newCardForm).willOpenOnClickOf($addCardButton)
+  $boardSettingsButton = $('.js-board-settings')
+  $boardSettings       = $('.js-board-settings-dialog-wrapper')
+
+  new Catchup.Dialog($addCard).willOpenOnClickOf($addCardButton)
+  new Catchup.Dialog($boardSettings).willOpenOnClickOf($boardSettingsButton)

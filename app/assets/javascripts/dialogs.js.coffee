@@ -1,15 +1,17 @@
 window.Catchup.Dialog = class Dialog
   constructor: ($element) ->
     @$element = $element.first()
-    @$content = $element.clone().show().wrap('<div></div>').parent().html()
+    @$content = $element.clone().addClass('dialog').show().wrap('<div></div>').parent().html()
 
   willOpenOnClickOf: ($triggerer) ->
     $triggerer.click =>
       vex.open(
-        content: @$content,
+        content: @$content
+        afterOpen: ($vexContent) ->
+          height = $('.dialog').css('height')
+          $vexContent.css('height', height)
         contentCSS: {
           width: '64%', # 1200 -> 768
-          height: @$element.css('height'),
           padding: '0'
         }
       )
