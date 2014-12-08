@@ -1,13 +1,27 @@
-<div class="card-header clearfix"
-     data-role="single-card"
-     data-board-id="<%= @card.board.id %>">
-  <h1 class="card-title"><%= @card.title %></h1>
-  <%= render "cards/archive", card: @card %>
-  <%= render "cards/preview", card: @card %>
-</div>
-<div class="card-comments clearfix">
+<div data-role="single-card" data-board-id="<%= @card.board.id %>" class="page-card clearfix">
+
+  <nav class="cards-nav clearfix">
+    <a href="<%= board_path @card.board %>" class="text"><%= @card.board.title %></a>
+  </nav>
+
+  <header class="cards-header clearfix">
+    <p class="user-firstname">Zach</p>
+    <h1 class="card-title"><%= @card.title %></h1>
+  </header>
+
+  <div class="card-actions-container clearfix">
+    <%= render "cards/archive", card: @card %>
+    <%= render "cards/preview", card: @card %>
+  </div>
+
   <% if signed_in? %>
-  <%= render "comments/form", comment: Comment.new, card: @card %>
+    <div class="comment-form-container clearfix">
+      <%= render "comments/form", comment: Comment.new, card: @card %>
+    </div>
   <% end %>
-  <%= render @card.comments %>
+
+  <section class="comments clearfix">
+    <%= render @card.comments %>
+  </section>
+
 </div>

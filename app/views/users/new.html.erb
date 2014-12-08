@@ -1,7 +1,21 @@
-<%= form_for @user, html: { class: "sign-in sign-in-1 clearfix" } do |f| %>
-  <p class="slogan"><%= t(".slogan", boards_path: boards_path).html_safe %></p>
-  <div class="form-fields clearfix">
-    <%= f.text_field :email, placeholder: t(".email-placeholder"), class: "email" %>
-    <%= f.submit t(".login"), class: "sign-in" %>
-  </div>
-<% end %>
+<div class="page-signup clearfix">
+
+  <header class="signup-header clearfix">
+    <h1 class="greeting"><%= t('.greeting', name: 'Zach').html_safe %></h1>
+  </header>
+
+  <section class="signup-content clearfix">
+    <div class="text-container clearfix">
+      <div class="plain-text">
+        <%= t('.text') %>
+      </div>
+    </div>
+    <div class="signup-form-container clearfix">
+      <%= form_for @user, html: { class: 'signup-form clearfix' } do |f| %>
+        <%= f.email_field :email, class: 'input', placeholder: t('.email-placeholder') %>
+        <%= button_tag t('.submit'), class: 'submit' %>
+      <% end %>
+    </div>
+  </section>
+
+</div>

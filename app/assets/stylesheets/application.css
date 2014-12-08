@@ -11,4 +11,7 @@
  * file per style scope.
  *
  *= require jquery-ui/sortable
+ *= require vex/vex
+ *= require vex/vex-theme-plain
+ *= require_tree .
  */

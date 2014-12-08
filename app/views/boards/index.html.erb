@@ -1,5 +1,22 @@
-<h1 class="title"><%= t("boards.index.suggest").html_safe %></h1>
-<div class="board-list clearfix">
-  <%= render @boards %>
+<div class="page-welcome clearfix">
+
+  <header class="boards-header clearfix">
+    <h1 class="greeting"><%= t('.greeting', name: 'Zach').html_safe %></h1>
+  </header>
+
+  <section class="boards-content clearfix">
+    <div class="boards-container clearfix">
+      <%= render "form", board: Board.new %>
+      <%= render @boards %>
+    </div>
+  </section>
+
+  <footer class="boards-footer clearfix">
+    <div class="text-container clearfix">
+      <div class="plain-text">
+        <%= t('.tutorial').html_safe %>
+      </div>
+    </div>
+  </footer>
+
 </div>
-<%= render "form", board: Board.new %>

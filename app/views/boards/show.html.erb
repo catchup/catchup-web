@@ -1,11 +1,43 @@
-<div class="board clearfix" data-role="board" data-board-id="<%= @board.id %>">
-  <div class="board-header clearfix">
-    <h1 class="title"><%= @board.title %></h1>
-    <%= render "boards/subscription", board: @board if signed_in? %>
-    <%= render "boards/heroku", board: @board %>
-    <%= render "cards/form", card: Card.new, board: @board %>
+<div class="page-board clearfix">
+
+  <nav class="board-nav clearfix">
+    <a href="<%= boards_path %>" class="text">boards</a>
+    <a href="#!" class="text js-board-settings">settings</a>
+  </nav>
+
+  <header class="board-header clearfix">
+    <p class="user-firstname">Zach</p>
+    <h1 class="board-title"><%= @board.title %></h1>
+  </header>
+
+  <section class="board-content clearfix">
+    <div class="lists-container clearfix" data-role="board" data-board-id="<%= @board.id %>">
+      <%= render @board.lists[0], list_class: 'todo', emptylist_placeholder: 'Dolor Ipsum Ullamcorper Cras Commodo' %>
+      <%= render @board.lists[1], list_class: 'doing', emptylist_placeholder: 'Tortor Tellus Ipsum Ultricies' %>
+      <%= render @board.lists[2], list_class: 'review', emptylist_placeholder: 'Sem Cras Magna Ultricies' %>
+    </div>
+  </section>
+
+  <div class="board-actions-container">
+    <p class="add-card-action js-add-card">+</p>
   </div>
-  <div class="container clearfix">
-    <%= render @board.lists %>
+
+  <div class="page-_add-card clearfix">
+    <div class="add-card-form-container clearfix js-add-card-form-container">
+      <%= render "cards/form", card: Card.new, board: @board %>
+    </div>
   </div>
+
+  <div class="page-_board-settings clearfix">
+    <div class="board-settings-dialog-wrapper clearfix js-board-settings-dialog-wrapper">
+      <div class="user-settings-form-container clearfix">
+        <%= render "boards/user_settings", board: @board if signed_in? %>
+      </div>
+      <div class="board-settings-form-container clearfix">
+        <p class="tutorial-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+        <%= render "boards/settings", board: @board %>
+      </div>
+    </div>
+  </div>
+
 </div>

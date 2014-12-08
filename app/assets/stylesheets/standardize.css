@@ -476,6 +476,7 @@ select {
   font-size: inherit;
   color: inherit;
   border: none;
+  border-radius: 0;
 }
 img {
   width: 100%;
