@@ -14,6 +14,10 @@ body {
   color: rgb(255, 252, 242);
 }
 
+.page-card {
+  color: rgb(0, 0, 0);
+}
+
 .page-_board-settings,
 .page-signup,
 .page-welcome {
@@ -22,16 +26,6 @@ body {
 
 .text-container p {
   margin-bottom: 1em;
-}
-
-.action-container {
-  position: fixed;
-  top: 197px;
-  left: 0;
-  z-index: 25;
-  width: 48px;
-  height: 48px;
-  background-color: rgb(255, 68, 122);
 }
 
 .add-card-action {
@@ -64,6 +58,7 @@ body {
   clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
+  background-color: rgb(118, 175, 186);
 }
 
 .add-card-form-container {
@@ -72,6 +67,31 @@ body {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 20px;
+}
+
+.archive-button {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 54px;
+  background-color: rgb(128, 128, 128);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 252, 242);
+  opacity: 0.4;
+}
+
+.archive-button:hover {
+  opacity: 1;
+}
+
+.archive-form {
+  float: left;
+  width: 18.75%;
+  height: 54px;
+  margin-left: 50.79948%;
 }
 
 .board {
@@ -96,6 +116,16 @@ body {
   color: rgb(255, 252, 242);
 }
 
+.board-actions-container {
+  position: fixed;
+  top: 197px;
+  left: 0;
+  z-index: 25;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 68, 122);
+}
+
 .board-content {
   position: relative;
   float: left;
@@ -109,7 +139,33 @@ body {
   float: left;
   clear: both;
   width: 100%;
+  background-color: rgb(255, 68, 122);
   font-weight: 700;
+}
+
+.board-header {
+  position: relative;
+  float: left;
+  clear: both;
+  z-index: 5;
+  width: 100%;
+}
+
+.board-header .board-title {
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 1.5em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(255, 252, 242);
+}
+
+.board-nav {
+  position: relative;
+  float: left;
+  z-index: 2;
+  width: 100%;
 }
 
 .board-settings-dialog-wrapper {
@@ -131,6 +187,7 @@ body {
   clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
+  background-color: rgb(118, 175, 186);
   font-weight: 700;
 }
 
@@ -211,40 +268,43 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
 }
 
-.card-title {
-  float: left;
+.card .card-title {
   height: 198px;
   padding: 10px;
   font-size: 0.75em;
   font-weight: 700;
-  line-height: 1.38;
   color: rgb(15, 20, 31);
   overflow: hidden;
 }
 
-.cards-header {
-  position: relative;
+.card-actions-container {
   float: left;
   clear: both;
-  z-index: 5;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.card-title {
+  float: left;
+  line-height: 1.38;
+}
+
+.cards-header {
+  float: left;
+  clear: both;
   width: 100%;
 }
 
-.cards-header .board-title {
+.cards-header .card-title {
   border-right: 12px solid rgb(255, 68, 122);
   border-left: 12px solid rgb(255, 68, 122);
   background-color: rgb(255, 68, 122);
-  font-size: 1.5em;
-  line-height: 1.38;
+  font-size: 1.167em;
+  font-weight: 900;
   text-align: center;
+  text-transform: uppercase;
   color: rgb(255, 252, 242);
-}
-
-.cards-nav {
-  position: relative;
-  float: left;
-  z-index: 2;
-  width: 100%;
+  overflow: visible;
 }
 
 .checkbox {
@@ -255,6 +315,74 @@ body {
   left: 0;
   z-index: 1;
   margin: auto 0;
+}
+
+.comment-author {
+  float: right;
+  margin-right: 84.79948%;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgb(237, 227, 212);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 252, 242);
+}
+
+.comment-button {
+  display: block;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 54px;
+  margin-top: 16px;
+  background-color: rgb(118, 175, 186);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 252, 242);
+}
+
+.comment-container {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.comment-form {
+  float: left;
+  width: 80%;
+  height: 198px;
+  margin-left: 10%;
+}
+
+.comment-form-container {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.comment-text {
+  float: left;
+  clear: both;
+  width: 73.1666666666%;
+  margin: -33px 0 0 16.83203%;
+  font-size: 0.833em;
+  line-height: 1.38;
+  text-align: justify;
+  color: rgb(0, 0, 0);
+}
+
+.comments {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 .doing-list,
@@ -390,6 +518,20 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.new-comment-text {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 128px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid rgb(215, 222, 209);
+  font-size: 0.917em;
+  font-weight: 600;
+  color: rgb(15, 20, 31);
+  resize: vertical;
+}
+
 .notifications-checkbox-label {
   display: block;
   position: relative;
@@ -421,6 +563,39 @@ body {
   font-size: 1em;
   font-weight: 900;
   line-height: 1.38;
+}
+
+.preview-button {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 54px;
+  background-color: rgb(255, 68, 122);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 252, 242);
+  -webkit-transition: -webkit-transform 0.25s;
+  -moz-transition: -moz-transform 0.25s;
+  -o-transition: -o-transform 0.25s;
+  -ms-transition: -ms-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+.preview-button:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+.preview-form {
+  float: left;
+  width: 18.75%;
+  height: 54px;
+  margin-left: 1.66797%;
 }
 
 .review-list {
@@ -456,6 +631,7 @@ body {
 }
 
 .board-form,
+.cards-nav,
 .signup-form {
   float: left;
   width: 100%;
@@ -465,6 +641,7 @@ body {
   float: left;
   width: 31.9791666666%;
   margin-left: 1.97917%;
+  background-color: rgb(255, 68, 122);
   font-weight: 700;
 }
 
@@ -484,7 +661,6 @@ body {
 .submit {
   display: block;
   height: 54px;
-  background-color: rgb(255, 68, 122);
   font-size: 1em;
   text-align: center;
   text-transform: uppercase;
@@ -573,14 +749,27 @@ body {
   padding-bottom: 20px;
 }
 
-.board-title em,
+.card-title strong,
+.comment-author strong {
+  background-color: transparent;
+  font-weight: 200;
+  text-transform: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title em,
+.comment-author em,
+.comment-text em,
 .user-firstname em {
   background-color: transparent;
   text-transform: inherit;
   text-decoration: none;
 }
 
-.board-title span,
+.card-title span,
+.comment-author span,
+.comment-text span,
 .user-firstname span {
   background-color: transparent;
   font-weight: 200;
@@ -588,12 +777,12 @@ body {
   text-decoration: none;
 }
 
-.board-title strong {
+.comment-text strong {
   background-color: transparent;
   font-weight: 200;
   text-transform: inherit;
   text-decoration: none;
-  color: inherit;
+  color: rgb(255, 252, 242);
 }
 
 .greeting strong {

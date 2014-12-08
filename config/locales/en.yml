@@ -64,4 +64,4 @@ en:
     create:
       error: There was some error while creating this comment
       submit: Comment
-      comment-placeholder: type here to create a new comment…
+      comment-placeholder: Got something to say?

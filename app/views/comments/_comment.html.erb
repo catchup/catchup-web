@@ -1,4 +1,4 @@
-<div data-role="comment">
-  <p><%= comment.user.email %></p>
-  <%= markdown(comment.text) %>
+<div data-role="comment" class="comment-container clearfix">
+  <p class="comment-author"><%= comment.user.email %></p>
+  <p class="comment-text"><%= comment.text %></p>
 </div>
