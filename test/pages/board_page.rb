@@ -4,6 +4,7 @@ module BoardPage
   end
 
   def create_card(title)
+    click_on "+"
     fill_in "card[title]", with: title
     click_on t("cards.create.submit")
 
@@ -40,7 +41,6 @@ module BoardPage
   end
 
   def visit_boards
-    visit root_path
-    click_on t("see_boards")
+    visit boards_path
   end
 end
