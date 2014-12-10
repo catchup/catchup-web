@@ -54,7 +54,6 @@ en:
     create:
       error: There was some error while creating this card
       title-placeholder: Title
-      app-name-placeholder: Heroku app name
       branch-placeholder: GitHub branch
       submit: Add
     archive:
