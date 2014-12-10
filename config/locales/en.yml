@@ -48,14 +48,14 @@ en:
     settings:
       api-key: Shared Heroku API key
       app-name-placeholder: Heroku app name
-      tarball-placeholder: GitHub tarball URL
+      repository-placeholder: GitHub repository URL
       submit: Save
   cards:
     create:
       error: There was some error while creating this card
       title-placeholder: Title
       app-name-placeholder: Heroku app name
-      tarball-placeholder: GitHub tarball URL
+      branch-placeholder: GitHub branch
       submit: Add
     archive:
       submit: Archive

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210174525) do
+ActiveRecord::Schema.define(version: 20141210180201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20141210174525) do
     t.datetime "updated_at"
     t.string   "heroku_api_key"
     t.string   "app_name"
+    t.string   "repository_url"
   end
 
   create_table "boards_subscriptions", force: true do |t|
@@ -38,10 +39,10 @@ ActiveRecord::Schema.define(version: 20141210174525) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
-    t.boolean  "archived",       default: false
-    t.string   "branch_tarball"
+    t.boolean  "archived",    default: false
     t.string   "preview_url"
     t.boolean  "previewing"
+    t.string   "branch_name"
   end
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree
