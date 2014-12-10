@@ -47,6 +47,8 @@ en:
       submit: Save
     settings:
       api-key: Shared Heroku API key
+      app-name-placeholder: Heroku app name
+      tarball-placeholder: GitHub tarball URL
       submit: Save
   cards:
     create:

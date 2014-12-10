@@ -37,6 +37,6 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :heroku_api_key)
+    params.require(:board).permit(:title, :heroku_api_key, :app_name)
   end
 end
