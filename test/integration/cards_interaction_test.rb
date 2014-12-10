@@ -9,7 +9,7 @@ class CardsInteractionTest < JavascriptTest
 
   test "User drags cards to other lists" do
     # Given a new board with a card
-    visit_boards
+    sign_in users(:antonio)
     create_board("Board 1")
     card = create_card("My Card")
 
@@ -36,11 +36,12 @@ class CardsInteractionTest < JavascriptTest
   test "User creates a card while other users are on the same page" do
     # Given a new board
     Capybara.session_name = user_1
-    visit_boards
+    sign_in users(:antonio)
     create_board("Board 2")
 
     # And another user on the same board
     Capybara.session_name = user_2
+    sign_in users(:antonio)
     visit_board("Board 2")
     sleep 1
 
@@ -58,12 +59,13 @@ class CardsInteractionTest < JavascriptTest
   test "User moves a card while other users are on the same page" do
     # Given a new board with a card
     Capybara.session_name = user_1
-    visit_boards
+    sign_in users(:antonio)
     create_board("Board 3")
     card = create_card("Moving card")
 
     # And another user on the same board
     Capybara.session_name = user_2
+    sign_in users(:antonio)
     visit_board("Board 3")
     sleep 1
 
@@ -81,12 +83,13 @@ class CardsInteractionTest < JavascriptTest
   test "User archives a card while other users are on the board" do
     # Given a new board with a card
     Capybara.session_name = user_1
-    visit_boards
+    sign_in users(:antonio)
     create_board("Board 3")
     card = create_card("Archiving card")
 
     # And another user on the same board
     Capybara.session_name = user_2
+    sign_in users(:antonio)
     visit_board("Board 3")
     sleep 1
 

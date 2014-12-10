@@ -13,7 +13,7 @@ class PreviewsTest < JavascriptTest
 
   test "User waits for a preview" do
     # Given a board with a card
-    visit_boards
+    sign_in users(:antonio)
     create_board("a board")
     card = create_card("My Card")
 
