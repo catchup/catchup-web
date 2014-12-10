@@ -3,6 +3,6 @@ module AuthenticationPage
     visit root_url
 
     fill_in "user[email]", with: user.email
-    click_on t("users.new.login")
+    click_on t("users.new.submit")
   end
 end
