@@ -19,7 +19,7 @@ class MoveAppNameToBoards < ActiveRecord::Migration
 
   def up
     add_column :boards, :app_name, :string
-    Card.where.not(app_name: '').find_each do |card|
+    Card.where.not(app_name: "").find_each do |card|
       card.board.update_attributes(app_name: card.app_name)
     end
     remove_column :cards, :app_name
