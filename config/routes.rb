@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  root to: 'boards#index'
+  root to: "boards#index"
 end
