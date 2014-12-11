@@ -3,9 +3,12 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "capybara/rails"
+require "capybara/poltergeist"
 require "database_cleaner"
 require "mocha/mini_test"
 require "pages/authentication_page"
+
+Capybara.javascript_driver = :poltergeist
 
 class ActiveSupport::TestCase
   fixtures :all

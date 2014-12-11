@@ -10,6 +10,6 @@ module AuthenticationPage
       raise "I don't know how to log in!"
     end
 
-    visit root_url
+    visit root_path
   end
 end
