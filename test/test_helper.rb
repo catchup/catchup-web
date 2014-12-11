@@ -30,7 +30,6 @@ class ActionDispatch::IntegrationTest
   self.use_transactional_fixtures = false
 
   setup do
-    sign_out
     DatabaseCleaner.start
   end
 

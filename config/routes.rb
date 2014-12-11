@@ -15,7 +15,5 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  root to: 'users#new'
-
-  resources :users, only: [:create]
+  root to: 'boards#index'
 end
