@@ -13,10 +13,7 @@ class BoardsController < ApplicationController
     if @board.save
       redirect_to @board
     else
-      redirect_to(
-        boards_path,
-        alert: t("boards.create.error")
-      )
+      redirect_to boards_path, alert: t("boards.create.error")
     end
   end
 
