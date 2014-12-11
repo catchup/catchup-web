@@ -7,7 +7,7 @@ class BoardsTest < ActionDispatch::IntegrationTest
   include CardPage
 
   setup do
-    visit_boards
+    sign_in users(:antonio)
   end
 
   test "User creates a boards with fixed lists" do
