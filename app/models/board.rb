@@ -8,6 +8,9 @@ class Board < ActiveRecord::Base
   has_and_belongs_to_many :subscribers,
                           join_table: "boards_subscriptions",
                           class_name: "User"
+  has_and_belongs_to_many :owners,
+                          join_table: "boards_owners",
+                          class_name: "User"
 
   def add_list!(params)
     lists.create(params)
@@ -27,6 +30,10 @@ class Board < ActiveRecord::Base
 
   def has_subscriber?(user)
     subscribers.where(id: user.id).exists?
+  end
+
+  def add_owner(user)
+    owners << user
   end
 
   private

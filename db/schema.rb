@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20141210180201) do
     t.string   "repository_url"
   end
 
+  create_table "boards_owners", force: true do |t|
+    t.integer "user_id"
+    t.integer "board_id"
+  end
+
+  add_index "boards_owners", ["board_id"], name: "index_boards_owners_on_board_id", using: :btree
+  add_index "boards_owners", ["user_id"], name: "index_boards_owners_on_user_id", using: :btree
+
   create_table "boards_subscriptions", force: true do |t|
     t.integer "board_id"
     t.integer "user_id"

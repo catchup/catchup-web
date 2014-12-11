@@ -4,6 +4,7 @@ require 'rails/test_help'
 require 'capybara/rails'
 require 'database_cleaner'
 require "mocha/mini_test"
+require "pages/authentication_page"
 
 class ActiveSupport::TestCase
   fixtures :all
@@ -23,11 +24,13 @@ end
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
   include AbstractController::Translation
+  include AuthenticationPage
 
   DatabaseCleaner.strategy = :truncation
   self.use_transactional_fixtures = false
 
   setup do
+    sign_out
     DatabaseCleaner.start
   end
 

@@ -1,14 +1,14 @@
 class BoardsController < ApplicationController
   def index
-    @boards = Board.all
+    @boards = current_user.owned_boards
   end
 
   def show
-    @board = Board.find(params[:id])
+    @board = current_user.owned_boards.find(params[:id])
   end
 
   def create
-    @board = Board.new(board_params)
+    @board = current_user.create_board(board_params)
 
     if @board.save
       redirect_to @board
@@ -18,14 +18,14 @@ class BoardsController < ApplicationController
   end
 
   def toggle_subscription
-    board = Board.find(params[:id])
+    board = current_user.owned_boards.find(params[:id])
     board.toggle_subscription_for(current_user)
 
     redirect_to board
   end
 
   def update
-    board = Board.find(params[:id])
+    board = current_user.owned_boards.find(params[:id])
     board.update_attributes(board_params)
 
     redirect_to board

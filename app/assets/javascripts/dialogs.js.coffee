@@ -4,7 +4,9 @@ window.Catchup.Dialog = class Dialog
     @$content = $element.clone().addClass('dialog').show().wrap('<div></div>').parent().html()
 
   willOpenOnClickOf: ($triggerer) ->
-    $triggerer.click =>
+    $triggerer.click (event) =>
+      event.preventDefault()
+
       vex.open(
         content: @$content
         afterOpen: ($vexContent) ->
