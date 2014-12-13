@@ -1,4 +1,4 @@
-$ ->
+$(document).on "ready page:load", ->
   $addCardButton = $('.js-add-card')
   $addCard       = $('.js-add-card-form-container')
 
