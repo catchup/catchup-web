@@ -19,7 +19,6 @@ body {
 }
 
 .page-_board-settings,
-.page-signup,
 .page-welcome {
   color: rgb(15, 20, 31);
 }
@@ -55,7 +54,6 @@ body {
 
 .add-card-form .submit {
   float: right;
-  clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
   background-color: rgb(118, 175, 186);
@@ -135,9 +133,14 @@ body {
   padding-top: 60px;
 }
 
+.board-form,
+.cards-nav {
+  float: left;
+  width: 100%;
+}
+
 .board-form .submit {
   float: left;
-  clear: both;
   width: 100%;
   background-color: rgb(255, 68, 122);
   font-weight: 700;
@@ -184,7 +187,6 @@ body {
 .board-settings-form .submit,
 .user-settings-form .submit {
   float: right;
-  clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
   background-color: rgb(118, 175, 186);
@@ -370,7 +372,7 @@ body {
   float: left;
   clear: both;
   width: 73.1666666666%;
-  margin: -33px 0 0 16.83203%;
+  margin: -33px 0 0 16.83073%;
   font-size: 0.833em;
   line-height: 1.38;
   text-align: justify;
@@ -434,19 +436,6 @@ body {
   font-weight: 900;
   line-height: 1.38;
   color: rgb(0, 0, 0);
-}
-
-.input {
-  display: block;
-  float: left;
-  width: 66.0400390625%;
-  height: 54px;
-  padding: 0 10px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(15, 20, 31);
 }
 
 .input-app-name {
@@ -622,44 +611,9 @@ body {
   color: rgb(255, 68, 122);
 }
 
-.signup-content {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
-
-.board-form,
-.cards-nav,
-.signup-form {
-  float: left;
-  width: 100%;
-}
-
-.signup-form .submit {
-  float: left;
-  width: 31.9791666666%;
-  margin-left: 1.97917%;
-  background-color: rgb(255, 68, 122);
-  font-weight: 700;
-}
-
-.signup-form-container {
-  float: left;
-  clear: both;
-  width: 80%;
-  margin: 90px 0 0 10%;
-}
-
-.signup-header {
-  float: left;
-  width: 100%;
-  padding-top: 80px;
-}
-
 .submit {
   display: block;
+  clear: both;
   height: 54px;
   font-size: 1em;
   text-align: center;
