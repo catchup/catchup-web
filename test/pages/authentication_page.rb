@@ -7,7 +7,7 @@ module AuthenticationPage
     elsif page.driver.respond_to?(:browser) && page.driver.browser.respond_to?(:basic_authorize)
       page.driver.browser.basic_authorize(user.email, user.password)
     else
-      raise "I don't know how to log in!"
+      raise "I don't know how to sign in!"
     end
 
     visit root_path
