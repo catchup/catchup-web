@@ -12,7 +12,11 @@ class ApplicationController < ActionController::Base
 
   def authenticate
     authenticate_or_request_with_http_basic do |email, password|
-      @current_user ||= User.find_by(email: email, password: password)
+      if flash[:will_logout] == true
+        false
+      else
+        @current_user ||= User.find_by(email: email, password: password)
+      end
     end
   end
 end
