@@ -15,6 +15,7 @@ body {
 }
 
 .page-card {
+  font-weight: 400;
   color: rgb(0, 0, 0);
 }
 
@@ -131,12 +132,6 @@ body {
   z-index: 23;
   width: 100%;
   padding-top: 60px;
-}
-
-.board-form,
-.cards-nav {
-  float: left;
-  width: 100%;
 }
 
 .board-form .submit {
@@ -291,12 +286,6 @@ body {
   line-height: 1.38;
 }
 
-.cards-header {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
 .cards-header .card-title {
   border-right: 12px solid rgb(255, 68, 122);
   border-left: 12px solid rgb(255, 68, 122);
@@ -320,8 +309,8 @@ body {
 }
 
 .comment-author {
-  float: right;
-  margin-right: 84.79948%;
+  float: left;
+  margin-left: 10%;
   padding-right: 10px;
   padding-left: 10px;
   background-color: rgb(237, 227, 212);
@@ -331,6 +320,13 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: rgb(255, 252, 242);
+}
+
+.cards-header,
+.comment-body {
+  float: left;
+  clear: both;
+  width: 100%;
 }
 
 .comment-button {
@@ -351,7 +347,7 @@ body {
 .comment-container {
   float: left;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .comment-form {
@@ -368,22 +364,48 @@ body {
   padding-top: 80px;
 }
 
-.comment-text {
+.board-form,
+.cards-nav,
+.comment-header {
+  float: left;
+  width: 100%;
+}
+
+.comment-list {
   float: left;
   clear: both;
-  width: 73.1666666666%;
-  margin: -33px 0 0 16.83073%;
-  font-size: 0.833em;
+  width: 74.8333333333%;
+  margin: 14px 0 0 15.16667%;
+}
+
+.comment-listitem {
+  float: left;
+  width: 100%;
+  margin-top: 4px;
+  font-size: 0.75em;
   line-height: 1.38;
   text-align: justify;
   color: rgb(0, 0, 0);
+}
+
+.comment-text {
+  float: left;
+  width: 100%;
+  font-size: 0.833em;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+.comment-text-container {
+  float: left;
+  width: 80%;
+  margin: 14px 0 0 10%;
 }
 
 .comments {
   float: left;
   clear: both;
   width: 100%;
-  padding-top: 20px;
   padding-bottom: 80px;
 }
 
@@ -703,6 +725,23 @@ body {
   padding-bottom: 20px;
 }
 
+.card-title em,
+.comment-author em,
+.user-firstname em {
+  background-color: transparent;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
+.card-title span,
+.comment-author span,
+.user-firstname span {
+  background-color: transparent;
+  font-weight: 200;
+  text-transform: inherit;
+  text-decoration: none;
+}
+
 .card-title strong,
 .comment-author strong {
   background-color: transparent;
@@ -712,31 +751,26 @@ body {
   color: inherit;
 }
 
-.card-title em,
-.comment-author em,
-.comment-text em,
-.user-firstname em {
+.comment-text em {
   background-color: transparent;
+  font-style: italic;
   text-transform: inherit;
   text-decoration: none;
 }
 
-.card-title span,
-.comment-author span,
-.comment-text span,
-.user-firstname span {
+.comment-text span {
   background-color: transparent;
-  font-weight: 200;
+  font-weight: 900;
   text-transform: inherit;
   text-decoration: none;
 }
 
 .comment-text strong {
   background-color: transparent;
-  font-weight: 200;
+  font-weight: 900;
   text-transform: inherit;
   text-decoration: none;
-  color: rgb(255, 252, 242);
+  color: rgb(15, 20, 31);
 }
 
 .greeting strong {
