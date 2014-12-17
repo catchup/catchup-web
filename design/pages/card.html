@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
   <title>card</title>
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:300,200,700,600,900" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:400,900,700,200,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -20,9 +20,10 @@
     <form class="archive-form clearfix">
       <button class="archive-button" type="submit">Archive</button>
     </form>
-    <form class="preview-form clearfix">
+    <form class="preview-form">
       <button class="preview-button js-preview-card" type="submit">Preview</button>
     </form>
+    <p class="text">Check out preview at <a href="#">http://example.herokuapp.com/</a></p>
   </div>
   <div class="comment-form-container clearfix">
     <form class="comment-form clearfix">
@@ -32,8 +33,17 @@
   </div>
   <section class="comments clearfix">
     <div class="comment-container clearfix">
-      <p class="comment-author">Eleifend</p>
-      <p class="comment-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. Nam liber tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
+      <div class="comment-header clearfix">
+        <p class="comment-author">Eleifend</p>
+      </div>
+      <div class="comment-body clearfix">
+        <div class="comment-text-container clearfix">
+          <p class="comment-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. <em>Emphasis</em> eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. <strong>Strong</strong> tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
+        </div>
+        <ul class="comment-list clearfix">
+          <li class="comment-listitem">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim.</li>
+        </ul>
+      </div>
     </div>
   </section>
 </body>
