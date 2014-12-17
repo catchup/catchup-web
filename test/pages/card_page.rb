@@ -16,8 +16,8 @@ module CardPage
     page.has_text? text
   end
 
-  def has_preview_wait_message?
-    page.has_text? t("cards.preview.wait")
+  def preview_spinner_visibile?
+    page.has_selector?('div.spinner')
   end
 
   def has_preview_url?(url)

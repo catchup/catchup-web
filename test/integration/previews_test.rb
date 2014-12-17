@@ -21,16 +21,16 @@ class PreviewsTest < ActionDispatch::IntegrationTest
     Card.last.previewing!
     show_card(card)
 
-    # Then a "wait" message is displayed
-    assert has_preview_wait_message?
+    # Then an activity indicator spinner becomes visible
+    assert preview_spinner_visibile?
 
     # When the preview finishes
     Card.last.previewed!(@any_preview_url)
     CardObserver.publish(:card_previewed, Card.last, Card.last.preview_url)
     refresh
 
-    # Then the wait message disappears
-    refute has_preview_wait_message?
+    # Then the activity indicator spinner hides itself
+    refute preview_spinner_visibile?
 
     # And the url is displayed instead
     assert has_preview_url?(@any_preview_url)
