@@ -17,7 +17,7 @@ module CardPage
   end
 
   def preview_spinner_visibile?
-    page.has_selector?('div.spinner')
+    page.has_selector?("div.spinner")
   end
 
   def has_preview_url?(url)
