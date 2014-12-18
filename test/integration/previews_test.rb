@@ -3,7 +3,7 @@ require "integration/javascript_test"
 require "pages/board_page"
 require "pages/card_page"
 
-class PreviewsTest < ActionDispatch::IntegrationTest
+class PreviewsTest < JavascriptTest
   include BoardPage
   include CardPage
 
@@ -22,7 +22,7 @@ class PreviewsTest < ActionDispatch::IntegrationTest
     show_card(card)
 
     # Then an activity indicator spinner becomes visible
-    assert preview_spinner_visibile?
+    assert has_preview_spinner?
 
     # When the preview finishes
     Card.last.previewed!(@any_preview_url)
@@ -30,7 +30,7 @@ class PreviewsTest < ActionDispatch::IntegrationTest
     refresh
 
     # Then the activity indicator spinner hides itself
-    refute preview_spinner_visibile?
+    assert has_no_preview_spinner?
 
     # And the url is displayed instead
     assert has_preview_url?(@any_preview_url)

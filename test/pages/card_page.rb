@@ -16,8 +16,12 @@ module CardPage
     page.has_text? text
   end
 
-  def preview_spinner_visibile?
+  def has_preview_spinner?
     page.has_selector?("div.spinner")
+  end
+
+  def has_no_preview_spinner?
+    page.has_no_selector?("div.spinner")
   end
 
   def has_preview_url?(url)
