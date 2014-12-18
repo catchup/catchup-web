@@ -3,6 +3,6 @@
     <p class="comment-author"><%= comment.user.first_name %></p>
   </div>
   <div class="comment-body clearfix">
-    <%= markdown(comment.text) %>
+    <%= comment_markdown(comment.text) %>
   </div>
 </div>
