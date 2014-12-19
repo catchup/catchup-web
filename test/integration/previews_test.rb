@@ -3,7 +3,7 @@ require "integration/javascript_test"
 require "pages/board_page"
 require "pages/card_page"
 
-class PreviewsTest < ActionDispatch::IntegrationTest
+class PreviewsTest < JavascriptTest
   include BoardPage
   include CardPage
 
@@ -21,16 +21,16 @@ class PreviewsTest < ActionDispatch::IntegrationTest
     Card.last.previewing!
     show_card(card)
 
-    # Then a "wait" message is displayed
-    assert has_preview_wait_message?
+    # Then an activity indicator spinner becomes visible
+    assert has_preview_spinner?
 
     # When the preview finishes
     Card.last.previewed!(@any_preview_url)
     CardObserver.publish(:card_previewed, Card.last, Card.last.preview_url)
     refresh
 
-    # Then the wait message disappears
-    refute has_preview_wait_message?
+    # Then the activity indicator spinner hides itself
+    assert has_no_preview_spinner?
 
     # And the url is displayed instead
     assert has_preview_url?(@any_preview_url)

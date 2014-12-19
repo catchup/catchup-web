@@ -58,8 +58,8 @@ en:
     archive:
       submit: Archive
     preview:
-      wait: Your Preview is being generated... Please wait :)
       submit: Preview
+      ready: Preview is ready at %{url}
   comments:
     create:
       error: There was some error while creating this comment
