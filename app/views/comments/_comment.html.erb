@@ -1,4 +1,8 @@
 <div data-role="comment" class="comment-container clearfix">
-  <p class="comment-author"><%= comment.user.first_name %></p>
-  <p class="comment-text"><%= comment.text %></p>
+  <div class="comment-header clearfix">
+    <p class="comment-author"><%= comment.user.first_name %></p>
+  </div>
+  <div class="comment-body clearfix">
+    <%= comment_markdown(comment.text) %>
+  </div>
 </div>
