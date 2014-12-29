@@ -748,49 +748,142 @@ body {
 .card-title em,
 .comment-author em,
 .user-firstname em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .card-title span,
-.comment-author span,
-.user-firstname span {
-  background-color: transparent;
-  font-weight: 200;
-  text-transform: inherit;
-  text-decoration: none;
-}
-
 .card-title strong,
-.comment-author strong {
+.comment-author span,
+.comment-author strong,
+.user-firstname span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 200;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .comment-text em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
   font-style: italic;
+  font-size: inherit;
+  font-weight: inherit;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .comment-text span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 900;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .comment-text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 900;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: rgb(15, 20, 31);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .greeting strong {
@@ -802,18 +895,76 @@ body {
   border-bottom-color: transparent;
   border-top-style: none;
   border-bottom-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: rgb(255, 68, 122);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: rgb(255, 252, 242);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .text a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 900;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .user-firstname strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: rgb(255, 68, 122);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 200;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: rgb(255, 252, 242);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
