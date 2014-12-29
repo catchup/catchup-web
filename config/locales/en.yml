@@ -41,9 +41,14 @@ en:
       title-placeholder: Hit Your Keys Here To…
     index:
       greeting: Hey <strong>%{name}!</strong> These are your boards…
-      tutorial: <p>Claritatem insitam est usus legentis in iis qui facit eorum claritatem Investigationes demonstraverunt lectores legere. Hendrerit in vulputate velit esse molestie consequat vel illum; dolore eu feugiat nulla.</p><p>Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. Nam liber tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
+      tutorial: "<p>Here you can see a list of all boards to which you already have access to, and create new boards if you want.</p><p>When thinking for a name for your new board, we recommend a short & sweet one and please note that —since this is a early access preview product— you won't be able to rename it afterwards. (We are sincerely sorry for that.)</p>"
+    show:
+      todo-placeholder: Write it down and prioritize.
+      doing-placeholder: Better keep shipping…
+      review-placeholder: Let’s get some feedback!
+      tutorial-text: Heroku API key below is shared among everyone who has access to this board and it will be used solely to create a new fork (app, configs, data and addins) in Heroku when you will ask to preview a card.
     user_settings:
-      receive-notifications: Receive email notifications when things happen.
+      receive-notifications: Receive personal email notifications when things happen.
       submit: Save
     settings:
       api-key: Shared Heroku API key
@@ -52,8 +57,8 @@ en:
     create:
       error: There was some error while creating this card
       title-placeholder: Title
-      app-name-placeholder: Heroku app name
-      tarball-placeholder: GitHub tarball URL
+      app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
+      tarball-placeholder: https://github.com/user/repo/archive/branch-name.tar.gz
       submit: Add
     archive:
       submit: Archive
