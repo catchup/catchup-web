@@ -12,9 +12,9 @@
 
   <section class="board-content clearfix">
     <div class="lists-container clearfix" data-role="board" data-board-id="<%= @board.id %>">
-      <%= render @board.lists[0], list_class: 'todo', emptylist_placeholder: 'Dolor Ipsum Ullamcorper Cras Commodo' %>
-      <%= render @board.lists[1], list_class: 'doing', emptylist_placeholder: 'Tortor Tellus Ipsum Ultricies' %>
-      <%= render @board.lists[2], list_class: 'review', emptylist_placeholder: 'Sem Cras Magna Ultricies' %>
+      <%= render @board.lists[0], list_class: 'todo', emptylist_placeholder: t('.todo-placeholder') %>
+      <%= render @board.lists[1], list_class: 'doing', emptylist_placeholder: t('.doing-placeholder') %>
+      <%= render @board.lists[2], list_class: 'review', emptylist_placeholder: t('.review-placeholder') %>
     </div>
   </section>
 
@@ -34,7 +34,7 @@
         <%= render "boards/user_settings", board: @board if signed_in? %>
       </div>
       <div class="board-settings-form-container clearfix">
-        <p class="tutorial-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+        <p class="tutorial-text"><%= t('.tutorial-text') %></p>
         <%= render "boards/settings", board: @board %>
       </div>
     </div>
