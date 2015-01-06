@@ -30,7 +30,7 @@ en:
       submit: Let's Do This!
   lists:
     list:
-      todo: To Do
+      todo: To-Do
       doing: Doing
       review: Review
   boards:
