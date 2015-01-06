@@ -1,13 +1,3 @@
-<div>
-  <%= form_for :preview, url: card_previews_path(card), html: { class: 'preview-form clearfix' } do |f| %>
-    <%= button_tag t(".submit"), class: 'preview-button js-preview-card' %>
-  <% end %>
-
-  <% if card.previewing? %>
-    <script>
-      $('.preview-form').spin({ color: '#fff' });
-    </script>
-  <% elsif card.previewed? %>
-    <p class="text"><%= t('.ready', url: link_to(@card.preview_url, @card.preview_url)).html_safe %></p>
-  <% end %>
-</div>
+<%= form_for :preview, url: card_previews_path(card), html: { class: 'preview-form clearfix' } do |f| %>
+  <%= button_tag t(".submit"), class: 'preview-button js-preview-card' %>
+<% end %>

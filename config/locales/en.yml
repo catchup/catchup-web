@@ -30,7 +30,7 @@ en:
       submit: Let's Do This!
   lists:
     list:
-      todo: To Do
+      todo: To-Do
       doing: Doing
       review: Review
   boards:
@@ -60,11 +60,12 @@ en:
       app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
       tarball-placeholder: https://github.com/user/repo/archive/branch-name.tar.gz
       submit: Add
+    show:
+      ready: Preview is ready at %{url}
     archive:
       submit: Archive
     preview:
       submit: Preview
-      ready: Preview is ready at %{url}
   comments:
     create:
       error: There was some error while creating this comment

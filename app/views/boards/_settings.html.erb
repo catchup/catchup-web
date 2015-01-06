@@ -1,4 +1,6 @@
-<%= form_for board, html: { class: 'board-settings-form clearfix' } do |f| %>
-  <%= f.text_field :heroku_api_key, type: 'url', class: 'input-app-name', placeholder: t(".api-key") %>
-  <%= button_tag t(".submit"), class: 'submit' %>
-<% end %>
+<div>
+  <%= form_for board, html: { class: 'board-settings-form clearfix' } do |f| %>
+    <%= f.text_field :heroku_api_key, type: 'url', class: 'input-app-name', placeholder: t(".api-key") %>
+    <%= button_tag t(".submit"), class: 'submit' %>
+  <% end %>
+</div>
