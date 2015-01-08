@@ -1,4 +1,4 @@
-ruby '2.1.2'
+ruby '2.2.0'
 
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
@@ -11,7 +11,7 @@ gem 'jquery-ui-rails'
 gem 'rails_admin'
 gem 'rails-assets-vex'
 gem 'spinjs-rails'
-gem 'rails', '4.1.2'
+gem 'rails', '4.2.0'
 gem 'passenger'
 gem 'platform-api'
 gem 'postmark-rails'
@@ -29,6 +29,7 @@ gem 'validates_email_format_of'
 
 group :development do
   gem 'quiet_assets'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do

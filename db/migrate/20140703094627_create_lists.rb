@@ -5,7 +5,7 @@ class CreateLists < ActiveRecord::Migration
       t.integer :position
       t.belongs_to :board, index: true
 
-      t.timestamps
+      t.timestamps nullable: true
     end
   end
 end

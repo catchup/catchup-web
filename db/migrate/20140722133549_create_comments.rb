@@ -5,7 +5,7 @@ class CreateComments < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.text :text
 
-      t.timestamps
+      t.timestamps nullable: true
     end
   end
 end
