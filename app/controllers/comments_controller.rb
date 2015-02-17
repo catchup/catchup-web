@@ -1,9 +1,8 @@
 class CommentsController < ApplicationController
   def create
-    card    = Card.find(params[:card_id])
     comment = card.post_comment(
       by: current_user,
-      with: params.require(:comment).permit(:text)
+      with: comment_params
     )
 
     if comment.valid?
@@ -13,5 +12,24 @@ class CommentsController < ApplicationController
     end
 
     redirect_to [card.board, card]
+  end
+
+  def update
+    comment = card.comments.find(params[:id])
+    comment.update_attributes(comment_params)
+
+    respond_to do |format|
+      format.json { respond_with_bip(comment) }
+    end
+  end
+
+  private
+
+  def card
+    @card ||= Card.find(params[:card_id])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end

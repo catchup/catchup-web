@@ -3,6 +3,6 @@
     <p class="comment-author"><%= comment.user.first_name %></p>
   </div>
   <div class="comment-body clearfix">
-    <%= comment_markdown(comment.text) %>
+    <%= best_in_place [comment.card, comment], :text, display_with: -> (text) { comment_markdown(text) } %>
   </div>
 </div>

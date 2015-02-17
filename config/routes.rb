@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :cards, only: [] do
-    resources :comments, only: :create
+    resources :comments, only: [:create, :update]
     resources :previews, only: :create
   end
 
