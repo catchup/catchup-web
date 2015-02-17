@@ -71,7 +71,7 @@ class CardTest < ActiveSupport::TestCase
 
   test "branch tarball" do
     board = stub(repository_url: "http://github.com")
-    card  = cards(:cool_feature)
+    card = cards(:cool_feature)
     card.stubs(:board).returns(board)
 
     assert_equal "http://github.com/archive/whatever.tar.gz", card.branch_tarball
