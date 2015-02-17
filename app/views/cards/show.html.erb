@@ -6,7 +6,7 @@
 
   <header class="cards-header clearfix">
     <p class="user-firstname"><%= current_user.first_name %></p>
-    <h1 class="card-title"><%= @card.title %></h1>
+    <h1 class="card-title"><%= best_in_place [@card.board, @card], :title %></h1>
   </header>
 
   <div class="card-actions-container clearfix">

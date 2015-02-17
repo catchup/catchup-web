@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
 
-    resources :cards, only: [:create, :show] do
+    resources :cards, only: [:create, :show, :update] do
       match :move, on: :member, via: [:patch, :put]
       match :archive, on: :member, via: [:patch, :put]
     end
