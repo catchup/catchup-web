@@ -1,9 +1,3 @@
 <%= form_for :preview, url: card_previews_path(card), html: { class: 'preview-form clearfix' } do |f| %>
   <%= button_tag t(".submit"), class: 'preview-button js-preview-card' %>
 <% end %>
-
-<% if card.previewing? %>
-  <%= t(".wait") %>
-<% elsif card.previewed? %>
-  <%= link_to @card.preview_url, @card.preview_url %>
-<% end %>

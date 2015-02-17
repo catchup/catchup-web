@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210180201) do
+ActiveRecord::Schema.define(version: 20141211091015) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "boards", force: true do |t|
+  create_table "boards", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20141210180201) do
     t.string   "repository_url"
   end
 
-  create_table "boards_owners", force: true do |t|
+  create_table "boards_owners", force: :cascade do |t|
     t.integer "user_id"
     t.integer "board_id"
   end
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141210180201) do
   add_index "boards_owners", ["board_id"], name: "index_boards_owners_on_board_id", using: :btree
   add_index "boards_owners", ["user_id"], name: "index_boards_owners_on_user_id", using: :btree
 
-  create_table "boards_subscriptions", force: true do |t|
+  create_table "boards_subscriptions", force: :cascade do |t|
     t.integer "board_id"
     t.integer "user_id"
   end
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20141210180201) do
   add_index "boards_subscriptions", ["board_id"], name: "index_boards_subscriptions_on_board_id", using: :btree
   add_index "boards_subscriptions", ["user_id"], name: "index_boards_subscriptions_on_user_id", using: :btree
 
-  create_table "cards", force: true do |t|
+  create_table "cards", force: :cascade do |t|
     t.string   "title"
     t.integer  "list_id"
     t.datetime "created_at"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20141210180201) do
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer  "card_id"
     t.integer  "user_id"
     t.text     "text"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20141210180201) do
   add_index "comments", ["card_id"], name: "index_comments_on_card_id", using: :btree
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
-  create_table "lists", force: true do |t|
+  create_table "lists", force: :cascade do |t|
     t.string   "title"
     t.integer  "position"
     t.integer  "board_id"
@@ -76,10 +76,12 @@ ActiveRecord::Schema.define(version: 20141210180201) do
 
   add_index "lists", ["board_id"], name: "index_lists_on_board_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
+    t.string   "first_name"
   end
 
 end

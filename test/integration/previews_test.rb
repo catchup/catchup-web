@@ -18,22 +18,19 @@ class PreviewsTest < JavascriptTest
     card = create_card("My Card")
 
     # When I am on a card that is being previewed
-
-    # TODO: this smells a bit. Acceptance tests should not really deal with
-    # models...
     Card.last.previewing!
     show_card(card)
 
-    # Then a "wait" message is displayed
-    assert has_preview_wait_message?
+    # Then an activity indicator spinner becomes visible
+    assert has_preview_spinner?
 
     # When the preview finishes
     Card.last.previewed!(@any_preview_url)
-    sleep 2
     CardObserver.publish(:card_previewed, Card.last, Card.last.preview_url)
+    refresh
 
-    # Then the wait message disappears
-    refute has_preview_wait_message?
+    # Then the activity indicator spinner hides itself
+    assert has_no_preview_spinner?
 
     # And the url is displayed instead
     assert has_preview_url?(@any_preview_url)

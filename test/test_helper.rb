@@ -1,10 +1,14 @@
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
-require 'rails/test_help'
-require 'capybara/rails'
-require 'database_cleaner'
+ENV["RAILS_ENV"] ||= "test"
+
+require File.expand_path("../../config/environment", __FILE__)
+require "rails/test_help"
+require "capybara/rails"
+require "capybara/poltergeist"
+require "database_cleaner"
 require "mocha/mini_test"
 require "pages/authentication_page"
+
+Capybara.javascript_driver = :poltergeist
 
 class ActiveSupport::TestCase
   fixtures :all
@@ -30,7 +34,6 @@ class ActionDispatch::IntegrationTest
   self.use_transactional_fixtures = false
 
   setup do
-    sign_out
     DatabaseCleaner.start
   end
 

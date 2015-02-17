@@ -17,6 +17,8 @@
 //= require turbolinks
 //= require vex/vex
 //= require vex/vex.dialog
+//= require spin
+//= require jquery.spin
 //= require_tree .
 
 window.Catchup = {}

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  get :logout, to: "authentication#logout"
+
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
 
@@ -15,7 +17,5 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  root to: 'users#new'
-
-  resources :users, only: [:create]
+  root to: "boards#index"
 end

@@ -1,7 +1,7 @@
 body {
   background-color: rgb(255, 252, 242);
   font: 300 1.5em/1.38 'Source Sans Pro';
-  color: rgb(15, 20, 31);
+  color: rgb(0, 0, 0);
 }
 
 .page-_add-card {
@@ -15,11 +15,11 @@ body {
 }
 
 .page-card {
+  font-weight: 400;
   color: rgb(0, 0, 0);
 }
 
 .page-_board-settings,
-.page-signup,
 .page-welcome {
   color: rgb(15, 20, 31);
 }
@@ -55,7 +55,6 @@ body {
 
 .add-card-form .submit {
   float: right;
-  clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
   background-color: rgb(118, 175, 186);
@@ -89,9 +88,9 @@ body {
 
 .archive-form {
   float: left;
-  width: 18.75%;
+  width: 23.4375%;
   height: 54px;
-  margin-left: 50.79948%;
+  margin-left: 51.04167%;
 }
 
 .board {
@@ -137,7 +136,6 @@ body {
 
 .board-form .submit {
   float: left;
-  clear: both;
   width: 100%;
   background-color: rgb(255, 68, 122);
   font-weight: 700;
@@ -184,7 +182,6 @@ body {
 .board-settings-form .submit,
 .user-settings-form .submit {
   float: right;
-  clear: both;
   width: 41.6673024592%;
   margin-top: 20px;
   background-color: rgb(118, 175, 186);
@@ -247,7 +244,7 @@ body {
   width: 97.9997964169%;
   height: 198px;
   margin: 20px 0 0 0.99756%;
-  background-color: rgb(255, 252, 242);
+  background-color: rgb(255, 255, 255);
   -webkit-transition: -webkit-transform 0.25s;
   -moz-transition: -moz-transform 0.25s;
   -o-transition: -o-transform 0.25s;
@@ -289,12 +286,6 @@ body {
   line-height: 1.38;
 }
 
-.cards-header {
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
 .cards-header .card-title {
   border-right: 12px solid rgb(255, 68, 122);
   border-left: 12px solid rgb(255, 68, 122);
@@ -318,8 +309,8 @@ body {
 }
 
 .comment-author {
-  float: right;
-  margin-right: 84.79948%;
+  float: left;
+  margin-left: 10%;
   padding-right: 10px;
   padding-left: 10px;
   background-color: rgb(237, 227, 212);
@@ -329,6 +320,13 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: rgb(255, 252, 242);
+}
+
+.cards-header,
+.comment-body {
+  float: left;
+  clear: both;
+  width: 100%;
 }
 
 .comment-button {
@@ -349,7 +347,7 @@ body {
 .comment-container {
   float: left;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .comment-form {
@@ -366,22 +364,48 @@ body {
   padding-top: 80px;
 }
 
-.comment-text {
+.board-form,
+.cards-nav,
+.comment-header {
+  float: left;
+  width: 100%;
+}
+
+.comment-list {
   float: left;
   clear: both;
-  width: 73.1666666666%;
-  margin: -33px 0 0 16.83203%;
-  font-size: 0.833em;
+  width: 74.8333333333%;
+  margin: 14px 0 0 15.16667%;
+}
+
+.comment-listitem {
+  float: left;
+  width: 100%;
+  margin-top: 4px;
+  font-size: 0.75em;
   line-height: 1.38;
   text-align: justify;
   color: rgb(0, 0, 0);
+}
+
+.comment-text {
+  float: left;
+  width: 100%;
+  font-size: 0.833em;
+  line-height: 1.38;
+  color: rgb(0, 0, 0);
+}
+
+.comment-text-container {
+  float: left;
+  width: 80%;
+  margin: 14px 0 0 10%;
 }
 
 .comments {
   float: left;
   clear: both;
   width: 100%;
-  padding-top: 20px;
   padding-bottom: 80px;
 }
 
@@ -434,19 +458,6 @@ body {
   font-weight: 900;
   line-height: 1.38;
   color: rgb(0, 0, 0);
-}
-
-.input {
-  display: block;
-  float: left;
-  width: 66.0400390625%;
-  height: 54px;
-  padding: 0 10px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgb(15, 20, 31);
 }
 
 .input-app-name {
@@ -567,7 +578,10 @@ body {
 
 .preview-button {
   display: block;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
   width: 100%;
   height: 54px;
   background-color: rgb(255, 68, 122);
@@ -591,11 +605,28 @@ body {
   transform: scale(1.2, 1.2);
 }
 
-.preview-form {
+.preview-container {
   float: left;
-  width: 18.75%;
+  clear: both;
+  width: 80%;
+  margin: 10px 0 0 10%;
+}
+
+.preview-form {
+  position: relative;
+  float: left;
+  width: 23.5416666666%;
   height: 54px;
-  margin-left: 1.66797%;
+  margin-left: 1.97754%;
+}
+
+.preview-text {
+  float: left;
+  width: 100%;
+  font-size: 0.833em;
+  line-height: 1.38;
+  text-align: right;
+  color: rgb(0, 0, 0);
 }
 
 .review-list {
@@ -622,44 +653,9 @@ body {
   color: rgb(255, 68, 122);
 }
 
-.signup-content {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
-
-.board-form,
-.cards-nav,
-.signup-form {
-  float: left;
-  width: 100%;
-}
-
-.signup-form .submit {
-  float: left;
-  width: 31.9791666666%;
-  margin-left: 1.97917%;
-  background-color: rgb(255, 68, 122);
-  font-weight: 700;
-}
-
-.signup-form-container {
-  float: left;
-  clear: both;
-  width: 80%;
-  margin: 90px 0 0 10%;
-}
-
-.signup-header {
-  float: left;
-  width: 100%;
-  padding-top: 80px;
-}
-
 .submit {
   display: block;
+  clear: both;
   height: 54px;
   font-size: 1em;
   text-align: center;
@@ -679,6 +675,7 @@ body {
   opacity: 0.2;
 }
 
+.buttons-container,
 .text-container {
   float: left;
   width: 80%;
@@ -749,40 +746,145 @@ body {
   padding-bottom: 20px;
 }
 
-.card-title strong,
-.comment-author strong {
-  background-color: transparent;
-  font-weight: 200;
-  text-transform: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-title em,
+.board-title em,
 .comment-author em,
-.comment-text em,
 .user-firstname em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
-.card-title span,
+.board-title span,
+.board-title strong,
 .comment-author span,
-.comment-text span,
+.comment-author strong,
 .user-firstname span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 200;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.comment-text em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: italic;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.comment-text span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  text-transform: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .comment-text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: transparent;
-  font-weight: 200;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 900;
   text-transform: inherit;
   text-decoration: none;
-  color: rgb(255, 252, 242);
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: rgb(15, 20, 31);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .greeting strong {
@@ -794,14 +896,76 @@ body {
   border-bottom-color: transparent;
   border-top-style: none;
   border-bottom-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: rgb(255, 68, 122);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: rgb(255, 252, 242);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.preview-text a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 .user-firstname strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
   background-color: rgb(255, 68, 122);
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
   font-weight: 200;
   text-transform: inherit;
   text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
   color: rgb(255, 252, 242);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }

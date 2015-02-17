@@ -5,13 +5,25 @@
   </nav>
 
   <header class="cards-header clearfix">
-    <p class="user-firstname">Zach</p>
+    <p class="user-firstname"><%= current_user.first_name %></p>
     <h1 class="card-title"><%= @card.title %></h1>
   </header>
 
   <div class="card-actions-container clearfix">
-    <%= render "cards/archive", card: @card %>
-    <%= render "cards/preview", card: @card %>
+    <div class="buttons-container clearfix">
+      <%= render "cards/archive", card: @card %>
+      <%= render "cards/preview", card: @card %>
+    </div>
+
+    <div class="preview-container clearfix">
+      <% if @card.previewing? %>
+        <script>
+          $('.preview-form').spin({ color: '#fff' });
+        </script>
+      <% elsif @card.previewed? %>
+        <p class="preview-text"><%= t('.ready', url: link_to(@card.preview_url, @card.preview_url)).html_safe %></p>
+      <% end %>
+    </div>
   </div>
 
   <% if signed_in? %>

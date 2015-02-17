@@ -4,7 +4,7 @@ class CreateCards < ActiveRecord::Migration
       t.string :title
       t.belongs_to :list, index: true
 
-      t.timestamps
+      t.timestamps nullable: true
     end
   end
 end
