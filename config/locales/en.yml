@@ -71,3 +71,6 @@ en:
       error: There was some error while creating this comment
       submit: Comment
       comment-placeholder: Got something to say?
+    edit:
+      save: Save edits
+      cancel: Cancel

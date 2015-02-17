@@ -3,6 +3,9 @@
     <p class="comment-author"><%= comment.user.first_name %></p>
   </div>
   <div class="comment-body clearfix">
-    <%= best_in_place [comment.card, comment], :text, display_with: -> (text) { comment_markdown(text) } %>
+    <%= best_in_place [comment.card, comment], :text, as: :textarea,
+                      display_with: -> (text) { comment_markdown(text) },
+                      ok_button: t("comments.edit.save"),
+                      cancel_button: t("comments.edit.cancel") %>
   </div>
 </div>
