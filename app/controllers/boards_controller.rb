@@ -31,7 +31,10 @@ class BoardsController < ApplicationController
     board = current_user.owned_boards.find(params[:id])
     board.update_attributes(board_params)
 
-    redirect_to board
+    respond_to do |format|
+      format.html { redirect_to board }
+      format.json { respond_with_bip(board) }
+    end
   end
 
   private

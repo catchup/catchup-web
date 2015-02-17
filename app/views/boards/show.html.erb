@@ -7,7 +7,7 @@
 
   <header class="board-header clearfix">
     <p class="user-firstname"><%= current_user.first_name %></p>
-    <h1 class="board-title"><%= @board.title %></h1>
+    <h1 class="board-title"><%= best_in_place @board, :title %></h1>
   </header>
 
   <section class="board-content clearfix">
