@@ -472,7 +472,7 @@ body {
   color: rgb(15, 20, 31);
 }
 
-.input-tarball-url {
+.input-tarball-url, .input-branch-name, .input-repository-url {
   display: block;
   float: left;
   clear: both;

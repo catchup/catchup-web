@@ -13,10 +13,7 @@ class BoardsController < ApplicationController
     if @board.save
       redirect_to @board
     else
-      redirect_to(
-        boards_path,
-        alert: t("boards.create.error")
-      )
+      redirect_to boards_path, alert: t("boards.create.error")
     end
   end
 
@@ -37,6 +34,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:title, :heroku_api_key)
+    params.require(:board)
+          .permit(:title, :heroku_api_key, :app_name, :repository_url)
   end
 end

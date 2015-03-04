@@ -52,13 +52,14 @@ en:
       submit: Save
     settings:
       api-key: Shared Heroku API key
+      app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
+      repository-placeholder: https://github.com/user/repo
       submit: Save
   cards:
     create:
       error: There was some error while creating this card
       title-placeholder: Title
-      app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
-      tarball-placeholder: https://github.com/user/repo/archive/branch-name.tar.gz
+      branch-placeholder: GitHub branch
       submit: Add
     show:
       ready: Preview is ready at %{url}

@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20141211091015) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "heroku_api_key"
+    t.string   "app_name"
+    t.string   "repository_url"
   end
 
   create_table "boards_owners", force: :cascade do |t|
@@ -45,11 +47,10 @@ ActiveRecord::Schema.define(version: 20141211091015) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
-    t.boolean  "archived",       default: false
-    t.string   "branch_tarball"
-    t.string   "app_name"
+    t.boolean  "archived",    default: false
     t.string   "preview_url"
     t.boolean  "previewing"
+    t.string   "branch_name"
   end
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree

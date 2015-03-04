@@ -50,4 +50,10 @@ class Card < ActiveRecord::Base
   def previewed?
     !previewing? && preview_url?
   end
+
+  def branch_tarball
+    uri = URI(board.repository_url)
+    uri.path = "/archive/#{branch_name}.tar.gz"
+    uri.to_s
+  end
 end
