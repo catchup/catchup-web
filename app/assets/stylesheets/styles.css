@@ -77,7 +77,6 @@ body {
   font-size: 1em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   opacity: 0.4;
 }
@@ -198,7 +197,6 @@ body {
 
 .board-title {
   float: left;
-  text-transform: uppercase;
 }
 
 .board-wrapper {
@@ -293,7 +291,6 @@ body {
   font-size: 1.167em;
   font-weight: 900;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   overflow: visible;
 }
@@ -318,7 +315,6 @@ body {
   font-weight: 700;
   line-height: 1.38;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
@@ -340,7 +336,6 @@ body {
   font-size: 1em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
@@ -588,7 +583,6 @@ body {
   font-size: 1em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   -webkit-transition: -webkit-transform 0.25s;
   -moz-transition: -moz-transform 0.25s;
@@ -659,7 +653,6 @@ body {
   height: 54px;
   font-size: 1em;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
@@ -691,7 +684,6 @@ body {
   background-color: rgb(255, 252, 242);
   font-size: 1em;
   font-weight: 700;
-  text-transform: uppercase;
   color: rgb(15, 20, 31);
   overflow: visible;
   resize: none;
@@ -735,7 +727,6 @@ body {
   font-weight: 700;
   line-height: 1.38;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(0, 0, 0);
 }
 
