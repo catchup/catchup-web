@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "heroku_api_key"
+    t.string   "heroku_api_key", limit: 255
     t.string   "app_name"
     t.string   "repository_url"
   end
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "boards_subscriptions", ["user_id"], name: "index_boards_subscriptions_on_user_id", using: :btree
 
   create_table "cards", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",       limit: 255
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
-    t.boolean  "archived",    default: false
-    t.string   "preview_url"
+    t.boolean  "archived",                default: false
+    t.string   "preview_url", limit: 255
     t.boolean  "previewing"
     t.string   "branch_name"
   end
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "lists", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",      limit: 255
     t.integer  "position"
     t.integer  "board_id"
     t.datetime "created_at"
@@ -77,11 +77,11 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "lists", ["board_id"], name: "index_lists_on_board_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
+    t.string   "email",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password"
-    t.string   "first_name"
+    t.string   "password",   limit: 255
+    t.string   "first_name", limit: 255
   end
 
 end
