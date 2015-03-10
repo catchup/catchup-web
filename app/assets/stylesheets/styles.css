@@ -33,7 +33,7 @@ body {
   top: -22px;
   left: 0;
   right: 0;
-  z-index: 24;
+  z-index: 27;
   margin: 0 auto;
   font-size: 2.667em;
   line-height: 1.38;
@@ -92,6 +92,18 @@ body {
   margin-left: 51.04167%;
 }
 
+.bip_board-title {
+  display: block;
+  float: left;
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 1.5em;
+  line-height: 1.38;
+  color: rgb(255, 252, 242);
+  overflow: visible;
+}
+
 .board {
   position: relative;
   float: left;
@@ -118,7 +130,7 @@ body {
   position: fixed;
   top: 197px;
   left: 0;
-  z-index: 25;
+  z-index: 28;
   width: 48px;
   height: 48px;
   background-color: rgb(255, 68, 122);
@@ -128,7 +140,7 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 23;
+  z-index: 26;
   width: 100%;
   padding-top: 60px;
 }
@@ -144,18 +156,8 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 5;
+  z-index: 8;
   width: 100%;
-}
-
-.board-header .board-title {
-  border-right: 12px solid rgb(255, 68, 122);
-  border-left: 12px solid rgb(255, 68, 122);
-  background-color: rgb(255, 68, 122);
-  font-size: 1.5em;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(255, 252, 242);
 }
 
 .board-nav {
@@ -197,6 +199,22 @@ body {
 
 .board-title {
   float: left;
+}
+
+.board-title-container {
+  display: block;
+  float: left;
+  width: 53.75%;
+  height: 49px;
+}
+
+.board-title-container .board-title {
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 1.5em;
+  line-height: 1.38;
+  color: rgb(255, 252, 242);
 }
 
 .board-wrapper {
@@ -410,7 +428,7 @@ body {
 }
 
 .doing-list .card {
-  z-index: 14;
+  z-index: 17;
 }
 
 .doing-list .card:active,
@@ -423,7 +441,7 @@ body {
 }
 
 .doing-list .emptylist-placeholder {
-  z-index: 13;
+  z-index: 16;
 }
 
 .doing-title,
@@ -467,7 +485,7 @@ body {
   color: rgb(15, 20, 31);
 }
 
-.input-tarball-url, .input-branch-name, .input-repository-url {
+.input-tarball-url {
   display: block;
   float: left;
   clear: both;
@@ -628,7 +646,7 @@ body {
 }
 
 .review-list .card {
-  z-index: 19;
+  z-index: 22;
 }
 
 .review-list .card:active {
@@ -640,7 +658,7 @@ body {
 }
 
 .review-list .emptylist-placeholder {
-  z-index: 18;
+  z-index: 21;
 }
 
 .review-title {
@@ -690,7 +708,7 @@ body {
 }
 
 .todo-list .card {
-  z-index: 9;
+  z-index: 12;
 }
 
 .todo-list .card:hover {
@@ -707,7 +725,7 @@ body {
 }
 
 .todo-list .emptylist-placeholder {
-  z-index: 7;
+  z-index: 10;
 }
 
 .tutorial-text {
@@ -737,7 +755,13 @@ body {
   padding-bottom: 20px;
 }
 
-.board-title em,
+._container {
+  float: left;
+  width: 57.3643410852%;
+  height: 49px;
+}
+
+.bip_board-title em,
 .comment-author em,
 .user-firstname em {
   border-top-width: 0;
@@ -766,8 +790,8 @@ body {
   white-space: normal;
 }
 
-.board-title span,
-.board-title strong,
+.bip_board-title span,
+.bip_board-title strong,
 .comment-author span,
 .comment-author strong,
 .user-firstname span {
