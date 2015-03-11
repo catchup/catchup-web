@@ -69,11 +69,19 @@ class CardTest < ActiveSupport::TestCase
     assert_equal board.subscribers, card.involved_users
   end
 
-  test "branch tarball" do
-    board = stub(repository_url: "http://github.com")
+  test "branch tarball with trailing slash" do
+    board = stub(repository_url: "http://github.com/user/repo/")
     card = cards(:cool_feature)
     card.stubs(:board).returns(board)
 
-    assert_equal "http://github.com/archive/whatever.tar.gz", card.branch_tarball
+    assert_equal "http://github.com/user/repo/archive/whatever.tar.gz", card.branch_tarball
+  end
+
+  test "branch tarball without trailing slash" do
+    board = stub(repository_url: "http://github.com/user/repo")
+    card = cards(:cool_feature)
+    card.stubs(:board).returns(board)
+
+    assert_equal "http://github.com/user/repo/archive/whatever.tar.gz", card.branch_tarball
   end
 end
