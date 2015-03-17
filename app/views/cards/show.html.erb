@@ -6,7 +6,10 @@
 
   <header class="cards-header clearfix">
     <p class="user-firstname"><%= current_user.first_name %></p>
-    <h1 class="card-title"><%= best_in_place [@card.board, @card], :title %></h1>
+    <%= best_in_place [@card.board, @card], :title,
+                      display_with: -> (title) { content_tag :h1, title, class: 'card-title' },
+                      class: 'card-title-container clearfix',
+                      inner_class: 'bip_card-title' %>
   </header>
 
   <div class="card-actions-container clearfix">
