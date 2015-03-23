@@ -29,16 +29,11 @@ module Heroku
     end
 
     def fork_into(application)
-      Heroku::CLT.execute(
-        api_key: api_key,
-        app: name,
-        cmd: "da-fork",
-        args: "--copy-pg-data #{application.name}"
-      )
+      heroku_clt("fork --copy-pg-data", application.name)
     end
 
     def run_command(command)
-      Heroku::CLT.execute(cmd: "run", args: command)
+      heroku_clt("run", command)
     end
 
     private
@@ -57,6 +52,16 @@ module Heroku
         rescue Excon::Errors::ServiceUnavailable
         end
       end
+    end
+
+    def heroku_clt(command, arguments)
+      command = "HEROKU_API_KEY=#{api_key} \
+                 heroku #{command} --app #{name} #{arguments}"
+
+      Rails.logger.info("Running command on #{name}: #{command}")
+      # Avoids conflicting ruby versions
+      # (Ref.: http://www.rakefieldmanual.com/fascicles/001-clean-environment.html)
+      Bundler.with_clean_env { system(command) }
     end
   end
 end
