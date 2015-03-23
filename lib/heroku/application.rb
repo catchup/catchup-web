@@ -56,7 +56,7 @@ module Heroku
 
     def heroku_clt(command, arguments)
       command = "HEROKU_API_KEY=#{api_key} \
-                 vendor/heroku-toolbelt/bin/heroku #{command} --app #{name} #{arguments}"
+                 heroku #{command} --app #{name} #{arguments}"
 
       Rails.logger.info("Running command on #{name}: #{command}")
       # Avoids conflicting ruby versions
