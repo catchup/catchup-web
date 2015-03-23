@@ -29,7 +29,7 @@ module Heroku
     end
 
     def fork_into(application)
-      heroku_clt("fork --copy-pg-data", application.name)
+      heroku_clt("da-fork --copy-pg-data", application.name)
     end
 
     def run_command(command)
