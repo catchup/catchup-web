@@ -37,7 +37,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.6)
     arel (6.0.0)
     best_in_place (3.0.3)
       actionpack (>= 3.2)
@@ -87,15 +86,6 @@ GEM
       moneta
       multi_json (>= 1.9.2)
       netrc
-    heroku (3.10.1)
-      heroku-api (~> 0.3.19)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (= 1.6.7)
-      rubyzip
-    heroku-api (0.3.19)
-      excon (~> 0.38)
-      multi_json (~> 1.8)
     hike (1.2.3)
     httpclient (2.3.4.1)
     i18n (0.7.0)
@@ -111,8 +101,6 @@ GEM
     kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    launchy (2.4.2)
-      addressable (~> 2.3)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -203,9 +191,6 @@ GEM
       activerecord (>= 3.1.12)
     redcarpet (3.1.2)
     remotipart (1.2.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    rubyzip (1.1.6)
     safe_yaml (1.0.4)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -260,7 +245,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails
   database_cleaner
-  heroku
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails

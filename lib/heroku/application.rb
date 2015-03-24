@@ -29,7 +29,7 @@ module Heroku
     end
 
     def fork_into(application)
-      heroku_clt("fork", application.name)
+      heroku_clt("da-fork --copy-pg-data", application.name)
     end
 
     def run_command(command)
@@ -54,12 +54,15 @@ module Heroku
       end
     end
 
-    def heroku_clt(command, arguments)
-      command = "HEROKU_API_KEY=#{api_key} \
-                 bundle exec heroku #{command} --app #{name} #{arguments}"
+    def heroku_clt(cmd, arguments)
+      command =  "HEROKU_API_KEY=#{api_key} "
+      command += "vendor/heroku-toolbelt/bin/heroku "
+      command += "#{cmd} --app #{name} #{arguments}"
 
       Rails.logger.info("Running command on #{name}: #{command}")
-      system(command)
+      # Avoids conflicting ruby versions
+      # (Ref.: http://www.rakefieldmanual.com/fascicles/001-clean-environment.html)
+      Bundler.with_clean_env { system(command) }
     end
   end
 end

@@ -5,7 +5,6 @@ source 'https://rails-assets.org'
 
 gem 'best_in_place'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'heroku'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'

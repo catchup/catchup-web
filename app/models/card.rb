@@ -53,7 +53,8 @@ class Card < ActiveRecord::Base
 
   def branch_tarball
     uri = URI(board.repository_url)
-    uri.path = "/archive/#{branch_name}.tar.gz"
+    uri.path += "/" unless uri.path.ends_with?("/")
+    uri.path += "archive/#{branch_name}.tar.gz"
     uri.to_s
   end
 end

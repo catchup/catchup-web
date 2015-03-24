@@ -1,7 +1,6 @@
-ENV["RAILS_ENV"] ||= "test"
-
-require File.expand_path("../../config/environment", __FILE__)
-require "rails/test_help"
+ENV['RAILS_ENV'] ||= 'test'
+require File.expand_path('../../config/environment', __FILE__)
+require 'rails/test_help'
 require "capybara/rails"
 require "capybara/poltergeist"
 require "database_cleaner"
@@ -11,6 +10,7 @@ require "pages/authentication_page"
 Capybara.javascript_driver = :poltergeist
 
 class ActiveSupport::TestCase
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 end
 
