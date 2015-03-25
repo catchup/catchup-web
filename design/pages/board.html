@@ -15,7 +15,12 @@
   </nav>
   <header class="board-header clearfix">
     <p class="user-firstname">Zach</p>
-    <h1 class="board-title">serious sh*t! ;-)</h1>
+    <span class="board-title-container clearfix js-bip_board-title">
+      <h1 class="board-title">Example board title</h1>
+      <form class="board-title-form clearfix">
+        <input class="bip_board-title" type="text">
+      </form>
+    </span>
   </header>
   <section class="board-content clearfix">
     <div class="lists-container clearfix">
@@ -45,7 +50,7 @@
     </div>
   </section>
   <div class="board-actions-container">
-    <p class="add-card-action js-add-card">+</p>
+    <a href="#" class="add-card-action js-add-card">+</a>
   </div>
 </body>
 </html>

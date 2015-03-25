@@ -7,7 +7,10 @@
 
   <header class="board-header clearfix">
     <p class="user-firstname"><%= current_user.first_name %></p>
-    <h1 class="board-title"><%= @board.title %></h1>
+    <%= best_in_place @board, :title,
+                      display_with: -> (title) { content_tag :h1, title, class: 'board-title' },
+                      class: 'board-title-container clearfix js-bip_board-title',
+                      inner_class: 'bip_board-title' %>
   </header>
 
   <section class="board-content clearfix">

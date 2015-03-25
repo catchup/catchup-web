@@ -2,7 +2,13 @@
   <div class="comment-header clearfix">
     <p class="comment-author"><%= comment.user.first_name %></p>
   </div>
-  <div class="comment-body clearfix">
-    <%= comment_markdown(comment.text) %>
+  <div class="comment-body-container clearfix">
+    <%= best_in_place [comment.card, comment], :text, as: :textarea,
+                      display_with: -> (text) { comment_markdown(text) },
+                      ok_button: t("comments.edit.save"),
+                      cancel_button: t("comments.edit.cancel"),
+                      class: 'comment-body clearfix js-bip_comment-body',
+                      ok_button_class: 'bip_submit-comment-text',
+                      cancel_button_class: 'bip_cancel-comment-text' %>
   </div>
 </div>

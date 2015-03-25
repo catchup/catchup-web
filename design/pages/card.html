@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
   <title>card</title>
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:400,900,700,200,600" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:400,700,200,900" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/standardize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,7 +14,12 @@
   </nav>
   <header class="cards-header clearfix">
     <p class="user-firstname">Zach</p>
-    <h1 class="card-title">Eleifend option congue nihil imperdiet doming id quod.</h1>
+    <span class="card-title-container clearfix js-bip_card-title">
+      <h1 class="card-title">Example card title</h1>
+      <form class="card-title-form clearfix">
+        <input class="bip_card-title" type="text">
+      </form>
+    </span>
   </header>
   <div class="card-actions-container clearfix">
     <div class="buttons-container clearfix">
@@ -40,13 +45,20 @@
       <div class="comment-header clearfix">
         <p class="comment-author">Eleifend</p>
       </div>
-      <div class="comment-body clearfix">
-        <div class="comment-text-container clearfix">
-          <p class="comment-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. <em>Emphasis</em> eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. <strong>Strong</strong> tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
-        </div>
-        <ul class="comment-list clearfix">
-          <li class="comment-listitem">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim.</li>
-        </ul>
+      <div class="comment-body-container clearfix">
+        <span class="comment-body clearfix js-bip_comment-body">
+          <form class="comment-text-form clearfix">
+            <textarea class="bip_comment-text" placeholder="Comment text (editing)"></textarea>
+            <button class="bip_cancel-comment-text" type="button">✕</button>
+            <button class="bip_submit-comment-text" type="submit">✓</button>
+          </form>
+          <div class="comment-text-container clearfix">
+            <p class="comment-text">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. <em class="rt-element" style="font-style: italic; font-family: inherit; font-weight: inherit; text-decoration: none; text-transform: inherit; color: inherit; background-image: none; background-color: transparent; box-shadow: none; text-shadow: inherit; opacity: 1; border: none; word-wrap: normal; white-space: normal; word-break: normal;">Emphasis</em> eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes. <strong class="rt-element is-selected" style="font-style: inherit; font-family: inherit; font-weight: 900; text-decoration: none; text-transform: inherit; color: rgb(15, 20, 31); background-image: none; background-color: transparent; box-shadow: none; text-shadow: inherit; opacity: 1; border: none; word-wrap: normal; white-space: normal; word-break: normal;">Strong</strong> tempor cum soluta nobis assum typi. Nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Eum iriure dolor in hendrerit in vulputate velit esse. Etiam processus dynamicus qui sequitur mutationem consuetudium lectorum mirum est. Claritatem Investigationes demonstraverunt lectores legere me lius, quod ii legunt.</p>
+          </div>
+          <ul class="comment-list clearfix">
+            <li class="comment-listitem">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim.</li>
+          </ul>
+        </span>
       </div>
     </div>
   </section>

@@ -1,6 +1,6 @@
 body {
   background-color: rgb(255, 252, 242);
-  font: 300 1.5em/1.38 'Source Sans Pro';
+  font: 400 1.25em/1.38 'Source Sans Pro';
   color: rgb(0, 0, 0);
 }
 
@@ -15,12 +15,12 @@ body {
 }
 
 .page-card {
-  font-weight: 400;
   color: rgb(0, 0, 0);
 }
 
 .page-_board-settings,
 .page-welcome {
+  font-weight: 300;
   color: rgb(15, 20, 31);
 }
 
@@ -29,13 +29,14 @@ body {
 }
 
 .add-card-action {
+  display: block;
   position: absolute;
   top: -22px;
   left: 0;
   right: 0;
-  z-index: 24;
+  z-index: 27;
   margin: 0 auto;
-  font-size: 2.667em;
+  font-size: 3.2em;
   line-height: 1.38;
   text-align: center;
   color: rgb(255, 252, 242);
@@ -48,15 +49,10 @@ body {
   margin-left: 9.99756%;
 }
 
-.add-card-form .input-app-name {
-  clear: both;
-  margin-top: 4px;
-}
-
 .add-card-form .submit {
-  float: right;
-  width: 41.6673024592%;
-  margin-top: 20px;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
   background-color: rgb(118, 175, 186);
 }
 
@@ -74,10 +70,9 @@ body {
   width: 100%;
   height: 54px;
   background-color: rgb(128, 128, 128);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   opacity: 0.4;
 }
@@ -93,6 +88,75 @@ body {
   margin-left: 51.04167%;
 }
 
+.bip_board-title {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-left: 12px;
+  border: 1px solid rgb(255, 68, 122);
+  background-color: rgb(255, 252, 242);
+  font-size: 1.8em;
+  line-height: 1.38;
+  color: rgb(255, 68, 122);
+  overflow: visible;
+}
+
+.bip_cancel-comment-text {
+  display: block;
+  position: absolute;
+  top: 42px;
+  right: -36px;
+  z-index: 24;
+  width: 36px;
+  height: 36px;
+  background-color: rgb(255, 68, 122);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(255, 252, 242);
+}
+
+.bip_card-title {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-left: 12px;
+  border: 1px solid rgb(255, 68, 122);
+  background-color: rgb(255, 252, 242);
+  font-size: 1.4em;
+  font-weight: 900;
+  line-height: 1.38;
+  color: rgb(255, 68, 122);
+}
+
+.bip_comment-text {
+  display: block;
+  float: left;
+  width: 100%;
+  min-height: 92px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid rgb(215, 222, 209);
+  font-size: 1em;
+  color: rgb(15, 20, 31);
+  resize: vertical;
+}
+
+.bip_submit-comment-text {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -36px;
+  z-index: 23;
+  width: 36px;
+  height: 36px;
+  background-color: rgb(118, 175, 186);
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(255, 252, 242);
+}
+
 .board {
   position: relative;
   float: left;
@@ -104,7 +168,7 @@ body {
   width: 100%;
   height: 198px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   color: rgb(237, 227, 212);
   overflow: hidden;
@@ -119,7 +183,7 @@ body {
   position: fixed;
   top: 197px;
   left: 0;
-  z-index: 25;
+  z-index: 28;
   width: 48px;
   height: 48px;
   background-color: rgb(255, 68, 122);
@@ -129,9 +193,16 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 23;
+  z-index: 26;
   width: 100%;
   padding-top: 60px;
+}
+
+.board-form,
+.cards-nav,
+.comment-header {
+  float: left;
+  width: 100%;
 }
 
 .board-form .submit {
@@ -145,18 +216,8 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 5;
+  z-index: 8;
   width: 100%;
-}
-
-.board-header .board-title {
-  border-right: 12px solid rgb(255, 68, 122);
-  border-left: 12px solid rgb(255, 68, 122);
-  background-color: rgb(255, 68, 122);
-  font-size: 1.5em;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(255, 252, 242);
 }
 
 .board-nav {
@@ -179,11 +240,10 @@ body {
   margin: 20px 0 0 9.99756%;
 }
 
-.board-settings-form .submit,
-.user-settings-form .submit {
+.board-settings-form .submit {
   float: right;
-  width: 41.6673024592%;
-  margin-top: 20px;
+  width: 99.936420742%;
+  margin-top: 10px;
   background-color: rgb(118, 175, 186);
   font-weight: 700;
 }
@@ -198,7 +258,30 @@ body {
 
 .board-title {
   float: left;
-  text-transform: uppercase;
+}
+
+.board-title-container,
+.card-title-container {
+  display: block;
+  float: left;
+  width: 75.25%;
+}
+
+.board-title-container .board-title {
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 1.8em;
+  line-height: 1.38;
+  color: rgb(255, 252, 242);
+}
+
+.board-title-form,
+.card-title-form,
+.cards-header {
+  float: left;
+  clear: both;
+  width: 100%;
 }
 
 .board-wrapper {
@@ -268,7 +351,7 @@ body {
 .card .card-title {
   height: 198px;
   padding: 10px;
-  font-size: 0.75em;
+  font-size: 0.9em;
   font-weight: 700;
   color: rgb(15, 20, 31);
   overflow: hidden;
@@ -286,14 +369,13 @@ body {
   line-height: 1.38;
 }
 
-.cards-header .card-title {
+.card-title-container .card-title {
   border-right: 12px solid rgb(255, 68, 122);
   border-left: 12px solid rgb(255, 68, 122);
   background-color: rgb(255, 68, 122);
-  font-size: 1.167em;
+  font-size: 1.4em;
   font-weight: 900;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   overflow: visible;
 }
@@ -314,16 +396,22 @@ body {
   padding-right: 10px;
   padding-left: 10px;
   background-color: rgb(237, 227, 212);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.38;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
-.cards-header,
 .comment-body {
+  display: block;
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.comment-body-container {
+  position: relative;
   float: left;
   clear: both;
   width: 100%;
@@ -337,10 +425,9 @@ body {
   height: 54px;
   margin-top: 16px;
   background-color: rgb(118, 175, 186);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
@@ -364,25 +451,18 @@ body {
   padding-top: 80px;
 }
 
-.board-form,
-.cards-nav,
-.comment-header {
-  float: left;
-  width: 100%;
-}
-
 .comment-list {
   float: left;
   clear: both;
-  width: 74.8333333333%;
-  margin: 14px 0 0 15.16667%;
+  width: 93.5416666666%;
+  margin: 14px 0 0 6.45671%;
 }
 
 .comment-listitem {
   float: left;
   width: 100%;
   margin-top: 4px;
-  font-size: 0.75em;
+  font-size: 0.9em;
   line-height: 1.38;
   text-align: justify;
   color: rgb(0, 0, 0);
@@ -391,15 +471,23 @@ body {
 .comment-text {
   float: left;
   width: 100%;
-  font-size: 0.833em;
+  font-size: 1em;
   line-height: 1.38;
   color: rgb(0, 0, 0);
 }
 
 .comment-text-container {
   float: left;
-  width: 80%;
-  margin: 14px 0 0 10%;
+  clear: both;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.comment-text-form {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-top: 14px;
 }
 
 .comments {
@@ -415,7 +503,7 @@ body {
 }
 
 .doing-list .card {
-  z-index: 14;
+  z-index: 17;
 }
 
 .doing-list .card:active,
@@ -428,7 +516,7 @@ body {
 }
 
 .doing-list .emptylist-placeholder {
-  z-index: 13;
+  z-index: 16;
 }
 
 .doing-title,
@@ -440,7 +528,7 @@ body {
   position: absolute;
   top: 20px;
   left: 10px;
-  font-size: 0.917em;
+  font-size: 1.1em;
   line-height: 1.38;
   color: rgb(255, 252, 242);
   overflow: hidden;
@@ -454,48 +542,36 @@ body {
 .greeting {
   float: left;
   margin-left: 10%;
-  font-size: 1.917em;
+  font-size: 2.3em;
   font-weight: 900;
   line-height: 1.38;
   color: rgb(0, 0, 0);
 }
 
-.input-app-name {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 54px;
-  padding-left: 20px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  font-weight: 900;
-  color: rgb(15, 20, 31);
-}
-
-.input-tarball-url, .input-branch-name, .input-repository-url {
+.input-branch-name,
+.input-heroku-api-key,
+.input-repository-url {
   display: block;
   float: left;
   clear: both;
   width: 100%;
   height: 54px;
-  margin-top: 4px;
+  margin-top: 10px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  font-weight: 900;
+  font-size: 0.9em;
   color: rgb(15, 20, 31);
 }
 
+.input-app-name,
 .input-title {
   display: block;
   float: left;
   width: 100%;
   height: 54px;
-  margin-top: 4px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  font-weight: 900;
+  font-size: 0.9em;
   color: rgb(15, 20, 31);
 }
 
@@ -510,7 +586,7 @@ body {
 
 .list-title {
   float: left;
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-transform: uppercase;
 }
 
@@ -537,8 +613,7 @@ body {
   padding-right: 10px;
   padding-left: 10px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 0.917em;
-  font-weight: 600;
+  font-size: 1em;
   color: rgb(15, 20, 31);
   resize: vertical;
 }
@@ -562,7 +637,7 @@ body {
 .plain-text {
   float: left;
   width: 100%;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: justify;
   color: rgb(15, 20, 31);
 }
@@ -571,7 +646,7 @@ body {
   display: block;
   float: left;
   margin-left: 28px;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 900;
   line-height: 1.38;
 }
@@ -581,14 +656,13 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 8;
   width: 100%;
   height: 54px;
   background-color: rgb(255, 68, 122);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
   -webkit-transition: -webkit-transform 0.25s;
   -moz-transition: -moz-transform 0.25s;
@@ -623,7 +697,7 @@ body {
 .preview-text {
   float: left;
   width: 100%;
-  font-size: 0.833em;
+  font-size: 1em;
   line-height: 1.38;
   text-align: right;
   color: rgb(0, 0, 0);
@@ -634,7 +708,7 @@ body {
 }
 
 .review-list .card {
-  z-index: 19;
+  z-index: 22;
 }
 
 .review-list .card:active {
@@ -646,7 +720,7 @@ body {
 }
 
 .review-list .emptylist-placeholder {
-  z-index: 18;
+  z-index: 21;
 }
 
 .review-title {
@@ -657,9 +731,8 @@ body {
   display: block;
   clear: both;
   height: 54px;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(255, 252, 242);
 }
 
@@ -668,7 +741,7 @@ body {
   float: left;
   padding-left: 24px;
   border-bottom: 6px solid rgb(255, 68, 122);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.38;
   color: rgb(255, 68, 122);
@@ -689,16 +762,15 @@ body {
   height: 144px;
   padding: 10px 15px;
   background-color: rgb(255, 252, 242);
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
-  text-transform: uppercase;
   color: rgb(15, 20, 31);
   overflow: visible;
   resize: none;
 }
 
 .todo-list .card {
-  z-index: 9;
+  z-index: 12;
 }
 
 .todo-list .card:hover {
@@ -715,14 +787,14 @@ body {
 }
 
 .todo-list .emptylist-placeholder {
-  z-index: 7;
+  z-index: 10;
 }
 
 .tutorial-text {
   float: left;
   width: 80%;
   margin-left: 9.99756%;
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: justify;
   color: rgb(15, 20, 31);
 }
@@ -731,12 +803,19 @@ body {
   float: left;
   margin-left: 10%;
   padding-right: 6px;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.38;
   text-align: center;
-  text-transform: uppercase;
   color: rgb(0, 0, 0);
+}
+
+.user-settings-form .submit {
+  float: right;
+  width: 99.936420742%;
+  margin-top: 20px;
+  background-color: rgb(118, 175, 186);
+  font-weight: 700;
 }
 
 .user-settings-form-container {
@@ -746,7 +825,7 @@ body {
   padding-bottom: 20px;
 }
 
-.board-title em,
+.bip_board-title em,
 .comment-author em,
 .user-firstname em {
   border-top-width: 0;
@@ -775,8 +854,8 @@ body {
   white-space: normal;
 }
 
-.board-title span,
-.board-title strong,
+.bip_board-title span,
+.bip_board-title strong,
 .comment-author span,
 .comment-author strong,
 .user-firstname span {
@@ -800,87 +879,6 @@ body {
   letter-spacing: inherit;
   word-spacing: inherit;
   color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.comment-text em {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: italic;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.comment-text span {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 900;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.comment-text strong {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 900;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: rgb(15, 20, 31);
   opacity: 1;
   word-break: normal;
   word-wrap: normal;
@@ -937,6 +935,87 @@ body {
   letter-spacing: inherit;
   word-spacing: inherit;
   color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.preview-text em {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: italic;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.preview-text span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  text-transform: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.preview-text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 900;
+  text-transform: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: rgb(15, 20, 31);
   opacity: 1;
   word-break: normal;
   word-wrap: normal;
