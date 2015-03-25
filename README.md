@@ -2,7 +2,7 @@
 
 ## Tests
 
-In order to be able to run tests (including integration tests), make sure you have `brew install homebrew/versions/phantomjs182` first.
+In order to be able to run tests (including integration tests), make sure you have `brew install phantomjs` first.
 
 Make sure all tests are passing:
 
