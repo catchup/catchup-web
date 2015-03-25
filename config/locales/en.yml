@@ -73,5 +73,5 @@ en:
       submit: Comment
       comment-placeholder: Got something to say?
     edit:
-      save: Save edits
-      cancel: Cancel
+      save: ✓
+      cancel: ✕

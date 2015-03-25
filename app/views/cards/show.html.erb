@@ -8,7 +8,7 @@
     <p class="user-firstname"><%= current_user.first_name %></p>
     <%= best_in_place [@card.board, @card], :title,
                       display_with: -> (title) { content_tag :h1, title, class: 'card-title' },
-                      class: 'card-title-container clearfix',
+                      class: 'card-title-container clearfix js-bip_card-title',
                       inner_class: 'bip_card-title' %>
   </header>
 
