@@ -1,5 +1,3 @@
-<div>
-  <%= form_for [:archive, card.board, card], html: { class: 'archive-form clearfix' } do |f| %>
-    <%= button_tag t(".submit"), class: 'archive-button' %>
-  <% end %>
-</div>
+<%= form_for [:archive, card.board, card], html: { class: 'archive-form clearfix' } do |f| %>
+  <%= button_tag t(".submit"), class: 'archive-button' %>
+<% end %>

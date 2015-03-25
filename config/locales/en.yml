@@ -51,9 +51,9 @@ en:
       receive-notifications: Receive personal email notifications when things happen.
       submit: Save
     settings:
-      api-key: Shared Heroku API key
       app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
       repository-placeholder: https://github.com/user/repo
+      api-key: Shared Heroku API key
       submit: Save
   cards:
     create:

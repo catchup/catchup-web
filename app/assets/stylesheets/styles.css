@@ -29,6 +29,7 @@ body {
 }
 
 .add-card-action {
+  display: block;
   position: absolute;
   top: -22px;
   left: 0;
@@ -48,15 +49,10 @@ body {
   margin-left: 9.99756%;
 }
 
-.add-card-form .input-app-name {
-  clear: both;
-  margin-top: 4px;
-}
-
 .add-card-form .submit {
-  float: right;
-  width: 41.6673024592%;
-  margin-top: 20px;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
   background-color: rgb(118, 175, 186);
 }
 
@@ -244,11 +240,10 @@ body {
   margin: 20px 0 0 9.99756%;
 }
 
-.board-settings-form .submit,
-.user-settings-form .submit {
+.board-settings-form .submit {
   float: right;
-  width: 41.6673024592%;
-  margin-top: 20px;
+  width: 99.936420742%;
+  margin-top: 10px;
   background-color: rgb(118, 175, 186);
   font-weight: 700;
 }
@@ -553,42 +548,30 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.input-app-name {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 54px;
-  padding-left: 20px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1.2em;
-  font-weight: 900;
-  color: rgb(15, 20, 31);
-}
-
-.input-tarball-url {
+.input-branch-name,
+.input-heroku-api-key,
+.input-repository-url {
   display: block;
   float: left;
   clear: both;
   width: 100%;
   height: 54px;
-  margin-top: 4px;
+  margin-top: 10px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1.2em;
-  font-weight: 900;
+  font-size: 0.9em;
   color: rgb(15, 20, 31);
 }
 
+.input-app-name,
 .input-title {
   display: block;
   float: left;
   width: 100%;
   height: 54px;
-  margin-top: 4px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1.2em;
-  font-weight: 900;
+  font-size: 0.9em;
   color: rgb(15, 20, 31);
 }
 
@@ -663,7 +646,7 @@ body {
   display: block;
   float: left;
   margin-left: 28px;
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: 900;
   line-height: 1.38;
 }
@@ -825,6 +808,14 @@ body {
   line-height: 1.38;
   text-align: center;
   color: rgb(0, 0, 0);
+}
+
+.user-settings-form .submit {
+  float: right;
+  width: 99.936420742%;
+  margin-top: 20px;
+  background-color: rgb(118, 175, 186);
+  font-weight: 700;
 }
 
 .user-settings-form-container {
