@@ -8,7 +8,7 @@ $(document).on "ready page:load", ->
   )
 
   $('.js-bip_comment-body').bind("best_in_place:activate", ->
-    form = $(this).find('form')
-    form.addClass('comment-text-form clearfix')
-    form.find('textarea').addClass('bip_comment-text')
+    $form = $(this).find('form')
+    $form.addClass('comment-text-form clearfix')
+    $form.find('textarea').addClass('bip_comment-text')
   )
