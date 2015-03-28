@@ -4,7 +4,9 @@ class CardsController < ApplicationController
 
     if @card.valid?
       card_html = render_to_string(@card)
-      CardObserver.publish(:card_created, @card, card_html)
+      CardObserver.publish(
+        :card_created, @card, html: card_html, originated_by: current_user
+      )
     else
       flash[:alert] = I18n.t("cards.create.error")
     end
@@ -20,7 +22,9 @@ class CardsController < ApplicationController
     @card = board.cards.find(params[:id])
     @card.move_to(move_params)
 
-    CardObserver.publish(:card_moved, @card, move_params)
+    CardObserver.publish(
+      :card_moved, @card, move_params.merge(originated_by: current_user)
+    )
 
     render nothing: true
   end
@@ -29,7 +33,7 @@ class CardsController < ApplicationController
     @card = board.cards.find(params[:id])
     @card.archive
 
-    CardObserver.publish(:card_archived, @card)
+    CardObserver.publish(:card_archived, @card, originated_by: current_user)
 
     redirect_to [@card.board, @card]
   end
