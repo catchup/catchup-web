@@ -28,6 +28,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of'
 
 group :development do
+  gem 'byebug'
   gem 'quiet_assets'
   gem 'web-console', '~> 2.0'
 end
