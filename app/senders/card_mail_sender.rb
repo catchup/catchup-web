@@ -7,7 +7,7 @@ class CardMailSender
     CardMailer.card_moved(card, users).deliver_now
   end
 
-  def self.card_created(card, originated_by:)
+  def self.card_created(card, html:, originated_by:)
     users = card.involved_users - Array(originated_by)
 
     return unless users.present?
