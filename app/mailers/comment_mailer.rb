@@ -6,8 +6,12 @@ class CommentMailer < ActionMailer::Base
   def new_comment(comment, recipients)
     @comment = comment
     @card    = comment.card
+    @board   = @card.board
     @user    = comment.user
 
-    mail(subject: "New comment on card #{@card.title}", to: recipients.map(&:email))
+    mail(
+      subject: "Re: [#{@board.title}] #{@card.title}",
+      to: recipients.map(&:email)
+    )
   end
 end

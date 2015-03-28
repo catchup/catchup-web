@@ -5,7 +5,9 @@ class CardMailer < ActionMailer::Base
     @card  = card
     @board = card.list.board
 
-    mail(subject: "New card on #{@board.title}", to: recipients.map(&:email))
+    mail(
+      subject: "#{@board.title}: #{@card.title}", to: recipients.map(&:email)
+    )
   end
 
   def card_moved(card, recipients)
@@ -13,13 +15,18 @@ class CardMailer < ActionMailer::Base
     @board = @list.board
     @card  = card
 
-    mail(subject: "Card moved on #{@board.title}", to: recipients.map(&:email))
+    mail(
+      subject: "Re: [#{@board.title}] #{@card.title}", to: recipients.map(&:email)
+    )
   end
 
   def card_archived(card, recipients)
     @board = card.board
     @card  = card
 
-    mail(subject: "Card archived on #{@board.title}", to: recipients.map(&:email))
+    mail(
+      subject: "Re: [#{@board.title}] #{@card.title}",
+      to: recipients.map(&:email)
+    )
   end
 end
