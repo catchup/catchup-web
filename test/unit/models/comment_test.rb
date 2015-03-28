@@ -1,11 +1,10 @@
 require "test_helper"
 
 class CommentTest < ActiveSupport::TestCase
-  test "involved users are the same as card ones" do
-    card    = stub(involved_users: [stub, stub])
+  test "involved users are the same as card ones without the creator" do
     comment = comments(:greeting)
-    comment.stubs(:card).returns(card)
+    comment.card.stubs(:involved_users).returns([users(:ali), comment.user])
 
-    assert_equal card.involved_users, comment.involved_users
+    assert_equal [users(:ali)], comment.involved_users
   end
 end

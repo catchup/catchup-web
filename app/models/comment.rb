@@ -6,6 +6,6 @@ class Comment < ActiveRecord::Base
   validates :user, presence: true
 
   def involved_users
-    card.involved_users
+    card.involved_users - Array(user)
   end
 end
