@@ -14,7 +14,6 @@ class CardsInteractionTest < JavascriptTest
     card = create_card("My Card")
 
     # When I drag a card to another list
-    another_list = lists.second
     card.drag_to cards_container_for_list(another_list)
 
     # Then that card should stick to the new list
@@ -27,7 +26,6 @@ class CardsInteractionTest < JavascriptTest
 
     # We have to fetch back the list again, because the dom has changed via
     # refresh :(
-    another_list = lists.second
     within another_list do
       assert has_card?("My Card")
     end
@@ -51,7 +49,7 @@ class CardsInteractionTest < JavascriptTest
 
     # Then the other user sees it in realtime
     Capybara.session_name = user_2
-    within lists.first do
+    within first_list do
       assert has_card?("Create card")
     end
   end
@@ -71,11 +69,11 @@ class CardsInteractionTest < JavascriptTest
 
     # When I create a card and I move it
     Capybara.session_name = user_1
-    card.drag_to cards_container_for_list(lists.third)
+    card.drag_to cards_container_for_list(last_list)
 
     # Then the other user sees it in realtime
     Capybara.session_name = user_2
-    within lists.third do
+    within last_list do
       assert has_card?("Moving card")
     end
   end

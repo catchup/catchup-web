@@ -1,7 +1,7 @@
+require "pages/board_page_matchers"
+
 module BoardPage
-  def cards_container_for_list(list)
-    list.find("[data-role='cards-container']")
-  end
+  include BoardPage::Matchers
 
   def create_card(title)
     click_on "+"
@@ -16,10 +16,6 @@ module BoardPage
     click_on t("boards.create.submit")
   end
 
-  def card(title)
-    find("[data-role='card']", text: title)
-  end
-
   def has_card?(title)
     card(title)
     true
@@ -29,10 +25,6 @@ module BoardPage
 
   def show_card(card_container)
     click_on card_container.text
-  end
-
-  def lists
-    all("[data-role='list']").to_a
   end
 
   def visit_board(title)
