@@ -2,10 +2,10 @@
 
 ## Tests
 
-In order to be able to run tests (including integration tests), make sure you have `brew install phantomjs` first.
+In order to be able to run tests (including integration tests), make sure you have `brew install homebrew/versions/phantomjs198` first (that's the closest version to what's available on Codeship at the time of this writing).
 
 Make sure all tests are passing:
 
 ```bash
-bundle exec bin/rake
+bin/rake
 ```
