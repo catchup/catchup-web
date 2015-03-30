@@ -1,29 +1,36 @@
 class CardMailSender
-  def self.card_moved(card, originated_by, _)
-    users = card.involved_users - Array(originated_by)
+  attr_reader :card, :originated_by
 
-    return unless card.changed_list? && users.present?
-
-    CardMailer.card_moved(card, originated_by, users).deliver_now
+  def initialize(card, originated_by)
+    @card = card
+    @originated_by = originated_by
   end
 
-  def self.card_created(card, originated_by, _)
-    users = card.involved_users - Array(originated_by)
+  def card_moved(_)
+    return unless card.changed_list? && recipients.present?
 
-    return unless users.present?
-
-    CardMailer.new_card(card, originated_by, users).deliver_now
+    CardMailer.card_moved(card, originated_by, recipients).deliver_now
   end
 
-  def self.card_archived(card, originated_by)
-    users = card.involved_users - Array(originated_by)
+  def card_created(_)
+    return unless recipients.present?
 
-    return unless users.present?
-
-    CardMailer.card_archived(card, originated_by, users).deliver_now
+    CardMailer.new_card(card, originated_by, recipients).deliver_now
   end
 
-  def self.card_previewed(card, originated_by, preview_url)
+  def card_archived
+    return unless recipients.present?
+
+    CardMailer.card_archived(card, originated_by, recipients).deliver_now
+  end
+
+  def card_previewed(preview_url)
     # no-op
+  end
+
+  private
+
+  def recipients
+    @recipients ||= card.involved_users - Array(originated_by)
   end
 end

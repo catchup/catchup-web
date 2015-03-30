@@ -1,41 +1,31 @@
 class CardRealtime
-  def self.card_moved(card, originated_by, move_params)
-    trigger(
-      card,
-      :move_card,
-      id: card.id, list_id: card.list_id, position: move_params.fetch(:position)
-    )
+  attr_reader :card, :originated_by
+
+  def initialize(card, originated_by)
+    @card = card
+    @originated_by = originated_by
   end
 
-  def self.card_created(card, originated_by, html)
-    trigger(
-      card,
-      :new_card,
-      id: card.id, list_id: card.list_id, html: html
-    )
+  def card_moved(move_params)
+    trigger_event(:move_card, position: move_params.fetch(:position))
   end
 
-  def self.card_archived(card, originated_by)
-    trigger(
-      card,
-      :archive_card,
-      id: card.id, list_id: card.list_id
-    )
+  def card_created(html)
+    trigger_event(:new_card, html: html)
   end
 
-  def self.card_previewed(card, originated_by, preview_url)
-    trigger(
-      card,
-      :preview_card,
-      id: card.id, preview_url: preview_url
-    )
+  def card_archived
+    trigger_event(:archive_card)
   end
 
-  def self.trigger(card, event_name, params)
-    Pusher.trigger(
-      "board_#{card.list.board_id}",
-      event_name.to_s,
-      params
-    )
+  def card_previewed(preview_url)
+    trigger_event(:preview_card, preview_url: preview_url)
+  end
+
+  private
+
+  def trigger_event(event_name, params = {})
+    event_details = params.merge(id: card.id, list_id: card.list_id)
+    Pusher.trigger("board_#{card.board.id}", event_name.to_s, event_details)
   end
 end
