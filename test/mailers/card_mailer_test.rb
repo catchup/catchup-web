@@ -7,17 +7,17 @@ class CardMailerTest < ActionMailer::TestCase
   end
 
   test "new_card is sent to involved users only" do
-    email = CardMailer.new_card(@irrelevant_card, @involved_users)
+    email = CardMailer.new_card(@irrelevant_card, users(:ali), @involved_users)
     assert sent_to_involved_users?(email)
   end
 
   test "card_moved is sent to involved users only" do
-    email = CardMailer.card_moved(@irrelevant_card, @involved_users)
+    email = CardMailer.card_moved(@irrelevant_card, users(:ali), @involved_users)
     assert sent_to_involved_users?(email)
   end
 
   test "card_archived is sent to involved users only" do
-    email = CardMailer.card_archived(@irrelevant_card, @involved_users)
+    email = CardMailer.card_archived(@irrelevant_card, users(:ali), @involved_users)
     assert sent_to_involved_users?(email)
   end
 

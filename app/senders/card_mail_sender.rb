@@ -4,7 +4,7 @@ class CardMailSender
 
     return unless card.changed_list? && users.present?
 
-    CardMailer.card_moved(card, users).deliver_now
+    CardMailer.card_moved(card, originated_by, users).deliver_now
   end
 
   def self.card_created(card, originated_by, _)
@@ -12,7 +12,7 @@ class CardMailSender
 
     return unless users.present?
 
-    CardMailer.new_card(card, users).deliver_now
+    CardMailer.new_card(card, originated_by, users).deliver_now
   end
 
   def self.card_archived(card, originated_by)
@@ -20,7 +20,7 @@ class CardMailSender
 
     return unless users.present?
 
-    CardMailer.card_archived(card, users).deliver_now
+    CardMailer.card_archived(card, originated_by, users).deliver_now
   end
 
   def self.card_previewed(card, originated_by, preview_url)
