@@ -13,12 +13,10 @@
                       inner_class: 'bip_board-title' %>
   </header>
 
-  <section class="board-content clearfix">
-    <div class="lists-container clearfix" data-role="board" data-board-id="<%= @board.id %>">
-      <%= render @board.lists[0], list_class: 'todo', emptylist_placeholder: t('.todo-placeholder') %>
-      <%= render @board.lists[1], list_class: 'doing', emptylist_placeholder: t('.doing-placeholder') %>
-      <%= render @board.lists[2], list_class: 'review', emptylist_placeholder: t('.review-placeholder') %>
-    </div>
+  <section class="board-content clearfix" data-role="board" data-board-id="<%= @board.id %>">
+    <%= render @board.lists[2], emptylist_placeholder: t('.review-placeholder') %>
+    <%= render @board.lists[1], emptylist_placeholder: t('.doing-placeholder') %>
+    <%= render @board.lists[0], emptylist_placeholder: t('.todo-placeholder') %>
   </section>
 
   <div class="board-actions-container">

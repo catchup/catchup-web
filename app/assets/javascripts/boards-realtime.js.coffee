@@ -21,9 +21,9 @@ $(document).on "ready page:load", ->
       if other_client_moved
         $card = $(CARD_SELECTOR).filter(MOVED_CARD_SELECTOR)
         $card.remove()
-        $children = $container.children()
-        if $children.length > 1
-          $children.eq(card.position).prepend($card)
+        $cardBelow = $container.children(CARD_SELECTOR)[card.position]
+        if $cardBelow
+          $card.insertBefore($cardBelow)
         else
           $container.append($card)
 

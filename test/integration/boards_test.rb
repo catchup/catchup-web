@@ -20,8 +20,8 @@ class BoardsTest < ActionDispatch::IntegrationTest
     assert page.has_text? t("lists.list.review")
 
     # And they are in order
-    assert in_order? t("lists.list.todo"), t("lists.list.doing")
-    assert in_order? t("lists.list.doing"), t("lists.list.review")
+    assert in_order? t("lists.list.review"), t("lists.list.doing")
+    assert in_order? t("lists.list.doing"), t("lists.list.todo")
   end
 
   test "User creates a new card" do
@@ -32,7 +32,7 @@ class BoardsTest < ActionDispatch::IntegrationTest
     create_card("My Card")
 
     # Then it should appear on the first list
-    within lists.first do
+    within first_list do
       assert has_card?("My Card")
     end
   end
