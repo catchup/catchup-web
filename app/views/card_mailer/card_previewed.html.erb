@@ -1,0 +1,10 @@
+<p>
+  A new preview for #<%= @card.id %> is ready and
+  <%= link_to "you can view it now", @card.preview_url %>.
+</p>
+
+<p>&ndash;</p>
+<p>
+  <%= link_to "See this card on catchup", board_card_url(@board, @card) %>
+  to reply.
+</p>

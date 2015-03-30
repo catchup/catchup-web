@@ -22,4 +22,11 @@ class CardMailer < ActionMailer::Base
 
     mail_for_existing_card_thread(card, originated_by, recipients)
   end
+
+  def card_previewed(card, originated_by, recipients)
+    @board = card.board
+    @card  = card
+
+    mail_for_existing_card_thread(card, originated_by, recipients)
+  end
 end

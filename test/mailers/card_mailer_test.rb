@@ -21,6 +21,11 @@ class CardMailerTest < ActionMailer::TestCase
     assert sent_to_involved_users?(email)
   end
 
+  test "card_previewed is sent to involved users only" do
+    email = CardMailer.card_previewed(@irrelevant_card, users(:ali), @involved_users)
+    assert sent_to_involved_users?(email)
+  end
+
   private
 
   def sent_to_involved_users?(email)

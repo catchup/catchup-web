@@ -18,7 +18,10 @@ class CardMailSender < CardObserver::Subscriber
   end
 
   def card_previewed(preview_url)
-    # no-op
+    return unless model.involved_users.present?
+
+    mail = CardMailer.card_previewed(model, originated_by, model.involved_users)
+    mail.deliver_now
   end
 
   private
