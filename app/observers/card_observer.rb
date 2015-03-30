@@ -1,4 +1,6 @@
 class CardObserver
+  Subscriber = Struct.new(:model, :originated_by)
+
   def self.publish(event, model, originated_by, params = nil)
     new.publish(event, model, originated_by, params)
   end

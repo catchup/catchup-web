@@ -1,11 +1,4 @@
-class CardRealtime
-  attr_reader :card, :originated_by
-
-  def initialize(card, originated_by)
-    @card = card
-    @originated_by = originated_by
-  end
-
+class CardRealtime < CardObserver::Subscriber
   def card_moved(move_params)
     trigger_event(:move_card, position: move_params.fetch(:position))
   end
@@ -25,7 +18,7 @@ class CardRealtime
   private
 
   def trigger_event(event_name, params = {})
-    event_details = params.merge(id: card.id, list_id: card.list_id)
-    Pusher.trigger("board_#{card.board.id}", event_name.to_s, event_details)
+    event_details = params.merge(id: model.id, list_id: model.list_id)
+    Pusher.trigger("board_#{model.board.id}", event_name.to_s, event_details)
   end
 end
