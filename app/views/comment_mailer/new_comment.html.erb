@@ -1,6 +1,9 @@
 <p>
-  <%= @comment.user.first_name %> just wrote on <%= link_to @card.title, board_card_url(@card.board, @card) %>
-</p>
-<p>
   <%= comment_markdown(@comment.text) %>
+</p>
+
+<p>&ndash;</p>
+<p>
+  <%= link_to "See this card on catchup", board_card_url(@board, @card) %>
+  to reply.
 </p>
