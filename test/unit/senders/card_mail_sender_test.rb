@@ -9,7 +9,7 @@ class CardMailSenderTest < ActionMailer::TestCase
     @cool_feature.stubs(:involved_users).returns([users(:antonio), users(:ali)])
     @cool_feature.stubs(:changed_list?).returns(true)
 
-    CardMailSender.card_moved(@cool_feature, originated_by: users(:antonio))
+    CardMailSender.card_moved(@cool_feature, users(:antonio), nil)
 
     assert delivered_email?
   end
@@ -18,7 +18,7 @@ class CardMailSenderTest < ActionMailer::TestCase
     @cool_feature.stubs(:involved_users).returns([users(:antonio), users(:ali)])
     @cool_feature.stubs(:changed_list?).returns(false)
 
-    CardMailSender.card_moved(@cool_feature, originated_by: users(:antonio))
+    CardMailSender.card_moved(@cool_feature, users(:antonio), nil)
 
     refute delivered_email?
   end
@@ -27,7 +27,7 @@ class CardMailSenderTest < ActionMailer::TestCase
     @cool_feature.stubs(:involved_users).returns([users(:antonio), users(:ali)])
     @cool_feature.stubs(:changed_list?).returns(false)
 
-    CardMailSender.card_moved(@cool_feature, originated_by: users(:antonio))
+    CardMailSender.card_moved(@cool_feature, users(:antonio), nil)
 
     refute delivered_email?
   end
@@ -36,7 +36,7 @@ class CardMailSenderTest < ActionMailer::TestCase
     @cool_feature.stubs(:involved_users).returns([users(:antonio)])
     @cool_feature.stubs(:changed_list?).returns(true)
 
-    CardMailSender.card_moved(@cool_feature, originated_by: users(:antonio))
+    CardMailSender.card_moved(@cool_feature, users(:antonio), nil)
 
     refute delivered_email?
   end

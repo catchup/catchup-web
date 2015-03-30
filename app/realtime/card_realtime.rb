@@ -1,5 +1,5 @@
 class CardRealtime
-  def self.card_moved(card, move_params)
+  def self.card_moved(card, originated_by, move_params)
     trigger(
       card,
       :move_card,
@@ -7,15 +7,15 @@ class CardRealtime
     )
   end
 
-  def self.card_created(card, created_params)
+  def self.card_created(card, originated_by, html)
     trigger(
       card,
       :new_card,
-      id: card.id, list_id: card.list_id, html: created_params.fetch(:html)
+      id: card.id, list_id: card.list_id, html: html
     )
   end
 
-  def self.card_archived(card, _)
+  def self.card_archived(card, originated_by)
     trigger(
       card,
       :archive_card,
@@ -23,7 +23,7 @@ class CardRealtime
     )
   end
 
-  def self.card_previewed(card, preview_url)
+  def self.card_previewed(card, originated_by, preview_url)
     trigger(
       card,
       :preview_card,
