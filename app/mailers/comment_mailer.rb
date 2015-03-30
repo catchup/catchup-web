@@ -9,6 +9,6 @@ class CommentMailer < ActionMailer::Base
     @board   = @card.board
     @user    = originated_by
 
-    mail_for_existing_card_thread(card, originated_by, recipients)
+    mail_for_existing_card_thread(@card, originated_by, recipients)
   end
 end
