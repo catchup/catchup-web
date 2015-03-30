@@ -4,7 +4,7 @@ class CardsController < ApplicationController
 
     if @card.valid?
       card_html = render_to_string(@card)
-      CardObserver.publish(:card_created, @card, current_user, html: card_html)
+      CardObserver.publish(:card_created, @card, current_user, card_html)
     else
       flash[:alert] = I18n.t("cards.create.error")
     end
