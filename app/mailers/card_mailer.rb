@@ -5,11 +5,7 @@ class CardMailer < ActionMailer::Base
     @card  = card
     @board = card.list.board
 
-    mail_with_display_name(
-      display_name: originated_by.first_name,
-      subject: "#{@board.title}: #{@card.title}",
-      to: recipients.map(&:email)
-    )
+    mail_for_new_card_thread(card, originated_by, recipients)
   end
 
   def card_moved(card, originated_by, recipients)
@@ -17,21 +13,13 @@ class CardMailer < ActionMailer::Base
     @board = @list.board
     @card  = card
 
-    mail_with_display_name(
-      display_name: originated_by.first_name,
-      subject: "Re: [#{@board.title}] #{@card.title}",
-      to: recipients.map(&:email)
-    )
+    mail_for_existing_card_thread(card, originated_by, recipients)
   end
 
   def card_archived(card, originated_by, recipients)
     @board = card.board
     @card  = card
 
-    mail_with_display_name(
-      display_name: originated_by.first_name,
-      subject: "Re: [#{@board.title}] #{@card.title}",
-      to: recipients.map(&:email)
-    )
+    mail_for_existing_card_thread(card, originated_by, recipients)
   end
 end

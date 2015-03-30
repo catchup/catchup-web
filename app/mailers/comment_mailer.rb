@@ -9,10 +9,6 @@ class CommentMailer < ActionMailer::Base
     @board   = @card.board
     @user    = originated_by
 
-    mail_with_display_name(
-      display_name: originated_by.first_name,
-      subject: "Re: [#{@board.title}] #{@card.title}",
-      to: recipients.map(&:email)
-    )
+    mail_for_existing_card_thread(card, originated_by, recipients)
   end
 end
