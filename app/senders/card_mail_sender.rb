@@ -1,5 +1,5 @@
 class CardMailSender
-  def self.card_moved(card, originated_by, move_params)
+  def self.card_moved(card, originated_by, _)
     users = card.involved_users - Array(originated_by)
 
     return unless card.changed_list? && users.present?
