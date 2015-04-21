@@ -20,6 +20,7 @@
 //= require spin
 //= require jquery.spin
 //= require best_in_place
+//
 //= require_tree .
 
 window.Catchup = {}
