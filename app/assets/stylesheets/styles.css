@@ -4,24 +4,24 @@ body {
   color: rgb(0, 0, 0);
 }
 
-.page-_add-card {
+._add-card {
   font-weight: 700;
   color: rgb(255, 252, 242);
 }
 
-.page-board {
+._board-settings,
+.boards-index {
+  font-weight: 300;
+  color: rgb(15, 20, 31);
+}
+
+.boards-show {
   font-weight: 900;
   color: rgb(15, 20, 31);
 }
 
-.page-card {
+.cards-show {
   color: rgb(0, 0, 0);
-}
-
-.page-_board-settings,
-.page-welcome {
-  font-weight: 300;
-  color: rgb(15, 20, 31);
 }
 
 .text-container p {
