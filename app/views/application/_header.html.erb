@@ -1,0 +1,5 @@
+<% if current_user.present? %>
+  <%= current_user.nickname %>
+  <%= current_user.email %>
+  <%= image_tag current_user.avatar_url %>
+<% end %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get :logout, to: "authentication#logout"
+  get "/auth/github/callback", to: "authentication#github"
 
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
@@ -17,5 +18,5 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  root to: "boards#index"
+  root to: "anonymous#index"
 end

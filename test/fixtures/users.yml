@@ -1,9 +1,9 @@
 antonio:
   email: antonio@email.com
   password: oinotna
-  first_name: Antonio
+  nickname: Antonio
 
 ali:
   email: ali@email.com
   password: ila
-  first_name: Ali
+  nickname: Ali

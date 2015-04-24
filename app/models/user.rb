@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   def create_board(params)
     Board.create(params).tap { |b| b.add_owner(self) }
   end
+
+  def self.authenticate(provider, uid)
+    find_or_initialize_by(auth_provider: provider, auth_uid: uid)
+  end
 end
