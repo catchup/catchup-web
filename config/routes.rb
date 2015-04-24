@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  get :logout, to: "authentication#logout"
+  get "/auth/signout", to: "authentication#signout"
   get "/auth/github/callback", to: "authentication#github"
   get "/auth/failure", to: "authentication#failure"
 

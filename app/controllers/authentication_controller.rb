@@ -1,8 +1,8 @@
 class AuthenticationController < ApplicationController
   skip_before_filter :authenticate, only: [:github, :failure]
 
-  def logout
-    flash[:will_logout] = true
+  def signout
+    session[:current_user] = nil
 
     redirect_to root_url
   end

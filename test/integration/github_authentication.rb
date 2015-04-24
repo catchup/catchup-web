@@ -56,7 +56,24 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     assert has_text?(t("anonymous.index.auth_failure"))
   end
 
-  test "Anonymous visits a 'signed in users' page"
+  test "Signed in user signs out" do
+    # Given I am already signed in
+    User.create!(
+      avatar_url: "as-cii.jpg",
+      nickname: "as-cii",
+      email: "me@as-cii.com"
+    )
+    visit root_path
+    click_on t("anonymous.index.signup")
 
-  test "Signed in user logs out"
+    # When I sign out
+    visit auth_signout_path
+
+    # Then my account information won't be displayed anymore
+    refute has_text?("as-cii")
+
+    # And I cannot visit restricted pages anymore
+    visit boards_path
+    assert_equal root_path, current_path
+  end
 end
