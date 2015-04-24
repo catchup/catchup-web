@@ -18,10 +18,4 @@ class AuthenticationController < ApplicationController
 
     redirect_to boards_url
   end
-
-  private
-
-  def user_info
-    env["omniauth.auth"].info
-  end
 end

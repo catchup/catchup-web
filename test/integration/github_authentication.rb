@@ -13,10 +13,10 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     # And I am on landing page
     visit root_path
 
-    # When I start the signup process via GitHub
+    # When I start the sign in process
     click_on t("anonymous.index.signup")
 
-    # Then I get signed in with my GitHub account information
+    # Then I get signed in with my account information
     assert has_text?("as-cii")
     assert has_text?("me@as-cii.com")
     assert has_css?("img[src*='as-cii.jpg']")
@@ -33,7 +33,7 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     # And I am on landing page
     visit root_path
 
-    # When I start the signup process via GitHub
+    # When I start the sign in process via GitHub
     click_on t("anonymous.index.signup")
 
     # Then I get signed in with my previous account information
@@ -44,4 +44,5 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
 
   test "Anonymous visits a 'signed in users' page"
   test "Anonymous fails to authenticate"
+  test "Signed in user logs out"
 end
