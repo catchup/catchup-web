@@ -11,4 +11,13 @@ module ApplicationHelper
 
     markdown.render(text).html_safe
   end
+
+  def flash_messages
+    flash
+      .to_hash
+      .symbolize_keys
+      .slice(:error, :alert, :notice, :success)
+      .map { |name, msg| [name, Array(msg)] }
+      .to_h
+  end
 end
