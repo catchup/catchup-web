@@ -2,9 +2,14 @@ require "test_helper"
 
 class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
   def setup
+    Capybara.ignore_hidden_elements = false
     @irrelevant_user = User.new(
       nickname: "as-cii", avatar_url: "as-cii.jpg", email: "me@as-cii.com"
     )
+  end
+
+  def teardown
+    Capybara.ignore_hidden_elements = true
   end
 
   test "Anonymous signs up" do
