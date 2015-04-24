@@ -1,3 +1,12 @@
-<% flash.to_hash.slice(:notice, :success, :error, :alert).each do |name, msg| -%>
-  <%= content_tag :div, msg %>
-<% end -%>
+<div class="application-_flashes clearfix">
+
+  <div class="flash-container clearfix" style="z-index: 999;">
+    <% flash.to_hash.slice("error", "alert", "notice", "success").each do |name, msg| -%>
+    <div class="flash <%= name %> clearfix" style="display: none;">
+      <button class="close-flash"></button>
+      <p class="message"><%= msg %></p>
+    </div>
+    <% end -%>
+  </div>
+
+</div>
