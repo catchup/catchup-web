@@ -15,7 +15,7 @@ module SystemNotification
   def mail_for_new_card_thread(card, originated_by, recipients)
     mail_with_display_name(
       display_name: originated_by.first_name,
-      subject: "#{card.board.title}: #{card.title}",
+      subject: "#{card.board.title}: #{card.title} (##{card.id})",
       to: recipients.map(&:email)
     )
   end
@@ -23,7 +23,7 @@ module SystemNotification
   def mail_for_existing_card_thread(card, originated_by, recipients)
     mail_with_display_name(
       display_name: originated_by.first_name,
-      subject: "Re: [#{card.board.title}] #{card.title}",
+      subject: "Re: [#{card.board.title}] #{card.title} (##{card.id})",
       to: recipients.map(&:email)
     )
   end
