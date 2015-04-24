@@ -431,21 +431,6 @@ body {
   margin: auto 0;
 }
 
-.close-flash {
-  display: block;
-  float: left;
-  width: 32px;
-  height: 32px;
-  border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/master/close-flash.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  font: 400 0.889em/1.38 Helvetica;
-  text-align: center;
-  color: rgb(0, 0, 0);
-}
-
 .comment-author {
   float: left;
   margin-left: 10%;
@@ -551,6 +536,21 @@ body {
   clear: both;
   width: 100%;
   padding-bottom: 80px;
+}
+
+.dismiss {
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/master/close-flash.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  font: 400 0.889em/1.38 Helvetica;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .emptylist-placeholder {
@@ -1068,7 +1068,7 @@ body {
     font-size: 1.125em;
   }
 
-  .flash .close-flash {
+  .flash .dismiss {
     width: 24px;
     height: 24px;
   }
@@ -1076,7 +1076,7 @@ body {
   .flash .message {
     width: 85.0694444444%;
     margin-top: 2px;
-    margin-left: 6.59722%;
+    margin-left: 6.5918%;
     font-size: 0.944em;
     line-height: 1.38;
   }

@@ -1,10 +1,10 @@
 <div class="application-_flashes clearfix">
 
-<div class="flash-container clearfix" style="z-index: 999;">
+<div class="flash-container clearfix js-flash-container" style="z-index: 999;">
   <% flash_messages.each do |name, msgs| %>
     <% msgs.each do |msg| %>
-    <div class="flash <%= name %> clearfix" style="display: none;">
-      <button class="close-flash"></button>
+    <div class="flash <%= name %> clearfix js-flash">
+      <button class="dismiss js-dismiss"></button>
       <p class="message"><%= msg %></p>
     </div>
     <% end %>
