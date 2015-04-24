@@ -23,6 +23,7 @@ en:
   anonymous:
     index:
       signup: Signup
+      auth_failure: Auth failed
   greeting: Hi, <strong>%{user}</strong>
   see_boards: Go to boards
   users:

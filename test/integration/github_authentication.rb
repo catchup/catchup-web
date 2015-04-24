@@ -10,7 +10,7 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
 
   test "Anonymous signs up" do
     # Given I haven't signed in yet
-    # And I am on landing page
+    # And I am on the landing page
     visit root_path
 
     # When I start the sign in process
@@ -30,10 +30,10 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
       email: "me@as-cii.com"
     )
 
-    # And I am on landing page
+    # And I am on the landing page
     visit root_path
 
-    # When I start the sign in process via GitHub
+    # When I start the sign in process
     click_on t("anonymous.index.signup")
 
     # Then I get signed in with my previous account information
@@ -42,7 +42,21 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     assert has_css?("img[src*='as-cii.jpg']")
   end
 
+  test "Anonymous fails to authenticate" do
+    # Given I don't remember my OAuth credentials
+    OmniAuth.config.mock_auth[:github] = :invalid_credentials
+
+    # And I am on the landing page
+    visit root_path
+
+    # When I start the sign in process
+    click_on t("anonymous.index.signup")
+
+    # Then I won't be able to sign in
+    assert has_text?(t("anonymous.index.auth_failure"))
+  end
+
   test "Anonymous visits a 'signed in users' page"
-  test "Anonymous fails to authenticate"
+
   test "Signed in user logs out"
 end

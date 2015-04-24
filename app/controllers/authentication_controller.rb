@@ -1,5 +1,5 @@
 class AuthenticationController < ApplicationController
-  skip_before_filter :authenticate, only: [:github]
+  skip_before_filter :authenticate, only: [:github, :failure]
 
   def logout
     flash[:will_logout] = true
@@ -17,5 +17,9 @@ class AuthenticationController < ApplicationController
     session[:current_user] = user.id
 
     redirect_to boards_url
+  end
+
+  def failure
+    redirect_to root_url, notice: t("anonymous.index.auth_failure")
   end
 end

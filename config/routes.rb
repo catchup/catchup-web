@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get :logout, to: "authentication#logout"
   get "/auth/github/callback", to: "authentication#github"
+  get "/auth/failure", to: "authentication#failure"
 
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]

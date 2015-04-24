@@ -34,6 +34,7 @@ class ActionDispatch::IntegrationTest
   self.use_transactional_fixtures = false
 
   setup do
+    Capybara.ignore_hidden_elements = false
     OmniAuth.config.test_mode = true
     DatabaseCleaner.start
   end
