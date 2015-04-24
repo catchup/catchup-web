@@ -1,5 +1,7 @@
-<p>
-  A card named "<%= @card.title %>" was created on <%= link_to @board.title, board_url(@board) %>.
-</p>
+<p>Created <%= @card.id %>.</p>
 
-<p>Cheers.</p>
+<p>&ndash;</p>
+<p>
+  <%= link_to "See this card on catchup", board_card_url(@board, @card) %>
+  to reply.
+</p>

@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     )
 
     if comment.valid?
-      CommentMailSender.new_comment(comment)
+      CommentMailSender.new_comment(comment, current_user)
     else
       flash[:alert] = t("comments.create.error")
     end

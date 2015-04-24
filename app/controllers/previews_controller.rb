@@ -5,6 +5,7 @@ class PreviewsController < ApplicationController
 
     card.previewing!
     PreviewJob.new.async.perform(
+      current_user,
       Heroku::Application.with(name: board.app_name, api_key: board.heroku_api_key),
       Heroku::Application.with(name: random_suffix(board.app_name), api_key: board.heroku_api_key),
       card.branch_tarball,

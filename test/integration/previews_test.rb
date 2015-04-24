@@ -26,7 +26,7 @@ class PreviewsTest < JavascriptTest
 
     # When the preview finishes
     Card.last.previewed!(@any_preview_url)
-    CardObserver.publish(:card_previewed, Card.last, Card.last.preview_url)
+    CardObserver.publish(:card_previewed, Card.last, users(:antonio), Card.last.preview_url)
     refresh
 
     # Then the activity indicator spinner hides itself

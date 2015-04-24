@@ -1,5 +1,7 @@
-<p>
-  "<%= @card.title %>" was moved into list "<%= @list.title %>" on <%= link_to @board.title, board_url(@board) %>.
-</p>
+<p>Moved <%= @card.id %> to <%= @list.title %>.</p>
 
-<p>Cheers.</p>
+<p>&ndash;</p>
+<p>
+  <%= link_to "See this card on catchup", board_card_url(@board, @card) %>
+  to reply.
+</p>

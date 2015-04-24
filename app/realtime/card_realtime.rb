@@ -1,41 +1,24 @@
-class CardRealtime
-  def self.card_moved(card, move_params)
-    trigger(
-      card,
-      :move_card,
-      id: card.id, list_id: card.list_id, position: move_params.fetch(:position)
-    )
+class CardRealtime < CardObserver::Subscriber
+  def card_moved(move_params)
+    trigger_event(:move_card, position: move_params.fetch(:position))
   end
 
-  def self.card_created(card, html)
-    trigger(
-      card,
-      :new_card,
-      id: card.id, list_id: card.list_id, html: html
-    )
+  def card_created(html)
+    trigger_event(:new_card, html: html)
   end
 
-  def self.card_archived(card)
-    trigger(
-      card,
-      :archive_card,
-      id: card.id, list_id: card.list_id
-    )
+  def card_archived
+    trigger_event(:archive_card)
   end
 
-  def self.card_previewed(card, preview_url)
-    trigger(
-      card,
-      :preview_card,
-      id: card.id, preview_url: preview_url
-    )
+  def card_previewed(preview_url)
+    trigger_event(:preview_card, preview_url: preview_url)
   end
 
-  def self.trigger(card, event_name, params)
-    Pusher.trigger(
-      "board_#{card.list.board_id}",
-      event_name.to_s,
-      params
-    )
+  private
+
+  def trigger_event(event_name, params = {})
+    event_details = params.merge(id: model.id, list_id: model.list_id)
+    Pusher.trigger("board_#{model.board.id}", event_name.to_s, event_details)
   end
 end
