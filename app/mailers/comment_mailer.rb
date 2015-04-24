@@ -3,11 +3,12 @@ class CommentMailer < ActionMailer::Base
 
   helper ApplicationHelper
 
-  def new_comment(comment, recipients)
+  def new_comment(comment, originated_by, recipients)
     @comment = comment
     @card    = comment.card
-    @user    = comment.user
+    @board   = @card.board
+    @user    = originated_by
 
-    mail(subject: "New comment on card #{@card.title}", to: recipients.map(&:email))
+    mail_for_existing_card_thread(@card, originated_by, recipients)
   end
 end

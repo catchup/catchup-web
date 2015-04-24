@@ -1,5 +1,6 @@
 <p>
-  <%= comment_markdown(@comment.text) %>
+  A new preview for #<%= @card.id %> is ready and
+  <%= link_to "you can view it now", @card.preview_url %>.
 </p>
 
 <p>&ndash;</p>

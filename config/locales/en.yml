@@ -39,7 +39,7 @@ en:
       review: Review
   boards:
     create:
-      error: There was some error while creating this board
+      error: There was an error while creating this board
       submit: Create a new board
       suggest: … or maybe <strong>create a new one</strong>?
       title-placeholder: Hit Your Keys Here To…
@@ -61,7 +61,7 @@ en:
       submit: Save
   cards:
     create:
-      error: There was some error while creating this card
+      error: There was an error while creating this card
       title-placeholder: Title
       branch-placeholder: GitHub branch
       submit: Add
@@ -73,7 +73,7 @@ en:
       submit: Preview
   comments:
     create:
-      error: There was some error while creating this comment
+      error: There was an error while creating this comment
       submit: Comment
       comment-placeholder: Got something to say?
     edit:
