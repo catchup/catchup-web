@@ -20,6 +20,6 @@ class AuthenticationController < ApplicationController
   end
 
   def failure
-    redirect_to root_url, notice: t("anonymous.index.auth_failure")
+    redirect_to root_url, notice: t("welcome.index.auth_failure")
   end
 end

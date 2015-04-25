@@ -19,5 +19,5 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  root to: "anonymous#index"
+  root to: "welcome#index"
 end

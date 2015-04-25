@@ -5,7 +5,7 @@ module AuthenticationPage
     }) unless @will_forget_credentials
 
     visit root_path
-    click_on t("anonymous.index.signup")
+    click_on t("welcome.index.signup")
   end
 
   def sign_out
@@ -24,7 +24,7 @@ module AuthenticationPage
   end
 
   def authentication_failed?
-    has_text? t("anonymous.index.auth_failure")
+    has_text? t("welcome.index.auth_failure")
   end
 
   def forget_credentials

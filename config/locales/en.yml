@@ -20,7 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  anonymous:
+  welcome:
     index:
       signup: Signup
       auth_failure: Auth failed

@@ -12,7 +12,7 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     Capybara.ignore_hidden_elements = true
   end
 
-  test "Anonymous signs up" do
+  test "Unknown user signs up" do
     # Given I haven't signed in yet
 
     # When I start the sign in process
@@ -22,7 +22,7 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     assert has_account_information?(@irrelevant_user)
   end
 
-  test "Anonymous signs in" do
+  test "Unknown user signs in" do
     # Given I have previously signed in
     @irrelevant_user.save!
 
@@ -33,7 +33,7 @@ class GitHubAuthenticationTest < ActionDispatch::IntegrationTest
     assert has_account_information?(@irrelevant_user)
   end
 
-  test "Anonymous fails to authenticate" do
+  test "Unknown user fails to authenticate" do
     # Given I don't remember my OAuth credentials
     forget_credentials
 
