@@ -23,12 +23,17 @@
 
   <body class="body clearfix">
 
-    <%= render "header" %>
     <%= render "flashes" %>
+
+    <% if current_user.present? %>
+      <%= render "header" %>
+    <% end %>
 
     <div class="<%= "#{controller_name}-#{action_name}" %> clearfix">
     <%= yield %>
     </div>
+
+    <%= render "footer" %>
 
   </body>
 

@@ -1,5 +1,7 @@
-<% if current_user.present? %>
-  <%= current_user.nickname %>
-  <%= current_user.email %>
-  <%= image_tag current_user.avatar_url %>
-<% end %>
+<div class="application-_header clearfix">
+
+<%= current_user.nickname %>
+<%= current_user.email %>
+<%= image_tag current_user.avatar_url %>
+
+</div>
