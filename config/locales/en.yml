@@ -49,6 +49,9 @@ en:
       todo: To-Do
       doing: Doing
       review: Review
+  new_boards:
+    no_boards:
+      message: None of your repositories on GitHub is using Catchup yet. Here's a list of all the repositories available to you, pick one to get started!
   boards:
     create:
       error: There was an error while creating this board

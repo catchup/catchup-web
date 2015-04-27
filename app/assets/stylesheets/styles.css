@@ -25,7 +25,6 @@ body {
 .application-_header,
 .new_boards-_all_boards,
 .new_boards-_create_board,
-.new_boards-_no_boards,
 .new_boards-index {
   background-color: rgb(255, 255, 255);
 }
@@ -39,6 +38,12 @@ body {
 .cards-show {
   background-color: rgb(255, 252, 242);
   color: rgb(0, 0, 0);
+}
+
+.new_boards-_no_boards {
+  background-color: rgb(255, 255, 255);
+  font-weight: 900;
+  color: rgb(17, 17, 17);
 }
 
 .welcome-index {
@@ -675,6 +680,14 @@ body {
   padding: 16px;
 }
 
+.flash .message {
+  width: 82.1917808219%;
+  margin: 3px 0 0 6.16305%;
+  font-size: 1em;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
 .flash-container {
   position: fixed;
   top: 0;
@@ -739,11 +752,22 @@ body {
 
 .message {
   float: left;
-  width: 82.1917808219%;
-  margin: 3px 0 0 6.16305%;
-  font-size: 1em;
-  word-spacing: 2px;
-  color: rgb(255, 255, 255);
+}
+
+.message-container {
+  float: left;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.message-container .message {
+  width: 56%;
+  margin-left: 22%;
+  font-size: 1.667em;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(17, 17, 17);
 }
 
 .new-comment-text {
@@ -1385,6 +1409,11 @@ body {
     margin-left: 6.16296%;
     color: rgb(17, 17, 17);
   }
+
+  .message-container .message {
+    width: 70.5729166666%;
+    margin-left: 14.71354%;
+  }
 }
 
 @media(max-width: 414px) {
@@ -1422,6 +1451,17 @@ body {
     margin-top: 176px;
     margin-right: 0;
     margin-left: 5.06869%;
+  }
+
+  .message-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .message-container .message {
+    width: 90%;
+    margin-left: 4.99321%;
+    font-size: 1.111em;
   }
 
   .signin-container .already-user {
