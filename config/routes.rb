@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "/auth/github/callback", to: "authentication#github"
   get "/auth/failure", to: "authentication#failure"
 
+  resources :new_boards, only: [:index] do
+  end
+
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
 
