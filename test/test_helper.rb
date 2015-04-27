@@ -34,10 +34,12 @@ class ActionDispatch::IntegrationTest
   self.use_transactional_fixtures = false
 
   setup do
+    OmniAuth.config.test_mode = true
     DatabaseCleaner.start
   end
 
   teardown do
+    OmniAuth.config.test_mode = false
     DatabaseCleaner.clean
   end
 

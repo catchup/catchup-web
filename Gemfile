@@ -27,6 +27,9 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of'
 
+# Authentication
+gem 'omniauth-github', :github => 'intridea/omniauth-github'
+
 group :development do
   gem 'byebug'
   gem 'quiet_assets'

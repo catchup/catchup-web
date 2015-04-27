@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211091015) do
+ActiveRecord::Schema.define(version: 20150424163219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.string   "title",          limit: 255
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "heroku_api_key", limit: 255
+    t.string   "heroku_api_key"
     t.string   "app_name"
     t.string   "repository_url"
   end
@@ -42,13 +42,13 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "boards_subscriptions", ["user_id"], name: "index_boards_subscriptions_on_user_id", using: :btree
 
   create_table "cards", force: :cascade do |t|
-    t.string   "title",       limit: 255
+    t.string   "title"
     t.integer  "list_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
-    t.boolean  "archived",                default: false
-    t.string   "preview_url", limit: 255
+    t.boolean  "archived",    default: false
+    t.string   "preview_url"
     t.boolean  "previewing"
     t.string   "branch_name"
   end
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "lists", force: :cascade do |t|
-    t.string   "title",      limit: 255
+    t.string   "title"
     t.integer  "position"
     t.integer  "board_id"
     t.datetime "created_at"
@@ -77,11 +77,14 @@ ActiveRecord::Schema.define(version: 20141211091015) do
   add_index "lists", ["board_id"], name: "index_lists_on_board_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",      limit: 255
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password",   limit: 255
-    t.string   "first_name", limit: 255
+    t.string   "password"
+    t.string   "avatar_url"
+    t.string   "auth_provider"
+    t.string   "auth_uid"
+    t.string   "nickname"
   end
 
 end

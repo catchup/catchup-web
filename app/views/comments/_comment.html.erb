@@ -1,6 +1,6 @@
 <div data-role="comment" class="comment-container clearfix">
   <div class="comment-header clearfix">
-    <p class="comment-author"><%= comment.user.first_name %></p>
+    <p class="comment-author"><%= comment.user.nickname %></p>
   </div>
   <div class="comment-body-container clearfix">
     <%= best_in_place [comment.card, comment], :text, as: :textarea,

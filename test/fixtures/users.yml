@@ -1,9 +1,9 @@
 antonio:
-  email: antonio@email.com
-  password: oinotna
-  first_name: Antonio
+  nickname: as-cii
+  password: antonio
+  email: antonio@catchup.io
 
 ali:
-  email: ali@email.com
-  password: ila
-  first_name: Ali
+  nickname: exalted
+  password: ali
+  email: ali@catchup.io

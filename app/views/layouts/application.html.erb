@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
 
-    <meta name="description" content="<%= content_for(:description).presence || "catchup.io" %>">
-    <title><%= content_for(:title).presence || "catchup.io" %></title>
+    <meta name="description" content="<%= content_for(:description).presence || t('application.name') %>">
+    <title><%= content_for(:title).presence || t('application.name') %></title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
@@ -25,9 +25,15 @@
 
     <%= render "flashes" %>
 
+    <% if current_user.present? %>
+      <%= render "header" %>
+    <% end %>
+
     <div class="<%= "#{controller_name}-#{action_name}" %> clearfix">
     <%= yield %>
     </div>
+
+    <%= render "footer" %>
 
   </body>
 
