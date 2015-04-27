@@ -28,8 +28,7 @@
   <p class="nospam-message"><%= t(".no_spam") %></p>
 </div>
 
-
-<% unless Rails.env.production? %>
+<% unless Rails.env.production? || Rails.env.test? %>
 <script>
 $.post(
   "<%= Forwarder::URLHelpers.store_redirect_url %>",
