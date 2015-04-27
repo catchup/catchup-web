@@ -9,23 +9,25 @@ body {
   color: rgb(255, 252, 242);
 }
 
+._board-settings {
+  background-color: rgb(255, 252, 242);
+  font-weight: 300;
+  color: rgb(15, 20, 31);
+}
+
 .application-_flashes {
   background-color: #ffffff;
   line-height: 1.48;
   color: rgb(255, 255, 255);
 }
 
-.new-board,
 .application-_footer,
-.application-_header {
+.application-_header,
+.new_boards-_all_boards,
+.new_boards-_create_board,
+.new_boards-_no_boards,
+.new_boards-index {
   background-color: rgb(255, 255, 255);
-}
-
-._board-settings,
-.boards-index {
-  background-color: rgb(255, 252, 242);
-  font-weight: 300;
-  color: rgb(15, 20, 31);
 }
 
 .boards-show {
@@ -62,10 +64,6 @@ body {
   filter: none;
 }
 
-.text-container p {
-  margin-bottom: 1em;
-}
-
 .add-card-action {
   display: block;
   position: absolute;
@@ -91,7 +89,6 @@ body {
   float: left;
   width: 100%;
   margin-top: 10px;
-  background-color: rgb(118, 175, 186);
 }
 
 .add-card-form-container {
@@ -304,28 +301,6 @@ body {
   color: rgb(255, 252, 242);
 }
 
-.board {
-  position: relative;
-  float: left;
-  width: 94.1717791411%;
-  height: 198px;
-}
-
-.board .board-title {
-  width: 100%;
-  height: 198px;
-  padding: 10px;
-  font-size: 1.333em;
-  font-weight: 700;
-  color: rgb(237, 227, 212);
-  overflow: hidden;
-}
-
-.board .board-title:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(255, 252, 242);
-}
-
 .board-actions-container {
   position: fixed;
   top: 197px;
@@ -344,20 +319,6 @@ body {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 60px;
-}
-
-.board-form,
-.cards-nav,
-.comment-header {
-  float: left;
-  width: 100%;
-}
-
-.board-form .submit {
-  float: left;
-  width: 100%;
-  background-color: rgb(255, 68, 122);
-  font-weight: 700;
 }
 
 .board-header {
@@ -392,7 +353,6 @@ body {
   float: right;
   width: 99.936420742%;
   margin-top: 10px;
-  background-color: rgb(118, 175, 186);
   font-weight: 700;
 }
 
@@ -406,6 +366,12 @@ body {
 
 .board-title {
   float: left;
+  border-right: 12px solid rgb(255, 68, 122);
+  border-left: 12px solid rgb(255, 68, 122);
+  background-color: rgb(255, 68, 122);
+  font-size: 2em;
+  line-height: 1.38;
+  color: rgb(255, 252, 242);
 }
 
 .board-title-container,
@@ -413,15 +379,6 @@ body {
   display: block;
   float: left;
   width: 75.25%;
-}
-
-.board-title-container .board-title {
-  border-right: 12px solid rgb(255, 68, 122);
-  border-left: 12px solid rgb(255, 68, 122);
-  background-color: rgb(255, 68, 122);
-  font-size: 2em;
-  line-height: 1.38;
-  color: rgb(255, 252, 242);
 }
 
 .board-title-form,
@@ -432,40 +389,10 @@ body {
   width: 100%;
 }
 
-.board-wrapper {
+.buttons-container {
   float: left;
-  width: 33.3322682685%;
-  margin-top: 20px;
-}
-
-.boards-container {
-  float: left;
-  width: 81.5026041666%;
+  width: 80%;
   margin-left: 10%;
-}
-
-.boards-content {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 60px;
-  background-color: rgb(237, 227, 212);
-}
-
-.boards-footer {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 80px;
-}
-
-.boards-header {
-  float: left;
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 40px;
 }
 
 .card {
@@ -654,6 +581,12 @@ body {
   padding-top: 80px;
 }
 
+.cards-nav,
+.comment-header {
+  float: left;
+  width: 100%;
+}
+
 .comment-list {
   float: left;
   clear: both;
@@ -756,15 +689,6 @@ body {
   height: 200px;
   margin-top: 40px;
   background-color: rgb(221, 221, 221);
-}
-
-.greeting {
-  float: left;
-  margin-left: 10%;
-  font-size: 2.556em;
-  font-weight: 900;
-  line-height: 1.38;
-  color: rgb(0, 0, 0);
 }
 
 .input-branch-name,
@@ -874,23 +798,6 @@ body {
   position: relative;
   float: left;
   width: 100%;
-}
-
-.old-board {
-  display: block;
-  background-color: rgb(255, 252, 242);
-}
-
-.old-board:hover {
-  background-color: rgb(118, 175, 186);
-}
-
-.plain-text {
-  float: left;
-  width: 100%;
-  font-size: 1.333em;
-  text-align: justify;
-  color: rgb(15, 20, 31);
 }
 
 .point-text {
@@ -1084,6 +991,7 @@ body {
   display: block;
   clear: both;
   height: 54px;
+  background-color: rgb(118, 175, 186);
   font-size: 1.333em;
   text-align: center;
   color: rgb(255, 252, 242);
@@ -1151,27 +1059,6 @@ body {
   opacity: 0.2;
 }
 
-.buttons-container,
-.text-container {
-  float: left;
-  width: 80%;
-  margin-left: 10%;
-}
-
-.textarea {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 144px;
-  padding: 10px 15px;
-  background-color: rgb(255, 252, 242);
-  font-size: 1.333em;
-  font-weight: 700;
-  color: rgb(15, 20, 31);
-  overflow: visible;
-  resize: none;
-}
-
 .title {
   float: left;
   width: 100%;
@@ -1227,7 +1114,6 @@ body {
   float: right;
   width: 99.936420742%;
   margin-top: 20px;
-  background-color: rgb(118, 175, 186);
   font-weight: 700;
 }
 
@@ -1353,35 +1239,6 @@ body {
   letter-spacing: inherit;
   word-spacing: inherit;
   color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.greeting strong {
-  border-right: 8px solid rgb(255, 68, 122);
-  border-left: 8px solid rgb(255, 68, 122);
-  border-top-width: 0;
-  border-bottom-width: 0;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-top-style: none;
-  border-bottom-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: rgb(255, 68, 122);
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: rgb(255, 252, 242);
   opacity: 1;
   word-break: normal;
   word-wrap: normal;
