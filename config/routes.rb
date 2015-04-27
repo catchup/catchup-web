@@ -20,4 +20,8 @@ Rails.application.routes.draw do
   end
 
   root to: "welcome#index"
+
+  # Forwarding
+  post "/forward/store_redirect", to: "forward#store_redirect"
+  get "/forward", to: "forward#redirect"
 end
