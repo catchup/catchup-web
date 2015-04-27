@@ -1,1 +1,29 @@
-<%= link_to "Signup", "/auth/github" %>
+<div class="bg-landing"></div>
+
+<header class="landing clearfix">
+  <h1 class="catchup"><%= t("application.name") %></h1>
+  <div class="signin-container clearfix">
+    <p class="already-user"><%= t(".already_user") %></p>
+    <a class="signin" href="/auth/github"><%= t(".sign_in") %></a>
+  </div>
+</header>
+
+<p class="slogan"><%= t(".slogan") %></p>
+
+<div class="video-container clearfix">
+  <div class="video-placeholder"></div>
+</div>
+
+<div class="bg-signup clearfix">
+  <div class="signup-container clearfix">
+    <p class="title"><%= t(".ready") %></p>
+    <a class="signup-github" href="/auth/github"><%= t(".sign_up") %></a>
+    <p class="beta-warning"><%= t(".warning", email: t("application.email")).html_safe %></p>
+  </div>
+</div>
+
+<div class="subscribe-container clearfix">
+  <p class="title"><%= t(".want_more") %></p>
+  <a class="subscribe" href="<%= t("application.newsletter_url") %>">Subscribe to newsletter</a>
+  <p class="nospam-message"><%= t(".no_spam") %></p>
+</div>

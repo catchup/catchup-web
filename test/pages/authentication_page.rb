@@ -5,7 +5,7 @@ module AuthenticationPage
     }) unless @will_forget_credentials
 
     visit root_path
-    click_on t("welcome.index.signup")
+    click_on t("welcome.index.sign_up")
   end
 
   def sign_out

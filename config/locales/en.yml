@@ -20,10 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  application:
+    name: Catchup
+    domain_name: catchup.io
+    email: info@catchup.io
+    newsletter_url: http://eepurl.com/bkMO59
   welcome:
     index:
-      signup: Signup
       auth_failure: Auth failed
+      already_user: Already a user?
+      sign_in: Sign in
+      slogan: Simple flow meets rich feedback.
+      ready: Ready to try?
+      sign_up: Sign up with GitHub
+      warning: Catchup isn't officially launched yet, so keep that in mind. Please try it out and <a href="mailto:%{email}">let us know</a> what do you think about it.
+      want_more: Want even more?
+      no_spam: We promise you will hear from us only when we have something exciting to share. We won't betray your trust by selling you ads or other creepy stuff!
   greeting: Hi, <strong>%{user}</strong>
   see_boards: Go to boards
   users:
