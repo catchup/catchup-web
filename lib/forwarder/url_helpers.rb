@@ -9,7 +9,7 @@ module Forwarder
     end
 
     def self.root_url
-      url = ENV.fetch("FORWARDER_ROOT_URL", "http://catchup.io")
+      url = ENV["FORWARDER_ROOT_URL"]
       url.chop! if url.end_with?("/")
       url
     end
