@@ -9,7 +9,7 @@ module Forwarder
     end
 
     def self.root_url
-      url = ENV["FORWARDER_ROOT_URL"]
+      url = ENV["FORWARDER_ROOT_URL"] ||= "http://localhost:3000"
       url.chop! if url.end_with?("/")
       url
     end
