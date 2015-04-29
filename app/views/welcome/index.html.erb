@@ -27,3 +27,12 @@
   <a class="subscribe" href="<%= t("application.newsletter_url") %>">Subscribe to newsletter</a>
   <p class="nospam-message"><%= t(".no_spam") %></p>
 </div>
+
+<% unless Rails.env.production? || Rails.env.test? %>
+<script>
+$.post(
+  "<%= Forwarder::URLHelpers.store_redirect_url %>",
+  { redirect_url: "<%= auth_github_callback_url %>" }
+)
+</script>
+<% end %>

@@ -36,6 +36,11 @@ module Heroku
       heroku_clt("run", command)
     end
 
+    def change_config(options)
+      Rails.logger.info("Setting environment variables:\n#{options}")
+      heroku_platform.config_var.update(name, options)
+    end
+
     private
 
     def heroku_platform
