@@ -51,11 +51,13 @@ en:
       review: Review
   new_boards:
     no_boards:
-      message: None of your repositories on GitHub is using Catchup yet. Here's a list of all the repositories available to you, pick one to get started!
+      message: Apparently you're new around here, welcome!
+    create_board:
+      message: Below is list of all the repositories available to you. Select one to get started with Catchup right now.
   boards:
     create:
       error: There was an error while creating this board
-      submit: Create a new board
+      submit: Let's go
       suggest: … or maybe <strong>create a new one</strong>?
       title-placeholder: Hit Your Keys Here To…
     index:
@@ -74,6 +76,10 @@ en:
       repository-placeholder: https://github.com/user/repo
       api-key: Shared Heroku API key
       submit: Save
+    board:
+      goto-github: go to repository on github
+    link:
+      lets_go: Go to board
   cards:
     create:
       error: There was an error while creating this card

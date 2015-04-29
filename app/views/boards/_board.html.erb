@@ -1,5 +1,19 @@
-<div class="board-wrapper">
-  <a href="<%= url_for(board) %>" class="board old-board clearfix">
-    <h2 class="board-title"><%= board.title %></h2>
-  </a>
+<div class="boards-_board clearfix">
+
+<p class="repo-title"><%= board.title %></p>
+<a class="goto-github" target="_blank" href="<%= "http://github.com/#{board.title}" %>"><%= t(".goto-github") %></a>
+<p class="description">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+
+<div class="collaborators clearfix">
+  <div class="avatars clearfix">
+    <%= render partial: "users/avatar",
+               collection: board.collaborators, as: :user,
+               locals: { size: "tiny" } %>
+  </div>
+</div>
+
+<div class="actions clearfix">
+  <%= render action_partial, board: board %>
+</div>
+
 </div>

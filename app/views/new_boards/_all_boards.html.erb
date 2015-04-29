@@ -1,5 +1,13 @@
 <div class="new_boards-_all_boards clearfix">
 
-
+<section class="your-boards-section clearfix">
+  <div class="header clearfix">
+    <a class="create-board" href="#">Create a new board</a>
+    <h1 class="title">Your boards:</h1>
+  </div>
+  <div class="boards clearfix">
+    <%= render boards, action_partial: "boards/link" %>
+  </div>
+</section>
 
 </div>

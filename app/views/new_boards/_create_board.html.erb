@@ -1,5 +1,12 @@
 <div class="new_boards-_create_board clearfix">
 
-
+<section class="create-board-section clearfix">
+  <div class="header clearfix">
+    <h1 class="title"><%= t(".message") %></h1>
+  </div>
+  <div class="boards clearfix">
+    <%= render boards, action_partial: "boards/form" %>
+  </div>
+</section>
 
 </div>
