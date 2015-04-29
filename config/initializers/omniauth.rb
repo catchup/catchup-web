@@ -6,7 +6,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
            scope: "user,repo"
 end
 
-unless Rails.env.production? || Rails.env.test?
+unless Rails.env.test?
   OmniAuth::Strategies::OAuth2.class_eval do
     def callback_url
       Forwarder::URLHelpers.forward_url
