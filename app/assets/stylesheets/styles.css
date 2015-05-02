@@ -103,7 +103,6 @@ body {
   top: -22px;
   left: 0;
   right: 0;
-  z-index: 16;
   margin: 0 auto;
   font-size: 3.556em;
   line-height: 1.38;
@@ -255,7 +254,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
   width: 100%;
   min-width: none;
   height: 568px;
@@ -314,7 +312,6 @@ body {
   position: absolute;
   top: 42px;
   right: -36px;
-  z-index: 24;
   width: 36px;
   height: 36px;
   background-color: rgb(255, 68, 122);
@@ -355,7 +352,6 @@ body {
   position: absolute;
   top: 0;
   right: -36px;
-  z-index: 23;
   width: 36px;
   height: 36px;
   background-color: rgb(118, 175, 186);
@@ -369,7 +365,6 @@ body {
   position: fixed;
   top: 197px;
   left: 0;
-  z-index: 17;
   width: 48px;
   height: 48px;
   background-color: rgb(255, 68, 122);
@@ -379,7 +374,6 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 15;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 60px;
@@ -389,14 +383,12 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 8;
   width: 100%;
 }
 
 .board-nav {
   position: relative;
   float: left;
-  z-index: 2;
   width: 100%;
 }
 
@@ -473,7 +465,6 @@ body {
   display: block;
   position: relative;
   float: left;
-  z-index: 12;
   width: 97.9997964169%;
   margin: 10px 0 0 0.99447%;
   padding: 8px 16px;
@@ -590,7 +581,6 @@ body {
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
   margin: auto 0;
 }
 
@@ -793,7 +783,6 @@ body {
   position: absolute;
   top: 20px;
   left: 10px;
-  z-index: 10;
   font-size: 1.222em;
   line-height: 1.38;
   color: rgb(255, 252, 242);
@@ -833,7 +822,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 12;
   width: 100%;
 }
 
@@ -945,7 +933,6 @@ body {
 .landing {
   position: relative;
   float: left;
-  z-index: 8;
   width: 100%;
 }
 
@@ -1067,7 +1054,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 8;
   width: 100%;
   height: 54px;
   background-color: rgb(255, 68, 122);
@@ -1220,7 +1206,6 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 3;
   width: 80%;
   min-width: none;
   min-height: nonepx;
@@ -1414,7 +1399,6 @@ body {
   position: relative;
   float: left;
   clear: both;
-  z-index: 2;
   width: 100%;
   margin-top: 80px;
 }
@@ -1764,7 +1748,6 @@ body {
 
   .landing {
     position: relative;
-    z-index: 8;
   }
 
   .landing .catchup {
@@ -1809,7 +1792,6 @@ body {
 
   .slogan {
     position: relative;
-    z-index: 3;
     width: 90%;
     margin-top: -180px;
     margin-left: 4.99321%;
@@ -1835,7 +1817,6 @@ body {
   .video-container {
     position: relative;
     clear: none;
-    z-index: 2;
   }
 
   .video-container .video-placeholder {
@@ -1888,7 +1869,6 @@ body {
 
   .landing {
     position: relative;
-    z-index: 8;
     margin-top: 20px;
   }
 
@@ -1914,7 +1894,6 @@ body {
 
   .slogan {
     position: relative;
-    z-index: 3;
     margin-left: 5%;
     padding-right: 20px;
     padding-left: 20px;
@@ -1927,7 +1906,6 @@ body {
 
   .video-container {
     position: relative;
-    z-index: 2;
   }
 
   .video-container .video-placeholder {
