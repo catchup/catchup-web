@@ -856,7 +856,6 @@ body {
   display: block;
   position: relative;
   float: left;
-  z-index: 2;
   width: 10px;
   height: 12px;
   margin: 54px 0 0 0.25%;
@@ -894,7 +893,6 @@ body {
 }
 
 .huge .avatar {
-  z-index: 8;
 }
 
 .ignoreme {
@@ -942,7 +940,6 @@ body {
 }
 
 .large .avatar {
-  z-index: 2;
 }
 
 .list-container {
@@ -963,7 +960,6 @@ body {
 }
 
 .medium .avatar {
-  z-index: 4;
 }
 
 .message {
@@ -1103,7 +1099,6 @@ body {
 .repo-title {
   position: relative;
   float: left;
-  z-index: 0;
   margin: 47px 0 0 10%;
   font-size: 1.333em;
   font-weight: 700;
@@ -1242,7 +1237,6 @@ body {
 }
 
 .small .avatar {
-  z-index: 6;
 }
 
 .submit {
@@ -1346,7 +1340,6 @@ body {
 }
 
 .tiny .avatar {
-  z-index: 10;
 }
 
 .title {
