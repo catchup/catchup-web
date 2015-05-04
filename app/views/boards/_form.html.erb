@@ -1,7 +1,25 @@
-<div class="div boards-_form clearfix">
+<div class="boards-_form clearfix">
 
-<%= form_for board, html: { class: 'create-board-form clearfix' } do |f| %>
-  <%= button_tag t('boards.create.submit'), class: 'submit' %>
-<% end %>
+<article class="new-board-card clearfix">
+
+  <header class="new-board-card-header clearfix">
+    <h3 class="board-title"><%= board.title %></h3>
+    <a class="open-in-github" target="_blank" href="<%= "http://github.com/#{board.title}" %>"><%= t("accessibility.open_in_github") %></a>
+    <p class="board-description">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+  </header>
+
+  <%= form_for board, html: { class: 'create-board-form clearfix' } do |f| %>
+    <%= button_tag t('boards.create.submit'), class: 'submit' %>
+  <% end %>
+
+  <div class="collaborators clearfix">
+    <div class="avatars-container clearfix">
+      <%= render partial: "users/avatar",
+                 collection: board.collaborators, as: :user,
+                 locals: { size: "tiny" } %>
+    </div>
+  </div>
+
+</article>
 
 </div>

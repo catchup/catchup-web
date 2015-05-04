@@ -1,19 +1,21 @@
 <div class="boards-_board clearfix">
 
-<p class="repo-title"><%= board.title %></p>
-<a class="goto-github" target="_blank" href="<%= "http://github.com/#{board.title}" %>"><%= t(".goto-github") %></a>
-<p class="description">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+<article class="board-card clearfix">
 
-<div class="collaborators clearfix">
-  <div class="avatars clearfix">
-    <%= render partial: "users/avatar",
-               collection: board.collaborators, as: :user,
-               locals: { size: "tiny" } %>
+  <header class="board-card-header clearfix">
+    <h3 class="board-title"><a href="<%= url_for(board) %>"><%= board.title %></a></h3>
+    <a class="open-in-github" target="_blank" href="<%= "http://github.com/#{board.title}" %>"><%= t("accessibility.open_in_github") %></a>
+    <p class="board-description">Eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim. Quinta decima eodem modo typi qui nunc nobis videntur parum, clari fiant sollemnes.</p>
+  </header>
+
+  <div class="collaborators clearfix">
+    <div class="avatars-container clearfix">
+      <%= render partial: "users/avatar",
+                 collection: board.collaborators, as: :user,
+                 locals: { size: "tiny" } %>
+    </div>
   </div>
-</div>
 
-<div class="actions clearfix">
-  <%= render action_partial, board: board %>
-</div>
+</article>
 
 </div>

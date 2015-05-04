@@ -1,12 +1,11 @@
 <div class="new_boards-_all_boards clearfix">
 
-<section class="your-boards-section clearfix">
-  <div class="header clearfix">
-    <a class="create-board" href="#">Create a new board</a>
-    <h1 class="title">Your boards:</h1>
-  </div>
-  <div class="boards clearfix">
-    <%= render boards, action_partial: "boards/link" %>
+<section class="all-boards-section clearfix">
+  <h2 class="section-title"><%= t(".title") %></h2>
+  <div class="boards-container clearfix">
+    <%= render partial: "boards/board",
+               collection: boards, as: :board,
+               spacer_template: "separator" %>
   </div>
 </section>
 

@@ -25,6 +25,8 @@ en:
     domain_name: catchup.io
     email: info@catchup.io
     newsletter_url: http://eepurl.com/bkMO59
+  accessibility:
+    open_in_github: open in github
   welcome:
     index:
       auth_failure: Auth failed
@@ -51,9 +53,11 @@ en:
       review: Review
   new_boards:
     no_boards:
-      message: Apparently you're new around here, welcome!
+      title: Apparently you're new around here, welcome!
     create_board:
-      message: Below is list of all the repositories available to you. Select one to get started with Catchup right now.
+      title: Below is list of all the repositories available to you. Select one to get started with Catchup right now.
+    all_boards:
+      title: "Your boards:"
   boards:
     create:
       error: There was an error while creating this board
@@ -76,10 +80,6 @@ en:
       repository-placeholder: https://github.com/user/repo
       api-key: Shared Heroku API key
       submit: Save
-    board:
-      goto-github: go to repository on github
-    link:
-      lets_go: Go to board
   cards:
     create:
       error: There was an error while creating this card

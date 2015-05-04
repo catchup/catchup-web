@@ -1,3 +1,11 @@
-<%= render "no_boards" %>
-<%= render "create_board", boards: @boards %>
-<%= render "all_boards", boards: @boards %>
+<div class="no-boards-container clearfix">
+  <%= render "no_boards" %>
+</div>
+
+<div class="create-board-container clearfix">
+  <%= render "create_board", boards: @boards %>
+</div>
+
+<div class="all-boards-container clearfix">
+  <%= render "all_boards", boards: @boards %>
+</div>
