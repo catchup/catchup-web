@@ -1,5 +1,7 @@
 class ForwardController < ActionController::Base
   def store_redirect
+    allow_cross_domain_requests
+
     cookies[:will_redirect_to] = params[:redirect_url]
 
     render nothing: true
@@ -15,5 +17,12 @@ class ForwardController < ActionController::Base
       uri.query = request.query_parameters.to_query
       redirect_to uri.to_s
     end
+  end
+
+  private
+
+  def allow_cross_domain_requests
+    headers["Access-Control-Allow-Origin"] = "*"
+    headers["Access-Control-Request-Method"] = "*"
   end
 end
