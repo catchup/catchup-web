@@ -1,7 +1,6 @@
 ruby '2.2.0'
 
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 gem 'best_in_place'
 gem 'coffee-rails', '~> 4.0.0'
@@ -9,7 +8,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'rails_admin'
-gem 'rails-assets-vex'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-vex'
+end
 gem 'spinjs-rails'
 gem 'rails', '4.2.0'
 gem 'passenger'
