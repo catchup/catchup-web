@@ -290,7 +290,7 @@ DEPENDENCIES
   pusher
   quiet_assets
   rails (= 4.2.0)
-  rails-assets-vex
+  rails-assets-vex!
   rails_admin
   ranked-model
   redcarpet
