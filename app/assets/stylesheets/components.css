@@ -1,0 +1,11 @@
+.flash-container {
+  z-index: 9999;
+}
+
+.site-header {
+  z-index: 999;
+}
+
+.avatar-container {
+  border-radius: 50%;
+}
