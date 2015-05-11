@@ -29,9 +29,7 @@
       <%= render "header" %>
     <% end %>
 
-    <div class="<%= "#{controller_name}-#{action_name}" %> clearfix">
-    <%= yield %>
-    </div>
+    <%= content_tag(:div, yield, class: "#{controller_name}-#{action_name} clearfix") %>
 
     <%= render "footer" %>
 
