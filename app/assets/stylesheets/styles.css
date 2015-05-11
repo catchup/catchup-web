@@ -1,6 +1,6 @@
 body {
   font: 400 1.125em/1.38 'Source Sans Pro';
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 ._add-card {
@@ -17,8 +17,17 @@ body {
 
 .application-_flashes {
   background-color: #ffffff;
+  font-weight: 600;
   line-height: 1.48;
   color: rgb(255, 255, 255);
+}
+
+.application-_footer,
+.application-_header,
+.avatars-_avatar,
+.boards-_header_action,
+.new_boards-index {
+  background-color: rgb(255, 255, 255);
 }
 
 .boards-_board,
@@ -45,13 +54,6 @@ body {
   background-color: rgb(255, 255, 255);
   font-weight: 900;
   color: rgb(17, 17, 17);
-}
-
-.application-_footer,
-.application-_header,
-.new_boards-index,
-.users-_avatar {
-  background-color: rgb(255, 255, 255);
 }
 
 .welcome-index {
@@ -205,7 +207,6 @@ body {
 .avatars-container {
   float: left;
   width: 100%;
-  min-height: 36px;
   margin: -4px 0 0 -4px;
 }
 
@@ -605,6 +606,16 @@ body {
   margin: 20px 0 0 10%;
 }
 
+.collaborators .avatars-container {
+  min-height: 36px;
+}
+
+.collaborators .placeholder__users-_avatar {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(222, 222, 222);
+}
+
 .comment-author {
   float: left;
   margin-left: 10%;
@@ -712,6 +723,22 @@ body {
   padding-bottom: 80px;
 }
 
+.create-board {
+  float: right;
+  height: 36px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.48;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
 .create-board-form {
   position: relative;
   float: left;
@@ -785,7 +812,10 @@ body {
 .flash {
   float: left;
   width: 100%;
-  padding: 16px;
+  min-height: 64px;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
 }
 
 .flash-container {
@@ -801,6 +831,10 @@ body {
   height: 200px;
   margin-top: 40px;
   background-color: rgb(221, 221, 221);
+}
+
+.full {
+  display: block;
 }
 
 .huge {
@@ -864,6 +898,12 @@ body {
   color: rgb(237, 227, 212);
 }
 
+.main-action-container {
+  float: right;
+  width: 28.7499999999%;
+  margin: 8px 10% 0 0;
+}
+
 .medium {
   width: 64px;
   height: 64px;
@@ -874,8 +914,8 @@ body {
 
 .message {
   float: left;
-  width: 82.1917808219%;
-  margin: 3px 0 0 6.16305%;
+  width: 81.081081081%;
+  margin: 3px 0 0 6.07052%;
   font-size: 1em;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1000,11 +1040,23 @@ body {
   background-color: rgb(222, 222, 222);
 }
 
-.placeholder__users-_avatar {
+.placeholder__button {
   float: left;
-  width: 36px;
+  width: 100%;
   height: 36px;
   background-color: rgb(222, 222, 222);
+}
+
+.placeholder__logo {
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin: 4px 0 0 2%;
+  background-color: rgb(222, 222, 222);
+}
+
+.placeholder__users-_avatar {
+  float: left;
 }
 
 .point-text {
@@ -1075,6 +1127,11 @@ body {
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
+}
+
+.short {
+  display: none;
+  clear: both;
 }
 
 .signin {
@@ -1166,6 +1223,16 @@ body {
   -o-filter: none;
   -ms-filter: none;
   filter: none;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 0 rgb(170, 170, 170);
 }
 
 .slogan {
@@ -1334,6 +1401,19 @@ body {
   line-height: 1.38;
   text-align: center;
   color: rgb(0, 0, 0);
+}
+
+.user-profile {
+  float: right;
+  clear: both;
+  width: 48px;
+  margin: -48px 2% 0 0;
+}
+
+.user-profile .placeholder__users-_avatar {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(221, 221, 221);
 }
 
 .user-settings-form .submit {
@@ -1637,36 +1717,54 @@ body {
   white-space: normal;
 }
 
-@media(max-width: 768px) {
-  .flash .message {
-    margin-left: 6.16296%;
-    color: rgb(17, 17, 17);
+@media(max-width: 1024px) {
+  .site-header .main-action-container {
+    width: 32.421875%;
+    margin-right: 9.96094%;
+  }
+
+  .site-header .placeholder__logo {
+    margin-left: 1.99738%;
+  }
+
+  .site-header .user-profile {
+    margin-right: 1.99738%;
   }
 }
 
-@media(max-width: 414px) {
+@media(max-width: 768px) {
   body {
     font-size: 1.125em;
   }
 
+  .site-header .main-action-container {
+    width: 33.984375%;
+    margin-right: 15.23234%;
+  }
+
+  .site-header .placeholder__logo {
+    margin-left: 1.99585%;
+  }
+
+  .site-header .user-profile {
+    margin-right: 1.99585%;
+  }
+}
+
+@media(max-width: 414px) {
   .all-boards-container .placeholder__boards-_all_boards,
+  .board-card .board-card-header,
   .board-card .collaborators,
-  .boards-container .placeholder__boards-_form,
+  .boards-container .placeholder__boards-_board,
   .create-board-container .placeholder__boards-_create_boards,
   .no-boards-container .placeholder__boards-_no_boards {
     width: 90%;
-    margin-left: 4.99698%;
+    margin-left: 4.99321%;
   }
 
   .all-boards-section .boards-container,
   .create-board-section .boards-container {
     margin-top: 40px;
-  }
-
-  .all-boards-section .section-title {
-    width: 90%;
-    margin-left: 5%;
-    font-size: 1.222em;
   }
 
   .bg-signup {
@@ -1677,11 +1775,6 @@ body {
 
   .bg-signup .signup-container {
     width: 89.9984903381%;
-    margin-left: 4.99321%;
-  }
-
-  .board-card .board-card-header {
-    width: 90%;
     margin-left: 4.99321%;
   }
 
@@ -1702,9 +1795,40 @@ body {
     position: relative;
   }
 
-  .boards-container .placeholder__boards-_board {
+  .boards-container .placeholder__boards-_form {
     width: 90%;
-    margin-left: 5%;
+    margin-left: 4.99698%;
+  }
+
+  .create-board {
+    position: relative;
+  }
+
+  .create-board-section .section-title {
+    width: 90%;
+    margin-left: 4.99698%;
+    font-size: 1.222em;
+  }
+
+  .flash .dismiss {
+    margin-top: 8px;
+  }
+
+  .flash .message {
+    width: 79.648241206%;
+    margin-left: 7.0351%;
+    font-size: 0.944em;
+    line-height: 1.38;
+  }
+
+  .flash-container .flash {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+  }
+
+  .full {
+    display: none;
   }
 
   .landing {
@@ -1730,7 +1854,7 @@ body {
   .new-board-card .collaborators {
     width: 90%;
     margin-top: -108px;
-    margin-left: 5%;
+    margin-left: 4.99698%;
   }
 
   .new-board-card .create-board-form {
@@ -1754,11 +1878,16 @@ body {
     padding-bottom: 40px;
   }
 
-  .create-board-section .section-title,
+  .all-boards-section .section-title,
   .no-boards-section .section-title {
     width: 90%;
-    margin-left: 4.99698%;
+    margin-left: 4.99321%;
     font-size: 1.222em;
+  }
+
+  .short {
+    display: block;
+    clear: none;
   }
 
   .signin-container .already-user {
@@ -1770,6 +1899,21 @@ body {
     margin-top: 8px;
     font-size: 0.944em;
     line-height: 1.38;
+  }
+
+  .site-header .main-action-container {
+    width: 28.7439613526%;
+    margin-right: 5.06869%;
+  }
+
+  .site-header .placeholder__logo {
+    margin-left: 1.98898%;
+  }
+
+  .site-header .user-profile {
+    float: left;
+    margin-right: 0;
+    margin-left: 19.39538%;
   }
 
   .slogan {
@@ -1808,22 +1952,13 @@ body {
 }
 
 @media(max-width: 320px) {
+  body {
+    font-size: 1.125em;
+  }
+
   .bg-signup .signup-container {
     width: 90%;
     margin-left: 4.98047%;
-  }
-
-  .flash .dismiss {
-    width: 24px;
-    height: 24px;
-  }
-
-  .flash .message {
-    width: 85.0694444444%;
-    margin-top: 2px;
-    margin-left: 6.5918%;
-    font-size: 0.944em;
-    line-height: 1.38;
   }
 
   .landing {

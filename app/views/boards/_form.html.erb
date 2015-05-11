@@ -14,9 +14,7 @@
 
   <div class="collaborators clearfix">
     <div class="avatars-container clearfix">
-      <%= render partial: "users/avatar",
-                 collection: board.collaborators, as: :user,
-                 locals: { size: "tiny" } %>
+      <%= render Avatar.tiny(*board.collaborators) %>
     </div>
   </div>
 

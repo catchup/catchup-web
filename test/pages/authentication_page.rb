@@ -13,8 +13,6 @@ module AuthenticationPage
   end
 
   def has_account_information?(user)
-    has_text?(user.nickname) &&
-    has_text?(user.email) &&
     has_css?("img[src*='#{user.avatar_url}']")
   end
 
