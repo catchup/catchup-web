@@ -8,4 +8,8 @@ class Avatar
     @size = size
     @url = url
   end
+
+  def self.small(*users)
+    users.map { |e| new(:small, e.avatar_url) }
+  end
 end
