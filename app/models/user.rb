@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
                           join_table: "boards_owners",
                           class_name: "Board"
 
+  def avatar(size)
+    Avatar.new(size, avatar_url)
+  end
+
   def create_board(params)
     Board.create(params).tap { |b| b.add_owner(self) }
   end

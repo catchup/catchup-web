@@ -7,9 +7,7 @@
   </div>
   <div class="user-profile clearfix">
     <div class="avatars-container clearfix">
-      <%= render partial: "users/avatar",
-                 object: current_user, as: :user,
-                 locals: { size: "small" } %>
+      <%= render current_user.avatar(:small) %>
     </div>
   </div>
 </header>
