@@ -10,10 +10,10 @@ class Avatar
   end
 
   def self.small(*users)
-    users.compact.map { |e| new(:small, e.avatar_url) }
+    users.map { |e| new(:small, e.avatar_url) }
   end
 
   def self.tiny(*users)
-    users.compact.map { |e| new(:tiny, e.avatar_url) }
+    users.map { |e| new(:tiny, e.avatar_url) }
   end
 end
