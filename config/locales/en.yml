@@ -52,6 +52,9 @@ en:
       doing: Doing
       review: Review
   new_boards:
+    header_action:
+      create_board_full: Create a new board
+      create_board_short: New
     no_boards:
       title: Apparently you're new around here, welcome!
     create_board:

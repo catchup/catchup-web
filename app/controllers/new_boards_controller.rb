@@ -1,6 +1,4 @@
 class NewBoardsController < ApplicationController
-  skip_before_action :authenticate
-
   def index
     @boards = [
       board("exalted/dotfiles", [ali]),

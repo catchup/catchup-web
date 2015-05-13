@@ -1,3 +1,7 @@
+<%= content_for :main_action do %>
+  <%= render "header_action" %>
+<% end %>
+
 <% if @boards.empty? %>
 <div class="no-boards-container clearfix">
   <%= render "no_boards" %>
