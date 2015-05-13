@@ -1232,7 +1232,7 @@ body {
   width: 100%;
   height: 56px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 0 rgb(170, 170, 170);
+  box-shadow: 0 1px 4px rgb(221, 221, 221);
 }
 
 .slogan {
