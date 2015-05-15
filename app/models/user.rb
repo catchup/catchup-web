@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
   private
 
   def github_repositories_full_names
-    github.repos.map(&:full_name)
+    github.repositories(nil, type: :public).map(&:full_name)
   end
 
   def github
