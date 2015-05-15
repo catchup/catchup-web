@@ -9,6 +9,7 @@
   </header>
 
   <%= form_for board, html: { class: 'create-board-form clearfix' } do |f| %>
+    <%= f.hidden_field :title %>
     <%= button_tag t('boards.create.submit'), class: 'submit' %>
   <% end %>
 
