@@ -10,7 +10,11 @@ class User < ActiveRecord::Base
     Board.create(params).tap { |b| b.add_owner(self) }
   end
 
-  def self.authenticate(provider, uid)
-    find_or_initialize_by(auth_provider: provider, auth_uid: uid)
+  def update_with_auth_schema!(auth_schema)
+    self.auth_token = auth_schema.credentials.token
+    self.avatar_url = auth_schema.info.image
+    self.email      = auth_schema.info.email
+    self.nickname   = auth_schema.info.nickname
+    self.save!
   end
 end
