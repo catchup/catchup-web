@@ -10,11 +10,23 @@ class User < ActiveRecord::Base
     Board.create(params).tap { |b| b.add_owner(self) }
   end
 
+  def github_boards
+    github.repos.map do |repo|
+      Board.new(title: repo.full_name, collaborators: [self])
+    end
+  end
+
   def update_with_auth_schema!(auth_schema)
     self.auth_token = auth_schema.credentials.token
     self.avatar_url = auth_schema.info.image
     self.email      = auth_schema.info.email
     self.nickname   = auth_schema.info.nickname
     self.save!
+  end
+
+  private
+
+  def github
+    @github_user ||= Octokit::Client.new(access_token: self.auth_token)
   end
 end
