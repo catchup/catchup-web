@@ -51,14 +51,13 @@ en:
       todo: To-Do
       doing: Doing
       review: Review
-  new_boards:
+  boards:
     no_boards:
       title: Apparently you're new around here, welcome!
     create_board:
       title: Below is list of all the repositories available to you. Select one to get started with Catchup right now.
     all_boards:
       title: "Your boards:"
-  boards:
     create:
       error: There was an error while creating this board
       submit: Let's go
