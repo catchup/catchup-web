@@ -10,9 +10,13 @@ class User < ActiveRecord::Base
     Board.create(params).tap { |b| b.add_owner(self) }
   end
 
-  def github_boards
+  def github_linked_boards
+    Board.where(title: github.repos.map(&:full_name))
+  end
+
+  def github_new_boards
     github.repos.map do |repo|
-      Board.new(title: repo.full_name, collaborators: [self])
+      Board.new(title: repo.full_name)
     end
   end
 
