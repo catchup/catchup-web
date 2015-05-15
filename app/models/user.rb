@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  UnauthorizedException = Class.new(StandardError)
+
   validates :email, presence: true
   validates_email_format_of :email
 
@@ -6,18 +8,27 @@ class User < ActiveRecord::Base
                           join_table: "boards_owners",
                           class_name: "Board"
 
-  def create_board(params)
-    Board.create(params).tap { |b| b.add_owner(self) }
+  def create_board(title)
+    raise UnauthorizedException unless github_repositories_full_names.include?(title)
+
+    Board.new(title: title)
+  end
+
+  def find_board(id)
+    board = Board.find(id)
+    raise UnauthorizedException unless github_repositories_full_names.include?(board.title)
+
+    board
   end
 
   def github_linked_boards
-    Board.where(title: github.repos.map(&:full_name))
+    @github_linked_boards ||= Board.where(title: github_repositories_full_names)
   end
 
   def github_new_boards
-    github.repos.map do |repo|
-      Board.new(title: repo.full_name)
-    end
+    new_boards = github_repositories_full_names - github_linked_boards.map(&:title)
+
+    new_boards.map { |repo_full_name| Board.new(title: repo_full_name) }
   end
 
   def update_with_auth_schema!(auth_schema)
@@ -29,6 +40,10 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def github_repositories_full_names
+    github.repos.map(&:full_name)
+  end
 
   def github
     @github_user ||= Octokit::Client.new(access_token: self.auth_token)

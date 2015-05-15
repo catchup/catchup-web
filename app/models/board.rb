@@ -38,6 +38,10 @@ class Board < ActiveRecord::Base
     owners << user
   end
 
+  def repository_url
+    "https://github.com/#{self.title}"
+  end
+
   private
 
   def add_sample_lists
