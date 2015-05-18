@@ -7,11 +7,11 @@
   <%= render "no_boards" %>
 </div>
 <% else %>
-<div class="all-boards-container clearfix">
-  <%= render "all_boards", boards: @linked_boards %>
+<div class="linked-boards-container clearfix">
+  <%= render "linked_boards", boards: @linked_boards %>
 </div>
 <% end %>
 
-<div class="create-board-container clearfix">
-  <%= render "create_board", boards: @new_boards %>
+<div class="new-boards-container clearfix">
+  <%= render "new_boards", boards: @new_boards %>
 </div>

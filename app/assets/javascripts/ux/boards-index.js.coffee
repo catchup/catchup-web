@@ -1,8 +1,8 @@
 $(document).on "ready page:load", ->
-  $("[data-ux-create-board]").on "click", (event) ->
+  $("[data-ux-new-board]").on "click", (event) ->
     event.preventDefault()
 
-    top = $("#create-board-section").offset().top
+    top = $("#new-boards-section").offset().top
     headerHeight = $("[data-ux-header]").outerHeight()
     $("html, body").animate(
       { scrollTop: top - headerHeight },
