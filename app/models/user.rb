@@ -9,9 +9,11 @@ class User < ActiveRecord::Base
                           class_name: "Board"
 
   def create_board(title)
-    raise UnauthorizedException unless github_repositories.map(&:full_name).include?(title)
+    repo = github_repositories.detect { |e| e.full_name == board.title }
 
-    Board.new(title: title)
+    raise UnauthorizedException if repo.nil?
+
+    Board.new(title: title, repository: repo)
   end
 
   def find_board(id)
@@ -20,7 +22,7 @@ class User < ActiveRecord::Base
 
     raise UnauthorizedException if repo.nil?
 
-    board.description = repo.description
+    board.repository = repo
     board
   end
 
@@ -29,7 +31,7 @@ class User < ActiveRecord::Base
       board = Board.find_by(title: repo.full_name)
       next if board.nil?
 
-      board.description = repo.description
+      board.repository = repo
       board
     end.compact
   end
@@ -38,7 +40,7 @@ class User < ActiveRecord::Base
     @github_new_boards ||= github_repositories.map do |repo|
       next if Board.find_by(title: repo.full_name).present?
 
-      Board.new(title: repo.full_name, description: repo.description)
+      Board.new(title: repo.full_name, repository: repo)
     end.compact
   end
 

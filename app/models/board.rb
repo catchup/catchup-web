@@ -12,7 +12,9 @@ class Board < ActiveRecord::Base
                           join_table: "boards_owners",
                           class_name: "User"
 
-  attr_accessor :description
+  attr_accessor :repository
+
+  delegate :description, to: :repository
 
   def add_list!(params)
     lists.create(params)
