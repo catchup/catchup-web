@@ -41,7 +41,7 @@ class Board < ActiveRecord::Base
   end
 
   def repository_url
-    "https://github.com/#{self.title}"
+    "https://github.com/#{title}"
   end
 
   private
