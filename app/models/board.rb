@@ -12,6 +12,8 @@ class Board < ActiveRecord::Base
                           join_table: "boards_owners",
                           class_name: "User"
 
+  attr_accessor :description
+
   def add_list!(params)
     lists.create(params)
   end

@@ -9,26 +9,37 @@ class User < ActiveRecord::Base
                           class_name: "Board"
 
   def create_board(title)
-    raise UnauthorizedException unless github_repositories_full_names.include?(title)
+    raise UnauthorizedException unless github_repositories.map(&:full_name).include?(title)
 
     Board.new(title: title)
   end
 
   def find_board(id)
     board = Board.find(id)
-    raise UnauthorizedException unless github_repositories_full_names.include?(board.title)
+    repo  = github_repositories.find { |repo| repo.full_name == board.title }
 
+    raise UnauthorizedException if repo.nil?
+
+    board.description = repo.description
     board
   end
 
   def github_linked_boards
-    @github_linked_boards ||= Board.where(title: github_repositories_full_names)
+    @github_linked_boards ||= github_repositories.map do |repo|
+      board = Board.find_by(title: repo.full_name)
+      next if board.nil?
+
+      board.description = repo.description
+      board
+    end.compact
   end
 
   def github_new_boards
-    new_boards = github_repositories_full_names - github_linked_boards.map(&:title)
+    @github_new_boards ||= github_repositories.map do |repo|
+      next if Board.find_by(title: repo.full_name).present?
 
-    new_boards.map { |repo_full_name| Board.new(title: repo_full_name) }
+      Board.new(title: repo.full_name, description: repo.description)
+    end.compact
   end
 
   def update_with_auth_schema!(auth_schema)
@@ -41,8 +52,8 @@ class User < ActiveRecord::Base
 
   private
 
-  def github_repositories_full_names
-    github.repositories(nil, type: :public).map(&:full_name)
+  def github_repositories
+    @github_repositories ||= github.repositories(nil, type: :public)
   end
 
   def github
