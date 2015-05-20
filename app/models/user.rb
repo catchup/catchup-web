@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
   def find_board(id)
     board = Board.find(id)
-    repo  = github_repositories.find { |repo| repo.full_name == board.title }
+    repo  = github_repositories.detect { |e| e.full_name == board.title }
 
     raise UnauthorizedException if repo.nil?
 
