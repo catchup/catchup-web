@@ -25,6 +25,8 @@ en:
     domain_name: catchup.io
     email: info@catchup.io
     newsletter_url: http://eepurl.com/bkMO59
+  accessibility:
+    open_in_github: open in github
   welcome:
     index:
       auth_failure: Auth failed
@@ -50,14 +52,20 @@ en:
       doing: Doing
       review: Review
   boards:
+    header_action:
+      new_board_button_label_full: Create a new board
+      new_board_button_label_short: New
+    no_boards:
+      title: Apparently you're new around here, welcome!
+    new_boards:
+      title: Below is list of all the repositories available to you. Select one to get started with Catchup right now.
+    linked_boards:
+      title: "Your boards:"
     create:
       error: There was an error while creating this board
-      submit: Create a new board
+      submit: Let's go
       suggest: … or maybe <strong>create a new one</strong>?
       title-placeholder: Hit Your Keys Here To…
-    index:
-      greeting: Hey <strong>%{name}!</strong> These are your boards…
-      tutorial: "<p>Here you can see a list of all boards to which you already have access to, and create new boards if you want.</p><p>When thinking for a name for your new board, we recommend a short & sweet one and please note that —since this is a early access preview product— you won't be able to rename it afterwards. (We are sincerely sorry for that.)</p>"
     show:
       todo-placeholder: Write it down and prioritize.
       doing-placeholder: Better keep shipping…

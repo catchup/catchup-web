@@ -1,0 +1,12 @@
+<div class="boards-_linked_boards clearfix">
+
+<section class="linked-boards-section clearfix">
+  <h2 class="section-title"><%= t(".title") %></h2>
+  <div class="boards-container clearfix">
+    <%= render partial: "boards/board",
+               collection: boards, as: :board,
+               spacer_template: "separator" %>
+  </div>
+</section>
+
+</div>

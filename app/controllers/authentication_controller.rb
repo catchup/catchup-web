@@ -8,11 +8,11 @@ class AuthenticationController < ApplicationController
   end
 
   def github
-    user = User.authenticate(:github, env["omniauth.auth"].uid)
-    user.avatar_url = env["omniauth.auth"].info.image
-    user.email = env["omniauth.auth"].info.email
-    user.nickname = env["omniauth.auth"].info.nickname
-    user.save!
+    user = User.find_or_initialize_by(
+      auth_provider: :github,
+      auth_uid: env["omniauth.auth"].uid
+    )
+    user.update_with_auth_schema!(env["omniauth.auth"])
 
     session[:current_user] = user.id
 

@@ -1,20 +1,17 @@
-<header class="boards-header clearfix">
-  <h1 class="greeting">
-    <%= t('.greeting', name: current_user.nickname).html_safe %>
-  </h1>
-</header>
+<%= content_for :main_action do %>
+  <%= render "header_action" %>
+<% end %>
 
-<section class="boards-content clearfix">
-  <div class="boards-container clearfix">
-    <%= render "form", board: Board.new %>
-    <%= render @boards %>
-  </div>
-</section>
+<% if @linked_boards.empty? %>
+<div class="no-boards-container clearfix">
+  <%= render "no_boards" %>
+</div>
+<% else %>
+<div class="linked-boards-container clearfix">
+  <%= render "linked_boards", boards: @linked_boards %>
+</div>
+<% end %>
 
-<footer class="boards-footer clearfix">
-  <div class="text-container clearfix">
-    <div class="plain-text">
-      <%= t('.tutorial').html_safe %>
-    </div>
-  </div>
-</footer>
+<div class="new-boards-container clearfix">
+  <%= render "new_boards", boards: @new_boards %>
+</div>

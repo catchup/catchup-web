@@ -1,5 +1,15 @@
-<div class="board-wrapper">
-  <a href="<%= url_for(board) %>" class="board old-board clearfix">
-    <h2 class="board-title"><%= board.title %></h2>
-  </a>
+<div class="boards-_board clearfix">
+
+<article class="board-card clearfix">
+
+  <header class="board-card-header clearfix">
+    <a class="open-in-github" target="_blank" href="<%= "http://github.com/#{board.title}" %>">
+      <%= t("accessibility.open_in_github") %>
+    </a>
+    <h3 class="board-title"><a href="<%= url_for(board) %>"><%= board.title %></a></h3>
+    <p class="board-description"><%= board.description %></p>
+  </header>
+
+</article>
+
 </div>

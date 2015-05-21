@@ -1,14 +1,15 @@
 class BoardsController < ApplicationController
   def index
-    @boards = current_user.owned_boards
+    @linked_boards = current_user.github_linked_boards
+    @new_boards = current_user.github_new_boards
   end
 
   def show
-    @board = current_user.owned_boards.find(params[:id])
+    @board = current_user.find_board(params[:id])
   end
 
   def create
-    @board = current_user.create_board(board_params)
+    @board = current_user.create_board(board_params.fetch(:title))
 
     if @board.save
       redirect_to @board
@@ -18,14 +19,14 @@ class BoardsController < ApplicationController
   end
 
   def toggle_subscription
-    board = current_user.owned_boards.find(params[:id])
+    board = current_user.find_board(params[:id])
     board.toggle_subscription_for(current_user)
 
     redirect_to board
   end
 
   def update
-    board = current_user.owned_boards.find(params[:id])
+    board = current_user.find_board(params[:id])
     board.update_attributes(board_params)
 
     respond_to do |format|
@@ -38,6 +39,6 @@ class BoardsController < ApplicationController
 
   def board_params
     params.require(:board)
-          .permit(:title, :heroku_api_key, :app_name, :repository_url)
+          .permit(:title, :heroku_api_key, :app_name)
   end
 end

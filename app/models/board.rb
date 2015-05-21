@@ -12,6 +12,10 @@ class Board < ActiveRecord::Base
                           join_table: "boards_owners",
                           class_name: "User"
 
+  attr_accessor :repository
+
+  delegate :description, to: :repository
+
   def add_list!(params)
     lists.create(params)
   end
@@ -34,6 +38,10 @@ class Board < ActiveRecord::Base
 
   def add_owner(user)
     owners << user
+  end
+
+  def repository_url
+    "https://github.com/#{title}"
   end
 
   private

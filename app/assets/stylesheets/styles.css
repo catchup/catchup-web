@@ -24,9 +24,9 @@ body {
 
 .application-_footer,
 .application-_header,
+.avatars-_avatar,
 .boards-_header_action,
-.new_boards-index,
-.users-_avatar {
+.boards-index {
   background-color: rgb(255, 255, 255);
 }
 
@@ -34,6 +34,14 @@ body {
 .boards-_form {
   font-weight: 300;
   line-height: 1.48;
+  color: rgb(17, 17, 17);
+}
+
+.boards-_linked_boards,
+.boards-_new_boards,
+.boards-_no_boards {
+  background-color: rgb(255, 255, 255);
+  font-weight: 900;
   color: rgb(17, 17, 17);
 }
 
@@ -46,14 +54,6 @@ body {
 .cards-show {
   background-color: rgb(255, 252, 242);
   color: rgb(0, 0, 0);
-}
-
-.new_boards-_all_boards,
-.new_boards-_create_board,
-.new_boards-_no_boards {
-  background-color: rgb(255, 255, 255);
-  font-weight: 900;
-  color: rgb(17, 17, 17);
 }
 
 .welcome-index {
@@ -121,16 +121,6 @@ body {
 .alert {
   clear: both;
   background-color: rgb(255, 133, 27);
-}
-
-.all-boards-container,
-.board-title-form,
-.card-title-form,
-.cards-header,
-.create-board-container {
-  float: left;
-  clear: both;
-  width: 100%;
 }
 
 .already-user {
@@ -365,8 +355,8 @@ body {
 .new-board-card {
   float: left;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .board-card-header,
@@ -378,6 +368,7 @@ body {
 
 .board-card-header .board-title {
   position: relative;
+  margin-left: 8px;
   font-size: 1.667em;
   font-weight: 900;
   text-decoration: underline;
@@ -599,23 +590,6 @@ body {
   margin: auto 0;
 }
 
-.collaborators {
-  float: left;
-  clear: both;
-  width: 80%;
-  margin: 20px 0 0 10%;
-}
-
-.collaborators .avatars-container {
-  min-height: 36px;
-}
-
-.collaborators .placeholder__users-_avatar {
-  width: 36px;
-  height: 36px;
-  background-color: rgb(222, 222, 222);
-}
-
 .comment-author {
   float: left;
   margin-left: 10%;
@@ -721,52 +695,6 @@ body {
   clear: both;
   width: 100%;
   padding-bottom: 80px;
-}
-
-.create-board {
-  float: right;
-  height: 36px;
-  padding: 5px 12px;
-  border-radius: 3px;
-  background-color: rgb(46, 204, 64);
-  box-shadow: 0 3px 0 rgb(27, 121, 38);
-  text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
-  font-weight: 700;
-  line-height: 1.48;
-  text-align: center;
-  word-spacing: 2px;
-  color: rgb(255, 255, 255);
-}
-
-.create-board-form {
-  position: relative;
-  float: left;
-  width: 18.8333333333%;
-  margin-left: 1.58073%;
-}
-
-.create-board-form .submit {
-  float: left;
-  width: 100%;
-  height: 48px;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgb(46, 204, 64);
-  box-shadow: 0 3px 0 rgb(27, 121, 38);
-  text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
-  font-weight: 700;
-  word-spacing: 2px;
-  color: rgb(255, 255, 255);
-}
-
-.create-board-section {
-  float: left;
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: rgb(255, 220, 0);
 }
 
 .dismiss {
@@ -886,6 +814,16 @@ body {
 .large .avatar {
 }
 
+.board-title-form,
+.card-title-form,
+.cards-header,
+.linked-boards-container,
+.new-boards-container {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
 .list-container {
   float: left;
   width: 80%;
@@ -921,8 +859,23 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.new-board {
+  float: right;
+  height: 36px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.48;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
 .new-board-card-header {
-  position: relative;
   float: left;
   width: 59.5833333333%;
   margin-left: 10%;
@@ -930,9 +883,39 @@ body {
 
 .new-board-card-header .board-title {
   position: relative;
+  margin-left: 8px;
   font-size: 1.667em;
   font-weight: 900;
   color: rgb(17, 17, 17);
+}
+
+.new-board-form {
+  float: left;
+  width: 18.8333333333%;
+  margin-left: 1.58073%;
+}
+
+.new-board-form .submit {
+  float: left;
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1em;
+  font-weight: 700;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.new-boards-section {
+  float: left;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgb(255, 220, 0);
 }
 
 .new-comment-text {
@@ -955,7 +938,7 @@ body {
   width: 100%;
 }
 
-.all-boards-section,
+.linked-boards-section,
 .no-boards-section {
   float: left;
   width: 100%;
@@ -1010,7 +993,7 @@ body {
   float: left;
   width: 22px;
   height: 22px;
-  margin-left: 4px;
+  margin-top: 10px;
   background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/e1b6f01b786ef9f22762046fcdb9df9a7f4c6edd/github-small-black.svg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -1021,22 +1004,22 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
-.placeholder__boards-_all_boards,
-.placeholder__boards-_create_boards,
-.placeholder__boards-_no_boards {
-  float: left;
-  width: 80%;
-  height: 200px;
-  margin-left: 9.9987%;
-  background-color: rgb(222, 222, 222);
-}
-
 .placeholder__boards-_board,
 .placeholder__boards-_form {
   float: left;
   width: 80%;
   height: 100px;
   margin-left: 10%;
+  background-color: rgb(222, 222, 222);
+}
+
+.placeholder__boards-_linked_boards,
+.placeholder__boards-_new_boards,
+.placeholder__boards-_no_boards {
+  float: left;
+  width: 80%;
+  height: 200px;
+  margin-left: 9.9987%;
   background-color: rgb(222, 222, 222);
 }
 
@@ -1057,6 +1040,9 @@ body {
 
 .placeholder__users-_avatar {
   float: left;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(221, 221, 221);
 }
 
 .point-text {
@@ -1410,12 +1396,6 @@ body {
   margin: -48px 2% 0 0;
 }
 
-.user-profile .placeholder__users-_avatar {
-  width: 48px;
-  height: 48px;
-  background-color: rgb(221, 221, 221);
-}
-
 .user-settings-form .submit {
   float: right;
   clear: both;
@@ -1752,21 +1732,6 @@ body {
 }
 
 @media(max-width: 414px) {
-  .all-boards-container .placeholder__boards-_all_boards,
-  .board-card .board-card-header,
-  .board-card .collaborators,
-  .boards-container .placeholder__boards-_board,
-  .create-board-container .placeholder__boards-_create_boards,
-  .no-boards-container .placeholder__boards-_no_boards {
-    width: 90%;
-    margin-left: 4.99321%;
-  }
-
-  .all-boards-section .boards-container,
-  .create-board-section .boards-container {
-    margin-top: 40px;
-  }
-
   .bg-signup {
     margin-top: 40px;
     padding-top: 40px;
@@ -1778,8 +1743,8 @@ body {
     margin-left: 4.99321%;
   }
 
-  .board-card-header .board-description,
-  .new-board-card-header .board-description {
+  .board-card-header .board-description {
+    margin-top: 11px;
     font-size: 0.944em;
     line-height: 1.38;
   }
@@ -1787,23 +1752,16 @@ body {
   .board-card-header .board-title,
   .new-board-card-header .board-title {
     position: relative;
+    margin-left: 4px;
     font-size: 1.111em;
   }
 
   .board-card-header .open-in-github,
   .new-board-card-header .open-in-github {
     position: relative;
-  }
-
-  .boards-container .placeholder__boards-_form {
-    width: 90%;
-    margin-left: 4.99698%;
-  }
-
-  .create-board-section .section-title {
-    width: 90%;
-    margin-left: 4.99698%;
-    font-size: 1.222em;
+    width: 18px;
+    height: 18px;
+    margin-top: 6px;
   }
 
   .flash .dismiss {
@@ -1847,34 +1805,47 @@ body {
     margin-left: 5.06869%;
   }
 
-  .new-board-card .collaborators {
+  .board-card .board-card-header,
+  .boards-container .placeholder__boards-_board,
+  .boards-container .placeholder__boards-_form,
+  .linked-boards-container .placeholder__boards-_linked_boards,
+  .new-board-card .new-board-card-header,
+  .new-boards-container .placeholder__boards-_new_boards,
+  .no-boards-container .placeholder__boards-_no_boards {
     width: 90%;
-    margin-top: -108px;
-    margin-left: 4.99698%;
+    margin-left: 4.99321%;
   }
 
-  .new-board-card .create-board-form {
+  .linked-boards-section .boards-container,
+  .new-boards-section .boards-container {
+    margin-top: 40px;
+  }
+
+  .new-board {
     position: relative;
+  }
+
+  .new-board-card .new-board-form {
     clear: both;
     width: 90%;
-    margin-top: 80px;
+    margin-top: 10px;
     margin-left: 4.99321%;
   }
 
-  .new-board-card .new-board-card-header {
-    position: relative;
-    width: 90%;
-    margin-left: 4.99321%;
+  .new-board-card-header .board-description {
+    font-size: 0.944em;
+    line-height: 1.38;
   }
 
-  .all-boards-section,
-  .create-board-section,
+  .linked-boards-section,
+  .new-boards-section,
   .no-boards-section {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  .all-boards-section .section-title,
+  .linked-boards-section .section-title,
+  .new-boards-section .section-title,
   .no-boards-section .section-title {
     width: 90%;
     margin-left: 4.99321%;

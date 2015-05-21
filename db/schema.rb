@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150424163219) do
+ActiveRecord::Schema.define(version: 20150515155714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20150424163219) do
     t.datetime "updated_at"
     t.string   "heroku_api_key"
     t.string   "app_name"
-    t.string   "repository_url"
   end
 
   create_table "boards_owners", force: :cascade do |t|
@@ -85,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150424163219) do
     t.string   "auth_provider"
     t.string   "auth_uid"
     t.string   "nickname"
+    t.string   "auth_token"
   end
 
 end

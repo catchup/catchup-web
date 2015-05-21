@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'octokit'
 gem 'rails_admin'
 source 'https://rails-assets.org' do
   gem 'rails-assets-vex'

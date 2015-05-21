@@ -1,8 +1,20 @@
-<div class="board-wrapper">
-  <div class="board new-board clearfix">
-    <%= form_for board, html: { class: 'board-form clearfix' } do |f| %>
-      <%= f.text_area :title, class: 'textarea', placeholder: t("boards.create.title-placeholder") %>
-      <%= button_tag t('boards.create.submit'), class: 'submit' %>
-    <% end %>
-  </div>
+<div class="boards-_form clearfix">
+
+<article class="new-board-card clearfix">
+
+  <header class="new-board-card-header clearfix">
+    <a class="open-in-github" target="_blank" href="<%= board.repository_url %>">
+      <%= t("accessibility.open_in_github") %>
+    </a>
+    <h3 class="board-title"><%= board.title %></h3>
+    <p class="board-description"><%= board.description %></p>
+  </header>
+
+  <%= form_for board, html: { class: 'new-board-form clearfix' } do |f| %>
+    <%= f.hidden_field :title %>
+    <%= button_tag t('boards.create.submit'), class: 'submit' %>
+  <% end %>
+
+</article>
+
 </div>
