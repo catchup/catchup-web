@@ -1,4 +1,6 @@
 class Card < ActiveRecord::Base
+  after_create :assign_branch_name
+
   include RankedModel
 
   scope :unarchived, -> { where(archived: false) }
@@ -56,5 +58,18 @@ class Card < ActiveRecord::Base
     uri.path += "/" unless uri.path.ends_with?("/")
     uri.path += "archive/#{branch_name}.tar.gz"
     uri.to_s
+  end
+
+  private
+
+  WORDS_BLACKLIST = ["after", "although", "and", "as", "because", "before", "but", "even", "for", "if", "in", "nor", "only", "of", "or", "since", "so", "than", "that", "though", "till", "unless", "until", "when", "whenever", "where", "whereas", "wherever", "while", "yet"]
+
+  def assign_branch_name
+    words = title.downcase.gsub(/[[:punct:]]/, "").split
+    words -= WORDS_BLACKLIST
+    slug = words.take(5).join("-")
+
+    self.branch_name = "catchup/#{id}-#{slug}"
+    save!
   end
 end
