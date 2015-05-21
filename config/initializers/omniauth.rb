@@ -3,7 +3,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   ENV["GITHUB_SECRET"] ||= "2fd993d61ff8eefa127ee5eee0507bdfa5312c44"
 
   provider :github, ENV["GITHUB_KEY"], ENV["GITHUB_SECRET"],
-           scope: "user,repo"
+           scope: "user,repo",
+           provider_ignores_state: true
 end
 
 unless Rails.env.test?
