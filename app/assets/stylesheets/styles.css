@@ -1,17 +1,25 @@
 body {
-  font: 400 1.125em/1.38 'Source Sans Pro';
+  font: 100 1em/3.38 'Source Sans Pro';
+  color: rgb(0, 0, 0);
+}
+
+.__fix__-body-reset {
+  background-color: rgb(255, 255, 255);
+  font-family: Roboto;
   color: rgb(0, 0, 0);
 }
 
 ._add-card {
   background-color: rgb(255, 252, 242);
   font-weight: 700;
+  line-height: 1.38;
   color: rgb(255, 252, 242);
 }
 
 ._board-settings {
   background-color: rgb(255, 252, 242);
   font-weight: 300;
+  line-height: 1.38;
   color: rgb(15, 20, 31);
 }
 
@@ -26,7 +34,8 @@ body {
 .application-_header,
 .avatars-_avatar,
 .boards-_header_action,
-.boards-index {
+.boards-index,
+.cards-show {
   background-color: rgb(255, 255, 255);
 }
 
@@ -42,18 +51,15 @@ body {
 .boards-_no_boards {
   background-color: rgb(255, 255, 255);
   font-weight: 900;
+  line-height: 1.38;
   color: rgb(17, 17, 17);
 }
 
 .boards-show {
   background-color: rgb(255, 252, 242);
   font-weight: 900;
+  line-height: 1.38;
   color: rgb(15, 20, 31);
-}
-
-.cards-show {
-  background-color: rgb(255, 252, 242);
-  color: rgb(0, 0, 0);
 }
 
 .welcome-index {
@@ -61,6 +67,7 @@ body {
   min-height: nonepx;
   background-color: rgb(255, 255, 255);
   font-weight: 300;
+  line-height: 1.38;
   color: rgb(17, 17, 17);
   -webkit-transform: none;
   -moz-transform: none;
@@ -86,7 +93,7 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  font-size: 3.556em;
+  font-size: 4em;
   line-height: 1.38;
   text-align: center;
   color: rgb(255, 252, 242);
@@ -106,7 +113,7 @@ body {
   height: 54px;
   margin-top: 10px;
   background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
+  font-size: 1.5em;
   color: rgb(255, 252, 242);
 }
 
@@ -130,7 +137,7 @@ body {
   min-height: nonepx;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.778em;
+  font-size: 0.875em;
   font-weight: 600;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -149,30 +156,6 @@ body {
   -o-filter: none;
   -ms-filter: none;
   filter: none;
-}
-
-.archive-button {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 54px;
-  background-color: rgb(128, 128, 128);
-  font-size: 1.333em;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(255, 252, 242);
-  opacity: 0.4;
-}
-
-.archive-button:hover {
-  opacity: 1;
-}
-
-.archive-form {
-  float: left;
-  width: 23.4375%;
-  height: 54px;
-  margin-left: 51.04167%;
 }
 
 .avatar {
@@ -209,7 +192,7 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.48;
   text-align: center;
   word-spacing: 2px;
@@ -282,64 +265,10 @@ body {
   padding-left: 12px;
   border: 1px solid rgb(255, 68, 122);
   background-color: rgb(255, 252, 242);
-  font-size: 2em;
+  font-size: 2.25em;
   line-height: 1.38;
   color: rgb(255, 68, 122);
   overflow: visible;
-}
-
-.bip_cancel-comment-text {
-  display: block;
-  position: absolute;
-  top: 42px;
-  right: -36px;
-  width: 36px;
-  height: 36px;
-  background-color: rgb(255, 68, 122);
-  font-size: 1.333em;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(255, 252, 242);
-}
-
-.bip_card-title {
-  display: block;
-  float: left;
-  width: 100%;
-  padding-left: 12px;
-  border: 1px solid rgb(255, 68, 122);
-  background-color: rgb(255, 252, 242);
-  font-size: 1.556em;
-  font-weight: 900;
-  line-height: 1.38;
-  color: rgb(255, 68, 122);
-}
-
-.bip_comment-text {
-  display: block;
-  float: left;
-  width: 100%;
-  min-height: 92px;
-  padding-right: 10px;
-  padding-left: 10px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1.111em;
-  color: rgb(15, 20, 31);
-  resize: vertical;
-}
-
-.bip_submit-comment-text {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -36px;
-  width: 36px;
-  height: 36px;
-  background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(255, 252, 242);
 }
 
 .board-actions-container {
@@ -359,8 +288,7 @@ body {
   padding-bottom: 10px;
 }
 
-.board-card-header,
-.buttons-container {
+.board-card-header {
   float: left;
   width: 80%;
   margin-left: 10%;
@@ -369,7 +297,7 @@ body {
 .board-card-header .board-title {
   position: relative;
   margin-left: 8px;
-  font-size: 1.667em;
+  font-size: 1.875em;
   font-weight: 900;
   text-decoration: underline;
   color: rgb(0, 116, 217);
@@ -389,7 +317,7 @@ body {
   clear: both;
   width: 100%;
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -427,7 +355,7 @@ body {
   height: 54px;
   margin-top: 10px;
   background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   color: rgb(255, 252, 242);
 }
@@ -445,8 +373,7 @@ body {
   line-height: 1.38;
 }
 
-.board-title-container,
-.card-title-container {
+.board-title-container {
   display: block;
   float: left;
   width: 75.25%;
@@ -456,7 +383,7 @@ body {
   border-right: 12px solid rgb(255, 68, 122);
   border-left: 12px solid rgb(255, 68, 122);
   background-color: rgb(255, 68, 122);
-  font-size: 2em;
+  font-size: 2.25em;
   color: rgb(255, 252, 242);
 }
 
@@ -465,6 +392,35 @@ body {
   clear: both;
   width: 100%;
   margin-top: 60px;
+}
+
+.body-reset-aa,
+.body-reset-ab,
+.body-reset-ac,
+.body-reset-ad,
+.body-reset-ae,
+.body-reset-af,
+.body-reset-ag,
+.body-reset-ah,
+.body-reset-ai,
+.body-reset-aj,
+.body-reset-ak,
+.body-reset-al,
+.body-reset-am,
+.body-reset-an,
+.body-reset-ao,
+.body-reset-ap,
+.body-reset-ar {
+  float: left;
+  clear: both;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+}
+
+.body-reset-as {
+  float: left;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
 }
 
 .card {
@@ -511,34 +467,13 @@ body {
   transform: rotate(1deg);
 }
 
-.card .card-title {
-  font-size: 1em;
-  font-weight: 700;
-  color: rgb(15, 20, 31);
-  overflow: hidden;
-}
-
-.card-actions-container {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 40px;
-}
-
 .card-title {
   float: left;
+  font-size: 1.125em;
+  font-weight: 700;
   line-height: 1.38;
-}
-
-.card-title-container .card-title {
-  border-right: 12px solid rgb(255, 68, 122);
-  border-left: 12px solid rgb(255, 68, 122);
-  background-color: rgb(255, 68, 122);
-  font-size: 1.556em;
-  font-weight: 900;
-  text-align: center;
-  color: rgb(255, 252, 242);
-  overflow: visible;
+  color: rgb(15, 20, 31);
+  overflow: hidden;
 }
 
 .cards-container {
@@ -560,7 +495,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   text-shadow: 0 -1px 0 rgb(255, 255, 255);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   line-height: 1.38;
   text-align: center;
   color: rgb(0, 116, 217);
@@ -590,113 +525,6 @@ body {
   margin: auto 0;
 }
 
-.comment-author {
-  float: left;
-  margin-left: 10%;
-  padding-right: 10px;
-  padding-left: 10px;
-  background-color: rgb(237, 227, 212);
-  font-size: 1.333em;
-  font-weight: 700;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(255, 252, 242);
-}
-
-.comment-body {
-  display: block;
-  float: left;
-  width: 80%;
-  margin-left: 10%;
-}
-
-.comment-body-container {
-  position: relative;
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
-.comment-button {
-  display: block;
-  float: left;
-  clear: both;
-  width: 100%;
-  height: 54px;
-  margin-top: 16px;
-  background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(255, 252, 242);
-}
-
-.comment-container {
-  float: left;
-  width: 100%;
-  padding-top: 20px;
-}
-
-.comment-form {
-  float: left;
-  width: 80%;
-  height: 198px;
-  margin-left: 10%;
-}
-
-.comment-form-container {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 80px;
-}
-
-.comment-list {
-  float: left;
-  clear: both;
-  width: 93.5416666666%;
-  margin: 14px 0 0 6.45671%;
-}
-
-.comment-listitem {
-  float: left;
-  width: 100%;
-  margin-top: 4px;
-  font-size: 1em;
-  line-height: 1.38;
-  text-align: justify;
-  color: rgb(0, 0, 0);
-}
-
-.comment-text {
-  float: left;
-  width: 100%;
-  font-size: 1.111em;
-  line-height: 1.38;
-  color: rgb(0, 0, 0);
-}
-
-.comment-text-container {
-  float: left;
-  clear: both;
-  width: 100%;
-  margin-top: 14px;
-}
-
-.comment-text-form {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-top: 14px;
-}
-
-.comments {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-bottom: 80px;
-}
-
 .dismiss {
   display: block;
   float: left;
@@ -707,7 +535,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: center;
   color: rgb(0, 0, 0);
 }
@@ -716,7 +544,7 @@ body {
   position: absolute;
   top: 20px;
   left: 10px;
-  font-size: 1.222em;
+  font-size: 1.375em;
   line-height: 1.38;
   color: rgb(255, 252, 242);
   overflow: hidden;
@@ -784,7 +612,8 @@ body {
   margin-top: 10px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
+  font-size: 1.125em;
+  font-weight: 400;
   color: rgb(15, 20, 31);
 }
 
@@ -796,7 +625,8 @@ body {
   height: 54px;
   padding-left: 20px;
   border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
+  font-size: 1.125em;
+  font-weight: 400;
   color: rgb(15, 20, 31);
 }
 
@@ -815,8 +645,6 @@ body {
 }
 
 .board-title-form,
-.card-title-form,
-.cards-header,
 .linked-boards-container,
 .new-boards-container {
   float: left;
@@ -832,7 +660,7 @@ body {
 
 .list-title {
   float: left;
-  font-size: 2em;
+  font-size: 2.25em;
   color: rgb(237, 227, 212);
 }
 
@@ -854,7 +682,7 @@ body {
   float: left;
   width: 81.081081081%;
   margin: 3px 0 0 6.07052%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
@@ -867,7 +695,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   line-height: 1.48;
   text-align: center;
@@ -884,7 +712,7 @@ body {
 .new-board-card-header .board-title {
   position: relative;
   margin-left: 8px;
-  font-size: 1.667em;
+  font-size: 1.875em;
   font-weight: 900;
   color: rgb(17, 17, 17);
 }
@@ -904,7 +732,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -918,21 +746,6 @@ body {
   background-color: rgb(255, 220, 0);
 }
 
-.new-comment-text {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 128px;
-  padding-right: 10px;
-  padding-left: 10px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1.111em;
-  color: rgb(15, 20, 31);
-  resize: vertical;
-}
-
-.cards-nav,
-.comment-header,
 .no-boards-container {
   float: left;
   width: 100%;
@@ -955,7 +768,8 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.778em;
+  font-size: 0.875em;
+  font-weight: 400;
   text-align: center;
   color: rgb(17, 17, 17);
   -webkit-transform: none;
@@ -998,7 +812,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font-size: 0.889em;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.38;
   color: rgba(0, 0, 0, 0);
@@ -1049,67 +863,16 @@ body {
   display: block;
   float: left;
   margin-left: 28px;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 900;
   line-height: 1.38;
-}
-
-.preview-button {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 54px;
-  background-color: rgb(255, 68, 122);
-  font-size: 1.333em;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(255, 252, 242);
-  -webkit-transition: -webkit-transform 0.25s;
-  -moz-transition: -moz-transform 0.25s;
-  -o-transition: -o-transform 0.25s;
-  -ms-transition: -ms-transform 0.25s;
-  transition: transform 0.25s;
-}
-
-.preview-button:hover {
-  -webkit-transform: scale(1.2, 1.2);
-  -moz-transform: scale(1.2, 1.2);
-  -o-transform: scale(1.2, 1.2);
-  -ms-transform: scale(1.2, 1.2);
-  transform: scale(1.2, 1.2);
-}
-
-.preview-container {
-  float: left;
-  clear: both;
-  width: 80%;
-  margin: 10px 0 0 10%;
-}
-
-.preview-form {
-  position: relative;
-  float: left;
-  width: 23.5416666666%;
-  height: 54px;
-  margin-left: 1.97754%;
-}
-
-.preview-text {
-  float: left;
-  width: 100%;
-  font-size: 1.111em;
-  line-height: 1.38;
-  text-align: right;
-  color: rgb(0, 0, 0);
 }
 
 .section-title {
   float: left;
   width: 80%;
   margin-left: 10%;
-  font-size: 2em;
+  font-size: 2.25em;
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1136,7 +899,7 @@ body {
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   line-height: 1.48;
   text-align: center;
@@ -1187,7 +950,7 @@ body {
   box-shadow: 0 3px 0 rgb(147, 9, 116);
   text-shadow: 0 -1px 0 rgb(147, 9, 116);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   line-height: 1.48;
   text-align: center;
@@ -1233,7 +996,7 @@ body {
   padding-left: 60px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   font-weight: 900;
   line-height: 1.38;
   text-align: center;
@@ -1284,7 +1047,7 @@ body {
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   line-height: 1.48;
   text-align: center;
@@ -1323,7 +1086,7 @@ body {
   float: left;
   padding-left: 24px;
   border-bottom: 6px solid rgb(255, 68, 122);
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   line-height: 1.38;
   color: rgb(255, 68, 122);
@@ -1347,7 +1110,7 @@ body {
   padding-left: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   font-weight: 200;
   line-height: 1.38;
   text-align: center;
@@ -1373,7 +1136,7 @@ body {
   float: left;
   width: 80%;
   margin-left: 9.99756%;
-  font-size: 1.333em;
+  font-size: 1.5em;
   text-align: justify;
   color: rgb(15, 20, 31);
 }
@@ -1382,7 +1145,7 @@ body {
   float: left;
   margin-left: 10%;
   padding-right: 6px;
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   line-height: 1.38;
   text-align: center;
@@ -1403,7 +1166,7 @@ body {
   height: 54px;
   margin-top: 20px;
   background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   color: rgb(255, 252, 242);
 }
@@ -1476,7 +1239,7 @@ body {
 }
 
 .bip_board-title em,
-.comment-author em,
+.board-title em,
 .user-firstname em {
   border-top-width: 0;
   border-right-width: 0;
@@ -1506,8 +1269,8 @@ body {
 
 .bip_board-title span,
 .bip_board-title strong,
-.comment-author span,
-.comment-author strong,
+.board-title span,
+.board-title strong,
 .user-firstname span {
   border-top-width: 0;
   border-right-width: 0;
@@ -1562,114 +1325,6 @@ body {
   white-space: normal;
 }
 
-.preview-text a {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 900;
-  text-transform: inherit;
-  text-decoration: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.preview-text em {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: italic;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.preview-text span {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 900;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.preview-text strong {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 900;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: rgb(15, 20, 31);
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
 .user-firstname strong {
   border-top-width: 0;
   border-right-width: 0;
@@ -1714,7 +1369,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .site-header .main-action-container {
@@ -1745,7 +1400,7 @@ body {
 
   .board-card-header .board-description {
     margin-top: 11px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -1753,7 +1408,7 @@ body {
   .new-board-card-header .board-title {
     position: relative;
     margin-left: 4px;
-    font-size: 1.111em;
+    font-size: 1.25em;
   }
 
   .board-card-header .open-in-github,
@@ -1771,7 +1426,7 @@ body {
   .flash .message {
     width: 79.648241206%;
     margin-left: 7.0351%;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -1793,7 +1448,7 @@ body {
     width: 90%;
     margin-top: 20px;
     margin-left: 4.99321%;
-    font-size: 2.333em;
+    font-size: 2.625em;
   }
 
   .landing .signin-container {
@@ -1833,7 +1488,7 @@ body {
   }
 
   .new-board-card-header .board-description {
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -1849,7 +1504,7 @@ body {
   .no-boards-section .section-title {
     width: 90%;
     margin-left: 4.99321%;
-    font-size: 1.222em;
+    font-size: 1.375em;
   }
 
   .short {
@@ -1864,7 +1519,7 @@ body {
 
   .signup-container .beta-warning {
     margin-top: 8px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -1888,7 +1543,7 @@ body {
     width: 90%;
     margin-top: -180px;
     margin-left: 4.99321%;
-    font-size: 1.556em;
+    font-size: 1.75em;
   }
 
   .subscribe-container {
@@ -1903,7 +1558,7 @@ body {
 
   .signup-container .title,
   .subscribe-container .title {
-    font-size: 1.556em;
+    font-size: 1.75em;
     font-weight: 900;
   }
 
@@ -1920,7 +1575,7 @@ body {
 
 @media(max-width: 320px) {
   body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .bg-signup .signup-container {
