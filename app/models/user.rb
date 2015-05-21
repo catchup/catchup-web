@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
                           class_name: "Board"
 
   def create_board(title)
-    repo = github_repositories.detect { |e| e.full_name == board.title }
+    repo = github_repositories.detect { |e| e.full_name == title }
 
     raise UnauthorizedException if repo.nil?
 
