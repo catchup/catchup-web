@@ -15,6 +15,6 @@ $(document).on "ready page:load", ->
       setTimeout(->
         $clipboardNotice.hide()
         noticeDisplayInProgress = false
-      , 500)
+      , 2000)
 
 $(document).on "page:before-unload", -> ZeroClipboard.destroy()
