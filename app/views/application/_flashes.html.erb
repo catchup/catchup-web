@@ -1,6 +1,10 @@
 <div class="application-_flashes clearfix">
 
 <div class="flash-container clearfix">
+  <div class="flash notice clearfix" data-ux-flash id="clipboard-notice">
+    <p class="message"><%= t(".copied-to-clipboard") %></p>
+  </div>
+
   <% flash_messages.each do |name, msgs| %>
     <% msgs.each do |msg| %>
     <div class="flash <%= name %> clearfix" data-ux-flash>
