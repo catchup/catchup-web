@@ -62,7 +62,7 @@ class Card < ActiveRecord::Base
 
   private
 
-  WORDS_BLACKLIST = ["after", "although", "and", "as", "because", "before", "but", "even", "for", "if", "in", "nor", "only", "of", "or", "since", "so", "than", "that", "though", "till", "unless", "until", "when", "whenever", "where", "whereas", "wherever", "while", "yet"]
+  WORDS_BLACKLIST = ["after", "although", "and", "as", "because", "before", "but", "even", "for", "if", "in", "nor", "only", "of", "or", "since", "so", "than", "that", "then", "though", "till", "unless", "until", "when", "whenever", "where", "whereas", "wherever", "while", "yet"]
 
   def assign_branch_name
     words = title.downcase.gsub(/[[:punct:]]/, "").split
