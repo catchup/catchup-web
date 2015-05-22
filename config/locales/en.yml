@@ -25,6 +25,8 @@ en:
     domain_name: catchup.io
     email: info@catchup.io
     newsletter_url: http://eepurl.com/bkMO59
+    flashes:
+      copied-to-clipboard: Copied to clipboard!
   accessibility:
     open_in_github: open in github
   welcome:

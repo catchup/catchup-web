@@ -28,6 +28,7 @@ gem 'sucker_punch'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of'
+gem 'zeroclipboard-rails'
 
 # Authentication
 gem 'omniauth-github', :github => 'intridea/omniauth-github'
