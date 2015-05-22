@@ -1,4 +1,6 @@
-$ -> $("[data-clipboard-text]").each ->
+$(document).on "ready page:load", -> $("[data-clipboard-text]").each ->
   zeroClipboard = new ZeroClipboard(this)
-  zeroClipboard.on "aftercopy", ->
-    alert("copied!")
+  zeroClipboard.on "ready", -> zeroClipboard.on "aftercopy", ->
+    alert "Yeeeeessss!"
+
+$(document).on "page:before-unload", -> ZeroClipboard.destroy()
