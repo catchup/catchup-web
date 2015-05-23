@@ -85,8 +85,12 @@ en:
     create:
       error: There was an error while creating this card
       title-placeholder: Title
-      branch-placeholder: GitHub branch
+      description-placeholder: Description (markdown allowed)
       submit: Add
+    edit:
+      description-placeholder: Click here to write a description (markdown allowed).
+      save: ✓
+      cancel: ✕
     show:
       ready: Preview is ready at %{url}
       view-on-github: View this branch on GitHub

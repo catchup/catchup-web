@@ -1,4 +1,7 @@
 <%= form_for [board, card], html: { class: 'add-card-form clearfix' } do |f| %>
   <%= f.text_field :title, class: 'input-title', placeholder: t("cards.create.title-placeholder") %>
+  <%= f.text_area :description,
+                  class: "new-comment-text",
+                  placeholder: t("cards.create.description-placeholder") %>
   <%= button_tag t("cards.create.submit"), class: 'submit' %>
 <% end %>
