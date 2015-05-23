@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150515155714) do
+ActiveRecord::Schema.define(version: 20150523172314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20150515155714) do
     t.string   "preview_url"
     t.boolean  "previewing"
     t.string   "branch_name"
+    t.text     "description"
   end
 
   add_index "cards", ["list_id"], name: "index_cards_on_list_id", using: :btree

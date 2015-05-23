@@ -9,7 +9,7 @@ module ApplicationHelper
       underline: true
     )
 
-    markdown.render(text).html_safe
+    markdown.render(text.to_s).html_safe
   end
 
   def flash_messages
