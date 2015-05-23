@@ -29,7 +29,11 @@ module Heroku
     end
 
     def fork_into(application)
-      heroku_clt("fork", application.name)
+      heroku_clt(
+        "fork",
+        "--from #{name} --to #{application.name}",
+        include_app: false
+      )
     end
 
     def run_command(command)
@@ -59,10 +63,12 @@ module Heroku
       end
     end
 
-    def heroku_clt(cmd, arguments)
+    def heroku_clt(cmd, arguments, include_app: true)
       command =  "HEROKU_API_KEY=#{api_key} "
       command += "vendor/heroku-toolbelt/bin/heroku "
-      command += "#{cmd} --app #{name} #{arguments}"
+      command += "#{cmd} "
+      command += "--app #{name} " if include_app
+      command += "#{arguments}"
 
       Rails.logger.info("Running command on #{name}: #{command}")
       # Avoids conflicting ruby versions
@@ -70,7 +76,7 @@ module Heroku
       Bundler.with_clean_env do
         Process.wait spawn(command)
 
-        raise "Preview aborted! The above command failed" if $?.exitstatus != 0
+        raise "Preview aborted! The above command failed" unless $?.success?
       end
     end
   end
