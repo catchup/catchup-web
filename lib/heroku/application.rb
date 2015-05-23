@@ -67,7 +67,11 @@ module Heroku
       Rails.logger.info("Running command on #{name}: #{command}")
       # Avoids conflicting ruby versions
       # (Ref.: http://www.rakefieldmanual.com/fascicles/001-clean-environment.html)
-      Bundler.with_clean_env { system(command) }
+      Bundler.with_clean_env do
+        Process.wait spawn(command)
+
+        raise "Preview aborted! The above command failed" if $?.exitstatus != 0
+      end
     end
   end
 end
