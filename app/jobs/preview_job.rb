@@ -2,7 +2,7 @@ class PreviewJob
   include SuckerPunch::Job
 
   def perform(user, origin, destination, tarball, card)
-    destination.destroy
+    # destination.destroy
     origin.fork_into(destination)
     destination.change_config(RACK_ENV: "development", RAILS_ENV: "development")
     destination.deploy_branch(tarball)
