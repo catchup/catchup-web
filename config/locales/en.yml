@@ -29,6 +29,7 @@ en:
       copied-to-clipboard: Copied to clipboard!
   accessibility:
     open_in_github: open in github
+    go-back-to-board: go back to board
   welcome:
     index:
       auth_failure: Auth failed
@@ -91,9 +92,17 @@ en:
       description-placeholder: Click here to write a description (markdown allowed).
       save: ✓
       cancel: ✕
+    waiting_review_app:
+      message: Wait while a review app is being created… Page will reload when ready.
+    review_app:
+      label: "Review App:"
+      copy: copy
+      open_mobile: Open Review App
     show:
-      ready: Preview is ready at %{url}
-      view-on-github: View this branch on GitHub
+      ship-it: Ship it!
+      copy-branch: Copy branch
+      open-pr-on-github: Open pull request
+      edit: Edit
     archive:
       submit: Archive
     preview:
