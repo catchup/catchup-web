@@ -19,10 +19,12 @@
   </header>
 
   <div class="card-actions-container clearfix">
+    <% unless @card.archived? %>
     <div class="buttons-container clearfix">
       <%= render "cards/archive", card: @card %>
       <%= render "cards/preview", card: @card %>
     </div>
+    <% end %>
 
     <div class="preview-container clearfix">
       <% if @card.previewing? %>
