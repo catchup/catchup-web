@@ -13,6 +13,9 @@
     <button data-clipboard-text='<%= @card.branch_name %>'>
       <b><%= @card.branch_name %></b>
     </button>
+
+    <%= link_to t(".view-on-github"),
+                @card.compare_url(url_for([@card.board, @card, only_path: false])) %>
   </header>
 
   <div class="card-actions-container clearfix">

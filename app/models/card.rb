@@ -54,9 +54,17 @@ class Card < ActiveRecord::Base
   end
 
   def branch_tarball
-    uri = URI(board.repository_url)
-    uri.path += "/" unless uri.path.ends_with?("/")
+    uri = build_repository_uri
     uri.path += "archive/#{branch_name}.tar.gz"
+    uri.to_s
+  end
+
+  def compare_url(card_url)
+    pr_body = "[View on catchup](#{card_url})"
+
+    uri = build_repository_uri
+    uri.path += "compare/#{branch_name}"
+    uri.query = "expand=1&title=#{title}&body=#{pr_body}"
     uri.to_s
   end
 
@@ -71,5 +79,11 @@ class Card < ActiveRecord::Base
 
     self.branch_name = "catchup/#{id}-#{slug}"
     save!
+  end
+
+  def build_repository_uri
+    uri = URI(board.repository_url)
+    uri.path += "/" unless uri.path.ends_with?("/")
+    uri
   end
 end
