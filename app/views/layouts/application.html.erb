@@ -11,8 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 
     <script>vex.defaultOptions.className = 'vex-theme-plain';</script>
 
@@ -21,7 +21,7 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body class="body clearfix">
+  <body class="body clearfix" data-no-turbolink>
 
     <%= render "flashes" %>
 
