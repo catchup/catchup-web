@@ -89,6 +89,7 @@ en:
       submit: Add
     show:
       ready: Preview is ready at %{url}
+      view-on-github: View this branch on GitHub
     archive:
       submit: Archive
     preview:
