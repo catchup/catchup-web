@@ -1,6 +1,8 @@
 class CardMailer < ActionMailer::Base
   include SystemNotification
 
+  helper ApplicationHelper
+
   def new_card(card, originated_by, recipients)
     @card  = card
     @board = card.list.board
