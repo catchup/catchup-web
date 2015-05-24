@@ -9,7 +9,7 @@ module ApplicationHelper
       underline: true
     )
 
-    markdown.render(text.to_s).html_safe
+    markdown.render(emojify(text).to_s).html_safe
   end
 
   def email_markdown(text)
@@ -22,7 +22,19 @@ module ApplicationHelper
       underline: true
     )
 
-    markdown.render(text.to_s).html_safe
+    markdown.render(emojify(text).to_s).html_safe
+  end
+
+  def emojify(content)
+    return if content.blank?
+
+    h(content).to_str.gsub(/:([\w+-]+):/) do |match|
+      if emoji = Emoji.find_by_alias($1)
+        %(<img alt="#$1" src="#{image_path("emoji/#{emoji.image_filename}")}" style="vertical-align:middle; width: 20px; height: 20px" />)
+      else
+        match
+      end
+    end.html_safe
   end
 
   def flash_messages
