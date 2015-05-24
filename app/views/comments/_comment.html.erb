@@ -6,7 +6,7 @@
   </div>
   <div class="comment-body-container clearfix">
     <%= best_in_place [comment.card, comment], :text, as: :textarea,
-                      display_with: -> (text) { comment_markdown(text) },
+                      display_with: -> (text) { site_markdown(text) },
                       ok_button: t("comments.edit.save"),
                       cancel_button: t("comments.edit.cancel"),
                       class: 'comment-body clearfix js-bip_comment-body',

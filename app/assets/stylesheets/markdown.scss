@@ -1,0 +1,29 @@
+.markdown {
+  .md-list-ordered {
+    list-style: decimal !important;
+
+    .md-list-item-ordered {
+      list-style: decimal !important;
+    }
+  }
+
+  .md-list-unordered {
+    list-style: disc !important;
+
+    .md-list-item-unordered {
+      list-style: disc !important;
+    }
+  }
+
+  .md-block-code {
+    font-family: 'Droid Sans Mono';
+  }
+
+  .md-block-quote {
+    font-size: inherit;
+
+    .md-text {
+      margin-top: 0;
+    }
+  }
+}

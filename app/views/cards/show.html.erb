@@ -12,8 +12,8 @@
         <%= t('accessibility.go-back-to-board') %>
       </a>
       <h1 class="card-title"><%= @card.title %></h1>
-      <div class="card-description-container">
-        <%= @card.description %>
+      <div class="card-description-container clearfix">
+        <%= render "markdown", text: @card.description %>
       </div>
     </div>
     <div class="card-actions clearfix">
