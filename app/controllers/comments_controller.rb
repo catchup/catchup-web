@@ -18,9 +18,7 @@ class CommentsController < ApplicationController
     comment = card.comments.find(params[:id])
     comment.update_attributes(comment_params)
 
-    respond_to do |format|
-      format.json { respond_with_bip(comment) }
-    end
+    redirect_to [card.board, card]
   end
 
   private
