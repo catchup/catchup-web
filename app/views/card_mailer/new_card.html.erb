@@ -1,5 +1,5 @@
 <% if @card.description.present? %>
-  <p><%= comment_markdown(@card.description) %></p>
+  <p><%= email_markdown(@card.description) %></p>
 <% else %>
   <p>Created <%= @card.id %>.</p>
 <% end %>
