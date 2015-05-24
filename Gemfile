@@ -2,7 +2,6 @@ ruby '2.2.0'
 
 source 'https://rubygems.org'
 
-gem 'best_in_place'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'gemoji'
 gem 'jbuilder', '~> 2.0'

@@ -6,10 +6,15 @@
 
   <header class="cards-header clearfix">
     <p class="user-firstname"><%= current_user.nickname %></p>
-    <%= best_in_place [@card.board, @card], :title,
-                      display_with: -> (title) { content_tag :h1, title, class: 'card-title' },
-                      class: 'card-title-container clearfix js-bip_card-title',
-                      inner_class: 'bip_card-title' %>
+    <div class="card-title-container clearfix">
+      <%= content_tag :h1, @card.title, class: 'card-title' %>
+    </div>
+
+    <%= form_for [@card.board, @card] do |f| %>
+      <%= f.text_field :title %>
+
+      <%= f.submit %>
+    <% end %>
 
     <button data-clipboard-text='<%= @card.branch_name %>'>
       <b><%= @card.branch_name %></b>
@@ -38,14 +43,15 @@
     </div>
   </div>
 
-  <%= best_in_place [@card.board, @card], :description, as: :textarea,
-                    place_holder: t("cards.edit.description-placeholder"),
-                    display_with: -> (text) { comment_markdown(text) },
-                    ok_button: t("cards.edit.save"),
-                    cancel_button: t("cards.edit.cancel"),
-                    class: 'comment-body clearfix js-bip_comment-body',
-                    ok_button_class: 'bip_submit-comment-text',
-                    cancel_button_class: 'bip_cancel-comment-text' %>
+  <div class="comment-body clearfix">
+    <%= comment_markdown(@card.description) %>
+  </div>
+
+  <%= form_for [@card.board, @card] do |f| %>
+    <%= f.text_area :description %>
+
+    <%= f.submit %>
+  <% end %>
 
   <% if signed_in? %>
     <div class="comment-form-container clearfix">
