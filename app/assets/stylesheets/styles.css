@@ -39,7 +39,8 @@ body {
 }
 
 .boards-_board,
-.boards-_form {
+.boards-_form,
+.markdown {
   font-weight: 300;
   color: rgb(17, 17, 17);
 }
@@ -67,10 +68,16 @@ body {
   color: rgb(17, 17, 17);
 }
 
-.markdown {
-  background-color: rgb(255, 255, 255);
-  font-weight: 300;
-  color: rgb(17, 17, 17);
+.comments-_comment {
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(170, 170, 170);
+}
+
+.comments-_form,
+.comments-_inline_form {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
 }
 
 .welcome-index {
@@ -213,6 +220,12 @@ body {
   margin: -4px 0 0 -4px;
 }
 
+.avatars-container .placeholder__users-_avatar {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(221, 221, 221);
+}
+
 .beta-warning {
   float: left;
   clear: both;
@@ -315,12 +328,6 @@ body {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.board-card-header {
-  float: left;
-  width: 80%;
-  margin-left: 10%;
 }
 
 .board-card-header .board-title {
@@ -466,6 +473,25 @@ body {
   color: rgb(0, 0, 0);
 }
 
+.cancel-comment {
+  display: block;
+  position: relative;
+  float: right;
+  clear: both;
+  width: 82px;
+  height: 48px;
+  margin: 8px 163px 0 0;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(221, 221, 221);
+  box-shadow: 0 3px 0 rgb(170, 170, 170);
+  text-shadow: 0 1px 0 rgb(255, 255, 255);
+  font-size: 1.125em;
+  text-align: center;
+  word-spacing: 2px;
+  color: hsl(0, 0%, 47%);
+}
+
 .card {
   display: block;
   position: relative;
@@ -522,8 +548,13 @@ body {
   clear: both;
   width: 100%;
   max-height: 320px;
-  margin-top: 10px;
+  margin-top: 8px;
   overflow: auto;
+}
+
+.card-description-container .placeholder__markdown {
+  height: 500px;
+  background-color: rgb(222, 222, 222);
 }
 
 .card-info .card-title {
@@ -587,10 +618,83 @@ body {
   margin: auto 0;
 }
 
+.comment {
+  float: left;
+  width: 80%;
+  margin: 64px 0 0 10%;
+}
+
+.comment-author {
+  float: left;
+  width: 36px;
+  height: 36px;
+  margin: -36px 0 0 -48px;
+}
+
+.comment-author .placeholder__users-_avatar {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  margin: 4px 0 0 4px;
+  background-color: rgb(170, 170, 170);
+  overflow: hidden;
+}
+
+.comment-body {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 4px 12px 12px;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgb(170, 170, 170);
+  overflow: visible;
+}
+
+.comment-body .placeholder__markdown {
+  height: 200px;
+  margin-top: 1px;
+  background-color: rgb(170, 170, 170);
+}
+
+.board-card-header,
+.comment-form {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+}
+
 .comment-form-container,
+.inline-comment-form,
 .no-boards-container {
   float: left;
   width: 100%;
+}
+
+.comment-text {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 220px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
+  font-size: 1.125em;
+  font-weight: 300;
+  word-spacing: 2px;
+  color: rgb(17, 17, 17);
+  resize: vertical;
+}
+
+.comment-title {
+  position: relative;
+  float: left;
+  margin-top: -30px;
+  text-shadow: 0 1px 1px rgb(255, 255, 255);
+  font-size: 1.25em;
+  line-height: 1.38;
+  color: rgb(170, 170, 170);
 }
 
 .comments-container {
@@ -606,7 +710,7 @@ body {
   width: 100%;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: rgb(221, 221, 221);
+  background-color: rgb(246, 246, 246);
 }
 
 .copy-branch-name {
@@ -661,6 +765,20 @@ body {
   border-radius: 3px;
   font-size: 1.125em;
   line-height: 1.38;
+  text-decoration: underline;
+  word-spacing: 2px;
+  color: rgb(0, 116, 217);
+}
+
+.edit-comment {
+  display: block;
+  float: right;
+  clear: both;
+  margin-top: 4px;
+  border-radius: 3px;
+  font-size: 1.25em;
+  line-height: 1.38;
+  text-align: center;
   text-decoration: underline;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
@@ -786,8 +904,6 @@ body {
 
 .board-title-form,
 .linked-boards-container,
-.md-list-ordered,
-.md-list-unordered,
 .new-boards-container {
   float: left;
   clear: both;
@@ -821,7 +937,7 @@ body {
   border-width: 1px 1px 1px 8px;
   border-color: rgb(221, 221, 221);
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 3px;
   font-family: DroidSansMono;
   font-size: 0.875em;
   font-weight: normal;
@@ -852,6 +968,14 @@ body {
   font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
+}
+
+.md-list-ordered,
+.md-list-unordered {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 8px;
 }
 
 .md-text {
@@ -1069,6 +1193,14 @@ body {
   background-color: rgb(170, 170, 170);
 }
 
+.placeholder__comments-_inline_form {
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(170, 170, 170);
+}
+
 .placeholder__logo {
   float: left;
   width: 48px;
@@ -1080,15 +1212,10 @@ body {
 .placeholder__markdown {
   float: left;
   width: 100%;
-  height: 500px;
-  background-color: rgb(222, 222, 222);
 }
 
 .placeholder__users-_avatar {
   float: left;
-  width: 48px;
-  height: 48px;
-  background-color: rgb(221, 221, 221);
 }
 
 .point-text {
@@ -1246,7 +1373,7 @@ body {
   width: 100%;
   height: 56px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 1px 4px rgb(221, 221, 221);
+  box-shadow: 0 1px 3px rgb(119, 119, 119);
 }
 
 .slogan {
@@ -1294,6 +1421,24 @@ body {
 .submit {
   display: block;
   text-align: center;
+}
+
+.submit-comment {
+  display: block;
+  float: right;
+  clear: both;
+  width: 144px;
+  height: 48px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1.125em;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
 .subscribe {
@@ -1403,6 +1548,25 @@ body {
   font-size: 1.5em;
   text-align: justify;
   color: rgb(15, 20, 31);
+}
+
+.update-comment {
+  display: block;
+  position: relative;
+  float: right;
+  clear: both;
+  width: 144px;
+  height: 48px;
+  margin-top: -48px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1.125em;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
 .user-firstname {
@@ -1773,17 +1937,12 @@ body {
 
   .card-header .card-actions {
     width: 25.390625%;
-    margin-left: 1.69271%;
+    margin-left: 1.53402%;
   }
 
   .card-header .card-info {
-    width: 52.734375%;
-    margin-left: 10.02401%;
-  }
-
-  .card-info .card-description-container {
-    position: relative;
-    margin-top: -33px;
+    width: 52.8645833333%;
+    margin-left: 9.99756%;
   }
 
   .card-info .card-title {
@@ -1849,11 +2008,6 @@ body {
     padding-bottom: 40px;
   }
 
-  .bg-signup .signup-container {
-    width: 89.9984903381%;
-    margin-left: 4.99321%;
-  }
-
   .board-card-header .board-description {
     margin-top: 11px;
     font-size: 1.063em;
@@ -1911,9 +2065,7 @@ body {
   }
 
   .card-info .card-description-container {
-    position: relative;
-    margin-top: -12px;
-    margin-left: -0.10484%;
+    margin-top: 4px;
   }
 
   .card-info .card-title {
@@ -1930,6 +2082,24 @@ body {
     height: 18px;
     margin-top: 4px;
     margin-left: 0;
+  }
+
+  .bg-signup .signup-container,
+  .comment-form {
+    width: 89.9984903381%;
+    margin-left: 4.99321%;
+  }
+
+  .comment-form .comment-text,
+  .inline-comment-form .comment-text {
+    height: 160px;
+    font-size: 1.063em;
+    line-height: 1.38;
+  }
+
+  .comment-form .submit-comment {
+    float: left;
+    width: 100%;
   }
 
   .comment-form-container .placeholder__comments-_form,
@@ -1960,6 +2130,21 @@ body {
 
   .full {
     display: none;
+  }
+
+  .inline-comment-form .cancel-comment {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 66px;
+    margin-right: 0;
+  }
+
+  .inline-comment-form .update-comment {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: -106px;
   }
 
   .landing {

@@ -1,8 +1,8 @@
-<% if false %>
+<div class="comments-_form clearfix">
 
 <%= form_for [card, comment], html: { class: 'comment-form clearfix' } do |f| %>
-  <%= f.text_area :text, placeholder: t("comments.create.comment-placeholder"), class: 'new-comment-text' %>
-  <%= button_tag t("comments.create.submit"), class: 'comment-button' %>
+  <%= f.text_area :text, placeholder: t(".placeholder"), class: 'comment-text' %>
+  <button class="submit-comment" type="submit"><%= t('.submit') %></button>
 <% end %>
 
-<% end %>
+</div>

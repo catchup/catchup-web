@@ -112,6 +112,15 @@ en:
       error: There was an error while creating this comment
       submit: Comment
       comment-placeholder: Got something to say?
+    form:
+      placeholder: Markdown friendly text
+      submit: Comment
+    inline_form:
+      placeholder: Markdown friendly text
+      submit: Save
+      cancel: Cancel
+    comment:
+      edit: Edit
     edit:
       save: ✓
       cancel: ✕

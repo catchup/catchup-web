@@ -1,18 +1,15 @@
-<% if false %>
+<div class="comments-_comment clearfix">
 
-<div data-role="comment" class="comment-container clearfix">
-  <div class="comment-header clearfix">
-    <p class="comment-author"><%= comment.user.nickname %></p>
+<article class="comment clearfix">
+  <div class="comment-author">
+    <%= render Avatar.tiny(comment.user) %>
   </div>
-  <div class="comment-body-container clearfix">
-    <%= site_markdown(comment.text) %>
-
-    <%= form_for [comment.card, comment] do |f| %>
-      <%= f.text_area :text %>
-
-      <%= f.submit t("comments.edit.save") %>
-    <% end %>
+  <h1 class="comment-title"><%= "#{comment.user.nickname} commented on #{comment.created_at}"  %></h1>
+  <div class="comment-body clearfix" data-ux-comment-body>
+    <%= render "markdown", text: comment.text %>
+    <button class="edit-comment" data-ux-edit-comment><%= t('.edit') %></button>
   </div>
+  <%= render "comments/inline_form", comment: comment, card: comment.card %>
+</article>
+
 </div>
-
-<% end %>
