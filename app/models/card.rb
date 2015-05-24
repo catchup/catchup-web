@@ -60,8 +60,9 @@ class Card < ActiveRecord::Base
   end
 
   def compare_url(card_url)
-    pr_body = "[View on catchup](#{card_url})"
-    pr_body += "\n\n#{description}" if description.present?
+    pr_body = ""
+    pr_body += "#{description}\n\n" if description.present?
+    pr_body += "--\n[Open card on Catchup](#{card_url})"
 
     uri = build_repository_uri
     uri.path += "compare/#{branch_name}"
