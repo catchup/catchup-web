@@ -9,7 +9,7 @@ module ApplicationHelper
       underline: true
     )
 
-    markdown.render(emojify(text.to_s)).html_safe
+    markdown.render(emojify(text).to_s).html_safe
   end
 
   def email_markdown(text)
@@ -22,7 +22,7 @@ module ApplicationHelper
       underline: true
     )
 
-    markdown.render(emojify(text.to_s)).html_safe
+    markdown.render(emojify(text).to_s).html_safe
   end
 
   def emojify(content)
