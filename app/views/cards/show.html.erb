@@ -6,10 +6,15 @@
 
   <header class="cards-header clearfix">
     <p class="user-firstname"><%= current_user.nickname %></p>
-    <%= best_in_place [@card.board, @card], :title,
-                      display_with: -> (title) { content_tag :h1, title, class: 'card-title' },
-                      class: 'card-title-container clearfix js-bip_card-title',
-                      inner_class: 'bip_card-title' %>
+    <div class="card-title-container clearfix">
+      <%= content_tag :h1, @card.title, class: 'card-title' %>
+    </div>
+
+    <%= form_for [@card.board, @card] do |f| %>
+      <%= f.text_field :title %>
+
+      <%= f.submit %>
+    <% end %>
 
     <button data-clipboard-text='<%= @card.branch_name %>'>
       <b><%= @card.branch_name %></b>
