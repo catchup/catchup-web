@@ -6,6 +6,8 @@
   <%= render "review_app", card: @card %>
   <% end %>
 
+  <%= render "boards/inline_form", card: @card %>
+
   <section class="card-header clearfix">
     <div class="card-info clearfix">
       <a class="go-back-to-board" href="<%= board_path @card.board %>">
@@ -49,5 +51,6 @@
       <%= render "cards/preview", card: @card %>
     </div>
     <% end %>
+  </div>
 
 <% end %>

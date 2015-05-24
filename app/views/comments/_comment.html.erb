@@ -5,13 +5,13 @@
     <p class="comment-author"><%= comment.user.nickname %></p>
   </div>
   <div class="comment-body-container clearfix">
-    <%= best_in_place [comment.card, comment], :text, as: :textarea,
-                      display_with: -> (text) { site_markdown(text) },
-                      ok_button: t("comments.edit.save"),
-                      cancel_button: t("comments.edit.cancel"),
-                      class: 'comment-body clearfix js-bip_comment-body',
-                      ok_button_class: 'bip_submit-comment-text',
-                      cancel_button_class: 'bip_cancel-comment-text' %>
+    <%= site_markdown(comment.text) %>
+
+    <%= form_for [comment.card, comment] do |f| %>
+      <%= f.text_area :text %>
+
+      <%= f.submit t("comments.edit.save") %>
+    <% end %>
   </div>
 </div>
 
