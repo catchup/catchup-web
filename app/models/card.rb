@@ -9,7 +9,7 @@ class Card < ActiveRecord::Base
   belongs_to :list
   delegate :board, to: :list
 
-  ranks :position, with_same: :list_id
+  ranks :position, with_same: :list_id, scope: :unarchived
 
   validates :title, presence: true
 
