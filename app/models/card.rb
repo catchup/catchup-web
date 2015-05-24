@@ -65,7 +65,7 @@ class Card < ActiveRecord::Base
 
     uri = build_repository_uri
     uri.path += "compare/#{branch_name}"
-    uri.query = "expand=1&title=#{title}&body=#{pr_body}"
+    uri.query = "expand=1&title=#{CGI.escape(title)}&body=#{CGI.escape(pr_body)}"
     uri.to_s
   end
 
