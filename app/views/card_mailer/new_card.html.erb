@@ -1,4 +1,9 @@
-<p>Created <%= @card.id %>.</p>
+<% if @card.description.present? %>
+  <p><%= email_markdown(@card.description) %></p>
+<% else %>
+  <p>Created <%= @card.id %>.</p>
+<% end %>
+
 
 <p>&ndash;</p>
 <p>
