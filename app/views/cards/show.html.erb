@@ -1,12 +1,22 @@
+<%= content_for :main_action do %>
+  <% unless @card.archived? %>
+  <%= render "header_actions/create_review", card: @card %>
+  <% end %>
+<% end %>
+
 <div data-role="single-card" data-board-id="<%= @card.board.id %>">
 
-  <% if @card.previewing? %>
-  <%= render "waiting_review_app" %>
-  <% elsif @card.previewed? %>
-  <%= render "review_app", card: @card %>
+  <% unless @card.archived? %>
+    <% if @card.previewing? %>
+      <%= render "review_app_waiting" %>
+    <% elsif @card.previewed? %>
+      <%= render "review_app_ready", card: @card %>
+    <% end %>
   <% end %>
 
-  <%= render "boards/inline_form", card: @card %>
+  <% if false %>
+    <%= render "cards/inline_form", card: @card %>
+  <% end %>
 
   <section class="card-header clearfix">
     <div class="card-info clearfix">
@@ -42,15 +52,3 @@
   </div>
 
 </div>
-
-<% if false %>
-
-  <div class="card-actions-container clearfix">
-    <% unless @card.archived? %>
-    <div class="buttons-container clearfix">
-      <%= render "cards/preview", card: @card %>
-    </div>
-    <% end %>
-  </div>
-
-<% end %>

@@ -56,8 +56,11 @@ en:
       review: Review
   header_actions:
     create_board:
-      new_board_button_label_full: Create a new board
-      new_board_button_label_short: New
+      create_board_full: Create a new board
+      create_board_short: New
+    create_review:
+      submit_full: Create review app
+      submit_short: Review
   boards:
     no_boards:
       title: Apparently you're new around here, welcome!
@@ -93,9 +96,9 @@ en:
       description-placeholder: Click here to write a description (markdown allowed).
       save: ✓
       cancel: ✕
-    waiting_review_app:
+    review_app_waiting:
       message: Wait while a review app is being created… Page will reload when ready.
-    review_app:
+    review_app_ready:
       label: "Review App:"
       copy: copy
       open_mobile: Open Review App
