@@ -774,13 +774,16 @@ body {
   display: block;
   float: right;
   clear: both;
-  margin-top: 4px;
   border-radius: 3px;
   font-size: 1.25em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
   word-spacing: 2px;
+  color: rgb(221, 221, 221);
+}
+
+.edit-comment:hover {
   color: rgb(0, 116, 217);
 }
 
