@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :cards, only: [:create, :show, :update] do
       match :move, on: :member, via: [:patch, :put]
       match :archive, on: :member, via: [:patch, :put]
+      match :shipit, on: :member, via: [:patch, :put]
     end
   end
 
