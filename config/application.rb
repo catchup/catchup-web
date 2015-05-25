@@ -26,5 +26,6 @@ module CatchupWeb
     config.autoload_paths << Rails.root.join("lib")
 
     config.action_mailer.default_url_options = { host: "catchup.io" }
+    config.action_mailer.asset_host = "http://catchup.io"
   end
 end
