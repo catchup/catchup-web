@@ -69,6 +69,7 @@ body {
 }
 
 .comments-_comment {
+  background-color: rgb(255, 255, 255);
   font-weight: 700;
   line-height: 1.38;
   color: rgb(170, 170, 170);
@@ -396,15 +397,6 @@ body {
   color: rgb(255, 252, 242);
 }
 
-.board-settings-form-container,
-.card-header {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 .board-title {
   float: left;
   line-height: 1.38;
@@ -664,11 +656,12 @@ body {
   margin-left: 10%;
 }
 
-.comment-form-container,
-.inline-comment-form,
-.no-boards-container {
+.comment-form-container {
   float: left;
   width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(221, 221, 221);
 }
 
 .comment-text {
@@ -697,20 +690,14 @@ body {
   color: rgb(170, 170, 170);
 }
 
+.board-settings-form-container,
+.card-header,
 .comments-container {
   float: left;
   clear: both;
   width: 100%;
-  padding-top: 40px;
-}
-
-.comments-wrapper {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: rgb(246, 246, 246);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .copy-branch-name {
@@ -862,6 +849,12 @@ body {
 .huge .avatar {
 }
 
+.inline-comment-form,
+.no-boards-container {
+  float: left;
+  width: 100%;
+}
+
 .input-branch-name,
 .input-heroku-api-key,
 .input-repository-url {
@@ -906,6 +899,7 @@ body {
 }
 
 .board-title-form,
+.comments-wrapper,
 .linked-boards-container,
 .new-boards-container {
   float: left;
