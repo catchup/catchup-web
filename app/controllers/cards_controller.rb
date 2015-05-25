@@ -46,6 +46,9 @@ class CardsController < ApplicationController
       head_branch
     )
 
+    @card.archive
+    CardObserver.publish(:card_archived, @card, current_user)
+
     flash[:success] = t("cards.shipit.success", card: @card.title)
     redirect_to @card.board
   rescue Octokit::Conflict
