@@ -54,10 +54,11 @@ en:
       todo: To-Do
       doing: Doing
       review: Review
-  boards:
-    header_action:
+  header_actions:
+    create_board:
       new_board_button_label_full: Create a new board
       new_board_button_label_short: New
+  boards:
     no_boards:
       title: Apparently you're new around here, welcome!
     new_boards:

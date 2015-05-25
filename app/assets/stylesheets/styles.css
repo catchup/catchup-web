@@ -33,8 +33,8 @@ body {
 .application-_footer,
 .application-_header,
 .avatars-_avatar,
-.boards-_header_action,
-.boards-index {
+.boards-index,
+.header_actions-create_board {
   background-color: rgb(255, 255, 255);
 }
 
