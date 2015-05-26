@@ -2,8 +2,12 @@
 
 <%= form_for [card, comment], html: { class: 'inline-comment-form clearfix' } do |f| %>
   <%= f.text_area :text, placeholder: t(".placeholder"), class: 'comment-text' %>
-  <button class="cancel-comment" type="button" data-ux-cancel-comment><%= t('.cancel') %></button>
-  <button class="update-comment" type="submit"><%= t('.submit') %></button>
+  <button class="cancel-update-comment" type="button" data-ux-cancel-comment>
+    <%= t('.cancel') %>
+  </button>
+  <button class="update-comment" type="submit">
+    <%= t('.submit') %>
+  </button>
 <% end %>
 
 </div>

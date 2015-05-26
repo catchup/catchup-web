@@ -122,11 +122,11 @@ en:
       submit: Comment
       comment-placeholder: Got something to say?
     form:
-      placeholder: Markdown friendly text
+      placeholder: Markdown friendly comment
       submit: Comment
     inline_form:
-      placeholder: Markdown friendly text
-      submit: Save
+      placeholder: Markdown friendly comment
+      submit: Save changes
       cancel: Cancel
     comment:
       edit: Edit

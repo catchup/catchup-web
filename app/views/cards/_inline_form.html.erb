@@ -1,6 +1,12 @@
-<%= form_for [card.board, card] do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
+<div class="cards-_inline_form clearfix">
 
-  <%= f.submit %>
+<%= form_for [card.board, card], html: { class: "edit-card-form clearfix" } do |f| %>
+  <button class="cancel-update-card" type="button" data-ux-cancel-update-card>close</button>
+  <%= f.text_field :title, placeholder: "Title",
+                    class: "card-title" %>
+  <%= f.text_area :description, placeholder: "Markdown friendly description",
+                   class:"card-description"  %>
+  <button class="update-card" type="submit">Save changes</button>
 <% end %>
+
+</div>

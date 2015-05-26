@@ -14,11 +14,11 @@
     <% end %>
   <% end %>
 
-  <% if false %>
+  <section class="edit-card-section clearfix" data-ux-edit-card-section>
     <%= render "cards/inline_form", card: @card %>
-  <% end %>
+  </section>
 
-  <section class="card-header clearfix">
+  <section class="card-header-section clearfix" data-ux-card-header-section>
     <div class="card-info clearfix">
       <a class="go-back-to-board" href="<%= board_path @card.board %>">
         <%= t('accessibility.go-back-to-board') %>
@@ -38,12 +38,12 @@
          target="_blank" href="<%= @card.compare_url(url_for([@card.board, @card, only_path: false])) %>">
          <%= t('.open-pr-on-github') %>
        </a>
-      <a class="edit-card" href="#"><%= t('.edit') %></a>
+      <a class="edit-card" href="#" data-ux-edit-card><%= t('.edit') %></a>
       <%= render "cards/archive", card: @card %>
     </div>
   </section>
   <div class="comments-wrapper clearfix">
-    <div class="comment-form-container clearfix">
+    <div class="comment-form-container clearfix" data-ux-comment-form-container>
       <%= render "comments/form", comment: Comment.new, card: @card %>
     </div>
     <div class="comments-container clearfix">
