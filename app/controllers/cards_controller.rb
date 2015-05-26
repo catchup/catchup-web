@@ -34,6 +34,30 @@ class CardsController < ApplicationController
     redirect_to [@card.board, @card]
   end
 
+  def shipit
+    @card = board.cards.find(params[:id])
+
+    base_branch = current_user.github.repo(board.title).default_branch
+    head_branch = @card.branch_name
+
+    current_user.github.merge(@card.board.title, base_branch, head_branch)
+    current_user.github.delete_branch(@card.board.title, head_branch)
+
+    @card.archive
+    CardObserver.publish(:card_archived, @card, current_user)
+
+    flash[:success] = t("cards.shipit.success", card: @card.title)
+    redirect_to @card.board
+  rescue Octokit::Conflict
+    flash[:error] = t("cards.shipit.merge-conflict", branch: head_branch)
+
+    redirect_to [@card.board, @card]
+  rescue Octokit::NotFound
+    flash[:error] = t("cards.shipit.not-found", branch: head_branch)
+
+    redirect_to [@card.board, @card]
+  end
+
   def update
     card = board.cards.find(params[:id])
     card.update_attributes(card_params)

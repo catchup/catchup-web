@@ -98,6 +98,11 @@ en:
       submit: Archive
     preview:
       submit: Preview
+    shipit:
+      submit: Ship It!
+      not-found: Ooops! This card couldn't be shipped. Are you sure you already published a branch named `%{branch}` on this repository?
+      merge-conflict: Ooops! This card couldn't be shipped. Solve `%{branch}` conflicts first and retry!
+      success: Congratulations! You've just shipped %{card}!
   comments:
     create:
       error: There was an error while creating this comment
