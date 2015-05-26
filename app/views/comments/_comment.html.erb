@@ -4,7 +4,12 @@
   <div class="comment-author">
     <%= render Avatar.tiny(comment.user) %>
   </div>
-  <h1 class="comment-title"><%= "#{comment.user.nickname} commented on #{comment.created_at}"  %></h1>
+  <h1 class="comment-title">
+    <%= comment.user.nickname %>
+    commented
+    <%= time_ago_in_words(comment.created_at) %>
+    ago
+  </h1>
   <div class="comment-body clearfix" data-ux-comment-body>
     <%= render "markdown", text: comment.text %>
   </div>
