@@ -19,7 +19,6 @@
 //= require vex/vex.dialog
 //= require spin
 //= require jquery.spin
-//= require best_in_place
 //= require zeroclipboard
 //
 //= require_tree .

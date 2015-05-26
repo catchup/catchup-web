@@ -1,0 +1,11 @@
+<div class="header_actions-create_review clearfix">
+
+<%= form_for :preview, url: card_previews_path(card), html: { class: 'create-review-form-full clearfix' } do |f| %>
+  <%= button_tag t(".submit_full"), class: 'create-review-app' %>
+<% end %>
+
+<%= form_for :preview, url: card_previews_path(card), html: { class: 'create-review-form-short clearfix' } do |f| %>
+  <%= button_tag t(".submit_short"), class: 'create-review-app' %>
+<% end %>
+
+</div>

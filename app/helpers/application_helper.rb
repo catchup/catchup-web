@@ -1,7 +1,7 @@
 module ApplicationHelper
-  def comment_markdown(text)
+  def site_markdown(text)
     markdown = Redcarpet::Markdown.new(
-      MarkdownToHTMLComment,
+      CatchupMarkdownRenderer,
       fenced_code_blocks: true,
       autolink: true,
       disable_indented_code_blocks: true,

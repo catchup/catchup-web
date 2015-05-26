@@ -1,0 +1,16 @@
+<section class="review-app-section clearfix">
+
+  <h1 class="review-app-label"><%= t('.label') %></h1>
+  <a class="open-view-app desktop"
+     target="_blank" href="<%= card.preview_url %>">
+     <%= card.preview_url %>
+   </a>
+  <button class="copy-view-app-link"
+          data-clipboard-text='<%= card.preview_url %>'>
+          <%= t('.copy') %>
+  </button>
+
+  <a class="open-review-app mobile"
+     target="_blank" href="<%= card.preview_url %>"><%= t('.open_mobile') %></a>
+
+</section>

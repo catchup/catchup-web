@@ -29,6 +29,7 @@ en:
       copied-to-clipboard: Copied to clipboard!
   accessibility:
     open_in_github: open in github
+    go-back-to-board: go back to board
   welcome:
     index:
       auth_failure: Auth failed
@@ -53,10 +54,14 @@ en:
       todo: To-Do
       doing: Doing
       review: Review
+  header_actions:
+    create_board:
+      create_board_full: Create a new board
+      create_board_short: New
+    create_review:
+      submit_full: Create review app
+      submit_short: Review
   boards:
-    header_action:
-      new_board_button_label_full: Create a new board
-      new_board_button_label_short: New
     no_boards:
       title: Apparently you're new around here, welcome!
     new_boards:
@@ -91,9 +96,17 @@ en:
       description-placeholder: Click here to write a description (markdown allowed).
       save: ✓
       cancel: ✕
+    review_app_waiting:
+      message: Wait while a review app is being created… Page will reload when ready.
+    review_app_ready:
+      label: "Review App:"
+      copy: copy
+      open_mobile: Open Review App
     show:
-      ready: Preview is ready at %{url}
-      view-on-github: View this branch on GitHub
+      submit: Ship it!
+      copy-branch: Copy branch
+      open-pr-on-github: Open pull request
+      edit: Edit
     archive:
       submit: Archive
     preview:
@@ -108,6 +121,15 @@ en:
       error: There was an error while creating this comment
       submit: Comment
       comment-placeholder: Got something to say?
+    form:
+      placeholder: Markdown friendly comment
+      submit: Comment
+    inline_form:
+      placeholder: Markdown friendly comment
+      submit: Save changes
+      cancel: Cancel
+    comment:
+      edit: Edit
     edit:
       save: ✓
       cancel: ✕

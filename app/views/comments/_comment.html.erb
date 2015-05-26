@@ -1,14 +1,15 @@
-<div data-role="comment" class="comment-container clearfix">
-  <div class="comment-header clearfix">
-    <p class="comment-author"><%= comment.user.nickname %></p>
+<div class="comments-_comment clearfix">
+
+<article class="comment clearfix">
+  <div class="comment-author">
+    <%= render Avatar.tiny(comment.user) %>
   </div>
-  <div class="comment-body-container clearfix">
-    <%= best_in_place [comment.card, comment], :text, as: :textarea,
-                      display_with: -> (text) { comment_markdown(text) },
-                      ok_button: t("comments.edit.save"),
-                      cancel_button: t("comments.edit.cancel"),
-                      class: 'comment-body clearfix js-bip_comment-body',
-                      ok_button_class: 'bip_submit-comment-text',
-                      cancel_button_class: 'bip_cancel-comment-text' %>
+  <h1 class="comment-title"><%= "#{comment.user.nickname} commented on #{comment.created_at}"  %></h1>
+  <div class="comment-body clearfix" data-ux-comment-body>
+    <%= render "markdown", text: comment.text %>
   </div>
+  <button class="edit-comment" data-ux-edit-comment><%= t('.edit') %></button>
+  <%= render "comments/inline_form", comment: comment, card: comment.card %>
+</article>
+
 </div>

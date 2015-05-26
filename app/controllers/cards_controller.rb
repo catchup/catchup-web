@@ -62,9 +62,7 @@ class CardsController < ApplicationController
     card = board.cards.find(params[:id])
     card.update_attributes(card_params)
 
-    respond_to do |format|
-      format.json { respond_with_bip(card) }
-    end
+    redirect_to [card.board, card]
   end
 
   private
