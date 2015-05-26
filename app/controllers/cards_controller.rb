@@ -40,11 +40,8 @@ class CardsController < ApplicationController
     base_branch = current_user.github.repo(board.title).default_branch
     head_branch = @card.branch_name
 
-    current_user.github.merge(
-      @card.board.title,
-      base_branch,
-      head_branch
-    )
+    current_user.github.merge(@card.board.title, base_branch, head_branch)
+    current_user.github.delete_branch(@card.board.title, head_branch)
 
     @card.archive
     CardObserver.publish(:card_archived, @card, current_user)
