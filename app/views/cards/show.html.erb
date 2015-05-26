@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="card-actions clearfix">
-      <button class="ship-it"><%= t('.ship-it') %></button>
+      <%= render "cards/shipit", card: @card %>
       <button class="copy-branch-name"
               data-clipboard-text='<%= @card.branch_name %>'>
               <%= t('.copy-branch') %>

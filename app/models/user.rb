@@ -52,13 +52,14 @@ class User < ActiveRecord::Base
     self.save!
   end
 
+  def github
+    @github_user ||= Octokit::Client.new(access_token: auth_token)
+  end
+
   private
 
   def github_repositories
     @github_repositories ||= github.repositories(nil, type: :public)
   end
 
-  def github
-    @github_user ||= Octokit::Client.new(access_token: auth_token)
-  end
 end
