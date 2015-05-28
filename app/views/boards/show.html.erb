@@ -1,39 +1,34 @@
-<nav class="board-nav clearfix">
-  <a href="<%= boards_path %>" class="text">boards</a>
-  <a href="#!" class="text js-board-settings">settings</a>
-</nav>
+<%= content_for :main_action do %>
+  <%= render "header_actions/create_card" %>
+<% end %>
 
-<header class="board-header clearfix">
-  <p class="user-firstname"><%= current_user.nickname %></p>
-  <div class="board-title-container clearfix js-bip_board-title">
-    <%= content_tag :h1, @board.title, class: 'board-title' %>
-  </div>
-</header>
+<div data-role="board" data-board-id="<%= @board.id %>">
 
-<section class="board-content clearfix" data-role="board" data-board-id="<%= @board.id %>">
   <%= render @board.lists[2], emptylist_placeholder: t('.review-placeholder') %>
   <%= render @board.lists[1], emptylist_placeholder: t('.doing-placeholder') %>
-  <%= render @board.lists[0], emptylist_placeholder: t('.todo-placeholder') %>
-</section>
 
-<div class="board-actions-container">
-  <a href="#" class="add-card-action js-add-card">+</a>
-</div>
-
-<div class="_add-card clearfix">
-  <div class="add-card-form-container clearfix js-add-card-form-container">
+  <section class="create-card-section clearfix" id="new" data-ux-create-card-section>
     <%= render "cards/form", card: Card.new, board: @board %>
-  </div>
+  </section>
+
+  <%= render @board.lists[0], emptylist_placeholder: t('.todo-placeholder') %>
+
 </div>
 
-<div class="_board-settings clearfix">
-  <div class="board-settings-dialog-wrapper clearfix js-board-settings-dialog-wrapper">
-    <div class="user-settings-form-container clearfix">
-      <%= render "boards/user_settings", board: @board if signed_in? %>
-    </div>
-    <div class="board-settings-form-container clearfix">
-      <p class="tutorial-text"><%= t('.tutorial-text') %></p>
-      <%= render "boards/settings", board: @board %>
-    </div>
-  </div>
-</div>
+
+<% if false %>
+
+<a href="<%= boards_path %>" class="text">boards</a>
+
+<%= form_for [:toggle_subscription, @board] do |f| %>
+  <%= check_box_tag :subscribe, "", @board.has_subscriber?(current_user) %>
+  <%= button_tag t(".submit") %>
+<% end %>
+
+<%= form_for @board do |f| %>
+  <%= f.text_field :app_name %>
+  <%= f.text_field :heroku_api_key, type: 'url' %>
+  <%= button_tag t(".submit") %>
+<% end %>
+
+<% end %>

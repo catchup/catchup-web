@@ -1,7 +1,12 @@
-<%= form_for [board, card], html: { class: 'add-card-form clearfix' } do |f| %>
-  <%= f.text_field :title, class: 'input-title', placeholder: t("cards.create.title-placeholder") %>
-  <%= f.text_area :description,
-                  class: "new-comment-text",
-                  placeholder: t("cards.create.description-placeholder") %>
-  <%= button_tag t("cards.create.submit"), class: 'submit' %>
+<div class="cards-_form clearfix">
+
+<%= form_for [board, card], html: { class: 'card-form clearfix' } do |f| %>
+  <button class="cancel-create-card" type="button" data-ux-cancel-create-card>close</button>
+  <%= f.text_field :title, class: "card-title",
+                    placeholder: t(".title-placeholder") %>
+  <%= f.text_area :description, class: "card-description",
+                   placeholder: t(".description-placeholder") %>
+  <%= button_tag t(".submit"), class: 'create-card' %>
 <% end %>
+
+</div>

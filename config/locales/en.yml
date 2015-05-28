@@ -58,6 +58,9 @@ en:
     create_board:
       create_board_full: Create a new board
       create_board_short: New
+    create_card:
+      create_card_full: Add To Do
+      create_card_short: New
     create_review:
       submit_full: Create review app
       submit_short: Review
@@ -87,6 +90,10 @@ en:
       api-key: Shared Heroku API key
       submit: Save
   cards:
+    form:
+      title-placeholder: Title
+      description-placeholder: Optional (although very valuable) markdown friendly description
+      submit: Okay!
     create:
       error: There was an error while creating this card
       title-placeholder: Title

@@ -1,5 +1,5 @@
 body {
-  font: 100 1.125em/1.48 'Source Sans Pro';
+  font: 100 1em/1.48 'Source Sans Pro';
   color: rgb(0, 0, 0);
 }
 
@@ -8,20 +8,6 @@ body {
   font-family: Roboto;
   line-height: 3.38;
   color: rgb(0, 0, 0);
-}
-
-._add-card {
-  background-color: rgb(255, 252, 242);
-  font-weight: 700;
-  line-height: 1.38;
-  color: rgb(255, 252, 242);
-}
-
-._board-settings {
-  background-color: rgb(255, 252, 242);
-  font-weight: 300;
-  line-height: 1.38;
-  color: rgb(15, 20, 31);
 }
 
 .application-_flashes {
@@ -33,7 +19,8 @@ body {
 .application-_footer,
 .application-_header,
 .avatars-_avatar,
-.boards-index {
+.boards-index,
+.boards-show {
   background-color: rgb(255, 255, 255);
 }
 
@@ -53,11 +40,9 @@ body {
   color: rgb(17, 17, 17);
 }
 
-.boards-show {
-  background-color: rgb(255, 252, 242);
-  font-weight: 900;
-  line-height: 1.38;
-  color: rgb(15, 20, 31);
+.cards-_form {
+  font-weight: 400;
+  color: rgb(255, 255, 255);
 }
 
 .cards-show {
@@ -106,45 +91,6 @@ body {
   filter: none;
 }
 
-.add-card-action {
-  display: block;
-  position: absolute;
-  top: -22px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  font-size: 3.556em;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(255, 252, 242);
-}
-
-.add-card-form,
-.user-settings-form {
-  float: left;
-  width: 80%;
-  margin-left: 9.99756%;
-}
-
-.add-card-form .submit {
-  float: left;
-  clear: both;
-  width: 100%;
-  height: 54px;
-  margin-top: 10px;
-  background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
-  color: rgb(255, 252, 242);
-}
-
-.add-card-form-container {
-  display: none;
-  float: left;
-  width: 100%;
-  padding-top: 16px;
-  padding-bottom: 20px;
-}
-
 .alert {
   clear: both;
   background-color: rgb(255, 133, 27);
@@ -157,7 +103,7 @@ body {
   min-height: nonepx;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.778em;
+  font-size: 0.875em;
   font-weight: 600;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -182,7 +128,7 @@ body {
   display: block;
   float: right;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -237,7 +183,7 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -302,28 +248,6 @@ body {
   background-color: rgb(255, 241, 153);
 }
 
-.bip_board-title {
-  display: block;
-  float: left;
-  width: 100%;
-  padding-left: 12px;
-  border: 1px solid rgb(255, 68, 122);
-  background-color: rgb(255, 252, 242);
-  font-size: 2em;
-  line-height: 1.38;
-  color: rgb(255, 68, 122);
-  overflow: visible;
-}
-
-.board-actions-container {
-  position: fixed;
-  top: 197px;
-  left: 0;
-  width: 48px;
-  height: 48px;
-  background-color: rgb(255, 68, 122);
-}
-
 .board-card,
 .new-board-card {
   float: left;
@@ -333,21 +257,8 @@ body {
 }
 
 .board-card-header .board-title {
-  position: relative;
-  margin-left: 8px;
-  font-size: 1.667em;
-  font-weight: 900;
   text-decoration: underline;
   color: rgb(0, 116, 217);
-}
-
-.board-content {
-  position: relative;
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 60px;
 }
 
 .board-description {
@@ -355,66 +266,18 @@ body {
   clear: both;
   width: 100%;
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
 
-.board-header {
-  position: relative;
-  float: left;
-  clear: both;
-  width: 100%;
-}
-
-.board-nav {
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
-.board-settings-dialog-wrapper {
-  display: none;
-  float: left;
-  width: 100%;
-}
-
-.board-settings-form {
-  float: left;
-  clear: both;
-  width: 79.9987792968%;
-  margin: 20px 0 0 9.99756%;
-}
-
-.board-settings-form .submit {
-  float: right;
-  clear: both;
-  width: 99.936420742%;
-  height: 54px;
-  margin-top: 10px;
-  background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
-  font-weight: 700;
-  color: rgb(255, 252, 242);
-}
-
 .board-title {
+  position: relative;
   float: left;
+  margin-left: 8px;
+  font-size: 1.875em;
+  font-weight: 900;
   line-height: 1.38;
-}
-
-.board-title-container {
-  display: block;
-  float: left;
-  width: 75.25%;
-}
-
-.board-title-container .board-title {
-  border-right: 12px solid rgb(255, 68, 122);
-  border-left: 12px solid rgb(255, 68, 122);
-  background-color: rgb(255, 68, 122);
-  font-size: 2em;
-  color: rgb(255, 252, 242);
 }
 
 .boards-container {
@@ -426,7 +289,7 @@ body {
 
 .body-reset-as {
   float: left;
-  font-size: 0.889em;
+  font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
@@ -462,10 +325,11 @@ body {
 .body-reset-bh {
   float: left;
   clear: both;
-  font-size: 0.889em;
+  font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
+.cancel-create-card,
 .cancel-update-card {
   display: block;
   float: left;
@@ -477,7 +341,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: left;
   text-indent: -9999px;
   color: rgb(0, 0, 0);
@@ -496,61 +360,10 @@ body {
   background-color: rgb(221, 221, 221);
   box-shadow: 0 3px 0 rgb(170, 170, 170);
   text-shadow: 0 1px 0 rgb(255, 255, 255);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: hsl(0, 0%, 47%);
-}
-
-.card {
-  display: block;
-  position: relative;
-  float: left;
-  width: 97.9997964169%;
-  margin: 10px 0 0 0.99447%;
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: rgb(255, 255, 255);
-  -webkit-transition: -webkit-transform 0.25s;
-  -moz-transition: -moz-transform 0.25s;
-  -o-transition: -o-transform 0.25s;
-  -ms-transition: -ms-transform 0.25s;
-  transition: transform 0.25s;
-}
-
-.card:hover {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-style: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
-  -webkit-transform: scale(1.01,01);
-  -moz-transform: scale(1.01,01);
-  -o-transform: scale(1.01,01);
-  -ms-transform: scale(1.01,01);
-  transform: scale(1.01,01);
-  -webkit-transition: -webkit-transform 0.1s;
-  -moz-transition: -moz-transform 0.1s;
-  -o-transition: -o-transform 0.1s;
-  -ms-transition: -ms-transform 0.1s;
-  transition: transform 0.1s;
-}
-
-.card:active {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
-  -webkit-transform: rotate(1deg);
-  -moz-transform: rotate(1deg);
-  -o-transform: rotate(1deg);
-  -ms-transform: rotate(1deg);
-  transform: rotate(1deg);
-}
-
-.card .card-title {
-  font-size: 1em;
-  font-weight: 700;
-  color: rgb(15, 20, 31);
-  overflow: hidden;
 }
 
 .card-description {
@@ -564,7 +377,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -584,27 +397,27 @@ body {
   height: 500px;
 }
 
+.card-form .card-title {
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
+  font-weight: 700;
+  word-spacing: 2px;
+}
+
 .card-info .card-title {
-  position: relative;
-  width: 100%;
-  font-size: 1.333em;
-  color: rgb(17, 17, 17);
 }
 
 .card-title {
-  float: left;
-  line-height: 1.38;
-}
-
-.cards-container {
   position: relative;
   float: left;
-  clear: both;
   width: 100%;
-  min-height: 90px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  background-color: rgb(237, 227, 212);
+  font-size: 1.5em;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
 }
 
 .catchup {
@@ -615,7 +428,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   text-shadow: 0 -1px 0 rgb(255, 255, 255);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   line-height: 1.38;
   text-align: center;
   color: rgb(0, 116, 217);
@@ -634,15 +447,6 @@ body {
   -o-filter: none;
   -ms-filter: none;
   filter: none;
-}
-
-.checkbox {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto 0;
 }
 
 .comment {
@@ -707,7 +511,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -718,12 +522,11 @@ body {
   position: relative;
   float: left;
   margin-top: -30px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
 }
 
-.board-settings-form-container,
 .card-header-section,
 .comments-container {
   float: left;
@@ -739,7 +542,7 @@ body {
   clear: both;
   margin-top: 12px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -753,7 +556,7 @@ body {
   float: left;
   margin-left: 4px;
   border-radius: 3px;
-  font-size: 0.889em;
+  font-size: 1em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -761,7 +564,8 @@ body {
   color: rgb(0, 116, 217);
 }
 
-.create-board-full {
+.create-board-full,
+.create-card-full {
   display: block;
   float: right;
   height: 36px;
@@ -770,14 +574,15 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
 
-.create-board-short {
+.create-board-short,
+.create-card-short {
   display: none;
   float: right;
   clear: both;
@@ -787,11 +592,39 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
+}
+
+.create-card {
+  display: block;
+  float: right;
+  clear: both;
+  width: 144px;
+  height: 48px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1.125em;
+  font-weight: 700;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
+.create-card-section {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0 -1px 3px rgb(170, 170, 170) inset;
 }
 
 .create-review-app {
@@ -803,7 +636,7 @@ body {
   background-color: rgb(255, 133, 27);
   box-shadow: 0 3px 0 rgb(180, 84, 0);
   text-shadow: 0 -1px 0 rgb(180, 84, 0);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -826,7 +659,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: center;
   color: rgb(0, 0, 0);
 }
@@ -838,13 +671,14 @@ body {
   clear: both;
   margin-top: 4px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
 }
 
+.card-form,
 .edit-card-form {
   position: relative;
   float: left;
@@ -854,16 +688,12 @@ body {
 
 .edit-card-form .card-title {
   display: block;
-  position: relative;
-  width: 100%;
   margin-top: 20px;
   padding: 5px;
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1.333em;
   word-spacing: 2px;
-  color: rgb(17, 17, 17);
 }
 
 .edit-card-section {
@@ -881,7 +711,7 @@ body {
   float: right;
   clear: both;
   border-radius: 3px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -891,21 +721,6 @@ body {
 
 .edit-comment:hover {
   color: rgb(0, 116, 217);
-}
-
-.emptylist-placeholder {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 1.222em;
-  line-height: 1.38;
-  color: rgb(255, 252, 242);
-  overflow: hidden;
-}
-
-.emptylist-placeholder:hover,
-.text:hover {
-  opacity: 1;
 }
 
 .error {
@@ -952,7 +767,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   color: rgba(0, 0, 0, 0);
 }
 
@@ -972,35 +787,6 @@ body {
   width: 100%;
 }
 
-.input-branch-name,
-.input-heroku-api-key,
-.input-repository-url {
-  display: block;
-  float: left;
-  clear: both;
-  width: 100%;
-  height: 54px;
-  margin-top: 10px;
-  padding-left: 20px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  font-weight: 400;
-  color: rgb(15, 20, 31);
-}
-
-.input-app-name,
-.input-title {
-  display: block;
-  float: left;
-  width: 100%;
-  height: 54px;
-  padding-left: 20px;
-  border: 1px solid rgb(215, 222, 209);
-  font-size: 1em;
-  font-weight: 400;
-  color: rgb(15, 20, 31);
-}
-
 .landing {
   position: relative;
   float: left;
@@ -1015,25 +801,12 @@ body {
 .large .avatar {
 }
 
-.board-title-form,
 .comments-wrapper,
 .linked-boards-container,
 .new-boards-container {
   float: left;
   clear: both;
   width: 100%;
-}
-
-.list-container {
-  float: left;
-  width: 80%;
-  margin: 20px 0 0 10%;
-}
-
-.list-title {
-  float: left;
-  font-size: 2em;
-  color: rgb(237, 227, 212);
 }
 
 .main-action-container {
@@ -1053,7 +826,7 @@ body {
   border-style: solid;
   border-radius: 3px;
   font-family: DroidSansMono;
-  font-size: 0.778em;
+  font-size: 0.875em;
   font-weight: normal;
   word-spacing: 2px;
   color: rgb(68, 68, 68);
@@ -1069,7 +842,7 @@ body {
   margin: 8px 0 0 5%;
   padding-left: 18px;
   border-left: 4px solid rgb(221, 221, 221);
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1079,7 +852,7 @@ body {
   float: left;
   width: 95%;
   margin: 4px 0 0 5%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1096,7 +869,7 @@ body {
   float: left;
   width: 100%;
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1113,7 +886,7 @@ body {
   float: left;
   width: 81.081081081%;
   margin: 3px 0 0 6.07052%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
@@ -1126,10 +899,6 @@ body {
 }
 
 .new-board-card-header .board-title {
-  position: relative;
-  margin-left: 8px;
-  font-size: 1.667em;
-  font-weight: 900;
   color: rgb(17, 17, 17);
 }
 
@@ -1138,21 +907,6 @@ body {
   float: left;
   width: 18.8333333333%;
   margin-left: 1.58073%;
-}
-
-.new-board-form .submit {
-  float: left;
-  width: 100%;
-  height: 48px;
-  padding: 12px;
-  border-radius: 3px;
-  background-color: rgb(46, 204, 64);
-  box-shadow: 0 3px 0 rgb(27, 121, 38);
-  text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
-  font-weight: 700;
-  word-spacing: 2px;
-  color: rgb(255, 255, 255);
 }
 
 .new-boards-section {
@@ -1180,7 +934,7 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.778em;
+  font-size: 0.875em;
   font-weight: 400;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1206,13 +960,6 @@ body {
   background-color: rgb(57, 204, 204);
 }
 
-.notifications-checkbox-label {
-  display: block;
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
 .open-in-github {
   display: block;
   position: relative;
@@ -1224,7 +971,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font-size: 0.889em;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.38;
   color: rgba(0, 0, 0, 0);
@@ -1236,7 +983,7 @@ body {
   clear: both;
   width: 90%;
   margin-left: 5%;
-  font-size: 0.944em;
+  font-size: 1.063em;
   font-weight: 600;
   line-height: 1.38;
   text-align: center;
@@ -1250,7 +997,7 @@ body {
   position: relative;
   float: left;
   margin: 4px 0 0 8px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
@@ -1283,6 +1030,7 @@ body {
   background-color: rgb(222, 222, 222);
 }
 
+.placeholder__cards-_form,
 .placeholder__cards-_inline_form {
   float: left;
   width: 80%;
@@ -1326,20 +1074,11 @@ body {
   float: left;
 }
 
-.point-text {
-  display: block;
-  float: left;
-  margin-left: 28px;
-  font-size: 1em;
-  font-weight: 900;
-  line-height: 1.38;
-}
-
 .review-app-label {
   position: relative;
   float: left;
   margin: 4px 0 0 10%;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -1359,7 +1098,7 @@ body {
   float: left;
   width: 80%;
   margin-left: 10%;
-  font-size: 2em;
+  font-size: 2.25em;
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1375,7 +1114,7 @@ body {
   background-color: rgb(0, 116, 217);
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1397,7 +1136,7 @@ body {
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1447,7 +1186,7 @@ body {
   box-shadow: 0 3px 0 rgb(147, 9, 116);
   text-shadow: 0 -1px 0 rgb(147, 9, 116);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -1493,7 +1232,7 @@ body {
   padding-left: 60px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   font-weight: 900;
   line-height: 1.38;
   text-align: center;
@@ -1525,7 +1264,19 @@ body {
 
 .submit {
   display: block;
+  float: left;
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(46, 204, 64);
+  box-shadow: 0 3px 0 rgb(27, 121, 38);
+  text-shadow: 0 -1px 0 rgb(27, 121, 38);
+  font-size: 1.125em;
+  font-weight: 700;
   text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
 .submit-comment,
@@ -1541,7 +1292,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1563,7 +1314,7 @@ body {
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
   font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1596,18 +1347,6 @@ body {
   background-color: #2ecc40;
 }
 
-.text {
-  display: block;
-  float: left;
-  padding-left: 24px;
-  border-bottom: 6px solid rgb(255, 68, 122);
-  font-size: 1.333em;
-  font-weight: 700;
-  line-height: 1.38;
-  color: rgb(255, 68, 122);
-  opacity: 0.2;
-}
-
 .tiny {
   width: 36px;
   height: 36px;
@@ -1625,7 +1364,7 @@ body {
   padding-left: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 2.667em;
+  font-size: 3em;
   font-weight: 200;
   line-height: 1.38;
   text-align: center;
@@ -1647,15 +1386,6 @@ body {
   filter: none;
 }
 
-.tutorial-text {
-  float: left;
-  width: 80%;
-  margin-left: 9.99756%;
-  font-size: 1.333em;
-  text-align: justify;
-  color: rgb(15, 20, 31);
-}
-
 .update-comment {
   display: block;
   position: relative;
@@ -1669,21 +1399,10 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
-}
-
-.user-firstname {
-  float: left;
-  margin-left: 10%;
-  padding-right: 6px;
-  font-size: 1.333em;
-  font-weight: 700;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(0, 0, 0);
 }
 
 .user-profile {
@@ -1691,25 +1410,6 @@ body {
   clear: both;
   width: 48px;
   margin: -48px 2% 0 0;
-}
-
-.user-settings-form .submit {
-  float: right;
-  clear: both;
-  width: 99.936420742%;
-  height: 54px;
-  margin-top: 20px;
-  background-color: rgb(118, 175, 186);
-  font-size: 1.333em;
-  font-weight: 700;
-  color: rgb(255, 252, 242);
-}
-
-.user-settings-form-container {
-  float: left;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .video-container {
@@ -1748,7 +1448,7 @@ body {
 .waiting-review-app-message {
   float: left;
   margin-left: 10%;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
@@ -1784,66 +1484,6 @@ body {
   letter-spacing: inherit;
   word-spacing: inherit;
   color: rgb(0, 116, 217);
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.bip_board-title em,
-.board-title em,
-.user-firstname em {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
-.bip_board-title span,
-.bip_board-title strong,
-.board-title span,
-.board-title strong,
-.user-firstname span {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 200;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: inherit;
   opacity: 1;
   word-break: normal;
   word-wrap: normal;
@@ -1995,33 +1635,6 @@ body {
   white-space: normal;
 }
 
-.user-firstname strong {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: rgb(255, 68, 122);
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 200;
-  text-transform: inherit;
-  text-decoration: none;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: rgb(255, 252, 242);
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
-}
-
 @media(max-width: 1024px) {
   .site-header .main-action-container {
     width: 32.421875%;
@@ -2039,7 +1652,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .card-header-section .card-actions {
@@ -2058,6 +1671,7 @@ body {
 
   .comment-form-container .placeholder__comments-_form,
   .comments-container .placeholder__comments-_comment,
+  .create-card-section .placeholder__cards-_form,
   .edit-card-section .placeholder__cards-_inline_form {
     width: 79.9987792968%;
     margin-left: 9.99756%;
@@ -2065,6 +1679,10 @@ body {
 
   .comments-wrapper .comments-container {
     margin-top: 67px;
+  }
+
+  .create-card-section {
+    margin-top: 28px;
   }
 
   .review-app-section .copy-view-app-link {
@@ -2118,7 +1736,7 @@ body {
 
   .board-card-header .board-description {
     margin-top: 11px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2126,7 +1744,7 @@ body {
   .new-board-card-header .board-title {
     position: relative;
     margin-left: 4px;
-    font-size: 1.111em;
+    font-size: 1.25em;
   }
 
   .board-card-header .open-in-github,
@@ -2179,7 +1797,7 @@ body {
   .card-info .card-title {
     position: relative;
     width: 99.8406441331%;
-    font-size: 1.056em;
+    font-size: 1.188em;
     font-weight: 600;
   }
 
@@ -2198,11 +1816,12 @@ body {
     margin-left: 4.99321%;
   }
 
+  .card-form .card-description,
   .comment-form .comment-text,
   .edit-card-form .card-description,
   .inline-comment-form .comment-text {
     height: 160px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2220,12 +1839,14 @@ body {
     margin-top: 63px;
   }
 
-  .create-board-full {
+  .create-board-full,
+  .create-card-full {
     display: none;
     position: relative;
   }
 
-  .create-board-short {
+  .create-board-short,
+  .create-card-short {
     display: block;
     position: relative;
     clear: none;
@@ -2245,7 +1866,9 @@ body {
   .board-card .board-card-header,
   .boards-container .placeholder__boards-_board,
   .boards-container .placeholder__boards-_form,
+  .card-form,
   .card-header-section .card-info,
+  .create-card-section .placeholder__cards-_form,
   .edit-card-form,
   .edit-card-section .placeholder__cards-_inline_form,
   .linked-boards-container .placeholder__boards-_linked_boards,
@@ -2256,6 +1879,7 @@ body {
     margin-left: 4.99321%;
   }
 
+  .card-form .cancel-create-card,
   .edit-card-form .cancel-update-card {
     width: 22px;
     height: 22px;
@@ -2263,14 +1887,16 @@ body {
     margin-left: 0;
   }
 
+  .card-form .card-title,
   .edit-card-form .card-title {
     position: relative;
     clear: both;
     width: 99.8406441331%;
-    font-size: 1.056em;
+    font-size: 1.188em;
     font-weight: 600;
   }
 
+  .card-form .create-card,
   .edit-card-form .update-card {
     float: left;
     width: 99.8406441331%;
@@ -2283,7 +1909,7 @@ body {
   .flash .message {
     width: 79.648241206%;
     margin-left: 7.0351%;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2316,7 +1942,7 @@ body {
     width: 90%;
     margin-top: 20px;
     margin-left: 4.99321%;
-    font-size: 2.333em;
+    font-size: 2.625em;
   }
 
   .landing .signin-container {
@@ -2341,7 +1967,7 @@ body {
   }
 
   .new-board-card-header .board-description {
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2357,7 +1983,7 @@ body {
   .no-boards-section .section-title {
     width: 90%;
     margin-left: 4.99321%;
-    font-size: 1.222em;
+    font-size: 1.375em;
   }
 
   .review-app-section {
@@ -2403,7 +2029,7 @@ body {
 
   .signup-container .beta-warning {
     margin-top: 8px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2427,7 +2053,7 @@ body {
     width: 90%;
     margin-top: -180px;
     margin-left: 4.99321%;
-    font-size: 1.556em;
+    font-size: 1.75em;
   }
 
   .subscribe-container {
@@ -2442,7 +2068,7 @@ body {
 
   .signup-container .title,
   .subscribe-container .title {
-    font-size: 1.556em;
+    font-size: 1.75em;
     font-weight: 900;
   }
 
@@ -2458,14 +2084,14 @@ body {
 
   .waiting-review-app-section .waiting-review-app-message {
     margin-left: 4.99321%;
-    font-size: 0.944em;
+    font-size: 1.063em;
     font-weight: 600;
   }
 }
 
 @media(max-width: 320px) {
   body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .bg-signup .signup-container {
