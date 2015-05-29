@@ -22,5 +22,3 @@
 //= require zeroclipboard
 //
 //= require_tree .
-
-window.Catchup = {}
