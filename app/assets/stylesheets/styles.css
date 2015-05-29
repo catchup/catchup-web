@@ -257,6 +257,9 @@ body {
 }
 
 .board-card-header .board-title {
+  margin-left: 8px;
+  font-size: 1.875em;
+  font-weight: 900;
   text-decoration: underline;
   color: rgb(0, 116, 217);
 }
@@ -271,12 +274,37 @@ body {
   color: rgb(17, 17, 17);
 }
 
+.board-description-container {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 8px;
+  overflow: auto;
+}
+
+.board-description-container .placeholder__markdown {
+  height: 60px;
+}
+
+.board-header-section {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.board-info .board-title {
+  display: block;
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-decoration: underline;
+  color: rgb(0, 116, 217);
+}
+
 .board-title {
   position: relative;
   float: left;
-  margin-left: 8px;
-  font-size: 1.875em;
-  font-weight: 900;
   line-height: 1.38;
 }
 
@@ -618,8 +646,10 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.create-card-section {
+.create-card-section,
+.edit-card-section {
   float: left;
+  clear: both;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -696,16 +726,6 @@ body {
   word-spacing: 2px;
 }
 
-.edit-card-section {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgb(246, 246, 246);
-  box-shadow: 0 -1px 3px rgb(170, 170, 170) inset;
-}
-
 .edit-comment {
   display: block;
   float: right;
@@ -757,7 +777,8 @@ body {
   background-color: rgb(221, 221, 221);
 }
 
-.go-back-to-board {
+.go-back-to-board,
+.go-back-to-boards {
   display: block;
   float: left;
   width: 22px;
@@ -891,6 +912,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
+.board-info,
 .card-info,
 .new-board-card-header {
   float: left;
@@ -899,9 +921,13 @@ body {
 }
 
 .new-board-card-header .board-title {
+  margin-left: 8px;
+  font-size: 1.875em;
+  font-weight: 900;
   color: rgb(17, 17, 17);
 }
 
+.board-actions,
 .card-actions,
 .new-board-form {
   float: left;
@@ -958,6 +984,18 @@ body {
 .notice {
   clear: both;
   background-color: rgb(57, 204, 204);
+}
+
+.open-board-settings {
+  display: block;
+  float: right;
+  border-radius: 3px;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-decoration: underline;
+  word-spacing: 2px;
+  color: rgb(0, 116, 217);
 }
 
 .open-in-github {
@@ -1655,14 +1693,29 @@ body {
     font-size: 1em;
   }
 
+  .board-actions .open-board-settings {
+    margin-top: 116px;
+  }
+
+  .board-header-section {
+    position: relative;
+  }
+
+  .board-header-section .board-actions,
   .card-header-section .card-actions {
     width: 25.390625%;
     margin-left: 1.53402%;
   }
 
+  .board-header-section .board-info,
   .card-header-section .card-info {
     width: 52.8645833333%;
     margin-left: 9.99756%;
+  }
+
+  .board-info .board-title,
+  .review-app-section .open-view-app {
+    position: relative;
   }
 
   .card-info .card-title {
@@ -1682,7 +1735,7 @@ body {
   }
 
   .create-card-section {
-    margin-top: 28px;
+    position: relative;
   }
 
   .review-app-section .copy-view-app-link {
@@ -1692,10 +1745,6 @@ body {
   .review-app-section .open-review-app {
     margin-top: 14px;
     margin-left: 119.99919%;
-  }
-
-  .review-app-section .open-view-app {
-    position: relative;
   }
 
   .review-app-section .review-app-label {
@@ -1734,6 +1783,13 @@ body {
     padding-bottom: 40px;
   }
 
+  .board-actions .open-board-settings {
+    float: left;
+    width: 100%;
+    margin-top: 88px;
+    text-align: center;
+  }
+
   .board-card-header .board-description {
     margin-top: 11px;
     font-size: 1.063em;
@@ -1753,6 +1809,47 @@ body {
     width: 18px;
     height: 18px;
     margin-top: 6px;
+  }
+
+  .board-description-container .placeholder__markdown,
+  .card-description-container .placeholder__markdown,
+  .shipit-form .shipit {
+    width: 99.8910857908%;
+  }
+
+  .board-header-section {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .board-header-section .board-actions,
+  .card-header-section .card-actions {
+    clear: both;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 4.99321%;
+  }
+
+  .board-info .board-description-container,
+  .card-info .card-description-container {
+    margin-top: 4px;
+  }
+
+  .board-info .board-title {
+    position: relative;
+    width: 99.8406441331%;
+    font-size: 1.188em;
+    font-weight: 600;
+  }
+
+  .board-info .go-back-to-boards {
+    display: none;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    margin-left: 0;
   }
 
   .card-actions .copy-branch-name {
@@ -1781,17 +1878,6 @@ body {
   .card-header-section {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .card-header-section .card-actions {
-    clear: both;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 4.99321%;
-  }
-
-  .card-info .card-description-container {
-    margin-top: 4px;
   }
 
   .card-info .card-title {
@@ -1852,6 +1938,10 @@ body {
     clear: none;
   }
 
+  .create-card-section {
+    position: relative;
+  }
+
   .create-review-form-full {
     display: none;
     position: relative;
@@ -1864,6 +1954,7 @@ body {
   }
 
   .board-card .board-card-header,
+  .board-header-section .board-info,
   .boards-container .placeholder__boards-_board,
   .boards-container .placeholder__boards-_form,
   .card-form,
@@ -2015,11 +2106,6 @@ body {
     visibility: hidden;
     position: relative;
     margin-left: 9.99774%;
-  }
-
-  .card-description-container .placeholder__markdown,
-  .shipit-form .shipit {
-    width: 99.8910857908%;
   }
 
   .signin-container .already-user {

@@ -30,6 +30,7 @@ en:
   accessibility:
     open_in_github: open in github
     go-back-to-board: go back to board
+    go_back_to_boards: go back to boards
   welcome:
     index:
       auth_failure: Auth failed
