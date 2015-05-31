@@ -15,10 +15,6 @@
 //= require jquery_ujs
 //= require jquery-ui/sortable
 //= require turbolinks
-//= require vex/vex
-//= require vex/vex.dialog
-//= require spin
-//= require jquery.spin
 //= require zeroclipboard
 //
 //= require_tree .
