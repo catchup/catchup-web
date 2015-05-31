@@ -3,7 +3,7 @@ class CardsController < ApplicationController
     @card = board.create_card(card_params)
 
     if @card.valid?
-      card_html = render_to_string(@card)
+      card_html = render_to_string(@card, locals: { list_class: "todo" })
       CardObserver.publish(:card_created, @card, current_user, card_html)
     else
       flash[:alert] = I18n.t("cards.create.error")

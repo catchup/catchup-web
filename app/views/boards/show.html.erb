@@ -21,18 +21,20 @@
     </div>
   </section>
 
-  <% if false %>
-    <%= render @board.lists[2], emptylist_placeholder: t('.review-placeholder') %>
-    <%= render @board.lists[1], emptylist_placeholder: t('.doing-placeholder') %>
-  <% end %>
+  <section class="review-list-section clearfix">
+    <%= render @board.lists[2], list_class: "review" %>
+  </section>
+  <section class="doing-list-section clearfix">
+    <%= render @board.lists[1], list_class: "doing" %>
+  </section>
 
   <section class="create-card-section clearfix" id="new" data-ux-create-card-section>
     <%= render "cards/form", card: Card.new, board: @board %>
   </section>
 
-  <% if false %>
-    <%= render @board.lists[0], emptylist_placeholder: t('.todo-placeholder') %>
-  <% end %>
+  <section class="todo-list-section clearfix">
+    <%= render @board.lists[0], list_class: "todo" %>
+  </section>
 
 </div>
 

@@ -40,6 +40,12 @@ body {
   color: rgb(17, 17, 17);
 }
 
+.cards-_card {
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+}
+
 .cards-_form {
   font-weight: 400;
   color: rgb(255, 255, 255);
@@ -65,6 +71,13 @@ body {
 .header_actions-create_review {
   font-weight: 700;
   color: rgb(255, 255, 255);
+}
+
+.lists-_list {
+  background-color: rgb(255, 255, 255);
+  font-weight: 900;
+  line-height: 1.38;
+  color: rgb(221, 221, 221);
 }
 
 .welcome-index {
@@ -448,6 +461,23 @@ body {
   color: rgb(17, 17, 17);
 }
 
+.card-wrapper {
+  display: block;
+  float: left;
+  width: 78%;
+  margin-left: 12%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.cards-container {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .catchup {
   float: left;
   min-width: none;
@@ -694,6 +724,19 @@ body {
   color: rgb(0, 0, 0);
 }
 
+.doing-card-title {
+  float: left;
+  clear: both;
+  width: 100%;
+  max-height: 54px;
+  padding-left: 8px;
+  border-left: 3px solid rgb(46, 204, 64);
+  font-size: 1.25em;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+  overflow: hidden;
+}
+
 .edit-card,
 .open-pr-on-github {
   display: block;
@@ -800,6 +843,7 @@ body {
 .huge .avatar {
 }
 
+.card-title-container,
 .create-review-form-full,
 .inline-comment-form,
 .no-boards-container,
@@ -828,6 +872,14 @@ body {
   float: left;
   clear: both;
   width: 100%;
+}
+
+.list-title {
+  float: left;
+  margin-left: 10%;
+  font-size: 2.25em;
+  line-height: 1.38;
+  color: rgb(221, 221, 221);
 }
 
 .main-action-container {
@@ -1068,6 +1120,14 @@ body {
   background-color: rgb(222, 222, 222);
 }
 
+.placeholder__cards-_card {
+  float: left;
+  width: 80%;
+  height: 40px;
+  margin-left: 10%;
+  background-color: rgb(170, 170, 170);
+}
+
 .placeholder__cards-_form,
 .placeholder__cards-_inline_form {
   float: left;
@@ -1078,7 +1138,8 @@ body {
 }
 
 .placeholder__comments-_comment,
-.placeholder__comments-_form {
+.placeholder__comments-_form,
+.placeholder__lists-_list {
   float: left;
   width: 80%;
   height: 100px;
@@ -1130,6 +1191,18 @@ body {
   padding-bottom: 14px;
   border-bottom: 3px solid rgb(255, 133, 27);
   background-color: rgb(255, 220, 0);
+}
+
+.review-card-title {
+  float: left;
+  width: 100%;
+  max-height: 54px;
+  padding-left: 8px;
+  border-left: 3px solid rgb(255, 133, 27);
+  font-size: 1.25em;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+  overflow: hidden;
 }
 
 .section-title {
@@ -1424,6 +1497,30 @@ body {
   filter: none;
 }
 
+.todo-card-title {
+  float: left;
+  clear: both;
+  width: 100%;
+  max-height: 54px;
+  padding-left: 8px;
+  border-left: 3px solid rgb(170, 170, 170);
+  font-size: 1.25em;
+  line-height: 1.38;
+  color: rgb(170, 170, 170);
+  overflow: hidden;
+}
+
+.doing-list-section,
+.review-list-section,
+.todo-list-section {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
 .update-comment {
   display: block;
   position: relative;
@@ -1693,14 +1790,6 @@ body {
     font-size: 1em;
   }
 
-  .board-actions .open-board-settings {
-    margin-top: 116px;
-  }
-
-  .board-header-section {
-    position: relative;
-  }
-
   .board-header-section .board-actions,
   .card-header-section .card-actions {
     width: 25.390625%;
@@ -1713,8 +1802,7 @@ body {
     margin-left: 9.99756%;
   }
 
-  .board-info .board-title,
-  .review-app-section .open-view-app {
+  .board-info .board-title {
     position: relative;
   }
 
@@ -1725,17 +1813,16 @@ body {
   .comment-form-container .placeholder__comments-_form,
   .comments-container .placeholder__comments-_comment,
   .create-card-section .placeholder__cards-_form,
-  .edit-card-section .placeholder__cards-_inline_form {
+  .doing-list-section .placeholder__lists-_list,
+  .edit-card-section .placeholder__cards-_inline_form,
+  .review-list-section .placeholder__lists-_list,
+  .todo-list-section .placeholder__lists-_list {
     width: 79.9987792968%;
     margin-left: 9.99756%;
   }
 
   .comments-wrapper .comments-container {
     margin-top: 67px;
-  }
-
-  .create-card-section {
-    position: relative;
   }
 
   .review-app-section .copy-view-app-link {
@@ -1745,6 +1832,10 @@ body {
   .review-app-section .open-review-app {
     margin-top: 14px;
     margin-left: 119.99919%;
+  }
+
+  .review-app-section .open-view-app {
+    position: relative;
   }
 
   .review-app-section .review-app-label {
@@ -1783,10 +1874,10 @@ body {
     padding-bottom: 40px;
   }
 
-  .board-actions .open-board-settings {
+  .board-actions .open-board-settings,
+  .card-actions .edit-card {
     float: left;
     width: 100%;
-    margin-top: 88px;
     text-align: center;
   }
 
@@ -1811,14 +1902,8 @@ body {
     margin-top: 6px;
   }
 
-  .board-description-container .placeholder__markdown,
-  .card-description-container .placeholder__markdown,
-  .shipit-form .shipit {
-    width: 99.8910857908%;
-  }
-
-  .board-header-section {
-    position: relative;
+  .board-header-section,
+  .card-header-section {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1857,12 +1942,6 @@ body {
     position: relative;
   }
 
-  .card-actions .edit-card {
-    float: left;
-    width: 100%;
-    text-align: center;
-  }
-
   .card-actions .open-pr-on-github {
     position: relative;
     float: left;
@@ -1873,11 +1952,6 @@ body {
 
   .card-actions .shipit-form {
     margin-left: -0.10484%;
-  }
-
-  .card-header-section {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .card-info .card-title {
@@ -1894,6 +1968,19 @@ body {
     height: 18px;
     margin-top: 4px;
     margin-left: 0;
+  }
+
+  .card-title-container .doing-card-title,
+  .card-title-container .review-card-title,
+  .card-title-container .todo-card-title {
+    max-height: 46px;
+    font-size: 1.063em;
+    font-weight: 600;
+  }
+
+  .card-wrapper {
+    width: 86.9565217391%;
+    margin-left: 7.96347%;
   }
 
   .bg-signup .signup-container,
@@ -1938,10 +2025,6 @@ body {
     clear: none;
   }
 
-  .create-card-section {
-    position: relative;
-  }
-
   .create-review-form-full {
     display: none;
     position: relative;
@@ -1959,6 +2042,7 @@ body {
   .boards-container .placeholder__boards-_form,
   .card-form,
   .card-header-section .card-info,
+  .cards-container .placeholder__cards-_card,
   .create-card-section .placeholder__cards-_form,
   .edit-card-form,
   .edit-card-section .placeholder__cards-_inline_form,
@@ -2050,6 +2134,11 @@ body {
     margin-top: 40px;
   }
 
+  .list-title {
+    margin-left: 4.99321%;
+    font-size: 1.375em;
+  }
+
   .new-board-card .new-board-form {
     clear: both;
     width: 90%;
@@ -2108,6 +2197,12 @@ body {
     margin-left: 9.99774%;
   }
 
+  .board-description-container .placeholder__markdown,
+  .card-description-container .placeholder__markdown,
+  .shipit-form .shipit {
+    width: 99.8910857908%;
+  }
+
   .signin-container .already-user {
     width: 99.8910857908%;
     margin-left: -0.07968%;
@@ -2156,6 +2251,13 @@ body {
   .subscribe-container .title {
     font-size: 1.75em;
     font-weight: 900;
+  }
+
+  .doing-list-section .placeholder__lists-_list,
+  .review-list-section .placeholder__lists-_list,
+  .todo-list-section .placeholder__lists-_list {
+    width: 79.9969806763%;
+    margin-left: 9.99774%;
   }
 
   .video-container {

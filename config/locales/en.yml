@@ -42,6 +42,7 @@ en:
       warning: Catchup isn't officially launched yet, so keep that in mind. Please try it out and <a href="mailto:%{email}">let us know</a> what do you think about it.
       want_more: Want even more?
       no_spam: We promise you will hear from us only when we have something exciting to share. We won't betray your trust by selling you ads or other creepy stuff!
+      subscribe_newsletter: Subscribe to newsletter
   greeting: Hi, <strong>%{user}</strong>
   see_boards: Go to boards
   users:
