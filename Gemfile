@@ -9,10 +9,6 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'octokit'
 gem 'rails_admin'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-vex'
-end
-gem 'spinjs-rails'
 gem 'rails', '4.2.0'
 gem 'passenger'
 gem 'platform-api'
@@ -22,7 +18,6 @@ gem 'pusher'
 gem 'ranked-model'
 gem 'redcarpet'
 gem 'sass-rails', '~> 4.0.3'
-gem 'compass-rails' # rails-assets-vex depends on it
 gem 'spring',        group: :development
 gem 'sucker_punch'
 gem 'turbolinks'
