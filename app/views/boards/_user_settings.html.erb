@@ -1,7 +1,0 @@
-<%= form_for [:toggle_subscription, board], html: { class: 'user-settings-form clearfix' } do |f| %>
-  <label class="notifications-checkbox-label clearfix">
-    <%= check_box_tag :subscribe, "", board.has_subscriber?(current_user), class: 'checkbox' %>
-    <span class="point-text"><%= t(".receive-notifications") %></span>
-  </label>
-  <%= button_tag t(".submit"), class: 'submit' %>
-<% end %>

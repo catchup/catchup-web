@@ -30,6 +30,7 @@ en:
   accessibility:
     open_in_github: open in github
     go-back-to-board: go back to board
+    go_back_to_boards: go back to boards
   welcome:
     index:
       auth_failure: Auth failed
@@ -41,6 +42,7 @@ en:
       warning: Catchup isn't officially launched yet, so keep that in mind. Please try it out and <a href="mailto:%{email}">let us know</a> what do you think about it.
       want_more: Want even more?
       no_spam: We promise you will hear from us only when we have something exciting to share. We won't betray your trust by selling you ads or other creepy stuff!
+      subscribe_newsletter: Subscribe to newsletter
   greeting: Hi, <strong>%{user}</strong>
   see_boards: Go to boards
   users:
@@ -58,6 +60,9 @@ en:
     create_board:
       create_board_full: Create a new board
       create_board_short: New
+    create_card:
+      create_card_full: Add To Do
+      create_card_short: New
     create_review:
       submit_full: Create review app
       submit_short: Review
@@ -87,6 +92,10 @@ en:
       api-key: Shared Heroku API key
       submit: Save
   cards:
+    form:
+      title-placeholder: Title
+      description-placeholder: Optional (although very valuable) markdown friendly description
+      submit: Okay!
     create:
       error: There was an error while creating this card
       title-placeholder: Title

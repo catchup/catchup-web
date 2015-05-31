@@ -17,14 +17,21 @@
 <div class="bg-signup clearfix">
   <div class="signup-container clearfix">
     <p class="title"><%= t(".ready") %></p>
-    <a class="signup-github" href="/auth/github"><%= t(".sign_up") %></a>
-    <p class="beta-warning"><%= t(".warning", email: t("application.email")).html_safe %></p>
+    <a class="signup-github" target="_blank" href="/auth/github">
+      <%= t(".sign_up") %>
+    </a>
+    <p class="beta-warning">
+      <%= t(".warning", email: t("application.email")).html_safe %>
+    </p>
   </div>
 </div>
 
 <div class="subscribe-container clearfix">
   <p class="title"><%= t(".want_more") %></p>
-  <a class="subscribe" href="<%= t("application.newsletter_url") %>">Subscribe to newsletter</a>
+  <a class="subscribe"
+     target="_blank" href='<%= t("application.newsletter_url") %>'>
+     <%= t(".subscribe_newsletter") %>
+  </a>
   <p class="nospam-message"><%= t(".no_spam") %></p>
 </div>
 
