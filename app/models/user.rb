@@ -56,6 +56,14 @@ class User < ActiveRecord::Base
     @github_user ||= Octokit::Client.new(access_token: auth_token)
   end
 
+  def self.antonio
+    User.where(nickname: "as-cii").first
+  end
+
+  def self.ali
+    User.where(nickname: "exalted").first
+  end
+
   private
 
   def github_repositories

@@ -16,7 +16,11 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.application-_footer,
+.application-_footer {
+  font-weight: 400;
+  color: rgb(170, 170, 170);
+}
+
 .application-_header,
 .avatars-_avatar,
 .boards-index,
@@ -137,6 +141,17 @@ body {
   filter: none;
 }
 
+.and {
+  float: left;
+  margin: 14px 0 0 35px;
+  text-shadow: 0 1px 1px rgb(255, 255, 255);
+  font-style: italic;
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 1.38;
+  color: rgb(170, 170, 170);
+}
+
 .archive-card {
   display: block;
   float: right;
@@ -255,7 +270,6 @@ body {
   float: left;
   clear: both;
   width: 100%;
-  margin-top: 80px;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: rgb(255, 241, 153);
@@ -328,6 +342,14 @@ body {
   margin-top: 60px;
 }
 
+.board-container,
+.boards-list-container,
+.card-container {
+  float: left;
+  width: 100%;
+  padding-bottom: 120px;
+}
+
 .body-reset-as {
   float: left;
   font-size: 1em;
@@ -368,6 +390,17 @@ body {
   clear: both;
   font-size: 1em;
   color: rgb(0, 0, 0);
+}
+
+.brought-by {
+  float: left;
+  width: 100%;
+  text-shadow: 0 1px 1px rgb(255, 255, 255);
+  font-style: italic;
+  font-size: 1.125em;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(170, 170, 170);
 }
 
 .cancel-create-card,
@@ -479,6 +512,7 @@ body {
 }
 
 .catchup {
+  position: relative;
   float: left;
   min-width: none;
   min-height: nonepx;
@@ -812,12 +846,38 @@ body {
   width: 100%;
 }
 
-.footer {
+.founder-ali {
+  display: block;
   float: left;
-  width: 100%;
-  height: 200px;
-  margin-top: 40px;
-  background-color: rgb(221, 221, 221);
+  width: 96px;
+  height: 96px;
+  margin: -4px 0 0 28px;
+}
+
+.founder-ali .placeholder__users-_avatar,
+.founder-antonio .placeholder__users-_avatar {
+  width: 96px;
+  height: 96px;
+  margin: 4px 0 0 4px;
+  background-color: rgb(170, 170, 170);
+}
+
+.founder-antonio {
+  display: block;
+  float: left;
+  width: 96px;
+  height: 96px;
+  margin: -4px 0 0 -4px;
+}
+
+.founders {
+  position: absolute;
+  top: 168px;
+  left: 0;
+  right: 0;
+  width: 278px;
+  height: 96px;
+  margin: 0 auto;
 }
 
 .go-back-to-board,
@@ -852,6 +912,34 @@ body {
   width: 100%;
 }
 
+.italian-flag {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.italian-flag-green {
+  float: left;
+  width: 33.3294270833%;
+  height: 17px;
+  background-color: rgb(0, 146, 70);
+}
+
+.italian-flag-red {
+  float: left;
+  width: 33.3294270833%;
+  height: 17px;
+  background-color: rgb(206, 43, 55);
+}
+
+.italian-flag-white {
+  float: left;
+  width: 33.3294270833%;
+  height: 17px;
+  background-color: rgb(255, 255, 255);
+}
+
 .landing {
   position: relative;
   float: left;
@@ -880,6 +968,19 @@ body {
   font-size: 2.25em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
+}
+
+.made-in {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 202px;
+  text-shadow: 0 1px 1px rgb(255, 255, 255);
+  font-style: italic;
+  font-size: 1.125em;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(170, 170, 170);
 }
 
 .main-action-container {
@@ -993,6 +1094,14 @@ body {
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: rgb(255, 220, 0);
+}
+
+.newsletter-section {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .linked-boards-section,
@@ -1270,15 +1379,10 @@ body {
 }
 
 .signin-container {
+  position: relative;
   float: right;
   width: 25.5833333333%;
   margin: 20px 10% 0 0;
-}
-
-.signup-container {
-  float: left;
-  width: 39.1666666666%;
-  margin-left: 30.41667%;
 }
 
 .signup-github {
@@ -1320,6 +1424,15 @@ body {
   filter: none;
 }
 
+.site-footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-top: 120px;
+  border-top: 3px solid rgb(170, 170, 170);
+  background-color: rgb(246, 246, 246);
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -1332,7 +1445,6 @@ body {
 }
 
 .slogan {
-  position: relative;
   float: left;
   clear: both;
   width: 80%;
@@ -1447,11 +1559,11 @@ body {
   filter: none;
 }
 
+.signup-container,
 .subscribe-container {
   float: left;
-  clear: both;
   width: 39.1666666666%;
-  margin: 180px 0 0 30.41667%;
+  margin-left: 30.41667%;
 }
 
 .success {
@@ -1552,7 +1664,8 @@ body {
   float: left;
   clear: both;
   width: 100%;
-  margin-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 80px;
 }
 
 .video-placeholder {
@@ -1596,6 +1709,13 @@ body {
   padding-bottom: 10px;
   border-bottom: 3px solid rgb(0, 116, 217);
   background-color: rgb(127, 219, 255);
+}
+
+.welcome-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-bottom: 120px;
 }
 
 .beta-warning a {
@@ -1815,8 +1935,7 @@ body {
   .create-card-section .placeholder__cards-_form,
   .doing-list-section .placeholder__lists-_list,
   .edit-card-section .placeholder__cards-_inline_form,
-  .review-list-section .placeholder__lists-_list,
-  .todo-list-section .placeholder__lists-_list {
+  .review-list-section .placeholder__lists-_list {
     width: 79.9987792968%;
     margin-left: 9.99756%;
   }
@@ -1856,6 +1975,11 @@ body {
     margin-right: 1.99585%;
   }
 
+  .todo-list-section .placeholder__lists-_list {
+    width: 79.9987792968%;
+    margin-left: 9.99552%;
+  }
+
   .waiting-review-app-section .waiting-review-app-message {
     margin-left: 9.99756%;
   }
@@ -1866,12 +1990,6 @@ body {
     float: left;
     width: 100%;
     text-align: center;
-  }
-
-  .bg-signup {
-    margin-top: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
 
   .board-actions .open-board-settings,
@@ -1902,8 +2020,12 @@ body {
     margin-top: 6px;
   }
 
-  .board-header-section,
-  .card-header-section {
+  .board-container {
+    height: 814px;
+  }
+
+  .board-container .board-header-section,
+  .card-container .card-header-section {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -1954,6 +2076,10 @@ body {
     margin-left: -0.10484%;
   }
 
+  .card-container .review-app-section {
+    padding-top: 14px;
+  }
+
   .card-info .card-title {
     position: relative;
     width: 99.8406441331%;
@@ -1984,7 +2110,8 @@ body {
   }
 
   .bg-signup .signup-container,
-  .comment-form {
+  .comment-form,
+  .newsletter-section .subscribe-container {
     width: 89.9984903381%;
     margin-left: 4.99321%;
   }
@@ -2034,6 +2161,12 @@ body {
     display: block;
     position: relative;
     clear: none;
+  }
+
+  .doing-list-section .placeholder__lists-_list,
+  .review-list-section .placeholder__lists-_list {
+    width: 79.9969806763%;
+    margin-left: 9.99774%;
   }
 
   .board-card .board-card-header,
@@ -2109,11 +2242,8 @@ body {
     margin-top: -106px;
   }
 
-  .landing {
-    position: relative;
-  }
-
   .landing .catchup {
+    position: relative;
     width: 90%;
     margin-top: 20px;
     margin-left: 4.99321%;
@@ -2121,12 +2251,20 @@ body {
   }
 
   .landing .signin-container {
+    position: relative;
     float: left;
     clear: both;
     width: 89.9984903381%;
     margin-top: 176px;
     margin-right: 0;
     margin-left: 5.06869%;
+  }
+
+  .landing .slogan {
+    width: 89.9984903381%;
+    margin-top: -180px;
+    margin-left: 4.99321%;
+    font-size: 1.75em;
   }
 
   .linked-boards-section .boards-container,
@@ -2164,10 +2302,6 @@ body {
     width: 90%;
     margin-left: 4.99321%;
     font-size: 1.375em;
-  }
-
-  .review-app-section {
-    padding-top: 14px;
   }
 
   .review-app-section .copy-view-app-link {
@@ -2229,20 +2363,6 @@ body {
     margin-left: 19.39538%;
   }
 
-  .slogan {
-    position: relative;
-    width: 90%;
-    margin-top: -180px;
-    margin-left: 4.99321%;
-    font-size: 1.75em;
-  }
-
-  .subscribe-container {
-    width: 90%;
-    margin-top: 100px;
-    margin-left: 4.99321%;
-  }
-
   .subscribe-container .nospam-message {
     margin-top: 8px;
   }
@@ -2253,16 +2373,9 @@ body {
     font-weight: 900;
   }
 
-  .doing-list-section .placeholder__lists-_list,
-  .review-list-section .placeholder__lists-_list,
   .todo-list-section .placeholder__lists-_list {
     width: 79.9969806763%;
-    margin-left: 9.99774%;
-  }
-
-  .video-container {
-    position: relative;
-    clear: none;
+    margin-left: 9.99396%;
   }
 
   .video-container .video-placeholder {
@@ -2274,6 +2387,22 @@ body {
     margin-left: 4.99321%;
     font-size: 1.063em;
     font-weight: 600;
+  }
+
+  .welcome-container {
+    height: 1423px;
+  }
+
+  .welcome-container .landing {
+    position: relative;
+  }
+
+  .welcome-container .newsletter-section {
+    padding-bottom: 120px;
+  }
+
+  .welcome-container .video-container {
+    position: relative;
   }
 }
 
@@ -2287,19 +2416,28 @@ body {
     margin-left: 4.98047%;
   }
 
-  .landing {
-    position: relative;
-    margin-top: 20px;
-  }
-
   .landing .catchup {
+    position: relative;
     margin-top: 0;
     margin-left: 5%;
   }
 
   .landing .signin-container {
+    position: relative;
     width: 90%;
     margin-left: 5%;
+  }
+
+  .landing .slogan {
+    width: 90%;
+    margin-left: 5%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .newsletter-section .subscribe-container {
+    width: 90%;
+    margin-left: 4.99512%;
   }
 
   .signin-container .already-user {
@@ -2307,23 +2445,20 @@ body {
     margin-left: 0;
   }
 
-  .slogan {
-    position: relative;
-    margin-left: 5%;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .subscribe-container {
-    margin-left: 4.99512%;
-  }
-
-  .video-container {
-    position: relative;
-  }
-
   .video-container .video-placeholder {
     width: 288px;
     height: 162px;
+  }
+
+  .welcome-container {
+    height: 1375px;
+  }
+
+  .welcome-container .landing {
+    position: relative;
+  }
+
+  .welcome-container .video-container {
+    position: relative;
   }
 }

@@ -1,5 +1,24 @@
 <div class="application-_footer clearfix">
 
-<footer class="footer"></footer>
+<footer class="site-footer clearfix">
+  <p class="brought-by">Brought to you by</p>
+  <div class="founders clearfix">
+    <a class="founder-antonio clearfix"
+       target="_blank" href="http://github.com/<%= User.antonio.nickname %>">
+      <%= render Avatar.large(User.antonio) %>
+    </a>
+    <p class="and">&amp;</p>
+    <a class="founder-ali clearfix"
+       target="_blank" href="http://github.com/<%= User.ali.nickname %>">
+      <%= render Avatar.large(User.ali) %>
+    </a>
+  </div>
+  <p class="made-in">Made in</p>
+  <div class="italian-flag clearfix">
+    <div class="italian-flag-green"></div>
+    <div class="italian-flag-white"></div>
+    <div class="italian-flag-red"></div>
+  </div>
+</footer>
 
 </div>

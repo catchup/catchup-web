@@ -2,7 +2,7 @@
   <%= render "header_actions/create_card" %>
 <% end %>
 
-<div data-role="board" data-board-id="<%= @board.id %>">
+<div class="board-container clearfix" data-role="board" data-board-id="<%= @board.id %>">
 
   <section class="board-header-section clearfix">
     <div class="board-info clearfix">
@@ -37,7 +37,6 @@
   </section>
 
 </div>
-
 
 <% if false %>
   <%= form_for [:toggle_subscription, @board] do |f| %>

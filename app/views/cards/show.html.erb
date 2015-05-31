@@ -4,7 +4,7 @@
   <% end %>
 <% end %>
 
-<div data-role="single-card" data-board-id="<%= @card.board.id %>">
+<div class="card-container clearfix" data-role="single-card" data-board-id="<%= @card.board.id %>">
 
   <% unless @card.archived? %>
     <% if @card.previewing? %>
