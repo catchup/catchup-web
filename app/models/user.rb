@@ -57,11 +57,17 @@ class User < ActiveRecord::Base
   end
 
   def self.antonio
-    User.where(nickname: "as-cii").first
+    User.new do |user|
+      user.nickname   = "as-cii"
+      user.avatar_url = "https://avatars2.githubusercontent.com/u/482957?v=3"
+    end
   end
 
   def self.ali
-    User.where(nickname: "exalted").first
+    User.new do |user|
+      user.nickname   = "exalted"
+      user.avatar_url = "https://avatars3.githubusercontent.com/u/314398?v=3"
+    end
   end
 
   private
