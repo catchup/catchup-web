@@ -2,20 +2,16 @@
   <%= render "header_actions/create_board" %>
 <% end %>
 
-<div class="boards-list-container clearfix">
+<% if @linked_boards.empty? %>
+<div class="no-boards-container clearfix">
+  <%= render "no_boards" %>
+</div>
+<% else %>
+<div class="linked-boards-container clearfix">
+  <%= render "linked_boards", boards: @linked_boards %>
+</div>
+<% end %>
 
-  <% if @linked_boards.empty? %>
-  <div class="no-boards-container clearfix">
-    <%= render "no_boards" %>
-  </div>
-  <% else %>
-  <div class="linked-boards-container clearfix">
-    <%= render "linked_boards", boards: @linked_boards %>
-  </div>
-  <% end %>
-
-  <div class="new-boards-container clearfix">
-    <%= render "new_boards", boards: @new_boards %>
-  </div>
-
+<div class="new-boards-container clearfix">
+  <%= render "new_boards", boards: @new_boards %>
 </div>

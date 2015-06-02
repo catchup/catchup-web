@@ -342,14 +342,6 @@ body {
   margin-top: 60px;
 }
 
-.board-container,
-.boards-list-container,
-.card-container {
-  float: left;
-  width: 100%;
-  padding-bottom: 120px;
-}
-
 .body-reset-as {
   float: left;
   font-size: 1em;
@@ -1711,13 +1703,6 @@ body {
   background-color: rgb(127, 219, 255);
 }
 
-.welcome-container {
-  position: relative;
-  float: left;
-  width: 100%;
-  padding-bottom: 120px;
-}
-
 .beta-warning a {
   border-top-width: 0;
   border-right-width: 0;
@@ -2020,8 +2005,8 @@ body {
     margin-top: 6px;
   }
 
-  .board-container .board-header-section,
-  .card-container .card-header-section {
+  .board-header-section,
+  .card-header-section {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -2070,10 +2055,6 @@ body {
 
   .card-actions .shipit-form {
     margin-left: -0.10484%;
-  }
-
-  .card-container .review-app-section {
-    padding-top: 14px;
   }
 
   .card-info .card-title {
@@ -2238,6 +2219,10 @@ body {
     margin-top: -106px;
   }
 
+  .landing {
+    position: relative;
+  }
+
   .landing .catchup {
     position: relative;
     width: 90%;
@@ -2285,6 +2270,10 @@ body {
     line-height: 1.38;
   }
 
+  .newsletter-section {
+    padding-bottom: 120px;
+  }
+
   .linked-boards-section,
   .new-boards-section,
   .no-boards-section {
@@ -2298,6 +2287,10 @@ body {
     width: 90%;
     margin-left: 4.99321%;
     font-size: 1.375em;
+  }
+
+  .review-app-section {
+    padding-top: 14px;
   }
 
   .review-app-section .copy-view-app-link {
@@ -2374,6 +2367,10 @@ body {
     margin-left: 9.99019%;
   }
 
+  .video-container {
+    position: relative;
+  }
+
   .video-container .video-placeholder {
     width: 372px;
     height: 209px;
@@ -2383,22 +2380,6 @@ body {
     margin-left: 4.99321%;
     font-size: 1.063em;
     font-weight: 600;
-  }
-
-  .welcome-container {
-    height: 1423px;
-  }
-
-  .welcome-container .landing {
-    position: relative;
-  }
-
-  .welcome-container .newsletter-section {
-    padding-bottom: 120px;
-  }
-
-  .welcome-container .video-container {
-    position: relative;
   }
 }
 
@@ -2410,6 +2391,10 @@ body {
   .bg-signup .signup-container {
     width: 90%;
     margin-left: 4.98047%;
+  }
+
+  .landing {
+    position: relative;
   }
 
   .landing .catchup {
@@ -2441,20 +2426,12 @@ body {
     margin-left: 0;
   }
 
+  .video-container {
+    position: relative;
+  }
+
   .video-container .video-placeholder {
     width: 288px;
     height: 162px;
-  }
-
-  .welcome-container {
-    height: 1375px;
-  }
-
-  .welcome-container .landing {
-    position: relative;
-  }
-
-  .welcome-container .video-container {
-    position: relative;
   }
 }

@@ -4,51 +4,51 @@
   <% end %>
 <% end %>
 
-<div class="card-container clearfix" data-role="single-card" data-board-id="<%= @card.board.id %>">
+<div data-role="single-card" data-board-id="<%= @card.board.id %>">
 
-  <% unless @card.archived? %>
-    <% if @card.previewing? %>
-      <%= render "review_app_waiting" %>
-    <% elsif @card.previewed? %>
-      <%= render "review_app_ready", card: @card %>
-    <% end %>
+<% unless @card.archived? %>
+  <% if @card.previewing? %>
+    <%= render "review_app_waiting" %>
+  <% elsif @card.previewed? %>
+    <%= render "review_app_ready", card: @card %>
   <% end %>
+<% end %>
 
-  <section class="edit-card-section clearfix" data-ux-edit-card-section>
-    <%= render "cards/inline_form", card: @card %>
-  </section>
+<section class="edit-card-section clearfix" data-ux-edit-card-section>
+  <%= render "cards/inline_form", card: @card %>
+</section>
 
-  <section class="card-header-section clearfix" data-ux-card-header-section>
-    <div class="card-info clearfix">
-      <a class="go-back-to-board" href="<%= board_path @card.board %>">
-        <%= t('accessibility.go-back-to-board') %>
-      </a>
-      <h1 class="card-title"><%= @card.title %></h1>
-      <div class="card-description-container clearfix">
-        <%= render "markdown", text: @card.description %>
-      </div>
-    </div>
-    <div class="card-actions clearfix">
-      <%= render "cards/shipit", card: @card %>
-      <button class="copy-branch-name"
-              data-clipboard-text='<%= @card.branch_name %>'>
-              <%= t('.copy-branch') %>
-      </button>
-      <a class="open-pr-on-github"
-         target="_blank" href="<%= @card.compare_url(url_for([@card.board, @card, only_path: false])) %>">
-         <%= t('.open-pr-on-github') %>
-       </a>
-      <a class="edit-card" href="#" data-ux-edit-card><%= t('.edit') %></a>
-      <%= render "cards/archive", card: @card %>
-    </div>
-  </section>
-  <div class="comments-wrapper clearfix">
-    <div class="comment-form-container clearfix" data-ux-comment-form-container>
-      <%= render "comments/form", comment: Comment.new, card: @card %>
-    </div>
-    <div class="comments-container clearfix">
-      <%= render @card.comments %>
+<section class="card-header-section clearfix" data-ux-card-header-section>
+  <div class="card-info clearfix">
+    <a class="go-back-to-board" href="<%= board_path @card.board %>">
+      <%= t('accessibility.go-back-to-board') %>
+    </a>
+    <h1 class="card-title"><%= @card.title %></h1>
+    <div class="card-description-container clearfix">
+      <%= render "markdown", text: @card.description %>
     </div>
   </div>
+  <div class="card-actions clearfix">
+    <%= render "cards/shipit", card: @card %>
+    <button class="copy-branch-name"
+            data-clipboard-text='<%= @card.branch_name %>'>
+            <%= t('.copy-branch') %>
+    </button>
+    <a class="open-pr-on-github"
+       target="_blank" href="<%= @card.compare_url(url_for([@card.board, @card, only_path: false])) %>">
+       <%= t('.open-pr-on-github') %>
+     </a>
+    <a class="edit-card" href="#" data-ux-edit-card><%= t('.edit') %></a>
+    <%= render "cards/archive", card: @card %>
+  </div>
+</section>
+<div class="comments-wrapper clearfix">
+  <div class="comment-form-container clearfix" data-ux-comment-form-container>
+    <%= render "comments/form", comment: Comment.new, card: @card %>
+  </div>
+  <div class="comments-container clearfix">
+    <%= render @card.comments %>
+  </div>
+</div>
 
 </div>
