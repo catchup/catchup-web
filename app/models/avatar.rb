@@ -16,4 +16,8 @@ class Avatar
   def self.tiny(*users)
     users.map { |e| new(:tiny, e.avatar_url) }
   end
+
+  def self.large(*users)
+    users.map { |e| new(:large, e.avatar_url) }
+  end
 end

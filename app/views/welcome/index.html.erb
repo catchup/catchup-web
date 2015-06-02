@@ -6,9 +6,8 @@
     <p class="already-user"><%= t(".already_user") %></p>
     <a class="signin" href="/auth/github"><%= t(".sign_in") %></a>
   </div>
+  <p class="slogan"><%= t(".slogan") %></p>
 </header>
-
-<p class="slogan"><%= t(".slogan") %></p>
 
 <div class="video-container clearfix">
   <div class="video-placeholder"></div>
@@ -26,14 +25,16 @@
   </div>
 </div>
 
-<div class="subscribe-container clearfix">
-  <p class="title"><%= t(".want_more") %></p>
-  <a class="subscribe"
-     target="_blank" href='<%= t("application.newsletter_url") %>'>
-     <%= t(".subscribe_newsletter") %>
-  </a>
-  <p class="nospam-message"><%= t(".no_spam") %></p>
-</div>
+<section class="newsletter-section">
+  <div class="subscribe-container clearfix">
+    <p class="title"><%= t(".want_more") %></p>
+    <a class="subscribe"
+       target="_blank" href='<%= t("application.newsletter_url") %>'>
+       <%= t(".subscribe_newsletter") %>
+    </a>
+    <p class="nospam-message"><%= t(".no_spam") %></p>
+  </div>
+</section>
 
 <% unless Rails.env.test? %>
 <script>

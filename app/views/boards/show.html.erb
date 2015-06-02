@@ -4,40 +4,39 @@
 
 <div data-role="board" data-board-id="<%= @board.id %>">
 
-  <section class="board-header-section clearfix">
-    <div class="board-info clearfix">
-      <a class="go-back-to-boards" href="<%= boards_path %>">
-        <%= t("accessibility.go_back_to_boards") %>
-      </a>
-      <a class="board-title" target="_blank" href="<%= @board.repository_url %>">
-        <%= @board.title %>
-      </a>
-      <div class="board-description-container clearfix">
-        <%= render "markdown", text: @board.description %>
-      </div>
+<section class="board-header-section clearfix">
+  <div class="board-info clearfix">
+    <a class="go-back-to-boards" href="<%= boards_path %>">
+      <%= t("accessibility.go_back_to_boards") %>
+    </a>
+    <a class="board-title" target="_blank" href="<%= @board.repository_url %>">
+      <%= @board.title %>
+    </a>
+    <div class="board-description-container clearfix">
+      <%= render "markdown", text: @board.description %>
     </div>
-    <div class="board-actions clearfix">
-      <a class="open-board-settings" href="#">Settings</a>
-    </div>
-  </section>
+  </div>
+  <div class="board-actions clearfix">
+    <a class="open-board-settings" href="#">Settings</a>
+  </div>
+</section>
 
-  <section class="review-list-section clearfix">
-    <%= render @board.lists[2], list_class: "review" %>
-  </section>
-  <section class="doing-list-section clearfix">
-    <%= render @board.lists[1], list_class: "doing" %>
-  </section>
+<section class="review-list-section clearfix">
+  <%= render @board.lists[2], list_class: "review" %>
+</section>
+<section class="doing-list-section clearfix">
+  <%= render @board.lists[1], list_class: "doing" %>
+</section>
 
-  <section class="create-card-section clearfix" id="new" data-ux-create-card-section>
-    <%= render "cards/form", card: Card.new, board: @board %>
-  </section>
+<section class="create-card-section clearfix" id="new" data-ux-create-card-section>
+  <%= render "cards/form", card: Card.new, board: @board %>
+</section>
 
-  <section class="todo-list-section clearfix">
-    <%= render @board.lists[0], list_class: "todo" %>
-  </section>
+<section class="todo-list-section clearfix">
+  <%= render @board.lists[0], list_class: "todo" %>
+</section>
 
 </div>
-
 
 <% if false %>
   <%= form_for [:toggle_subscription, @board] do |f| %>
