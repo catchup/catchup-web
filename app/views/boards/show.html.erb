@@ -37,10 +37,3 @@
 </section>
 
 </div>
-
-<% if false %>
-  <%= form_for [:toggle_subscription, @board] do |f| %>
-    <%= check_box_tag :subscribe, "", @board.has_subscriber?(current_user) %>
-    <%= button_tag t(".submit") %>
-  <% end %>
-<% end %>
