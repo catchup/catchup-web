@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
+  resources :applinks, only: [:index]
+
   root to: "welcome#index"
 
   # Forwarding

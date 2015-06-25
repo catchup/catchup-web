@@ -29,13 +29,20 @@ body {
 }
 
 .boards-_board,
-.boards-_form,
 .boards-_settings,
 .markdown {
   font-weight: 300;
   color: rgb(17, 17, 17);
 }
 
+.boards-_form {
+  background-color: rgb(255, 255, 255);
+  font-weight: 300;
+  color: rgb(17, 17, 17);
+}
+
+.applinks-_heroku_form,
+.applinks-index,
 .boards-_linked_boards,
 .boards-_new_boards,
 .boards-_no_boards {
@@ -276,6 +283,7 @@ body {
   background-color: rgb(255, 241, 153);
 }
 
+.app-link,
 .board-card,
 .new-board-card {
   float: left;
@@ -339,6 +347,7 @@ body {
 }
 
 .boards-container,
+.heroku-apps-container,
 .personal-board-settings-section {
   float: left;
   clear: both;
@@ -926,6 +935,19 @@ body {
   color: rgba(0, 0, 0, 0);
 }
 
+.heroku-app-header {
+  float: left;
+  width: 59.5833333333%;
+  margin: 4px 0 0 10%;
+}
+
+.heroku-app-title {
+  float: left;
+  font-size: 1.667em;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+}
+
 .heroku-link-status-linked,
 .team-board-heroku-link-description {
   float: left;
@@ -1155,12 +1177,14 @@ body {
 
 .board-actions,
 .card-actions,
+.heroku-app-form,
 .new-board-form {
   float: left;
   width: 18.8333333333%;
   margin-left: 1.58073%;
 }
 
+.heroku-app-form .submit,
 .new-board-form .submit {
   width: 100%;
 }
@@ -1181,6 +1205,7 @@ body {
   padding-bottom: 80px;
 }
 
+.applinks-section,
 .linked-boards-section,
 .no-boards-section {
   float: left;
@@ -1334,6 +1359,7 @@ body {
   color: rgb(17, 17, 17);
 }
 
+.placeholder__applinks-_heroku_form,
 .placeholder__boards-_board,
 .placeholder__boards-_form {
   float: left;
@@ -2190,6 +2216,20 @@ body {
 }
 
 @media(max-width: 414px) {
+  .app-link .heroku-app-form,
+  .new-board-card .new-board-form {
+    clear: both;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 4.99321%;
+  }
+
+  .app-link .heroku-app-header {
+    width: 90%;
+    margin-top: 0;
+    margin-left: 4.99321%;
+  }
+
   .archive-card-form .archive-card {
     float: left;
     width: 100%;
@@ -2390,6 +2430,7 @@ body {
   .create-card-section .placeholder__cards-_form,
   .edit-card-form,
   .edit-card-section .placeholder__cards-_inline_form,
+  .heroku-apps-container .placeholder__applinks-_heroku_form,
   .linked-boards-container .placeholder__boards-_linked_boards,
   .new-board-card .new-board-card-header,
   .new-boards-container .placeholder__boards-_new_boards,
@@ -2438,6 +2479,10 @@ body {
     padding-left: 8px;
   }
 
+  .heroku-app-header .heroku-app-title {
+    font-size: 1.111em;
+  }
+
   .inline-comment-form .cancel-update-comment {
     position: relative;
     float: left;
@@ -2482,6 +2527,7 @@ body {
     font-size: 1.556em;
   }
 
+  .applinks-section .heroku-apps-container,
   .linked-boards-section .boards-container,
   .new-boards-section .boards-container {
     margin-top: 40px;
@@ -2490,13 +2536,6 @@ body {
   .list-title {
     margin-left: 4.99321%;
     font-size: 1.222em;
-  }
-
-  .new-board-card .new-board-form {
-    clear: both;
-    width: 90%;
-    margin-top: 10px;
-    margin-left: 4.99321%;
   }
 
   .new-board-card-header .board-description {
@@ -2508,6 +2547,7 @@ body {
     padding-bottom: 120px;
   }
 
+  .applinks-section,
   .linked-boards-section,
   .new-boards-section,
   .no-boards-section {
@@ -2515,6 +2555,7 @@ body {
     padding-bottom: 40px;
   }
 
+  .applinks-section .section-title,
   .linked-boards-section .section-title,
   .new-boards-section .section-title,
   .no-boards-section .section-title {

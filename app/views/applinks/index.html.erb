@@ -1,0 +1,8 @@
+<section class="applinks-section clearfix">
+  <h2 class="section-title">Below is list of all Heroku apps available to you. Select one to link it to board so you can create review apps and ship!</h2>
+  <div class="heroku-apps-container clearfix">
+    <%= render partial: "heroku_form",
+               collection: @heroku_apps, as: :app,
+               spacer_template: "separator" %>
+  </div>
+</section>
