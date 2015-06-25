@@ -1,6 +1,6 @@
 body {
-  font: 100 1em/1.48 'Source Sans Pro';
-  color: rgb(0, 0, 0);
+  font: 100 1.125em/1.48 'Source Sans Pro';
+  color: rgb(17, 17, 17);
 }
 
 .__fix__-body-reset {
@@ -30,6 +30,7 @@ body {
 
 .boards-_board,
 .boards-_form,
+.boards-_settings,
 .markdown {
   font-weight: 300;
   color: rgb(17, 17, 17);
@@ -120,7 +121,7 @@ body {
   min-height: nonepx;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.875em;
+  font-size: 0.778em;
   font-weight: 600;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -146,7 +147,7 @@ body {
   margin: 14px 0 0 35px;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 3em;
+  font-size: 2.667em;
   font-weight: 200;
   line-height: 1.38;
   color: rgb(170, 170, 170);
@@ -156,7 +157,7 @@ body {
   display: block;
   float: right;
   border-radius: 3px;
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -211,7 +212,7 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -240,11 +241,11 @@ body {
   min-width: none;
   height: 568px;
   min-height: nonepx;
-  background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/bg-landing.png');
-  background-image:    -moz-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/bg-landing.png');
-  background-image:      -o-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/bg-landing.png');
-  background-image:     -ms-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/bg-landing.png');
-  background-image:         linear-gradient(360deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/bg-landing.png');
+  background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
+  background-image:    -moz-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
+  background-image:      -o-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
+  background-image:     -ms-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
+  background-image:         linear-gradient(360deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
   background-repeat: repeat, no-repeat;
   background-size: 100% 100%, cover;
   background-position: 0% 0%, center center;
@@ -285,7 +286,7 @@ body {
 
 .board-card-header .board-title {
   margin-left: 8px;
-  font-size: 1.875em;
+  font-size: 1.667em;
   font-weight: 900;
   text-decoration: underline;
   color: rgb(0, 116, 217);
@@ -296,7 +297,7 @@ body {
   clear: both;
   width: 100%;
   margin-top: 8px;
-  font-size: 1.125em;
+  font-size: 1em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -313,20 +314,22 @@ body {
   height: 60px;
 }
 
-.board-header-section {
+.board-info .board-title {
+  display: block;
+  width: 100%;
+  font-size: 1.333em;
+  font-weight: 700;
+  text-decoration: underline;
+  color: rgb(0, 116, 217);
+}
+
+.board-settings-section {
   float: left;
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.board-info .board-title {
-  display: block;
-  width: 100%;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-decoration: underline;
-  color: rgb(0, 116, 217);
+  background-color: rgb(246, 246, 246);
+  box-shadow: 0 -1px 3px rgb(170, 170, 170) inset;
 }
 
 .board-title {
@@ -335,7 +338,8 @@ body {
   line-height: 1.38;
 }
 
-.boards-container {
+.boards-container,
+.personal-board-settings-section {
   float: left;
   clear: both;
   width: 100%;
@@ -344,7 +348,7 @@ body {
 
 .body-reset-as {
   float: left;
-  font-size: 1em;
+  font-size: 0.889em;
   color: rgb(0, 0, 0);
 }
 
@@ -380,7 +384,7 @@ body {
 .body-reset-bh {
   float: left;
   clear: both;
-  font-size: 1em;
+  font-size: 0.889em;
   color: rgb(0, 0, 0);
 }
 
@@ -389,13 +393,29 @@ body {
   width: 100%;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(170, 170, 170);
 }
 
-.cancel-create-card,
+.cancel-create-card {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin: 32px 0 0 -8.85417%;
+  border-radius: 3px;
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  font: 400 0.889em/1.38 Helvetica;
+  text-align: left;
+  text-indent: -9999px;
+  color: rgb(0, 0, 0);
+}
+
 .cancel-update-card {
   display: block;
   float: left;
@@ -403,11 +423,11 @@ body {
   height: 24px;
   margin: 32px 0 0 -8.95671%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 1em/1.38 Helvetica;
+  font: 400 0.889em/1.38 Helvetica;
   text-align: left;
   text-indent: -9999px;
   color: rgb(0, 0, 0);
@@ -426,7 +446,7 @@ body {
   background-color: rgb(221, 221, 221);
   box-shadow: 0 3px 0 rgb(170, 170, 170);
   text-shadow: 0 1px 0 rgb(255, 255, 255);
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: hsl(0, 0%, 47%);
@@ -443,7 +463,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -481,7 +501,7 @@ body {
   position: relative;
   float: left;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.333em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
 }
@@ -512,7 +532,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   text-shadow: 0 -1px 0 rgb(255, 255, 255);
   font-style: normal;
-  font-size: 3em;
+  font-size: 2.667em;
   line-height: 1.38;
   text-align: center;
   color: rgb(0, 116, 217);
@@ -531,6 +551,23 @@ body {
   -o-filter: none;
   -ms-filter: none;
   filter: none;
+}
+
+.close-board-settings {
+  display: block;
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-left: -8.95996%;
+  border-radius: 3px;
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  font: 400 0.889em/1.38 Helvetica;
+  text-align: left;
+  text-indent: -9999px;
+  color: rgb(0, 0, 0);
 }
 
 .comment {
@@ -595,7 +632,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -606,11 +643,12 @@ body {
   position: relative;
   float: left;
   margin-top: -30px;
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
 }
 
+.board-header-section,
 .card-header-section,
 .comments-container {
   float: left;
@@ -626,7 +664,7 @@ body {
   clear: both;
   margin-top: 12px;
   border-radius: 3px;
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -640,7 +678,7 @@ body {
   float: left;
   margin-left: 4px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 0.889em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -658,7 +696,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -676,7 +714,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -695,7 +733,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -722,7 +760,7 @@ body {
   background-color: rgb(255, 133, 27);
   box-shadow: 0 3px 0 rgb(180, 84, 0);
   text-shadow: 0 -1px 0 rgb(180, 84, 0);
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -741,11 +779,11 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/flash-dismiss.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/flash-dismiss.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  font: 400 1em/1.38 Helvetica;
+  font: 400 0.889em/1.38 Helvetica;
   text-align: center;
   color: rgb(0, 0, 0);
 }
@@ -757,7 +795,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(46, 204, 64);
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
   overflow: hidden;
@@ -770,13 +808,14 @@ body {
   clear: both;
   margin-top: 4px;
   border-radius: 3px;
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
 }
 
+.board-settings-container,
 .card-form,
 .edit-card-form {
   position: relative;
@@ -800,7 +839,7 @@ body {
   float: right;
   clear: both;
   border-radius: 3px;
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -879,12 +918,31 @@ body {
   width: 22px;
   height: 22px;
   margin: 6px 0 0 -32px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/go-back.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/go-back.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 1em/1.38 Helvetica;
+  font: 400 0.889em/1.38 Helvetica;
   color: rgba(0, 0, 0, 0);
+}
+
+.heroku-link-status-linked,
+.team-board-heroku-link-description {
+  float: left;
+  clear: both;
+  width: 100%;
+  font-size: 1em;
+  word-spacing: 2px;
+  color: rgb(17, 17, 17);
+}
+
+.heroku-link-status-not-linked {
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  word-spacing: 2px;
+  color: rgb(17, 17, 17);
 }
 
 .huge {
@@ -897,9 +955,13 @@ body {
 
 .card-title-container,
 .create-review-form-full,
+.heroku-link-status-wrapper,
 .inline-comment-form,
 .no-boards-container,
-.shipit-form {
+.personal-board-settings-header,
+.shipit-form,
+.team-board-settings-header,
+.team-board-settings-section {
   float: left;
   width: 100%;
 }
@@ -946,6 +1008,25 @@ body {
 .large .avatar {
 }
 
+.link-to-heroku {
+  display: block;
+  float: left;
+  clear: both;
+  width: 226px;
+  height: 48px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgb(0, 116, 217);
+  box-shadow: 0 3px 0 rgb(0, 31, 63);
+  text-shadow: 0 -1px 0 rgb(0, 31, 63);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(255, 255, 255);
+}
+
 .comments-wrapper,
 .linked-boards-container,
 .new-boards-container {
@@ -957,7 +1038,7 @@ body {
 .list-title {
   float: left;
   margin-left: 10%;
-  font-size: 2.25em;
+  font-size: 2em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
 }
@@ -969,7 +1050,7 @@ body {
   margin-top: 202px;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(170, 170, 170);
@@ -992,7 +1073,7 @@ body {
   border-style: solid;
   border-radius: 3px;
   font-family: DroidSansMono;
-  font-size: 0.875em;
+  font-size: 0.778em;
   font-weight: normal;
   word-spacing: 2px;
   color: rgb(68, 68, 68);
@@ -1008,7 +1089,7 @@ body {
   margin: 8px 0 0 5%;
   padding-left: 18px;
   border-left: 4px solid rgb(221, 221, 221);
-  font-size: 1.125em;
+  font-size: 1em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1018,7 +1099,7 @@ body {
   float: left;
   width: 95%;
   margin: 4px 0 0 5%;
-  font-size: 1.125em;
+  font-size: 1em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1035,7 +1116,7 @@ body {
   float: left;
   width: 100%;
   margin-top: 8px;
-  font-size: 1.125em;
+  font-size: 1em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1052,7 +1133,7 @@ body {
   float: left;
   width: 81.081081081%;
   margin: 3px 0 0 6.07052%;
-  font-size: 1.125em;
+  font-size: 1em;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
@@ -1067,7 +1148,7 @@ body {
 
 .new-board-card-header .board-title {
   margin-left: 8px;
-  font-size: 1.875em;
+  font-size: 1.667em;
   font-weight: 900;
   color: rgb(17, 17, 17);
 }
@@ -1078,6 +1159,10 @@ body {
   float: left;
   width: 18.8333333333%;
   margin-left: 1.58073%;
+}
+
+.new-board-form .submit {
+  width: 100%;
 }
 
 .new-boards-section {
@@ -1113,7 +1198,7 @@ body {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 0.875em;
+  font-size: 0.778em;
   font-weight: 400;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1143,7 +1228,7 @@ body {
   display: block;
   float: right;
   border-radius: 3px;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   line-height: 1.38;
   text-decoration: underline;
@@ -1158,11 +1243,11 @@ body {
   width: 22px;
   height: 22px;
   margin-top: 10px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/cb7336aaff216f39c53a2f96d1ad868933a512dc/github-small-black.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/github-small-black.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font-size: 1em;
+  font-size: 0.889em;
   font-weight: 400;
   line-height: 1.38;
   color: rgba(0, 0, 0, 0);
@@ -1174,7 +1259,7 @@ body {
   clear: both;
   width: 90%;
   margin-left: 5%;
-  font-size: 1.063em;
+  font-size: 0.944em;
   font-weight: 600;
   line-height: 1.38;
   text-align: center;
@@ -1188,11 +1273,65 @@ body {
   position: relative;
   float: left;
   margin: 4px 0 0 8px;
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
+}
+
+.personal-board-notifications,
+.team-board-heroku-link {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.personal-board-notifications-form {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.personal-board-notifications-form .submit {
+  clear: both;
+  width: 144px;
+  margin-top: 20px;
+}
+
+.personal-board-notifications-title,
+.team-board-heroku-link-title {
+  float: left;
+  width: 100%;
+  font-size: 1.111em;
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+}
+
+.personal-board-settings-description,
+.team-board-settings-description {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 8px;
+  font-size: 1.333em;
+  font-weight: 700;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
+}
+
+.personal-board-settings-title,
+.team-board-settings-title {
+  float: left;
+  width: 100%;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.38;
+  color: rgb(17, 17, 17);
 }
 
 .placeholder__boards-_board,
@@ -1212,6 +1351,13 @@ body {
   height: 200px;
   margin-left: 9.9987%;
   background-color: rgb(222, 222, 222);
+}
+
+.placeholder__boards-_settings {
+  float: left;
+  width: 100%;
+  height: 200px;
+  background-color: rgb(170, 170, 170);
 }
 
 .placeholder__button {
@@ -1274,11 +1420,32 @@ body {
   float: left;
 }
 
+.receive-notifications-checkbox {
+  display: block;
+  float: left;
+  margin-top: 6px;
+}
+
+.receive-notifications-label {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.receive-notifications-text {
+  display: block;
+  float: left;
+  margin-left: 6px;
+  font-size: 1em;
+  word-spacing: 2px;
+  color: rgb(17, 17, 17);
+}
+
 .review-app-label {
   position: relative;
   float: left;
   margin: 4px 0 0 10%;
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -1300,7 +1467,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(255, 133, 27);
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
   overflow: hidden;
@@ -1310,7 +1477,7 @@ body {
   float: left;
   width: 80%;
   margin-left: 10%;
-  font-size: 2.25em;
+  font-size: 2em;
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1326,7 +1493,7 @@ body {
   background-color: rgb(0, 116, 217);
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1348,7 +1515,7 @@ body {
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
   font-style: normal;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1393,7 +1560,7 @@ body {
   box-shadow: 0 3px 0 rgb(147, 9, 116);
   text-shadow: 0 -1px 0 rgb(147, 9, 116);
   font-style: normal;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -1447,7 +1614,7 @@ body {
   padding-left: 60px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 3em;
+  font-size: 2.667em;
   font-weight: 900;
   line-height: 1.38;
   text-align: center;
@@ -1480,14 +1647,13 @@ body {
 .submit {
   display: block;
   float: left;
-  width: 100%;
   height: 48px;
   padding: 12px;
   border-radius: 3px;
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1507,7 +1673,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1529,7 +1695,7 @@ body {
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
   font-style: normal;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1562,6 +1728,15 @@ body {
   background-color: #2ecc40;
 }
 
+.team-board-heroku-link-wrapper {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgb(255, 220, 0);
+}
+
 .tiny {
   width: 36px;
   height: 36px;
@@ -1579,7 +1754,7 @@ body {
   padding-left: 20px;
   background-color: rgba(0, 0, 0, 0);
   font-style: normal;
-  font-size: 3em;
+  font-size: 2.667em;
   font-weight: 200;
   line-height: 1.38;
   text-align: center;
@@ -1608,7 +1783,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(170, 170, 170);
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   color: rgb(170, 170, 170);
   overflow: hidden;
@@ -1638,7 +1813,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1.125em;
+  font-size: 1em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1688,7 +1863,7 @@ body {
 .waiting-review-app-message {
   float: left;
   margin-left: 10%;
-  font-size: 1.25em;
+  font-size: 1.111em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
@@ -1724,6 +1899,33 @@ body {
   letter-spacing: inherit;
   word-spacing: inherit;
   color: rgb(0, 116, 217);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.heroku-link-status-linked strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
   opacity: 1;
   word-break: normal;
   word-wrap: normal;
@@ -1892,7 +2094,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    font-size: 1em;
+    font-size: 1.125em;
   }
 
   .board-header-section .board-actions,
@@ -1909,6 +2111,23 @@ body {
 
   .board-info .board-title {
     position: relative;
+  }
+
+  .board-settings-container .close-board-settings {
+    position: relative;
+  }
+
+  .board-settings-container .placeholder__boards-_settings {
+    position: relative;
+    clear: both;
+    width: 99.9009146341%;
+    margin-top: -24px;
+    margin-left: -0.03052%;
+  }
+
+  .board-settings-section .board-settings-container {
+    width: 79.9987792968%;
+    margin-left: 10.02401%;
   }
 
   .card-info .card-title {
@@ -1986,7 +2205,7 @@ body {
 
   .board-card-header .board-description {
     margin-top: 11px;
-    font-size: 1.063em;
+    font-size: 0.944em;
     line-height: 1.38;
   }
 
@@ -1994,7 +2213,7 @@ body {
   .new-board-card-header .board-title {
     position: relative;
     margin-left: 4px;
-    font-size: 1.25em;
+    font-size: 1.111em;
   }
 
   .board-card-header .open-in-github,
@@ -2027,7 +2246,7 @@ body {
   .board-info .board-title {
     position: relative;
     width: 99.8406441331%;
-    font-size: 1.188em;
+    font-size: 1.056em;
     font-weight: 600;
   }
 
@@ -2038,6 +2257,21 @@ body {
     height: 18px;
     margin-top: 4px;
     margin-left: 0;
+  }
+
+  .board-settings-container .close-board-settings {
+    position: relative;
+  }
+
+  .board-settings-container .placeholder__boards-_settings {
+    position: relative;
+    width: 99.7552710843%;
+    margin-left: -0.17928%;
+  }
+
+  .board-settings-section .board-settings-container {
+    width: 79.9969806763%;
+    margin-left: 10.14493%;
   }
 
   .card-actions .copy-branch-name {
@@ -2060,7 +2294,7 @@ body {
   .card-info .card-title {
     position: relative;
     width: 99.8406441331%;
-    font-size: 1.188em;
+    font-size: 1.056em;
     font-weight: 600;
   }
 
@@ -2077,7 +2311,7 @@ body {
   .card-title-container .review-card-title,
   .card-title-container .todo-card-title {
     max-height: 46px;
-    font-size: 1.063em;
+    font-size: 0.944em;
     font-weight: 600;
   }
 
@@ -2098,7 +2332,7 @@ body {
   .edit-card-form .card-description,
   .inline-comment-form .comment-text {
     height: 160px;
-    font-size: 1.063em;
+    font-size: 0.944em;
     line-height: 1.38;
   }
 
@@ -2177,7 +2411,7 @@ body {
     position: relative;
     clear: both;
     width: 99.8406441331%;
-    font-size: 1.188em;
+    font-size: 1.056em;
     font-weight: 600;
   }
 
@@ -2194,7 +2428,7 @@ body {
   .flash .message {
     width: 79.648241206%;
     margin-left: 7.0351%;
-    font-size: 1.063em;
+    font-size: 0.944em;
     line-height: 1.38;
   }
 
@@ -2228,7 +2462,7 @@ body {
     width: 90%;
     margin-top: 20px;
     margin-left: 4.99321%;
-    font-size: 2.625em;
+    font-size: 2.333em;
   }
 
   .landing .signin-container {
@@ -2245,7 +2479,7 @@ body {
     width: 89.9984903381%;
     margin-top: -180px;
     margin-left: 4.99321%;
-    font-size: 1.75em;
+    font-size: 1.556em;
   }
 
   .linked-boards-section .boards-container,
@@ -2255,7 +2489,7 @@ body {
 
   .list-title {
     margin-left: 4.99321%;
-    font-size: 1.375em;
+    font-size: 1.222em;
   }
 
   .new-board-card .new-board-form {
@@ -2266,7 +2500,7 @@ body {
   }
 
   .new-board-card-header .board-description {
-    font-size: 1.063em;
+    font-size: 0.944em;
     line-height: 1.38;
   }
 
@@ -2286,7 +2520,7 @@ body {
   .no-boards-section .section-title {
     width: 90%;
     margin-left: 4.99321%;
-    font-size: 1.375em;
+    font-size: 1.222em;
   }
 
   .review-app-section {
@@ -2333,7 +2567,7 @@ body {
 
   .signup-container .beta-warning {
     margin-top: 8px;
-    font-size: 1.063em;
+    font-size: 0.944em;
     line-height: 1.38;
   }
 
@@ -2358,7 +2592,7 @@ body {
 
   .signup-container .title,
   .subscribe-container .title {
-    font-size: 1.75em;
+    font-size: 1.556em;
     font-weight: 900;
   }
 
@@ -2378,14 +2612,14 @@ body {
 
   .waiting-review-app-section .waiting-review-app-message {
     margin-left: 4.99321%;
-    font-size: 1.063em;
+    font-size: 0.944em;
     font-weight: 600;
   }
 }
 
 @media(max-width: 320px) {
   body {
-    font-size: 1em;
+    font-size: 1.125em;
   }
 
   .bg-signup .signup-container {

@@ -4,6 +4,13 @@
 
 <div data-role="board" data-board-id="<%= @board.id %>">
 
+<section class="board-settings-section clearfix" data-ux-board-settings-section>
+  <div class="board-settings-container clearfix">
+    <button class="close-board-settings" type="button" data-ux-close-board-settings>close</button>
+    <%= render "settings" %>
+  </div>
+</section>
+
 <section class="board-header-section clearfix">
   <div class="board-info clearfix">
     <a class="go-back-to-boards" href="<%= boards_path %>">
@@ -17,7 +24,7 @@
     </div>
   </div>
   <div class="board-actions clearfix">
-    <a class="open-board-settings" href="#">Settings</a>
+    <a class="open-board-settings" href="#" data-ux-open-board-settings>Settings</a>
   </div>
 </section>
 

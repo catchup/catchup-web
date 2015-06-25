@@ -83,9 +83,6 @@ en:
       doing-placeholder: Better keep shipping…
       review-placeholder: Let’s get some feedback!
       tutorial-text: Heroku API key below is shared among everyone who has access to this board and it will be used solely to create a new fork (app, configs, data and addins) in Heroku when you will ask to preview a card.
-    user_settings:
-      receive-notifications: Receive personal email notifications when things happen.
-      submit: Save
     settings:
       app-name-placeholder: Original Heroku app name to be forked (e.g., foobar)
       repository-placeholder: https://github.com/user/repo
