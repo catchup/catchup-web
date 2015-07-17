@@ -1,46 +1,55 @@
-<div class="bg-landing"></div>
-
-<header class="landing clearfix">
-  <h1 class="catchup"><%= t("application.name") %></h1>
-  <div class="signin-container clearfix">
-    <p class="already-user"><%= t(".already_user") %></p>
-    <a class="signin" href="/auth/github"><%= t(".sign_in") %></a>
-  </div>
-  <p class="slogan"><%= t(".slogan") %></p>
+<header class="welcome-header clearfix">
+  <img class="image catchup-logo" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/logo.svg">
+  <h1 class="slogan">Simple flow meets rich feedback.</h1>
+  <a class="signin-link" href="/auth/github">Sign in here if you are already a user</a>
 </header>
 
-<div class="video-container clearfix">
-  <div class="video-placeholder"></div>
-</div>
+<section class="signup-section clearfix">
+  <h1 class="signup-title">Would you like to give it a try?</h1>
+  <a class="signup-button" target="_blank" href="/auth/github">Sign up with GitHub</a>
+  <p class="signup-text">We're letting you in, although you should note that Catchup is in early stages.<br>We use it every day ourselves and we would like to hear anything you would like to say about the service.</p>
+</section>
 
-<div class="bg-signup clearfix">
-  <div class="signup-container clearfix">
-    <p class="title"><%= t(".ready") %></p>
-    <a class="signup-github" target="_blank" href="/auth/github">
-      <%= t(".sign_up") %>
-    </a>
-    <p class="beta-warning">
-      <%= t(".warning", email: t("application.email")).html_safe %>
-    </p>
+<section class="tutorial clearfix">
+  <h1 class="tutorial-title">All you have to know is below in 7 quick steps:</h1>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">1. Sign up with GitHub</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
   </div>
-</div>
-
-<section class="newsletter-section">
-  <div class="subscribe-container clearfix">
-    <p class="title"><%= t(".want_more") %></p>
-    <a class="subscribe"
-       target="_blank" href='<%= t("application.newsletter_url") %>'>
-       <%= t(".subscribe_newsletter") %>
-    </a>
-    <p class="nospam-message"><%= t(".no_spam") %></p>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">2. Create a Catchup board for one of your repositories</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
+  </div>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">3. Link to your Heroku app</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
+  </div>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">4. Add to-dos using Markdown, prioritize with drag & drop</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
+  </div>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">5. Work with unique branches and create pull requests on GitHub</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
+  </div>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">6. Review and share production-like apps on Heroku for each branch</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
+  </div>
+  <div class="tutorial-step clearfix">
+    <h2 class="video-title">7. Ship features fast with a single click!</h2>
+    <img class="image tutorial-video" src="https://cdn.rawgit.com/catchup/catchup-web-assets/6fb5f5c68cfb11e5eb29169de6a5f26d1950b839/placeholder.gif">
   </div>
 </section>
 
-<% unless Rails.env.test? %>
-<script>
-$.post(
-  "<%= Forwarder::URLHelpers.store_redirect_url %>",
-  { redirect_url: "<%= auth_github_callback_url %>" }
-)
-</script>
-<% end %>
+<section class="signup-section clearfix">
+  <h1 class="signup-title">Ready to give it a try?</h1>
+  <a class="signup-button" target="_blank" href="/auth/github">Sign up with GitHub</a>
+  <p class="signup-text">We're letting you in, although you should note that Catchup is in early stages.<br>We use it every day ourselves and we would like to hear anything you would like to say about the service.</p>
+</section>
+
+<section class="newsletter-section clearfix">
+  <h1 class="newsletter-title">Would you like to know about new features?</h1>
+  <a class="subscribe-button" target="_blank" href="#">Subscribe to newsletter</a>
+  <p class="newsletter-text">We will e-mail you only we have something really interesting to share.<br>We promise you won't get any spam from us, ever!</p>
+</section>
