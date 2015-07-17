@@ -1585,7 +1585,7 @@ body {
 .tutorial-video {
   clear: both;
   width: 53.3333333333%;
-  margin: 20px 0 0 23.33203%;
+  margin: 20px 0 0 23.33073%;
 }
 
 .update-comment {
@@ -1959,6 +1959,33 @@ body {
   white-space: normal;
 }
 
+.signup-text a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: underline;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: rgb(0, 116, 217);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
 @media(max-width: 1024px) {
   .site-header .main-action-container {
     width: 32.421875%;
@@ -2036,11 +2063,10 @@ body {
   }
 
   .newsletter-section .newsletter-text,
-  .signup-section .signup-text,
-  .welcome-header .signin-link {
+  .signup-section .signup-text {
     width: 90%;
     margin-left: 4.99878%;
-    font-size: 1.063em;
+    font-size: 0.938em;
     line-height: 1.38;
   }
 
@@ -2075,6 +2101,10 @@ body {
     margin-left: 9.99756%;
   }
 
+  .signup-section {
+    margin-top: 20px;
+  }
+
   .site-header .main-action-container {
     width: 33.984375%;
     margin-right: 15.23234%;
@@ -2093,9 +2123,8 @@ body {
     margin-left: 9.99349%;
   }
 
-  .signup-section,
   .tutorial {
-    margin-top: 20px;
+    margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -2108,10 +2137,10 @@ body {
   }
 
   .tutorial-step .image {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-top: 10px;
-    margin-left: 4.99878%;
+    margin-left: 0;
   }
 
   .tutorial-step .video-title {
@@ -2135,6 +2164,13 @@ body {
     width: 66.9270833333%;
     height: auto;
     margin-left: 16.53646%;
+  }
+
+  .welcome-header .signin-link {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.063em;
+    line-height: 1.38;
   }
 
   .welcome-header .slogan {
