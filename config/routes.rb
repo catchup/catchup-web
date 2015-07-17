@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get "/auth/signout", to: "authentication#signout"
   get "/auth/github/callback", to: "authentication#github"
+  get "/auth/heroku/callback", to: "authentication#heroku"
   get "/auth/failure", to: "authentication#failure"
 
   resources :boards, only: [:create, :index, :show, :update] do

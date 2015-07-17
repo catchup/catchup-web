@@ -13,7 +13,10 @@
         <p class="heroku-link-status-not-linked">This board is not yet linked to Heroku. Let's take care of that…</p>
         <p class="heroku-link-status-linked">This board is linked to <strong>catchup-web</strong> using <strong>example@catchup.io</strong>'s account on Heroku. You can change that if needed.</p>
       </div>
-      <a class="link-to-heroku" href="#">Link to Heroku</a>
+
+      <%= link_to "Link to Heroku",
+                  "/auth/heroku?board_id=#{@board.id}",
+                  class: "link-to-heroku" %>
     </div>
   </div>
 </section>
