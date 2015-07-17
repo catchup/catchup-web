@@ -44,6 +44,10 @@ class Board < ActiveRecord::Base
     "https://github.com/#{title}"
   end
 
+  def linked_to_heroku?
+    app_name.present? && heroku_api_key.present?
+  end
+
   private
 
   def add_sample_lists

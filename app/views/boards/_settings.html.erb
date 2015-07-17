@@ -10,8 +10,15 @@
     <p class="team-board-heroku-link-description">When a board is linked to Heroku all kinds of good things happen. For instance, when linked to Heroku, you can create ad hoc review apps for any given card.</p>
     <div class="team-board-heroku-link-wrapper clearfix">
       <div class="heroku-link-status-wrapper clearfix">
-        <p class="heroku-link-status-not-linked">This board is not yet linked to Heroku. Let's take care of that…</p>
-        <p class="heroku-link-status-linked">This board is linked to <strong>catchup-web</strong> using <strong>example@catchup.io</strong>'s account on Heroku. You can change that if needed.</p>
+        <% if @board.linked_to_heroku? %>
+          <p class="heroku-link-status-linked">
+            This board is linked to <strong><%= @board.app_name %></strong> on Heroku.
+            You can change that if needed.
+          </p>
+        <% else %>
+          <p class="heroku-link-status-not-linked">
+            This board has not been linked yet to Heroku. Let's take care of that…</p>
+        <% end %>
       </div>
 
       <%= link_to "Link to Heroku",

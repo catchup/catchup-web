@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
 
+    resources :applinks, only: [:index, :create]
+
     resources :cards, only: [:create, :show, :update] do
       match :move, on: :member, via: [:patch, :put]
       match :archive, on: :member, via: [:patch, :put]
@@ -21,7 +23,6 @@ Rails.application.routes.draw do
     resources :previews, only: :create
   end
 
-  resources :applinks, only: [:index]
 
   root to: "welcome#index"
 

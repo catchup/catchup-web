@@ -4,9 +4,12 @@
   <header class="heroku-app-header clearfix">
     <h3 class="heroku-app-title"><%= app.name %></h3>
   </header>
-  <form class="heroku-app-form clearfix">
-    <button class="submit">Link to board</button>
-  </form>
+
+  <%= form_tag({ url: board_applinks_url(board) }, class: "heroku-app-form clearfix") do %>
+    <%= hidden_field_tag :app_name, app.name %>
+    <%= hidden_field_tag :api_key, api_key %>
+    <%= submit_tag "Link to board", class: "submit" %>
+  <% end %>
 </article>
 
 </div>

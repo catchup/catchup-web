@@ -3,6 +3,7 @@
   <div class="heroku-apps-container clearfix">
     <%= render partial: "heroku_form",
                collection: @heroku_apps, as: :app,
-               spacer_template: "separator" %>
+               spacer_template: "separator",
+               locals: { board: @board, api_key: @api_key } %>
   </div>
 </section>
