@@ -1,0 +1,8 @@
+<% unless Rails.env.test? %>
+<script>
+$.post(
+  "<%= Forwarder::URLHelpers.store_redirect_url %>",
+  { redirect_url: "<%= redirect_url %>" }
+)
+</script>
+<% end %>

@@ -135,6 +135,9 @@ GEM
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
+    omniauth-heroku (0.2.0)
+      omniauth (~> 1.2)
+      omniauth-oauth2 (~> 1.2)
     omniauth-oauth2 (1.3.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -276,6 +279,7 @@ DEPENDENCIES
   mocha
   octokit
   omniauth-github!
+  omniauth-heroku
   passenger
   pg
   platform-api

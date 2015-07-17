@@ -27,6 +27,7 @@ gem 'zeroclipboard-rails'
 
 # Authentication
 gem 'omniauth-github', :github => 'intridea/omniauth-github'
+gem 'omniauth-heroku'
 
 group :development do
   gem 'byebug'
