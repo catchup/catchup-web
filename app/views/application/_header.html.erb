@@ -1,14 +1,14 @@
 <div class="application-_header clearfix">
 
 <header class="site-header clearfix" data-ux-header>
-  <div class="placeholder__logo"></div>
-  <div class="main-action-container clearfix">
-    <%= content_for :main_action %>
-  </div>
   <div class="user-profile clearfix">
     <div class="avatars-container clearfix">
       <%= render Avatar.small(current_user) %>
     </div>
+  </div>
+  <img class="catchup-icon" src="https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/icon.svg">
+  <div class="main-action-container clearfix">
+    <%= content_for :main_action %>
   </div>
 </header>
 
