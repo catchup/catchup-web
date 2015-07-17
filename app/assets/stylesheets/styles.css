@@ -1,5 +1,5 @@
 body {
-  font: 100 1.125em/1.48 'Source Sans Pro';
+  font: 100 1em/1.48 'Source Sans Pro';
   color: rgb(17, 17, 17);
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .boards-_form {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 220, 0);
   font-weight: 300;
   color: rgb(17, 17, 17);
 }
@@ -93,27 +93,9 @@ body {
 }
 
 .welcome-index {
-  min-width: none;
-  min-height: nonepx;
   background-color: rgb(255, 255, 255);
   font-weight: 300;
-  line-height: 1.38;
   color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
 }
 
 .alert {
@@ -121,40 +103,12 @@ body {
   background-color: rgb(255, 133, 27);
 }
 
-.already-user {
-  float: left;
-  width: 100%;
-  min-width: none;
-  min-height: nonepx;
-  background-color: rgba(0, 0, 0, 0);
-  font-style: normal;
-  font-size: 0.778em;
-  font-weight: 600;
-  text-align: center;
-  color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
 .and {
   float: left;
   margin: 14px 0 0 35px;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 2.667em;
+  font-size: 3em;
   font-weight: 200;
   line-height: 1.38;
   color: rgb(170, 170, 170);
@@ -164,7 +118,7 @@ body {
   display: block;
   float: right;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -210,79 +164,6 @@ body {
   background-color: rgb(221, 221, 221);
 }
 
-.beta-warning {
-  float: left;
-  clear: both;
-  width: 100%;
-  min-width: none;
-  min-height: nonepx;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  font-style: normal;
-  font-size: 1em;
-  text-align: center;
-  word-spacing: 2px;
-  color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
-.bg-landing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: none;
-  height: 568px;
-  min-height: nonepx;
-  background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
-  background-image:    -moz-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
-  background-image:      -o-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
-  background-image:     -ms-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
-  background-image:         linear-gradient(360deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 47.38095238095238%), url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/bg-landing.png');
-  background-repeat: repeat, no-repeat;
-  background-size: 100% 100%, cover;
-  background-position: 0% 0%, center center;
-  background-attachment: scroll, fixed;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
-.bg-signup {
-  float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: rgb(255, 241, 153);
-}
-
 .app-link,
 .board-card,
 .new-board-card {
@@ -294,7 +175,7 @@ body {
 
 .board-card-header .board-title {
   margin-left: 8px;
-  font-size: 1.667em;
+  font-size: 1.875em;
   font-weight: 900;
   text-decoration: underline;
   color: rgb(0, 116, 217);
@@ -305,7 +186,7 @@ body {
   clear: both;
   width: 100%;
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -325,7 +206,7 @@ body {
 .board-info .board-title {
   display: block;
   width: 100%;
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   text-decoration: underline;
   color: rgb(0, 116, 217);
@@ -357,7 +238,7 @@ body {
 
 .body-reset-as {
   float: left;
-  font-size: 0.889em;
+  font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
@@ -393,7 +274,7 @@ body {
 .body-reset-bh {
   float: left;
   clear: both;
-  font-size: 0.889em;
+  font-size: 1em;
   color: rgb(0, 0, 0);
 }
 
@@ -402,7 +283,7 @@ body {
   width: 100%;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(170, 170, 170);
@@ -415,11 +296,11 @@ body {
   height: 24px;
   margin: 32px 0 0 -8.85417%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: left;
   text-indent: -9999px;
   color: rgb(0, 0, 0);
@@ -432,11 +313,11 @@ body {
   height: 24px;
   margin: 32px 0 0 -8.95671%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: left;
   text-indent: -9999px;
   color: rgb(0, 0, 0);
@@ -455,7 +336,7 @@ body {
   background-color: rgb(221, 221, 221);
   box-shadow: 0 3px 0 rgb(170, 170, 170);
   text-shadow: 0 1px 0 rgb(255, 255, 255);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: hsl(0, 0%, 47%);
@@ -472,7 +353,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -510,7 +391,7 @@ body {
   position: relative;
   float: left;
   width: 100%;
-  font-size: 1.333em;
+  font-size: 1.5em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
 }
@@ -532,34 +413,19 @@ body {
   padding-bottom: 10px;
 }
 
-.catchup {
-  position: relative;
+.catchup-icon {
+  display: block;
   float: left;
-  min-width: none;
-  min-height: nonepx;
-  margin: 40px 0 0 10%;
-  background-color: rgba(0, 0, 0, 0);
-  text-shadow: 0 -1px 0 rgb(255, 255, 255);
-  font-style: normal;
-  font-size: 2.667em;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(0, 116, 217);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
+  clear: both;
+  width: 48px;
+  height: auto;
+  margin: 4px 0 0 2%;
+  overflow: hidden;
+}
+
+.catchup-logo {
+  width: 52.8333333333%;
+  margin-left: 23.58073%;
 }
 
 .close-board-settings {
@@ -569,11 +435,11 @@ body {
   height: 24px;
   margin-left: -8.95996%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: left;
   text-indent: -9999px;
   color: rgb(0, 0, 0);
@@ -641,7 +507,7 @@ body {
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 1px 3px rgb(170, 170, 170) inset;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 300;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -652,7 +518,7 @@ body {
   position: relative;
   float: left;
   margin-top: -30px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
 }
@@ -673,7 +539,7 @@ body {
   clear: both;
   margin-top: 12px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-align: left;
   text-decoration: underline;
@@ -687,7 +553,7 @@ body {
   float: left;
   margin-left: 4px;
   border-radius: 3px;
-  font-size: 0.889em;
+  font-size: 1em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -705,7 +571,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -723,7 +589,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -742,7 +608,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -769,7 +635,7 @@ body {
   background-color: rgb(255, 133, 27);
   box-shadow: 0 3px 0 rgb(180, 84, 0);
   text-shadow: 0 -1px 0 rgb(180, 84, 0);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -788,11 +654,11 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/flash-dismiss.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/flash-dismiss.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   text-align: center;
   color: rgb(0, 0, 0);
 }
@@ -804,7 +670,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(46, 204, 64);
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
   overflow: hidden;
@@ -817,7 +683,7 @@ body {
   clear: both;
   margin-top: 4px;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
@@ -848,7 +714,7 @@ body {
   float: right;
   clear: both;
   border-radius: 3px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   text-align: center;
   text-decoration: underline;
@@ -912,7 +778,7 @@ body {
 
 .founders {
   position: absolute;
-  top: 168px;
+  top: 100px;
   left: 0;
   right: 0;
   width: 278px;
@@ -927,11 +793,11 @@ body {
   width: 22px;
   height: 22px;
   margin: 6px 0 0 -32px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/go-back.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/go-back.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font: 400 0.889em/1.38 Helvetica;
+  font: 400 1em/1.38 Helvetica;
   color: rgba(0, 0, 0, 0);
 }
 
@@ -943,7 +809,7 @@ body {
 
 .heroku-app-title {
   float: left;
-  font-size: 1.667em;
+  font-size: 1.875em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
 }
@@ -953,7 +819,7 @@ body {
   float: left;
   clear: both;
   width: 100%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -961,7 +827,7 @@ body {
 .heroku-link-status-not-linked {
   float: left;
   width: 100%;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 600;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -973,6 +839,13 @@ body {
 }
 
 .huge .avatar {
+}
+
+.image {
+  display: block;
+  float: left;
+  height: auto;
+  overflow: hidden;
 }
 
 .card-title-container,
@@ -988,11 +861,12 @@ body {
   width: 100%;
 }
 
-.italian-flag {
+.italian-flag,
+.personal-board-notifications-form {
   float: left;
   clear: both;
   width: 100%;
-  margin-top: 18px;
+  margin-top: 10px;
 }
 
 .italian-flag-green {
@@ -1016,12 +890,6 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-.landing {
-  position: relative;
-  float: left;
-  width: 100%;
-}
-
 .large {
   width: 96px;
   height: 96px;
@@ -1042,7 +910,7 @@ body {
   background-color: rgb(0, 116, 217);
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1060,7 +928,7 @@ body {
 .list-title {
   float: left;
   margin-left: 10%;
-  font-size: 2em;
+  font-size: 2.25em;
   line-height: 1.38;
   color: rgb(221, 221, 221);
 }
@@ -1069,10 +937,10 @@ body {
   float: left;
   clear: both;
   width: 100%;
-  margin-top: 202px;
+  margin-top: 140px;
   text-shadow: 0 1px 1px rgb(255, 255, 255);
   font-style: italic;
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(170, 170, 170);
@@ -1095,7 +963,7 @@ body {
   border-style: solid;
   border-radius: 3px;
   font-family: DroidSansMono;
-  font-size: 0.778em;
+  font-size: 0.875em;
   font-weight: normal;
   word-spacing: 2px;
   color: rgb(68, 68, 68);
@@ -1111,7 +979,7 @@ body {
   margin: 8px 0 0 5%;
   padding-left: 18px;
   border-left: 4px solid rgb(221, 221, 221);
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1121,7 +989,7 @@ body {
   float: left;
   width: 95%;
   margin: 4px 0 0 5%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1138,7 +1006,7 @@ body {
   float: left;
   width: 100%;
   margin-top: 8px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1155,7 +1023,7 @@ body {
   float: left;
   width: 81.081081081%;
   margin: 3px 0 0 6.07052%;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
@@ -1170,7 +1038,7 @@ body {
 
 .new-board-card-header .board-title {
   margin-left: 8px;
-  font-size: 1.667em;
+  font-size: 1.875em;
   font-weight: 900;
   color: rgb(17, 17, 17);
 }
@@ -1201,8 +1069,31 @@ body {
   float: left;
   clear: both;
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.newsletter-text,
+.signup-text {
+  float: left;
+  clear: both;
+  width: 80%;
+  margin: 30px 0 0 10%;
+  font-size: 1em;
+  text-align: center;
+  word-spacing: 2px;
+  color: rgb(17, 17, 17);
+}
+
+.newsletter-title {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1.25em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(17, 17, 17);
 }
 
 .applinks-section,
@@ -1214,36 +1105,6 @@ body {
   padding-bottom: 80px;
 }
 
-.nospam-message {
-  float: left;
-  clear: both;
-  width: 100%;
-  min-width: none;
-  min-height: nonepx;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  font-style: normal;
-  font-size: 0.778em;
-  font-weight: 400;
-  text-align: center;
-  color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
 .notice {
   clear: both;
   background-color: rgb(57, 204, 204);
@@ -1253,7 +1114,7 @@ body {
   display: block;
   float: right;
   border-radius: 3px;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   line-height: 1.38;
   text-decoration: underline;
@@ -1268,11 +1129,11 @@ body {
   width: 22px;
   height: 22px;
   margin-top: 10px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/d172fc2c72715adbcf9422fc9a1675e0ba1e93ac/github-small-black.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/github-small-black.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
-  font-size: 0.889em;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1.38;
   color: rgba(0, 0, 0, 0);
@@ -1284,7 +1145,7 @@ body {
   clear: both;
   width: 90%;
   margin-left: 5%;
-  font-size: 0.944em;
+  font-size: 1.063em;
   font-weight: 600;
   line-height: 1.38;
   text-align: center;
@@ -1298,7 +1159,7 @@ body {
   position: relative;
   float: left;
   margin: 4px 0 0 8px;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   text-decoration: underline;
   word-spacing: 2px;
@@ -1313,13 +1174,6 @@ body {
   margin-top: 30px;
 }
 
-.personal-board-notifications-form {
-  float: left;
-  clear: both;
-  width: 100%;
-  margin-top: 10px;
-}
-
 .personal-board-notifications-form .submit {
   clear: both;
   width: 144px;
@@ -1330,7 +1184,7 @@ body {
 .team-board-heroku-link-title {
   float: left;
   width: 100%;
-  font-size: 1.111em;
+  font-size: 1.25em;
   font-weight: 700;
   line-height: 1.38;
   color: rgb(17, 17, 17);
@@ -1342,7 +1196,7 @@ body {
   clear: both;
   width: 100%;
   margin-top: 8px;
-  font-size: 1.333em;
+  font-size: 1.5em;
   font-weight: 700;
   line-height: 1.38;
   color: rgb(17, 17, 17);
@@ -1353,7 +1207,7 @@ body {
   float: left;
   width: 100%;
   border-bottom: 3px solid rgb(0, 0, 0);
-  font-size: 2em;
+  font-size: 2.25em;
   font-weight: 900;
   line-height: 1.38;
   color: rgb(17, 17, 17);
@@ -1428,14 +1282,6 @@ body {
   background-color: rgb(170, 170, 170);
 }
 
-.placeholder__logo {
-  float: left;
-  width: 48px;
-  height: 48px;
-  margin: 4px 0 0 2%;
-  background-color: rgb(222, 222, 222);
-}
-
 .placeholder__markdown {
   float: left;
   width: 100%;
@@ -1462,7 +1308,7 @@ body {
   display: block;
   float: left;
   margin-left: 6px;
-  font-size: 1em;
+  font-size: 1.125em;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
 }
@@ -1471,7 +1317,7 @@ body {
   position: relative;
   float: left;
   margin: 4px 0 0 10%;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(17, 17, 17);
@@ -1493,7 +1339,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(255, 133, 27);
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   color: rgb(17, 17, 17);
   overflow: hidden;
@@ -1503,7 +1349,7 @@ body {
   float: left;
   width: 80%;
   margin-left: 10%;
-  font-size: 2em;
+  font-size: 2.25em;
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
@@ -1519,101 +1365,61 @@ body {
   background-color: rgb(0, 116, 217);
   box-shadow: 0 3px 0 rgb(0, 31, 63);
   text-shadow: 0 -1px 0 rgb(0, 31, 63);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
 
-.signin {
+.signin-link {
   display: block;
   float: left;
   clear: both;
-  width: 100%;
-  min-width: none;
-  height: 48px;
-  min-height: nonepx;
-  margin-top: 4px;
-  padding: 12px;
-  border-style: none;
-  border-radius: 3px;
-  background-color: rgb(0, 116, 217);
-  box-shadow: 0 3px 0 rgb(0, 31, 63);
-  text-shadow: 0 -1px 0 rgb(0, 31, 63);
-  font-style: normal;
-  font-size: 1em;
-  font-weight: 700;
+  width: 80%;
+  margin: 20px 0 0 10%;
+  font-size: 1.125em;
+  font-weight: 400;
   text-align: center;
+  text-decoration: underline;
   word-spacing: 2px;
-  color: rgb(255, 255, 255);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
+  color: rgb(0, 116, 217);
 }
 
-.signin-container {
-  position: relative;
-  float: right;
-  width: 25.5833333333%;
-  margin: 20px 10% 0 0;
-}
-
-.signup-github {
+.signup-button {
   display: block;
   float: left;
   clear: both;
-  width: 100%;
-  min-width: none;
+  width: 28.8333333333%;
   height: 48px;
-  min-height: nonepx;
-  margin-top: 8px;
+  margin: 10px 0 0 35.58203%;
   padding: 12px;
-  border-style: none;
   border-radius: 3px;
   background-color: rgb(240, 18, 190);
   box-shadow: 0 3px 0 rgb(147, 9, 116);
   text-shadow: 0 -1px 0 rgb(147, 9, 116);
-  font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
+}
+
+.signup-section {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(127, 219, 255);
 }
 
 .site-footer {
   position: relative;
   float: left;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 60px;
   border-top: 3px solid rgb(170, 170, 170);
   background-color: rgb(246, 246, 246);
 }
@@ -1633,33 +1439,12 @@ body {
   float: left;
   clear: both;
   width: 80%;
-  min-width: none;
-  min-height: nonepx;
-  margin: 160px 0 0 10%;
-  padding-right: 60px;
-  padding-left: 60px;
-  background-color: rgba(0, 0, 0, 0);
-  font-style: normal;
-  font-size: 2.667em;
-  font-weight: 900;
+  margin: 25px 0 0 10%;
+  font-size: 3em;
+  font-weight: 200;
   line-height: 1.38;
   text-align: center;
   color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
 }
 
 .small {
@@ -1679,7 +1464,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
@@ -1699,55 +1484,29 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
 }
 
-.subscribe {
+.subscribe-button {
   display: block;
   float: left;
   clear: both;
-  width: 100%;
-  min-width: none;
+  width: 28.8333333333%;
   height: 48px;
-  min-height: nonepx;
-  margin-top: 8px;
+  margin: 10px 0 0 35.58203%;
   padding: 12px;
-  border-style: none;
   border-radius: 3px;
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-style: normal;
-  font-size: 1em;
+  font-size: 1.125em;
   font-weight: 700;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
-.signup-container,
-.subscribe-container {
-  float: left;
-  width: 39.1666666666%;
-  margin-left: 30.41667%;
 }
 
 .success {
@@ -1771,37 +1530,6 @@ body {
 .tiny .avatar {
 }
 
-.title {
-  float: left;
-  width: 100%;
-  min-width: none;
-  min-height: nonepx;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  font-style: normal;
-  font-size: 2.667em;
-  font-weight: 200;
-  line-height: 1.38;
-  text-align: center;
-  color: rgb(17, 17, 17);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
-}
-
 .todo-card-title {
   float: left;
   clear: both;
@@ -1809,7 +1537,7 @@ body {
   max-height: 54px;
   padding-left: 8px;
   border-left: 3px solid rgb(170, 170, 170);
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   color: rgb(170, 170, 170);
   overflow: hidden;
@@ -1826,6 +1554,41 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+.tutorial {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tutorial-step {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.signup-title,
+.tutorial-title {
+  float: left;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1.875em;
+  font-weight: 900;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(17, 17, 17);
+}
+
+.tutorial-video {
+  clear: both;
+  width: 53.3333333333%;
+  margin: 20px 0 0 23.33073%;
+}
+
 .update-comment {
   display: block;
   position: relative;
@@ -1839,7 +1602,7 @@ body {
   background-color: rgb(46, 204, 64);
   box-shadow: 0 3px 0 rgb(27, 121, 38);
   text-shadow: 0 -1px 0 rgb(27, 121, 38);
-  font-size: 1em;
+  font-size: 1.125em;
   text-align: center;
   word-spacing: 2px;
   color: rgb(255, 255, 255);
@@ -1847,49 +1610,25 @@ body {
 
 .user-profile {
   float: right;
-  clear: both;
   width: 48px;
-  margin: -48px 2% 0 0;
+  margin: -164px 2% 0 0;
 }
 
-.video-container {
-  position: relative;
+.video-title {
   float: left;
-  clear: both;
-  width: 100%;
-  padding-top: 120px;
-  padding-bottom: 80px;
-}
-
-.video-placeholder {
-  width: 672px;
-  min-width: none;
-  height: 378px;
-  min-height: nonepx;
-  margin: 0 auto;
-  border: 1px solid rgb(170, 170, 170);
-  background-color: rgb(221, 221, 221);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(17, 17, 17);
 }
 
 .waiting-review-app-message {
   float: left;
   margin-left: 10%;
-  font-size: 1.111em;
+  font-size: 1.25em;
   line-height: 1.38;
   word-spacing: 2px;
   color: rgb(0, 116, 217);
@@ -1904,31 +1643,11 @@ body {
   background-color: rgb(127, 219, 255);
 }
 
-.beta-warning a {
-  border-top-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-color: transparent;
-  border-style: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: transparent;
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-transform: inherit;
-  text-decoration: underline;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-  color: rgb(0, 116, 217);
-  opacity: 1;
-  word-break: normal;
-  word-wrap: normal;
-  white-space: normal;
+.welcome-header {
+  float: left;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .heroku-link-status-linked strong {
@@ -2103,14 +1822,72 @@ body {
   white-space: normal;
 }
 
+.newsletter-text strong,
+.signup-text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  text-shadow: none;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.signup-text a {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  text-shadow: none;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: underline;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: rgb(0, 116, 217);
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
 @media(max-width: 1024px) {
+  .site-header .catchup-icon {
+    height: auto;
+    margin-left: 1.99738%;
+  }
+
   .site-header .main-action-container {
     width: 32.421875%;
     margin-right: 9.96094%;
-  }
-
-  .site-header .placeholder__logo {
-    margin-left: 1.99738%;
   }
 
   .site-header .user-profile {
@@ -2120,7 +1897,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   .board-header-section .board-actions,
@@ -2174,6 +1951,32 @@ body {
     margin-top: 67px;
   }
 
+  .newsletter-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .newsletter-section .newsletter-text,
+  .signup-section .signup-text {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 0.938em;
+    line-height: 1.38;
+  }
+
+  .newsletter-section .newsletter-title {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.063em;
+    font-weight: 600;
+  }
+
+  .newsletter-section .subscribe-button,
+  .signup-section .signup-button {
+    width: 90%;
+    margin-left: 4.99878%;
+  }
+
   .review-app-section .copy-view-app-link {
     position: relative;
   }
@@ -2192,13 +1995,18 @@ body {
     margin-left: 9.99756%;
   }
 
+  .signup-section {
+    margin-top: 20px;
+  }
+
+  .site-header .catchup-icon {
+    height: auto;
+    margin-left: 1.99992%;
+  }
+
   .site-header .main-action-container {
     width: 33.984375%;
     margin-right: 15.23234%;
-  }
-
-  .site-header .placeholder__logo {
-    margin-left: 1.99585%;
   }
 
   .site-header .user-profile {
@@ -2210,8 +2018,61 @@ body {
     margin-left: 9.99349%;
   }
 
+  .tutorial {
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .signup-section .signup-title,
+  .tutorial .tutorial-title {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.25em;
+  }
+
+  .tutorial-step .image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .tutorial-step .video-title {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.188em;
+    font-weight: 600;
+  }
+
   .waiting-review-app-section .waiting-review-app-message {
     margin-left: 9.99756%;
+  }
+
+  .tutorial .tutorial-step,
+  .welcome-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .welcome-header .image {
+    width: 66.9270833333%;
+    height: auto;
+    margin-left: 16.53646%;
+  }
+
+  .welcome-header .signin-link {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.063em;
+    line-height: 1.38;
+  }
+
+  .welcome-header .slogan {
+    width: 90%;
+    margin-left: 4.99878%;
+    font-size: 1.625em;
+    font-weight: 300;
   }
 }
 
@@ -2245,7 +2106,7 @@ body {
 
   .board-card-header .board-description {
     margin-top: 11px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2253,7 +2114,7 @@ body {
   .new-board-card-header .board-title {
     position: relative;
     margin-left: 4px;
-    font-size: 1.111em;
+    font-size: 1.25em;
   }
 
   .board-card-header .open-in-github,
@@ -2286,7 +2147,7 @@ body {
   .board-info .board-title {
     position: relative;
     width: 99.8406441331%;
-    font-size: 1.056em;
+    font-size: 1.188em;
     font-weight: 600;
   }
 
@@ -2334,7 +2195,7 @@ body {
   .card-info .card-title {
     position: relative;
     width: 99.8406441331%;
-    font-size: 1.056em;
+    font-size: 1.188em;
     font-weight: 600;
   }
 
@@ -2351,7 +2212,7 @@ body {
   .card-title-container .review-card-title,
   .card-title-container .todo-card-title {
     max-height: 46px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     font-weight: 600;
   }
 
@@ -2360,9 +2221,7 @@ body {
     margin-left: 7.96347%;
   }
 
-  .bg-signup .signup-container,
-  .comment-form,
-  .newsletter-section .subscribe-container {
+  .comment-form {
     width: 89.9984903381%;
     margin-left: 4.99321%;
   }
@@ -2372,7 +2231,7 @@ body {
   .edit-card-form .card-description,
   .inline-comment-form .comment-text {
     height: 160px;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2452,7 +2311,7 @@ body {
     position: relative;
     clear: both;
     width: 99.8406441331%;
-    font-size: 1.056em;
+    font-size: 1.188em;
     font-weight: 600;
   }
 
@@ -2469,7 +2328,7 @@ body {
   .flash .message {
     width: 79.648241206%;
     margin-left: 7.0351%;
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
   }
 
@@ -2480,7 +2339,7 @@ body {
   }
 
   .heroku-app-header .heroku-app-title {
-    font-size: 1.111em;
+    font-size: 1.25em;
   }
 
   .inline-comment-form .cancel-update-comment {
@@ -2498,35 +2357,6 @@ body {
     margin-top: -106px;
   }
 
-  .landing {
-    position: relative;
-  }
-
-  .landing .catchup {
-    position: relative;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 4.99321%;
-    font-size: 2.333em;
-  }
-
-  .landing .signin-container {
-    position: relative;
-    float: left;
-    clear: both;
-    width: 89.9984903381%;
-    margin-top: 176px;
-    margin-right: 0;
-    margin-left: 5.06869%;
-  }
-
-  .landing .slogan {
-    width: 89.9984903381%;
-    margin-top: -180px;
-    margin-left: 4.99321%;
-    font-size: 1.556em;
-  }
-
   .applinks-section .heroku-apps-container,
   .linked-boards-section .boards-container,
   .new-boards-section .boards-container {
@@ -2535,16 +2365,12 @@ body {
 
   .list-title {
     margin-left: 4.99321%;
-    font-size: 1.222em;
+    font-size: 1.375em;
   }
 
   .new-board-card-header .board-description {
-    font-size: 0.944em;
+    font-size: 1.063em;
     line-height: 1.38;
-  }
-
-  .newsletter-section {
-    padding-bottom: 120px;
   }
 
   .applinks-section,
@@ -2561,7 +2387,7 @@ body {
   .no-boards-section .section-title {
     width: 90%;
     margin-left: 4.99321%;
-    font-size: 1.222em;
+    font-size: 1.375em;
   }
 
   .review-app-section {
@@ -2601,24 +2427,15 @@ body {
     width: 99.8910857908%;
   }
 
-  .signin-container .already-user {
-    width: 99.8910857908%;
-    margin-left: -0.07968%;
-  }
-
-  .signup-container .beta-warning {
-    margin-top: 8px;
-    font-size: 0.944em;
-    line-height: 1.38;
+  .site-header .catchup-icon {
+    clear: none;
+    height: auto;
+    margin-left: 1.99653%;
   }
 
   .site-header .main-action-container {
     width: 28.7439613526%;
     margin-right: 5.06869%;
-  }
-
-  .site-header .placeholder__logo {
-    margin-left: 1.98898%;
   }
 
   .site-header .user-profile {
@@ -2627,86 +2444,14 @@ body {
     margin-left: 19.39538%;
   }
 
-  .subscribe-container .nospam-message {
-    margin-top: 8px;
-  }
-
-  .signup-container .title,
-  .subscribe-container .title {
-    font-size: 1.556em;
-    font-weight: 900;
-  }
-
   .todo-list-section .placeholder__lists-_list {
     width: 79.9969806763%;
     margin-left: 9.99019%;
   }
 
-  .video-container {
-    position: relative;
-  }
-
-  .video-container .video-placeholder {
-    width: 372px;
-    height: 209px;
-  }
-
   .waiting-review-app-section .waiting-review-app-message {
     margin-left: 4.99321%;
-    font-size: 0.944em;
+    font-size: 1.063em;
     font-weight: 600;
-  }
-}
-
-@media(max-width: 320px) {
-  body {
-    font-size: 1.125em;
-  }
-
-  .bg-signup .signup-container {
-    width: 90%;
-    margin-left: 4.98047%;
-  }
-
-  .landing {
-    position: relative;
-  }
-
-  .landing .catchup {
-    position: relative;
-    margin-top: 0;
-    margin-left: 5%;
-  }
-
-  .landing .signin-container {
-    position: relative;
-    width: 90%;
-    margin-left: 5%;
-  }
-
-  .landing .slogan {
-    width: 90%;
-    margin-left: 5%;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  .newsletter-section .subscribe-container {
-    width: 90%;
-    margin-left: 4.99512%;
-  }
-
-  .signin-container .already-user {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .video-container {
-    position: relative;
-  }
-
-  .video-container .video-placeholder {
-    width: 288px;
-    height: 162px;
   }
 }
