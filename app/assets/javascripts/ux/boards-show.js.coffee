@@ -18,8 +18,6 @@ $(document).on "ready page:load", ->
 
 
 $(document).on "ready page:load", ->
-  $("[data-ux-board-settings-section]").hide()
-
   $("[data-ux-open-board-settings], [data-ux-close-board-settings]").on "click", (event) ->
     event.preventDefault()
     $("[data-ux-board-settings-section]").toggle()
