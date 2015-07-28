@@ -3,10 +3,13 @@ Rails.application.routes.draw do
 
   get "/auth/signout", to: "authentication#signout"
   get "/auth/github/callback", to: "authentication#github"
+  get "/auth/heroku/callback", to: "authentication#heroku"
   get "/auth/failure", to: "authentication#failure"
 
   resources :boards, only: [:create, :index, :show, :update] do
     match :toggle_subscription, on: :member, via: [:patch, :put]
+
+    resources :applinks, only: [:index, :create]
 
     resources :cards, only: [:create, :show, :update] do
       match :move, on: :member, via: [:patch, :put]
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :update]
     resources :previews, only: :create
   end
+
 
   root to: "welcome#index"
 

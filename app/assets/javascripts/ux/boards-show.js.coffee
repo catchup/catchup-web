@@ -3,7 +3,6 @@ $(document).on "ready page:load", ->
 
   $("[data-ux-new-card]").on "click", (event) ->
     event.preventDefault()
-
     $("[data-ux-create-card-section]").show()
 
     top = $("#new").offset().top
@@ -15,5 +14,12 @@ $(document).on "ready page:load", ->
 
   $("[data-ux-cancel-create-card]").on "click", (event) ->
     event.preventDefault()
-
     $("[data-ux-create-card-section]").hide()
+
+
+$(document).on "ready page:load", ->
+  $("[data-ux-board-settings-section]").hide()
+
+  $("[data-ux-open-board-settings], [data-ux-close-board-settings]").on "click", (event) ->
+    event.preventDefault()
+    $("[data-ux-board-settings-section]").toggle()

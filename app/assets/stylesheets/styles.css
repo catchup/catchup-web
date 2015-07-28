@@ -296,7 +296,7 @@ body {
   height: 24px;
   margin: 32px 0 0 -8.85417%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -313,7 +313,7 @@ body {
   height: 24px;
   margin: 32px 0 0 -8.95671%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -430,7 +430,7 @@ body {
   height: 24px;
   margin-left: -8.95996%;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/close.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/close.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -649,7 +649,7 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 3px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/flash-dismiss.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/flash-dismiss.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -788,7 +788,7 @@ body {
   width: 22px;
   height: 22px;
   margin: 6px 0 0 -32px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/go-back.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/go-back.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -1126,7 +1126,7 @@ body {
   width: 22px;
   height: 22px;
   margin-top: 10px;
-  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/870b23673591525b89dc489f6e503d62bad6a952/github-small-black.svg');
+  background-image: url('https://cdn.rawgit.com/catchup/catchup-web-assets/b913b3ae51adba167c27ae7c68d8f3229cb20f5e/github-small-black.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
@@ -1585,7 +1585,7 @@ body {
   float: left;
   width: 100%;
   height: auto;
-  margin-left: -0.00488%;
+  margin-left: -0.00249%;
   overflow: hidden;
 }
 
@@ -1593,7 +1593,7 @@ body {
   float: left;
   clear: both;
   width: 53.3333333333%;
-  margin: 20px 0 0 23.33203%;
+  margin: 20px 0 0 23.33073%;
   border: 6px solid rgb(221, 221, 221);
   background-color: rgb(221, 221, 221);
 }

@@ -1,0 +1,48 @@
+<div class="boards-_settings clearfix">
+
+<section class="team-board-settings-section clearfix">
+  <div class="team-board-settings-header clearfix">
+    <h1 class="team-board-settings-title">Team Settings</h1>
+    <p class="team-board-settings-description">Settings that are effective for you and for any other collaborators of your team. Please don't be evil.</p>
+  </div>
+  <div class="team-board-heroku-link clearfix">
+    <h2 class="team-board-heroku-link-title">Heroku</h2>
+    <p class="team-board-heroku-link-description">When a board is linked to Heroku all kinds of good things happen. For instance, when linked to Heroku, you can create ad hoc review apps for any given card.</p>
+    <div class="team-board-heroku-link-wrapper clearfix">
+      <div class="heroku-link-status-wrapper clearfix">
+        <% if @board.linked_to_heroku? %>
+          <p class="heroku-link-status-linked">
+            This board is linked to <strong><%= @board.app_name %></strong> on Heroku.
+            You can change that if needed.
+          </p>
+        <% else %>
+          <p class="heroku-link-status-not-linked">
+            This board has not been linked yet to Heroku. Let's take care of that…</p>
+        <% end %>
+      </div>
+
+      <%= link_to "Link to Heroku",
+                  "/auth/heroku?board_id=#{@board.id}",
+                  class: "link-to-heroku" %>
+    </div>
+  </div>
+</section>
+
+<section class="personal-board-settings-section clearfix">
+  <div class="personal-board-settings-header clearfix">
+    <h1 class="personal-board-settings-title">Personal Settings</h1>
+    <p class="personal-board-settings-description">Settings that are only related to you. Feel free to tweak them to your liking.</p>
+  </div>
+  <div class="personal-board-notifications clearfix">
+    <h2 class="personal-board-notifications-title">Notifications</h2>
+    <%= form_for [:toggle_subscription, @board], html: { class: 'personal-board-notifications-form clearfix' } do |f| %>
+      <label class="receive-notifications-label clearfix">
+        <%= check_box_tag :subscribe, "", @board.has_subscriber?(current_user), class: 'receive-notifications-checkbox' %>
+        <span class="receive-notifications-text">Receive e-mail notifications when things happen</span>
+      </label>
+      <button class="submit">Save Settings</button>
+    <% end %>
+  </div>
+</section>
+
+</div>

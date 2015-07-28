@@ -19,6 +19,13 @@ class AuthenticationController < ApplicationController
     redirect_to boards_url
   end
 
+  def heroku
+    board_id = request.env['omniauth.params']['board_id']
+    api_key = env["omniauth.auth"].credentials.token
+
+    redirect_to board_applinks_url(board_id: board_id, api_key: api_key)
+  end
+
   def failure
     redirect_to root_url, notice: t("welcome.index.auth_failure")
   end

@@ -2,6 +2,13 @@ require "platform-api"
 
 module Heroku
   class Application < Struct.new(:name, :api_key)
+    def self.all(api_key)
+      heroku = PlatformAPI.connect_oauth(api_key)
+      heroku.app.list.map do |app|
+        self.with(name: app["name"], api_key: api_key)
+      end
+    end
+
     def self.with(name:, api_key:)
       new(name, api_key)
     end
