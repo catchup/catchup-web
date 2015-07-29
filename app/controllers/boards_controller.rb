@@ -12,6 +12,8 @@ class BoardsController < ApplicationController
     @board = current_user.create_board(board_params.fetch(:title))
 
     if @board.save
+      @board.toggle_subscription_for(current_user)
+
       redirect_to @board
     else
       redirect_to boards_path, alert: t("boards.create.error")
