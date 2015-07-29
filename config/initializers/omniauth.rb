@@ -10,7 +10,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
            provider_ignores_state: true
 
   provider :heroku, ENV["HEROKU_OAUTH_ID"], ENV["HEROKU_OAUTH_SECRET"],
-           scope: "write-protected",
+           scope: "global",
            provider_ignores_state: true
 end
 
