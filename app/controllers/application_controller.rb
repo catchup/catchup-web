@@ -4,9 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   attr_reader :current_user
-  helper_method :current_user, :signed_in?
+  helper_method :current_user, :signed_in?, :beta_user?
 
   before_action :authenticate
+  before_action :require_invitation
 
   def signed_in?
     current_user != nil
@@ -16,5 +17,19 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:current_user])
 
     redirect_to root_url if current_user.nil?
+  end
+
+  def require_invitation
+    return unless Rails.env.production?
+
+    redirect_to root_url unless beta_user?
+  end
+
+  def beta_user?
+    cookies[:beta_user].present?
+  end
+
+  def beta_user!
+    cookies.permanent[:beta_user] = true
   end
 end
