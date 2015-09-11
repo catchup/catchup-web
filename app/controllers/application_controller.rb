@@ -32,4 +32,8 @@ class ApplicationController < ActionController::Base
   def beta_user!
     cookies.permanent[:beta_user] = true
   end
+
+  def invitation_codes
+    ENV["INVITATION_CODES"].to_s.split(";").compact
+  end
 end
